@@ -1,3 +1,5 @@
+/* at the very top of style.css — must be first line */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root { --accent: #1c58e3; }
 
