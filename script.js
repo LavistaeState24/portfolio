@@ -390,3 +390,47 @@ if (clock) {
   tick();
   setInterval(tick, 1000);
 })();
+
+// contact form
+
+/**
+ * Form submit handler — builds a WhatsApp message with the form fields
+ * and opens wa.me. Replace the number if it ever changes.
+ */
+function handleFormSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const type = document.getElementById('type').value;
+  const service = document.getElementById('service').value.trim();
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const message = document.getElementById('message').value.trim();
+
+  const lines = [
+    '*New Enquiry — Scalixo Media*',
+    '',
+    `*Name:* ${name}`,
+    `*Phone:* ${phone}`,
+    email ? `*Email:* ${email}` : null,
+    `*Enquiry Type:* ${type}`,
+    `*Service:* ${service}`,
+    `*Preferred Date:* ${date}`,
+    `*Preferred Time:* ${time}`,
+    message ? `*Message:* ${message}` : null,
+  ].filter(Boolean);
+
+  const waNumber = '919328792160'; // ← update if the number changes
+  const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+  const note = document.getElementById('formNote');
+  if (note) {
+    note.classList.remove('hidden');
+    setTimeout(() => note.classList.add('hidden'), 3000);
+  }
+
+  window.open(waUrl, '_blank', 'noopener,noreferrer');
+  return false;
+}
