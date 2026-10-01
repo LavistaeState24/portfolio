@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — Scalixo Media Agency</title>
+    <meta name="description"
+        content="Get in touch with Scalixo Media. Book a free strategy call, discuss a campaign, or enquire about our services. Based in Ahmedabad, Gujarat." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans">
+
+    <!-- Cursor -->
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Progress -->
+    <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+    <!-- ══════════ HEADER ══════════ -->
+    <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+
+            <a href="index.html" class="group relative flex items-center gap-3">
+                <span
+                    class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+
+                <img src="./assets/scalixo.png" alt="Scalixo Media"
+                    class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+            </a>
+
+            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
+                <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
+                <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
+                <a href="contact.html" class="text-accent transition-opacity hover:opacity-50">Contact</a>
+            </nav>
+
+            <a href="#contact-form"
+                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
+                Start a project ↗
+            </a>
+
+            <button id="menuBtn"
+                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
+                Menu
+            </button>
+        </div>
+
+        <div id="mobileMenu"
+            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
+            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
+            <a href="contact.html" class="mobile-link font-display text-5xl uppercase text-accent">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══════════ PAGE HEADER ══════════ -->
+        <section class="relative overflow-hidden px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
+
+            <div
+                class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+            </div>
+
+            <div class="relative mx-auto max-w-[1500px]">
+
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
+                    data-reveal>
+                    <span class="text-accent">(Contact)</span>
+                    <span class="h-3 w-px bg-white/20"></span>
+                    <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                    <span class="text-white/20">/</span>
+                    <span class="text-white/70">Contact</span>
+                </div>
+
+                <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
+                    Let's<br />Connect<span class="text-accent">.</span>
+                </h1>
+
+                <div class="mt-4 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
+                    <div class="md:col-span-5">
+                        <p class="text-lg leading-relaxed text-white/75 md:text-xl">
+                            Whether you want to book a free strategy call, discuss a marketing
+                            campaign, or enquire about our services, our team is here to help you
+                            grow smarter.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">
+                                Ahmedabad</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Response time
+                            </div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">24 hrs
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Consultation
+                            </div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Free
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════ CONTACT CARDS ══════════ -->
+        <section class="px-6 pb-16 md:px-10 md:pb-24">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+
+                    <!-- Phone -->
+                    <a href="tel:+919328792160" data-reveal
+                        class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl transition-opacity duration-700 group-hover:opacity-100 opacity-0"></span>
+                        <div class="relative">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+                            <h3 class="mt-3 font-display text-2xl uppercase leading-none text-white md:text-3xl">Phone
+                            </h3>
+                        </div>
+                        <div class="relative mt-10">
+                            <p
+                                class="font-display text-xl leading-none text-white transition-colors group-hover:text-accent md:text-2xl">
+                                +91 93287 92160
+                            </p>
+                            <p class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35">
+                                Mon – Sat · 10:00 AM – 7:00 PM
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Office Address -->
+                    <a href="https://maps.google.com/?q=301,+3rd+Floor,+Harvy+Complex,+Subhash+Chowk,+Gurukul+Rd,+Memnagar,+Ahmedabad,+Gujarat+380052"
+                        target="_blank" rel="noopener noreferrer" data-reveal
+                        class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl transition-opacity duration-700 group-hover:opacity-100 opacity-0"></span>
+                        <div class="relative">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
+                            <h3 class="mt-3 font-display text-2xl uppercase leading-none text-white md:text-3xl">Office
+                            </h3>
+                        </div>
+                        <div class="relative mt-10">
+                            <p class="text-sm leading-relaxed text-white/70 transition-colors group-hover:text-white">
+                                301, 3rd Floor, Harvy Complex,<br />
+                                Subhash Chowk, Gurukul Rd,<br />
+                                Memnagar, Ahmedabad,<br />
+                                Gujarat 380052
+                            </p>
+                            <p
+                                class="mt-3 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                Open in Maps
+                                <span
+                                    class="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Timings -->
+                    <div data-reveal
+                        class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl transition-opacity duration-700 group-hover:opacity-100 opacity-0"></span>
+                        <div class="relative">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
+                            <h3 class="mt-3 font-display text-2xl uppercase leading-none text-white md:text-3xl">Timings
+                            </h3>
+                        </div>
+                        <div class="relative mt-10">
+                            <div class="flex items-baseline justify-between border-b border-white/10 pb-3">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Mon –
+                                    Sat</span>
+                                <span class="font-display text-lg leading-none text-white">10 AM – 7 PM</span>
+                            </div>
+                            <div class="flex items-baseline justify-between pt-3">
+                                <span
+                                    class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Sunday</span>
+                                <span class="font-display text-lg leading-none text-white/35">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ FORM + MAP ══════════ -->
+        <section id="contact-form" class="scroll-mt-28 border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-10 md:grid-cols-12 md:gap-14">
+
+                    <!-- ── Form ── -->
+                    <div class="md:col-span-5" data-reveal>
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(01)</span>
+                        <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-5xl">
+                            Send Your<br />Details
+                        </h2>
+                        <p class="mt-5 leading-relaxed text-white/45">
+                            Fill in the form and we'll get back to you within one business day. You
+                            can also reach us directly on WhatsApp.
+                        </p>
+
+                        <div class="mt-8 space-y-4">
+                            <a href="https://wa.me/919328792160" target="_blank" rel="noopener noreferrer"
+                                class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                Chat on WhatsApp
+                                <span
+                                    class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                            </a>
+
+                            <a href="mailto:hello@scalixomedia.com"
+                                class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                hello@scalixomedia.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── Form fields ── -->
+                    <div class="md:col-span-6 md:col-start-7" data-reveal>
+                        <form id="contactForm" class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8"
+                            onsubmit="return handleFormSubmit(event)">
+
+                            <div class="grid gap-4 sm:grid-cols-2">
+
+                                <div class="sm:col-span-1">
+                                    <label for="name"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Full
+                                        Name *</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/40 caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        placeholder="Your name" />
+                                </div>
+
+                                <div class="sm:col-span-1">
+                                    <label for="phone"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Mobile
+                                        Number *</label>
+                                    <input type="tel" id="phone" name="phone" required
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/40 caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        placeholder="+91 98765 43210" />
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="email"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Email
+                                        Address</label>
+                                    <input type="email" id="email" name="email"
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/40 caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        placeholder="you@company.com (optional)" />
+                                </div>
+
+                                <div class="sm:col-span-1">
+                                    <label for="type"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Enquiry
+                                        Type *</label>
+                                    <select id="type" name="type" required
+                                        class="mt-2 w-full appearance-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-opacity=%220.5%22 stroke-width=%222%22><path d=%22m6 9 6 6 6-6%22/></svg>'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem;">
+                                        <option value="" class="bg-ink text-white/50">Select an option</option>
+                                        <option class="bg-ink text-white">Free Strategy Call</option>
+                                        <option class="bg-ink text-white">Social Media Marketing</option>
+                                        <option class="bg-ink text-white">Performance Marketing</option>
+                                        <option class="bg-ink text-white">SEO</option>
+                                        <option class="bg-ink text-white">Website Development</option>
+                                        <option class="bg-ink text-white">Branding</option>
+                                        <option class="bg-ink text-white">Influencer Marketing</option>
+                                        <option class="bg-ink text-white">General Enquiry</option>
+                                    </select>
+                                </div>
+
+                                <div class="sm:col-span-1">
+                                    <label for="service"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Service
+                                        Interested In *</label>
+                                    <input type="text" id="service" name="service" required
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/40 caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        placeholder="e.g. Instagram growth" />
+                                </div>
+
+                                <div class="sm:col-span-1">
+                                    <label for="date"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Preferred
+                                        Date *</label>
+                                    <input type="date" id="date" name="date" required
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent focus:bg-white/[0.06] [color-scheme:dark] placeholder:text-white" />
+                                </div>
+
+                                <div class="sm:col-span-1">
+                                    <label for="time"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Preferred
+                                        Time *</label>
+                                    <input type="time" id="time" name="time" required
+                                        class="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent focus:bg-white/[0.06] [color-scheme:dark]" />
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="message"
+                                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="mt-2 w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white caret-accent outline-none transition-colors focus:border-accent focus:bg-white/[0.06]"
+                                        placeholder="Tell us about your project..."></textarea>
+                                </div>
+
+                            </div>
+
+                            <button type="submit"
+                                class="cta-btn group mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white transition-colors duration-500 hover:border-accent md:text-xs">
+                                <span class="relative z-10 transition-colors duration-500">Book via WhatsApp</span>
+                                <span
+                                    class="relative z-10 transition-transform duration-500 group-hover:translate-x-0.5">→</span>
+                            </button>
+
+                            <p id="formNote"
+                                class="mt-3 hidden text-center font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
+                                Opening WhatsApp...
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ MAP ══════════ -->
+        <section class="border-t border-white/10 px-6 pb-24 md:px-10 md:pb-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-8 flex flex-wrap items-end justify-between gap-4" data-reveal>
+                    <div>
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(02)</span>
+                        <h2 class="mt-3 font-display text-3xl uppercase leading-none text-white md:text-5xl">Find Us
+                        </h2>
+                    </div>
+                    <a href="https://maps.google.com/?q=301,+3rd+Floor,+Harvy+Complex,+Subhash+Chowk,+Gurukul+Rd,+Memnagar,+Ahmedabad,+Gujarat+380052"
+                        target="_blank" rel="noopener noreferrer"
+                        class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45 transition-colors hover:text-accent">
+                        Get Directions ↗
+                    </a>
+                </div>
+
+                <div class="overflow-hidden rounded-2xl border border-white/10" data-reveal>
+                    <iframe title="Scalixo Media Location"
+                        src="https://www.google.com/maps?q=Harvy%20Complex%20Subhash%20Chowk%20Gurukul%20Road%20Memnagar%20Ahmedabad&output=embed"
+                        width="100%" height="480" loading="lazy"
+                        style="border:0; filter: grayscale(1) invert(0.92) contrast(0.9);" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ WHY CONTACT ══════════ -->
+        <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-12 max-w-[720px]" data-reveal>
+                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(03)</span>
+                    <h2 class="mt-3 mb-8 font-display text-3xl uppercase leading-[0.95] text-white md:text-5xl">
+                        Marketing guidance designed around your business goals.
+                    </h2>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+                        <div class="font-display text-4xl leading-none text-accent">01</div>
+                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Experienced Team
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-white/45">
+                            Work with professionals focused on strategy, content, performance and measurable growth.
+                        </p>
+                    </div>
+
+                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+                        <div class="font-display text-4xl leading-none text-accent">02</div>
+                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Performance Focused
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-white/45">
+                            Campaigns planned to improve leads, conversions, visibility and long-term brand growth.
+                        </p>
+                    </div>
+
+                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+                        <div class="font-display text-4xl leading-none text-accent">03</div>
+                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Personalized
+                            Consultation</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-white/45">
+                            Get practical suggestions based on your current marketing stage and business goals.
+                        </p>
+                    </div>
+
+                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+                        <div class="font-display mb-4 text-4xl leading-none text-accent">04</div>
+                        <h3 class=" mb-6 font-display text-xl uppercase leading-none text-white">Transparent Process
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-white/45">
+                            Clear communication, practical reporting and a growth system built with accountability.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ FINAL CTA ══════════ -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-10" data-reveal>
+                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(04)</span>
+                </div>
+
+                <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-reveal>
+                    Your growth<br />starts with one<br />conversation<span class="text-accent">.</span>
+                </h2>
+
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
+                    data-reveal>
+                    <a href="tel:+919328792160" data-magnetic
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        +91 93287 92160
+                        <span
+                            class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+                    <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+                        <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
+                            class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/"
+                            class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media"
+                            class="transition-colors hover:text-accent">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+        <div
+            class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+
+            <a href="#home" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- ══════════ SCRIPTS ══════════ -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
