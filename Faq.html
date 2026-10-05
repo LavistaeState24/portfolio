@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Scalixo Media Agency</title>
+  <meta name="description"
+    content="Frequently asked questions about Scalixo Media's digital marketing services — pricing, timelines, process, reporting, and more." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body class="font-sans">
+
+  <!-- Cursor -->
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Progress -->
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
+    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+
+      <a href="index.html" class="group relative flex items-center gap-3">
+        <span
+          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+
+        <img src="./assets/scalixo.png" alt="Scalixo Media"
+          class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+      </a>
+
+      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
+        <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
+        <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
+        <a href="index.html#contact" class="transition-opacity hover:opacity-25">Contact</a>
+      </nav>
+
+      <a href="index.html#contact"
+        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
+        Start a project ↗
+      </a>
+
+      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
+        Menu
+      </button>
+    </div>
+
+    <div id="mobileMenu"
+      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+      <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
+      <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
+      <a href="index.html#contact" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ PAGE HEADER ══════════ -->
+    <section class="relative overflow-hidden px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
+
+      <div
+        class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+      </div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+
+        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
+          data-reveal>
+          
+          <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+          <span class="text-white/20">/</span>
+          <span class="text-white/70">FAQ</span>
+        </div>
+
+        <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
+          Frequently<br />Asked<span class="text-accent">.</span>
+        </h1>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
+          <div class="md:col-span-5">
+            <p class="text-lg leading-relaxed text-white/75 md:text-xl">
+              Straight answers about how we work, what we charge, and what you can expect.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Last updated</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">Jan 2026</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Applies to</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">scalixomedia.com</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Questions</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">12</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ BODY ══════════ -->
+    <section class="px-6 pb-24 md:px-10 md:pb-32">
+      <div class="mx-auto grid max-w-[1500px] gap-12 md:grid-cols-12 md:gap-16">
+
+        <!-- ── Sticky TOC ── -->
+        <aside class="md:col-span-3">
+          <div class="md:sticky md:top-28" data-reveal>
+            <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">(Index)</span>
+            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5">
+              <a href="#q1" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · What we do</a>
+              <a href="#q2" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · Services offered</a>
+              <a href="#q3" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · Getting started</a>
+              <a href="#q4" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · Pricing &amp; billing</a>
+              <a href="#q5" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Timelines</a>
+              <a href="#q6" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06 · Results &amp; guarantees</a>
+              <a href="#q7" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07 · Business size</a>
+              <a href="#q8" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · Ownership of work</a>
+              <a href="#q9" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · Reporting</a>
+              <a href="#q10" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Pausing &amp; cancelling</a>
+              <a href="#q11" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · Locations served</a>
+              <a href="#q12" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · Still have questions</a>
+            </nav>
+
+            <a href="index.html#contact" data-magnetic
+              class="cta-btn group mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+              <span class="relative z-10 transition-colors duration-500">Ask a question</span>
+              <span class="relative z-10 transition-transform duration-500 group-hover:translate-x-0.5">→</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- ── Content ── -->
+        <div class="md:col-span-9 md:col-start-4">
+
+          <!-- Intro card -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-10" data-reveal>
+            <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">Overview</span>
+            <p class="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
+              Everything you might want to know before working with Scalixo Media —
+              collected in one place.
+            </p>
+            <p class="mt-4 leading-relaxed text-white/45">
+              Can't find your answer here? Reach out directly and we'll walk you through
+              it. We usually reply within one business day.
+            </p>
+          </div>
+
+          <!-- 01 · What we do -->
+          <details id="q1" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal open>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">01</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">What does Scalixo Media do?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Scalixo Media is a full-service digital marketing and creative agency.
+                We help brands grow online through strategy, content, paid media, and
+                performance-driven campaigns.
+              </p>
+              <p>
+                We work as an extension of your team — planning, producing, launching,
+                and optimising everything needed to build visibility and generate
+                qualified demand.
+              </p>
+            </div>
+          </details>
+
+          <!-- 02 · Services -->
+          <details id="q2" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">02</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Which services do you offer?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Social media marketing and content production</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Performance marketing and paid advertising (Meta, Google, LinkedIn)</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Lead generation and funnel building</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Search engine optimisation (SEO)</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Website design and development</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Branding, identity, and creative direction</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Influencer marketing and collaborations</span>
+                </li>
+              </ul>
+              <p>
+                You can engage us for a single service or a fully integrated retainer.
+              </p>
+            </div>
+          </details>
+
+          <!-- 03 · Getting started -->
+          <details id="q3" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">03</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do I get started?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                It starts with a conversation. Share your goals, current challenges, and
+                budget range through our contact form or a quick call.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="font-normal text-white/80">Discovery call</strong> — we understand your business and objectives.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="font-normal text-white/80">Proposal</strong> — you receive a scope, timeline, and pricing document.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="font-normal text-white/80">Onboarding</strong> — once approved and the advance is received, we kick off.</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 04 · Pricing -->
+          <details id="q4" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">04</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How much do your services cost?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Pricing depends on scope, channels, deliverables, and the level of
+                ongoing management required. Because of that, we quote per project
+                rather than publish fixed rates.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Project-based pricing for one-time work like websites or branding.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Monthly retainers for ongoing marketing, content, and ad management.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Ad spend and third-party costs (platforms, hosting, domains, stock assets) are billed separately.</span>
+                </li>
+              </ul>
+              <p>
+                A non-refundable advance is required before work begins, and invoices
+                are due within the period stated on the invoice.
+              </p>
+            </div>
+          </details>
+
+          <!-- 05 · Timelines -->
+          <details id="q5" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">05</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How long until I see results?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                It varies by channel and category. Paid campaigns can generate traffic
+                and leads within days, while SEO and organic social typically need
+                three to six months to build meaningful momentum.
+              </p>
+              <p>
+                We set expectations upfront in the proposal and review performance
+                against agreed milestones rather than vague promises.
+              </p>
+            </div>
+          </details>
+
+          <!-- 06 · Guarantees -->
+          <details id="q6" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">06</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you guarantee rankings or leads?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                No. Digital marketing results depend on factors outside anyone's
+                control — market conditions, platform algorithms, competition, pricing,
+                and the strength of your own product or offer.
+              </p>
+              <p>
+                What we do commit to is industry best practice, transparent reporting,
+                and continuous optimisation. We won't promise specific rankings, traffic
+                volumes, leads, revenue, or return on ad spend.
+              </p>
+            </div>
+          </details>
+
+          <!-- 07 · Business size -->
+          <details id="q7" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">07</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work with small businesses?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Yes. We work with early-stage startups, local businesses, D2C brands,
+                and established companies. The approach is scaled to fit your stage and
+                budget.
+              </p>
+              <p>
+                If your budget can't support the scope you need yet, we'll tell you
+                honestly and suggest a leaner starting point.
+              </p>
+            </div>
+          </details>
+
+          <!-- 08 · Ownership -->
+          <details id="q8" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">08</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Who owns the work you create?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Once the agreed fees are paid in full, ownership of final approved
+                deliverables created specifically for you transfers to you, unless
+                stated otherwise in the agreement.
+              </p>
+              <p>
+                Scalixo Media retains ownership of concepts, drafts, working files,
+                internal frameworks, and methodologies. Third-party assets such as
+                fonts, stock footage, and licensed software remain subject to their own
+                licences.
+              </p>
+              <p>
+                We may feature completed work in our portfolio unless you request
+                otherwise in writing.
+              </p>
+            </div>
+          </details>
+
+          <!-- 09 · Reporting -->
+          <details id="q9" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">09</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do you report on performance?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                You get a monthly report covering the metrics that matter to your goals
+                — reach, engagement, traffic, leads, cost per result, and spend — along
+                with commentary on what worked and what we're changing next.
+              </p>
+              <p>
+                Larger retainers can include scheduled review calls and access to live
+                dashboards.
+              </p>
+            </div>
+          </details>
+
+          <!-- 10 · Pausing / cancelling -->
+          <details id="q10" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">10</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Can I pause or cancel anytime?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Either party may terminate an engagement with written notice as
+                specified in the relevant agreement.
+              </p>
+              <p>
+                On termination, you remain responsible for fees covering work completed
+                up to the termination date, plus any non-cancellable third-party costs
+                already incurred on your behalf.
+              </p>
+            </div>
+          </details>
+
+          <!-- 11 · Locations -->
+          <details id="q11" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">11</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work outside Ahmedabad?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Absolutely. We're based in Ahmedabad, Gujarat, but we work with clients
+                across India and internationally. Most collaboration happens remotely
+                over email, calls, and shared workspaces.
+              </p>
+              <p>
+                In-person meetings can be arranged locally when needed.
+              </p>
+            </div>
+          </details>
+
+          <!-- 12 · Contact -->
+          <details id="q12" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
+            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">12</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Still have questions?</h2>
+              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
+            </summary>
+            <div class="faq-content mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
+              <p>
+                Reach out and we'll get back to you, usually within one business day.
+              </p>
+
+              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8">
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Address</div>
+                    <p class="mt-2 text-sm leading-relaxed text-white/70">
+                      301, 3rd Floor, Harvy Complex, Subhash Chowk,<br />
+                      Gurukul Rd, Memnagar, Ahmedabad,<br />
+                      Gujarat 380052
+                    </p>
+                  </div>
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Phone</div>
+                    <a href="tel:+919328792160"
+                      class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent md:text-2xl">
+                      +91 93287 92160
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a href="tel:+919328792160" data-magnetic
+                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                    Call us
+                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  </a>
+                  <a href="index.html#contact" data-magnetic
+                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                    Start a project
+                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT CTA ══════════ -->
+    <section id="contact-cta" class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-10" data-reveal>
+          <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">(03)</span>
+        </div>
+
+        <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-reveal>
+          Need More<br />Information<span class="text-accent">?</span>
+        </h2>
+
+        <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
+          data-reveal>
+          <a href="tel:+919328792160" data-magnetic
+            class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+            +91 93287 92160
+            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+          </a>
+          <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+            <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
+              class="transition-colors hover:text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/company/scalixomedia/posts/"
+              class="transition-colors hover:text-accent">LinkedIn</a>
+            <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+
+      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+
+      <span class="flex items-center gap-2">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        Ahmedabad <span id="clock">--:--:--</span>
+      </span>
+
+      <a href="#home" class="transition-colors hover:text-accent">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script src="script.js"></script>
+ 
+
+</body>
+
+</html>

@@ -4,38 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scalixo Media Agency — Portfolio</title>
+  <title>Scalixo Media — Social Media Marketing Agency, Ahmedabad</title>
   <meta name="description"
-    content="Full-service digital agency. Social Media, Performance Marketing, SEO, Web Development, Branding, Influencer Marketing." />
+    content="Scalixo Media is a performance-driven social media marketing agency in Ahmedabad. We grow brands through social media, performance marketing, SEO, and content that converts." />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon">
-
+  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
   <link rel="stylesheet" href="./tailwind.css" />
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+  <!-- Tailwind config: accent + ink colors (same as contact page) -->
 </head>
 
-<body class="font-sans">
+<body class="bg-ink font-sans text-white antialiased">
 
-  <!-- Cursor -->
+  <!-- ══════════ CURSOR & PROGRESS ══════════ -->
   <div class="cursor-ring"></div>
   <div class="cursor-dot"></div>
-
-  <!-- Progress -->
   <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
 
   <!-- ══════════ HEADER ══════════ -->
-  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
+  <header class="inset-x-0 top-0 z-50 mix-blend-difference">
     <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
-      <a href="#home" class="group relative flex items-center gap-3">
-        <!-- Soft blue glow behind logo -->
+      <a href="index.html" class="group relative flex items-center gap-3">
         <span
           class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-
-        <!-- Logo -->
         <img src="./assets/scalixo.png" alt="Scalixo Media"
           class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
       </a>
@@ -43,7 +38,7 @@
       <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
         <a href="#services" class="transition-opacity hover:opacity-25">Services</a>
         <a href="#work" class="transition-opacity hover:opacity-25">Work</a>
-        <a href="#contact" class="transition-opacity hover:opacity-25">Contact</a>
+        <a href="#contact" class="text-accent transition-opacity hover:opacity-50">Contact</a>
       </nav>
 
       <a href="#contact"
@@ -51,1380 +46,721 @@
         Start a project ↗
       </a>
 
-      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
-        Menu
-      </button>
+      <button id="menuBtn"
+        class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">Menu</button>
     </div>
 
+    <!-- Mobile menu -->
     <div id="mobileMenu"
       class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
       <a href="#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
       <a href="#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
-      <a href="#contact" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
+      <a href="#contact" class="mobile-link font-display text-5xl uppercase text-accent">Contact</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ══════════ HERO ══════════ -->
-    <section id="home"
-      class="relative flex min-h-[100svh] flex-col justify-between overflow-hidden px-6 pb-10 pt-32 md:px-10 md:pb-14">
-
-      <div id="heroSpotlight"
-        class="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity duration-700"
-        style="width: 620px; height: 620px;
-              background: radial-gradient(circle, rgba(28,88,227,.25) 0%, rgba(28,88,227,0) 65%);
-              filter: blur(40px);"></div>
-
+    <!-- ══════════ 1. HERO SECTION ══════════ -->
+    <section id="home" class="relative overflow-hidden px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-40">
+      <!-- Background glow -->
       <div
-        class="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+        class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+      </div>
+      <div
+        class="pointer-events-none absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-accent/5 blur-[120px]">
       </div>
 
-      <div class="relative mx-auto flex w-full max-w-[1500px] flex-1 flex-col justify-center">
+      <div class="relative mx-auto grid max-w-[1500px] gap-10 md:grid-cols-12 md:gap-14">
+        <!-- Left: copy -->
+        <div class="md:col-span-7">
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent" data-reveal>(We Build
+            Brands)</span>
 
-        <h1 class="font-display text-[clamp(2.4rem,7vw,5.5rem)] uppercase leading-[0.95]">
+          <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
+            We grow<br />brands on<br />
+            <span class="text-accent">social media</span><span class="text-accent">.</span>
+          </h1>
 
-          <span class="block animate-[fadeUp_0.9s_ease-out_both] [animation-delay:150ms]">
-            Grow your brand
-          </span>
+          <p class="mt-6 max-w-[520px] text-lg leading-relaxed text-white/70 md:text-xl" data-reveal>
+            Scalixo Media is a performance-driven social media marketing agency. We help brands grow through social
+            media, performance marketing, SEO, and content that converts.
+          </p>
 
-          <span class="block text-white animate-[fadeUp_0.9s_ease-out_both] [animation-delay:350ms]">
-            with strategy, content,
-          </span>
+          <div class="mt-10 flex flex-wrap items-center gap-5" data-reveal>
+            <a href="#contact"
+              class="shimmer-btn group inline-flex items-center gap-3 rounded-full px-8 py-5 font-mono text-[10px] uppercase tracking-[0.25em] transition-all duration-500 md:text-xs">
+              Book a Free Strategy Call
+              <span
+                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+            <a href="portfolio.html"
+              class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-8 py-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+              View Our Work
+              <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
 
-          <span class="block text-white animate-[fadeUp_0.9s_ease-out_both] [animation-delay:550ms]">
-            and performance marketing.
-          </span>
-        </h1>
-
-        <div
-          class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-white/45 animate-[fadeUp_0.9s_ease-out_both] [animation-delay:800ms]">
-          <a href="#contact" data-magnetic
-            class="cta-btn group inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white md:text-xs">
-            <span class="relative z-10 transition-colors duration-500">Start a project</span>
-            <span class="relative z-10 transition-transform duration-500 group-hover:translate-x-0.5">→</span>
-          </a>
+          <!-- Trust row -->
+          <div
+            class="mt-12 flex flex-wrap items-center gap-8 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35"
+            data-reveal>
+            <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> 50+ Brands
+              Grown</span>
+            <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> 4.9/5 Client
+              Rating</span>
+            <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Free
+              Consultation</span>
+          </div>
         </div>
-      </div>
 
-      <div class="relative mx-auto w-full max-w-[1500px] animate-[fadeIn_1s_ease-out_both] [animation-delay:1000ms]">
-        <div
-          class="flex flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-end">
-          <span class="flex items-center gap-3">
-            <span class="scroll-hint transition-colors hover:text-accent">Scroll</span>
-            <span class="relative block h-8 w-px overflow-hidden bg-white/20">
-              <span class="animate-scroll-line absolute inset-x-0 top-0 h-3 bg-accent"></span>
-            </span>
-          </span>
+        <!-- Right: hero image -->
+        <div class="md:col-span-5">
+          <div class="relative aspect-[4/5] w-full overflow-hidden rounded-3xl" data-reveal>
+            <img src="./assets/hero.png" alt="Scalixo Media Hero Image"
+              class="absolute inset-0 h-full w-full object-cover transition-all duration-500 hover:scale-105" />
+          </div>
+
         </div>
-      </div>
     </section>
 
-    <!-- ══════════ MARQUEE ══════════ -->
+    <!-- ══════════ SERVICES MARQUEE — IMAGES ══════════ -->
     <section class="overflow-hidden border-y border-white/10 py-6 md:py-8">
-      <div class="marquee-track flex w-max items-center gap-8 whitespace-nowrap md:gap-12">
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Social Media</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Performance</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Lead Generation</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Web Dev</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Branding</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Influencers</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Social Media</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Performance</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">SEO</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Web Dev</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Branding</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
-        <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Influencers</span>
-        <span class="text-xl text-accent md:text-2xl">✦</span>
+      <div class=" relative marquee-track flex w-max items-center gap-8 whitespace-nowrap md:gap-12">
+
+        <!-- Edge fades (optional — remove if you don't want them) -->
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-ink to-transparent md:w-32">
+        </div>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-ink to-transparent md:w-32">
+        </div>
+
+        <!-- Scrolling track -->
+        <div
+          class="flex w-max items-center gap-12 will-change-transform motion-safe:animate-marquee motion-reduce:animate-none group-hover:[animation-play-state:paused] md:gap-10">
+          <!-- ═══ Set 1 ═══ -->
+          <img src="./assets/C1.png" alt="Social Media" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+          <img src="./assets/C2.png" alt="Performance" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+          <img src="./assets/C3.png" alt="Lead Generation" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+          <img src="./assets/C4.png" alt="Web Dev" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+          <img src="./assets/C5.png" alt="Branding" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+          <img src="./assets/C6.png" alt="Influencers" class="h-24 w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+
+          <!-- ═══ Set 2 (duplicate for seamless loop) ═══ -->
+          <img src="./assets/C9.png" alt="" aria-hidden="true" class="h-auto w-auto shrink-0 object-contain md:h-24 bg-white rounded-full" />
+
+        </div>
       </div>
     </section>
 
-    <!-- ══════════ SERVICES OVERVIEW ══════════ -->
-    <section id="services" class="px-6 py-20 md:px-10 md:py-28">
+    <!-- ══════════ SERVICES — BENTO GRID ══════════ -->
+    <section id="services" class="scroll-mt-28 border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1500px]">
 
-        <div class="mb-10 flex items-end justify-between md:mb-16" data-reveal>
-          <div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(01)</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-none md:text-7xl">Services</h2>
-          </div>
-          <span class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white/35 md:block">
-            Click a card to jump to the work
-          </span>
+        <!-- Section Header -->
+        <div class="mb-14 max-w-[720px]" data-reveal>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(What We Do)</span>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+            Full-stack social<br />media growth.
+          </h2>
+          <p class="mt-5 leading-relaxed text-white/45">
+            From strategy and content to paid performance and analytics — we handle the complete growth engine
+            so you can focus on running your business.
+          </p>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
 
-          <a href="#service-01"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">01</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Social Media Marketing</h3>
-            </div>
-          </a>
-
-          <a href="#service-02"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">02</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Performance Marketing</h3>
-            </div>
-          </a>
-
-          <a href="#service-03"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">03</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Lead Generation</h3>
-            </div>
-          </a>
-
-          <a href="#service-04"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">04</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Website Development</h3>
-            </div>
-          </a>
-
-          <a href="#service-05"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">05</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Branding &amp; Identity</h3>
-            </div>
-          </a>
-
-          <a href="#service-06"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">06</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Influencer Marketing</h3>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 01 · SOCIAL MEDIA MARKETING ─── -->
-    <section id="service-01" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">01</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 01</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Social Media<br>Marketing</h2>
-          </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Scroll-stopping reels, viral carousels and community-first campaigns
-              that turned passive followers into paying customers.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">+340%</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Engagement</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-14" data-reveal>
-          <div class="mb-8 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Reels &amp; Shorts</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">04 pieces</span>
-          </div>
-
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-4 md:gap-6">
-
-            <!-- Reel 1 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/r8.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Casa Salon
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Reel · 0:44
-                </span>
-              </div>
-            </div>
-
-            <!-- Reel 2 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/r1.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Grace Coffee Cafe
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Reel · 0:22
-                </span>
-              </div>
-            </div>
-
-            <!-- Reel 3 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/r3.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Desi Rituals
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Reel · 0:30
-                </span>
-              </div>
-            </div>
-
-            <!-- Reel 4 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/r4.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Krupa Nails
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Reel · 0:18
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="mt-10" data-reveal>
-          <div class="mb-5 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Post Designs</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">03 pieces</span>
-          </div>
-          <div class="post-grid grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
-
-            <div class="post-card">
-              <img src="./assets/w5.jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Carousel · 6 slides</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Post Carousel</h4>
-              </div>
-            </div>
-
-            <div class="post-card">
-              <img src="./assets/w6.jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Static Post</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Weekly Tips</h4>
-              </div>
-            </div>
-
-            <div class="post-card">
-              <img src="./assets/w7.jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Story Set</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Creative Post</h4>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 02 · PERFORMANCE MARKETING ─── -->
-    <section id="service-02" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">02</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 02</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Performance<br>Marketing</h2>
-          </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Paid campaigns engineered for ROI. Creative ad videos and data-driven
-              funnels that turned ad spend into measurable revenue.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">5.8×</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Avg ROAS</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-14" data-reveal>
-          <div class="mb-8 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Ad Creatives</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">03 pieces</span>
-          </div>
-
-          <div class="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-2">
-
-            <!-- Ad 1 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/A1.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Amber Salon
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Ad · 0:15
-                </span>
-              </div>
-            </div>
-
-            <!-- Ad 2 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/A2.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-12 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Creata
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Ad · 0:18
-                </span>
-              </div>
-            </div>
-
-            <!-- Ad 3 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/A3.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Jewellery
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Ad · 0:18
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="mt-10" data-reveal>
-          <div class="mb-5 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Client Feedback</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">03 pieces</span>
-          </div>
-          <div class="post-grid grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
-
-            <div class="post-card">
-              <img src="./assets/p1 (2).jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Advertise</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Amber Salon</h4>
-              </div>
-            </div>
-
-            <div class="post-card">
-              <img src="./assets/p1 (5).jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Banner Set</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Display Network</h4>
-              </div>
-            </div>
-
-            <div class="post-card">
-              <img src="./assets/p1 (3).jpeg" alt="">
-              <div class="post-overlay">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-accent">Banner Set</span>
-                <h4 class="mt-2 font-display text-xl uppercase">Display Network</h4>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 03 · LEAD GENERATION ─── -->
-    <section id="service-03" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">03</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 03</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Lead Generation</h2>
-          </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Technical audits, content strategy and link building that pushed
-              clients to page one and kept them there.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">#1</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Less Cost Lead</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-10" data-reveal>
-          <div class="mb-5 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Content &amp; Reports</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">04 pieces · Click to
-              view</span>
-          </div>
-
-          <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4">
-
-            <!-- Card 1 -->
-            <button type="button" data-lightbox data-src="./assets/L1.png" data-category="Lead Details"
-              data-title="Lead"
-              class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                        transition-all duration-500 ease-out
-                        hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/L1.png" alt="Lead"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lead Details
-              </span>
-            </button>
-
-            <!-- Card 2 -->
-            <button type="button" data-lightbox data-src="./assets/L2.png" data-category="Lead Details"
-              data-title="Lead Details"
-              class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                        transition-all duration-500 ease-out
-                        hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/L2.png" alt="Lead Details"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lead Details
-              </span>
-            </button>
-
-            <!-- Card 3 -->
-            <button type="button" data-lightbox data-src="./assets/L3.png" data-category="Lead Details"
-              data-title="Lead Details"
-              class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                        transition-all duration-500 ease-out
-                        hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/L3.png" alt="Lead Details"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lead Details
-              </span>
-            </button>
-
-            <!-- Card 4 -->
-            <button type="button" data-lightbox data-src="./assets/L4.png" data-category="Lead Details"
-              data-title="Lead Details"
-              class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                        transition-all duration-500 ease-out
-                        hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/L4.png" alt="Lead Details"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lead Details
-              </span>
-            </button>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 04 · WEBSITE DEVELOPMENT ─── -->
-    <section id="service-04" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">04</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 04</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Web development</h2>
-          </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Fast, accessible and conversion-optimized websites — from marketing
-              sites to full web apps.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">98</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Lighthouse</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-10" data-reveal>
-          <div class="mb-5 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Live Projects</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">04 pieces · Click to
-              visit</span>
-          </div>
-
-          <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4">
-
-            <!-- Card 1 -->
-            <a href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer" class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                  transition-all duration-500 ease-out
-                  hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/w1.png" alt="Polycast CRM"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <path d="M15 3h6v6M10 14 21 3" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                CRM
-              </span>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer" class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                  transition-all duration-500 ease-out
-                  hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/w2.png" alt="Lavista E State"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <path d="M15 3h6v6M10 14 21 3" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lavista E State
-              </span>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer" class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                  transition-all duration-500 ease-out
-                  hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/w3.png" alt="Lavista Marketing"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <path d="M15 3h6v6M10 14 21 3" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Lavista Marketing
-              </span>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="https://property-management-app-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="group relative block w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-[#141414]
-                  transition-all duration-500 ease-out
-                  hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
-              <img src="./assets/w4.png" alt="Real E State CRM"
-                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span
-                class="absolute right-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 scale-75 -rotate-30 backdrop-blur transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-accent group-hover:border-accent">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <path d="M15 3h6v6M10 14 21 3" />
-                </svg>
-              </span>
-              <span
-                class="absolute bottom-2.5 left-2.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-[3px] font-mono text-[9px] uppercase tracking-[0.2em] text-white/85 backdrop-blur transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent/90">
-                Real EState CRM
-              </span>
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ LIGHTBOX MODAL ══════════ -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-10" aria-hidden="true"
-      role="dialog" aria-modal="true">
-
-      <div id="lightboxBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-md opacity-0"></div>
-
-      <div id="lightboxContent"
-        class="relative z-10 flex max-h-[92vh] w-full max-w-[1100px] flex-col opacity-0 translate-y-6">
-
-        <div class="mb-4 flex items-center justify-between gap-4">
+          <!-- ── 01 · Social Media Marketing ── -->
           <div
-            class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white/60 md:text-xs">
-            <span id="lightboxIndex" class="text-accent">01 / 04</span>
-            <span class="h-3 w-px bg-white/25"></span>
-            <span id="lightboxCategory">Long-form Blog</span>
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">Social Media Marketing</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                Complete social media management with content calendars, creative production, community
+                management, and platform-native growth strategies for Instagram, LinkedIn, and YouTube.
+              </p>
+
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">3.5x</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Avg. Follower Growth</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
           </div>
 
-          <button id="lightboxClose" type="button"
-            class="group inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/80 transition-all duration-300 hover:border-accent hover:text-accent md:text-xs">
-            Close
-            <span class="transition-transform duration-300 group-hover:rotate-90">✕</span>
-          </button>
-        </div>
+          <!-- ── 02 · Performance Marketing ── -->
+          <div
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">Performance Marketing</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                Data-driven Meta and Google Ads campaigns built for ROAS, with funnel strategy, creative
+                testing, audience targeting, and continuous optimization across every ad channel.
+              </p>
 
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">4.8x</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Average ROAS</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ── 03 · SEO & Content ── -->
+          <div
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">SEO & Content</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                Technical SEO, keyword research, blog content, and on-page optimization that builds
+                sustainable organic traffic and long-term authority for your brand online.
+              </p>
+
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">80%</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Organic Traffic</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ── 04 · Web Development ── -->
+          <div
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">Web Development</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                High-converting landing pages, business websites, and e-commerce stores engineered for
+                speed, SEO, and conversion — built to turn visitors into paying customers.
+              </p>
+
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">90/100</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">PageSpeed Score</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ── 05 · Branding & Identity ── -->
+          <div
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">05</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">Branding & Identity</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                Brand strategy, visual identity, logo design, and brand guidelines that make your business
+                instantly recognizable and unforgettable across every customer touchpoint.
+              </p>
+
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">20+</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Brands Shaped</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ── 06 · Influencer Marketing ── -->
+          <div
+            class="bento-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)] md:p-8"
+            data-reveal>
+            <span
+              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative flex h-full flex-col">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">06</span>
+              <h3 class="mt-4 font-display text-2xl uppercase leading-none text-white">Influencer Marketing</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-white/50">
+                Creator partnerships, UGC campaigns, and influencer collaborations that build trust, spark
+                authentic engagement, and drive real conversions for your brand.
+              </p>
+
+              <div class="mt-5 flex items-baseline gap-2  pt-5">
+                <span class="font-display text-2xl leading-none text-accent">1M+</span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Campaign Reach</span>
+              </div>
+
+              <a href="contact.html"
+                class="group/btn mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors duration-500 hover:text-accent">
+                Read More
+                <span class="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 4. STATS — NUMBER TICKERS ══════════ -->
+    <section class="border-b border-white/10 px-6 py-16 md:px-10 md:py-24">
+      <div class="mx-auto max-w-[1500px]">
         <div
-          class="relative flex flex-1 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
-          <img id="lightboxImg" src="" alt=""
-            class="max-h-[70vh] w-auto max-w-full object-contain opacity-0 scale-95 transition-all duration-500 ease-out" />
+          class="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-4">
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10" data-reveal>
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="number-ticker"
+                data-value="50">0</span>+</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Brands Grown</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10" data-reveal>
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl">₹<span class="number-ticker"
+                data-value="12">0</span>Cr+</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Ad Spend Managed</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10" data-reveal>
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="number-ticker"
+                data-value="95">0</span>%</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Client Retention</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10" data-reveal>
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="number-ticker"
+                data-value="4.9" data-decimals="1">0</span></div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Client Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <button id="lightboxPrev" type="button" aria-label="Previous"
-            class="absolute left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white backdrop-blur transition-all duration-300 hover:border-accent hover:bg-accent md:left-5 md:h-12 md:w-12">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          </button>
-
-          <button id="lightboxNext" type="button" aria-label="Next"
-            class="absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white backdrop-blur transition-all duration-300 hover:border-accent hover:bg-accent md:right-5 md:h-12 md:w-12">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
+    <!-- ══════════ 5. PROCESS / HOW WE WORK ══════════ -->
+    <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-14 max-w-[720px]" data-reveal>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(How We Work)</span>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+            A growth system,<br />not guesswork.
+          </h2>
+          <p class="mt-5 leading-relaxed text-white/45">
+            Every engagement follows a proven four-phase framework designed for clarity, speed, and measurable
+            results.
+          </p>
         </div>
 
-        <div class="mt-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h3 id="lightboxTitle" class="font-display text-2xl uppercase leading-none text-white md:text-3xl">
-              Ultimate Guide 2025
-            </h3>
-            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
-              Use ← → keys to navigate · ESC to close
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-6">
+          <!-- Step 1 -->
+          <div
+            class="process-step group relative rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/60 md:p-9"
+            data-reveal>
+            <div
+              class="font-display text-5xl leading-none text-white/10 transition-colors duration-500 group-hover:text-accent/30 md:text-6xl">
+              01</div>
+            <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Discover</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Deep-dive audit of your brand, audience, competitors, and current marketing performance.
+            </p>
+          </div>
+          <!-- Step 2 -->
+          <div
+            class="process-step group relative rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/60 md:p-9"
+            data-reveal>
+            <div
+              class="font-display text-5xl leading-none text-white/10 transition-colors duration-500 group-hover:text-accent/30 md:text-6xl">
+              02</div>
+            <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Strategize</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Custom growth roadmap with channel mix, content pillars, budget allocation, and KPIs.
+            </p>
+          </div>
+          <!-- Step 3 -->
+          <div
+            class="process-step group relative rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/60 md:p-9"
+            data-reveal>
+            <div
+              class="font-display text-5xl leading-none text-white/10 transition-colors duration-500 group-hover:text-accent/30 md:text-6xl">
+              03</div>
+            <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Execute</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Content production, campaign launch, daily optimization, and agile creative iteration.
+            </p>
+          </div>
+          <!-- Step 4 -->
+          <div
+            class="process-step group relative rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/60 md:p-9"
+            data-reveal>
+            <div
+              class="font-display text-5xl leading-none text-white/10 transition-colors duration-500 group-hover:text-accent/30 md:text-6xl">
+              04</div>
+            <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Scale</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Double down on what works, expand to new channels, and build compounding growth loops.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── 05 · BRANDING & IDENTITY ─── -->
-    <section id="service-05" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">05</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 05</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Branding &amp;<br>Identity Design
+    <!-- ══════════ 6. FEATURED WORK ══════════ -->
+    <section id="work" class="scroll-mt-28 border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-14 flex flex-wrap items-end justify-between gap-6" data-reveal>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Our Work</span>
+            <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">Results that speak.
             </h2>
           </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Logos, visual systems and brand films that give companies a voice
-              people actually remember.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">28</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Brands built</div>
-            </div>
-          </div>
+          <a href="contact.html"
+            class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45 transition-colors hover:text-accent">
+            Start a project ↗
+          </a>
         </div>
 
-        <div class="mt-10" data-reveal>
-          <div class="mb-5 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Identity Pieces</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">03 pieces</span>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-6">
+
+          <!-- ═══════════ Case Study 1 · Fashion ═══════════ -->
+          <a href="https://cpplcrm.com/" data-reveal
+            class="work-card group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
+
+            <!-- Image / visual -->
+            <div
+              class="flex h-[320px] items-center justify-center bg-gradient-to-br from-accent/10 to-transparent md:h-[400px]">
+              <img src="./assets/w1.png" alt="Fashion Brand Growth"
+                class="h-full w-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <!-- Hover overlay (darkens the image + reveals CTA) -->
+            <div
+              class="pointer-events-none absolute inset-0 bg-ink/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            </div>
+
+            <!-- Hover CTA chip (top-right) -->
+            <div
+              class="pointer-events-none absolute right-6 top-6 flex h-12 w-12 translate-y-2 items-center justify-center rounded-full border border-accent/60 bg-ink/90 text-accent opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </div>
+
+            <!-- Content overlay -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/80 to-transparent p-7 md:p-9">
+              <div class="flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                <span>Social Media</span>
+                <span class="h-2 w-px bg-white/20"></span>
+                <span>Instagram</span>
+              </div>
+              <h3 class="mt-2 font-display text-2xl uppercase leading-none text-white">Fashion Brand Growth</h3>
+              <div class="mt-3 flex gap-6">
+                <div>
+                  <span class="font-display text-xl text-accent">+320%</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">Followers</span>
+                </div>
+                <div>
+                  <span class="font-display text-xl text-accent">6.1x</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">ROAS</span>
+                </div>
+              </div>
+
+              <!-- "View Case Study" reveal link (slides up from below) -->
+              <div class="mt-5 flex items-center gap-2 overflow-hidden">
+                <span
+                  class="translate-y-6 font-mono text-[10px] uppercase tracking-[0.25em] text-accent opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  View Case Study
+                </span>
+                <span
+                  class="translate-y-6 text-accent opacity-0 transition-all duration-500 delay-75 group-hover:translate-y-0 group-hover:opacity-100">→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ═══════════ Case Study 2 · SaaS ═══════════ -->
+          <a href="https://property-management-app-seven.vercel.app/" data-reveal
+            class="work-card group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
+
+            <div
+              class="flex h-[320px] items-center justify-center bg-gradient-to-br from-accent/5 to-transparent md:h-[400px]">
+              <img src="./assets/w4.png" alt="SaaS Lead Generation"
+                class="h-full w-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-ink/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            </div>
+
+            <div
+              class="pointer-events-none absolute right-6 top-6 flex h-12 w-12 translate-y-2 items-center justify-center rounded-full border border-accent/60 bg-ink/90 text-accent opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/80 to-transparent p-7 md:p-9">
+              <div class="flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                <span>Performance</span>
+                <span class="h-2 w-px bg-white/20"></span>
+                <span>LinkedIn</span>
+              </div>
+              <h3 class="mt-2 font-display text-2xl uppercase leading-none text-white">SaaS Lead Generation</h3>
+              <div class="mt-3 flex gap-6">
+                <div>
+                  <span class="font-display text-xl text-accent">₹42</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">Cost per Lead</span>
+                </div>
+                <div>
+                  <span class="font-display text-xl text-accent">280+</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">Leads/mo</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex items-center gap-2 overflow-hidden">
+                <span
+                  class="translate-y-6 font-mono text-[10px] uppercase tracking-[0.25em] text-accent opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  View Case Study
+                </span>
+                <span
+                  class="translate-y-6 text-accent opacity-0 transition-all duration-500 delay-75 group-hover:translate-y-0 group-hover:opacity-100">→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ═══════════ Case Study 3 · E-Commerce ═══════════ -->
+          <a href="https://www.lavistamarketingagency.com/" data-reveal
+            class="work-card group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_20px_45px_-20px_rgba(28,88,227,0.55)]">
+
+            <div
+              class="flex h-[320px] items-center justify-center bg-gradient-to-br from-accent/10 to-transparent md:h-[400px]">
+              <img src="./assets/w3.png" alt="E-Commerce Scaling"
+                class="h-full w-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-ink/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            </div>
+
+            <div
+              class="pointer-events-none absolute right-6 top-6 flex h-12 w-12 translate-y-2 items-center justify-center rounded-full border border-accent/60 bg-ink/90 text-accent opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/80 to-transparent p-7 md:p-9">
+              <div class="flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                <span>E-Commerce</span>
+                <span class="h-2 w-px bg-white/20"></span>
+                <span>Meta Ads</span>
+              </div>
+              <h3 class="mt-2 font-display text-2xl uppercase leading-none text-white">E-Commerce Scaling</h3>
+              <div class="mt-3 flex gap-6">
+                <div>
+                  <span class="font-display text-xl text-accent">+540%</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">Revenue</span>
+                </div>
+                <div>
+                  <span class="font-display text-xl text-accent">3.2x</span>
+                  <span class="ml-1 font-mono text-[9px] text-white/40">ROAS</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex items-center gap-2 overflow-hidden">
+                <span
+                  class="translate-y-6 font-mono text-[10px] uppercase tracking-[0.25em] text-accent opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  View Case Study
+                </span>
+                <span
+                  class="translate-y-6 text-accent opacity-0 transition-all duration-500 delay-75 group-hover:translate-y-0 group-hover:opacity-100">→</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 7. TESTIMONIALS — VERTICAL MARQUEE ══════════ -->
+    <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-14 max-w-[720px]" data-reveal>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Client Love)</span>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">Don't take our word for
+            it.</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-9" data-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/60">
+              "Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew
+              from 2K to 18K followers and our DMs are full of qualified leads. The team is responsive,
+              creative, and data-driven."
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div
+                class="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center font-display text-sm text-accent">
+                RK</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Rahul K.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, NovaFit</div>
+              </div>
+            </div>
           </div>
-          <div class="post-grid grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4">
 
-            <div class="post-card">
-              <img src="./assets/p1.jpeg" alt="">
-              <div class="post-overlay">
-                <h4 class="mt-2 font-display text-xl uppercase">Burger</h4>
+          <!-- Testimonial 2 -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-9" data-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/60">
+              "We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks
+              our ROAS went from 1.8x to 5.4x. Their reporting is transparent and they actually care about
+              your numbers."
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div
+                class="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center font-display text-sm text-accent">
+                PM</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Priya M.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CMO, TechNest</div>
               </div>
             </div>
+          </div>
 
-            <div class="post-card">
-              <img src="./assets/p2.jpeg" alt="">
-              <div class="post-overlay">
-                <h4 class="mt-2 font-display text-xl uppercase">Pasta</h4>
+          <!-- Testimonial 3 -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-9" data-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/60">
+              "The best agency we've worked with in Ahmedabad. They understand both brand building and
+              performance. Our website traffic is up 210% and our content actually converts. Highly
+              recommended."
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div
+                class="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center font-display text-sm text-accent">
+                AS</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Amit S.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Director, UrbanRoots</div>
               </div>
             </div>
-
-            <div class="post-card">
-              <img src="./assets/p3.jpeg" alt="">
-              <div class="post-overlay">
-                <h4 class="mt-2 font-display text-xl uppercase">Sand Wiches</h4>
-              </div>
-            </div>
-
-            <div class="post-card">
-              <img src="./assets/p4.jpeg" alt="">
-              <div class="post-overlay">
-                <h4 class="mt-2 font-display text-xl uppercase">Maggie</h4>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── 06 · INFLUENCER MARKETING ─── -->
-    <section id="service-06" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <span class="watermark absolute -top-6 right-4 text-[220px] md:text-[340px]">06</span>
-
-      <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
-          <div class="md:col-span-5">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">/ Service 06</span>
-            <h2 class="mt-3 font-display text-5xl uppercase leading-[0.9] md:text-7xl">Influencer<br>Marketing</h2>
-          </div>
-          <div class="md:col-span-4 md:col-start-7">
-            <p class="text-base leading-relaxed text-white/60 md:text-lg">
-              Authentic creator partnerships and UGC campaigns that scaled brands
-              through trusted voices.
-            </p>
-          </div>
-          <div class="flex gap-8 md:col-span-2 md:col-start-11">
-            <div>
-              <div class="font-display text-3xl leading-none text-accent">42M</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Reach</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-14" data-reveal>
-          <div class="mb-8 flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45">→ Creator Collabs</span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">03 pieces</span>
-          </div>
-
-          <div class="grid grid-cols-1 gap-2 md:grid-cols-4
-             md:gap-2">
-
-            <!-- Collab 1 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/S1.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Real Estate
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ UGC · 0:25
-                </span>
-              </div>
-            </div>
-
-            <!-- Collab 2 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/S2.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Real Estate
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Collab · 0:40
-                </span>
-              </div>
-            </div>
-
-            <!-- Collab 3 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/s3.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Real Estate
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Collab · 0:35
-                </span>
-              </div>
-            </div>
-
-
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
-              <div
-                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
-                <div
-                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
-                </div>
-
-                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
-                  <source src="https://qofjeukekthtxrkbpasd.supabase.co/storage/v1/object/public/portfolio-reels/s4.mp4"
-                    type="video/mp4">
-                </video>
-
-                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
-                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">
-                    Amber Salon
-                  </p>
-                </div>
-
-                <button
-                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
-                  <span
-                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
-                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
-                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                </button>
-
-                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
-                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
-                </div>
-
-                <span
-                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">
-                  ▶ Collab · 0:48
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ ABOUT ══════════ -->
-    <section id="about" class="border-t border-white/10 px-6 py-24 md:px-10 md:py-36">
-      <div class="mx-auto grid max-w-[1500px] gap-12 md:grid-cols-12 md:gap-16">
-        <div class="md:col-span-5" data-reveal>
-          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(02)</span>
-          <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] md:text-5xl">
-            A full-stack<br />creative partner.
+    <!-- ══════════ 8. WHY SCALIXO — VALUE PROPS ══════════ -->
+    <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-14 max-w-[720px]" data-reveal>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Why Scalixo)</span>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+            Marketing guidance designed<br />around your business goals.
           </h2>
         </div>
-        <div class="space-y-6 md:col-span-6 md:col-start-7" data-reveal>
-          <p class="text-lg leading-relaxed text-white/75 md:text-xl">
-            Strategy, content, design and code — all under one roof. That's why
-            brands choose us for the long haul.
-          </p>
-          <p class="leading-relaxed text-white/45">
-            We combine performance marketing, creative storytelling and modern
-            engineering to help brands grow. Every deliverable is crafted with
-            intent — from the first script to the final pixel.
-          </p>
 
-          <div class="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10">
+        <div
+          class="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+            <div class="font-display text-4xl leading-none text-accent">01</div>
+            <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Experienced Team</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Work with professionals focused on strategy, content, performance, and measurable growth.
+            </p>
+          </div>
 
-            <div class="bg-ink p-6">
-              <div class="font-display text-4xl leading-none text-accent">20+</div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-                Brands helped to grow online
-              </div>
-            </div>
+          <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+            <div class="font-display text-4xl leading-none text-accent">02</div>
+            <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Performance Focused</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Campaigns planned to improve leads, conversions, visibility, and long-term brand growth.
+            </p>
+          </div>
 
-            <div class="bg-ink p-6">
-              <div class="font-display text-xl uppercase leading-none text-accent sm:text-2xl md:text-3xl">
-                Multi-Industry
-              </div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-                Marketing expertise
-              </div>
-            </div>
+          <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+            <div class="font-display text-4xl leading-none text-accent">03</div>
+            <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Personalized Consultation</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Get practical suggestions based on your current marketing stage and business goals.
+            </p>
+          </div>
 
-            <div class="bg-ink p-6">
-              <div class="font-display text-xl uppercase leading-none text-accent sm:text-2xl md:text-3xl">
-                Dedicated
-              </div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-                Strategy and execution teams
-              </div>
-            </div>
-
-            <div class="bg-ink p-6">
-              <div class="font-display text-xl uppercase leading-none text-accent sm:text-2xl md:text-3xl">
-                Transparent
-              </div>
-              <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-                Clear reporting and planning
-              </div>
-            </div>
-
+          <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
+            <div class="font-display mb-4 text-4xl leading-none text-accent">04</div>
+            <h3 class="mb-6 font-display text-xl uppercase leading-none text-white">Transparent Process</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/45">
+              Clear communication, practical reporting, and a growth system built with accountability.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════ CONTACT ══════════ -->
-    <section id="contact" class="border-t border-white/10 px-6 py-24 md:px-10 md:py-36">
+    <!-- ══════════ 9. FINAL CTA ══════════ -->
+    <section id="contact" class="scroll-mt-28 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
       <div class="mx-auto max-w-[1500px]">
         <div class="mb-10" data-reveal>
-          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(03)</span>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Let's Talk)</span>
         </div>
 
         <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-reveal>
-          Let's grow<br />together<span class="text-accent">.</span>
+          Your growth<br />starts with one<br />conversation<span class="text-accent">.</span>
         </h2>
 
         <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
           data-reveal>
-          <a href="tel:+919328792160" data-magnetic
-            class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
-            +91 9328792160
-            <span
-              class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-          </a>
+          <div class="flex flex-wrap gap-5">
+            <a href="tel:+919328792160"
+              class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+              +91 93287 92160
+              <span
+                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+            <a href="mailto:hello@scalixomedia.com"
+              class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+              hello@scalixomedia.com
+              <span
+                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+          </div>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
-            <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
-              class="transition-colors hover:text-accent">Instagram</a>
-            <a href="https://www.linkedin.com/company/scalixomedia/posts/"
+            <a href="https://www.instagram.com/scalixo.media" class="transition-colors hover:text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/company/scalixomedia"
               class="transition-colors hover:text-accent">LinkedIn</a>
             <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
           </div>
@@ -1438,21 +774,17 @@
   <footer class="border-t border-white/10 px-6 py-8 md:px-10">
     <div
       class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
-
       <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
-
       <span class="flex items-center gap-2">
         <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
         Ahmedabad <span id="clock">--:--:--</span>
       </span>
-
       <a href="#home" class="transition-colors hover:text-accent">Back to top ↑</a>
     </div>
   </footer>
 
   <!-- ══════════ SCRIPTS ══════════ -->
   <script src="script.js"></script>
-
 </body>
 
 </html>

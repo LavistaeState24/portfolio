@@ -433,4 +433,70 @@ function handleFormSubmit(e) {
 
   window.open(waUrl, '_blank', 'noopener,noreferrer');
   return false;
+
 }
+
+// faq page
+// FAQ Accordion: only one open at a time
+document.querySelectorAll('.faq-item').forEach((item) => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      document.querySelectorAll('.faq-item').forEach((other) => {
+        if (other !== item) other.open = false;
+      });
+    }
+  });
+});
+
+// Open accordion when TOC link is clicked
+document.querySelectorAll('.toc-link').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target && target.classList.contains('faq-item')) {
+      e.preventDefault();
+      target.open = true;
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  });
+});
+
+// Open from hash on load
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target && target.classList.contains('faq-item')) {
+      target.open = true;
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+});
+
+
+// home page no js 
+// ── GSAP reveals (same pattern as home page) ──
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── Number tickers ──
+  const tickers = document.querySelectorAll('.number-ticker');
+  tickers.forEach((el) => {
+    const target = parseFloat(el.dataset.value);
+    const decimals = parseInt(el.dataset.decimals || '0');
+    const obj = { val: 0 };
+    ScrollTrigger.create({
+      trigger: el, start: 'top 90%',
+      onEnter: () => {
+        gsap.to(obj, {
+          val: target, duration: 2, ease: 'power2.out',
+          onUpdate: () => { el.textContent = obj.val.toFixed(decimals); },
+        });
+      },
+      once: true,
+    });
+  });
+
+});
