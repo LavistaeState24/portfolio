@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — Scalixo Media Agency</title>
+    <meta name="description"
+        content="Get in touch with Scalixo Media. Book a free strategy call, discuss a campaign, or enquire about our services. Based in Ahmedabad, Gujarat." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./input.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans">
+
+    <!-- Cursor -->
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Progress -->
+    <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+    <!-- ══════════ HEADER ══════════ -->
+    <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+
+            <a href="index.html" class="group relative flex items-center gap-3">
+                <span
+                    class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+
+                <img src="./assets/scalixo.png" alt="Scalixo Media"
+                    class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+            </a>
+
+            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
+                <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
+                <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
+                <a href="contact.html" class="text-accent transition-opacity hover:opacity-50">Contact</a>
+            </nav>
+
+            <a href="#contact-form"
+                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
+                Start a project ↗
+            </a>
+
+            <button id="menuBtn"
+                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
+                Menu
+            </button>
+        </div>
+
+        <div id="mobileMenu"
+            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
+            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
+            <a href="contact.html" class="mobile-link font-display text-5xl uppercase text-accent">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="relative overflow-hidden px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
+
+            <div
+                class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+            </div>
+
+            <div class="relative mx-auto max-w-[1500px]">
+
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
+                    data-reveal>
+                    <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                    <span class="text-white/20">/</span>
+                    <span class="text-white/70">Social Media Marketing</span>
+                </div>
+
+                <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
+                    Turn Followers<br />Into Customers<span class="text-accent">.</span>
+                </h1>
+
+                <div class="mt-4 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
+                    <div class="md:col-span-5">
+                        <p class="text-lg leading-relaxed text-white/75 md:text-xl">
+                            Grow your brand with strategic content, engaging creatives, and
+                            performance-driven social media marketing that builds trust, increases
+                            visibility, and generates real business growth.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">
+                                Growth</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Platforms
+                            </div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">4+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Reporting
+                            </div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">
+                                Monthly
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════ MARQUEE ══════════ -->
+        <section class="overflow-hidden border-y border-white/10 py-6 md:py-8">
+            <div class="marquee-track flex w-max items-center gap-8 whitespace-nowrap md:gap-12">
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Social Media</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Performance</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Lead Generation</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Web Dev</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Branding</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Influencers</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Social Media</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Performance</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">SEO</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Web Dev</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Branding</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+                <span class="font-display text-3xl uppercase text-white/80 md:text-5xl">Influencers</span>
+                <span class="text-xl text-accent md:text-2xl">✦</span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             WHY IT MATTERS
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-10 md:grid-cols-12 md:gap-14">
+
+                    <div class="md:col-span-5" data-reveal>
+                        <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(01) — Why It
+                            Matters</span>
+                        <h2
+                            class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                            Build A Brand<br />People Remember
+                        </h2>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7" data-reveal>
+                        <p class="text-lg leading-relaxed text-white/55">
+                            Today's customers don't just buy products. They buy brands they trust.
+                            Social media is where your audience discovers your business, interacts
+                            with your content, and decides whether to choose you over your competitors.
+                        </p>
+                        <p class="mt-5 text-lg leading-relaxed text-white/55">
+                            At Scalixo Media, we create social media strategies designed to increase
+                            brand awareness, build credibility, engage your audience, and convert
+                            attention into qualified leads.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             SERVICES
+        ═══════════════════════════════════════════════════════════ -->
+        <section id="services" class="scroll-mt-24 border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mx-auto mb-16 max-w-[760px] text-center" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(02) — What We
+                        Offer</span>
+                    <h2
+                        class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                        Complete Social Media Management
+                    </h2>
+                    <p class="mt-6 leading-relaxed text-white/45">
+                        From strategy to creatives, reels, posting, and reporting — we manage your
+                        social media with a growth-focused system.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- 1 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl p-10 transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 13.125c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v6.75c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Social Media Strategy</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Custom growth strategy based on your business goals, audience, and
+                                market positioning.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 2 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Content Creation</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Professional graphics, carousel posts, stories, and creatives that
+                                make your brand look premium.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 3 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Reels &amp; Video Production</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Short-form videos planned and edited to increase reach,
+                                engagement, and brand recall.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 4 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Content Planning</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Monthly content calendars with strategic themes, posting
+                                schedules, and campaign ideas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 5 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Community Management</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Audience engagement support through comments, messages, and
+                                stronger brand interactions.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 6 -->
+                    <article data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)] md:p-9">
+                        <span
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                        <div class="relative">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Performance Tracking</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Monthly reports with insights, content performance, and clear
+                                optimization recommendations.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+           PLATFORMS
+         ═══════════════════════════════════════════════════════════ -->
+        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <!-- Heading -->
+                <div class="mx-auto mb-14 max-w-[760px] text-center" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(03) — Platforms We
+                        Manage</span>
+                    <h2
+                        class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                        Your Brand, Everywhere<br class="hidden md:block" /> Your Audience Is
+                    </h2>
+                </div>
+
+                <!-- Platform Cards -->
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Instagram -->
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 min-h-[260px] transition-all duration-500 hover:-translate-y-2 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_25px_60px_-25px_rgba(28,88,227,0.55)]">
+
+                        <span
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/20 opacity-0 blur-3xl p-10 transition-opacity duration-700 group-hover:opacity-100"></span>
+
+
+
+                        <div class="relative flex h-full flex-col">
+
+                            <!-- Icon -->
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:border-accent/60 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-instagram text-2xl"></i>
+                            </div>
+
+                            <h3
+                                class="font-display text-2xl uppercase tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Instagram</h3>
+
+                            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">
+                                Reels · Stories · Feed</p>
+
+                            <div
+                                class="mt-auto pt-6 opacity-0 translate-y-3 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="flex h-px w-full bg-white/10">
+                                    <span
+                                        class="h-px w-0 bg-accent transition-all duration-700 group-hover:w-full"></span>
+                                </span>
+                                <p class="mt-4 text-xs leading-relaxed text-white/45">
+                                    Visual-first content built to stop the scroll and drive saves.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Facebook -->
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 min-h-[260px] transition-all duration-500 hover:-translate-y-2 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_25px_60px_-25px_rgba(28,88,227,0.55)]">
+
+                        <span
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/20 opacity-0 blur-3xl p-10 transition-opacity duration-700 group-hover:opacity-100"></span>
+
+
+
+                        <div class="relative flex h-full flex-col">
+
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:border-accent/60 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-facebook-f text-2xl"></i>
+                            </div>
+
+                            <h3
+                                class="font-display text-2xl uppercase tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Facebook</h3>
+
+                            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">
+                                Pages · Ads · Community</p>
+
+                            <div
+                                class="mt-auto pt-6 opacity-0 translate-y-3 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="flex h-px w-full bg-white/10">
+                                    <span
+                                        class="h-px w-0 bg-accent transition-all duration-700 group-hover:w-full"></span>
+                                </span>
+                                <p class="mt-4 text-xs leading-relaxed text-white/45">
+                                    Community building and paid reach that compounds over time.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 min-h-[260px] transition-all duration-500 hover:-translate-y-2 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_25px_60px_-25px_rgba(28,88,227,0.55)]">
+
+                        <span
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/20 opacity-0 blur-3xl p-10 transition-opacity duration-700 group-hover:opacity-100"></span>
+
+                        <div class="relative flex h-full flex-col">
+
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:border-accent/60 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-linkedin-in text-2xl"></i>
+                            </div>
+
+                            <h3
+                                class="font-display text-2xl uppercase tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                LinkedIn</h3>
+
+                            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">
+                                B2B · Authority · Leads</p>
+
+                            <div
+                                class="mt-auto pt-6 opacity-0 translate-y-3 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="flex h-px w-full bg-white/10">
+                                    <span
+                                        class="h-px w-0 bg-accent transition-all duration-700 group-hover:w-full"></span>
+                                </span>
+                                <p class="mt-4 text-xs leading-relaxed text-white/45">
+                                    Positioning your team as the authority in your industry.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- YouTube -->
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 min-h-[260px] transition-all duration-500 hover:-translate-y-2 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_25px_60px_-25px_rgba(28,88,227,0.55)]">
+
+                        <span
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/20 opacity-0 blur-3xl p-10 transition-opacity duration-700 group-hover:opacity-100"></span>
+
+
+
+                        <div class="relative flex h-full flex-col">
+
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:border-accent/60 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-youtube text-2xl"></i>
+                            </div>
+
+                            <h3
+                                class="font-display text-2xl uppercase tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                YouTube</h3>
+
+                            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">
+                                Shorts · Long-form</p>
+
+                            <div
+                                class="mt-auto pt-6 opacity-0 translate-y-3 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="flex h-px w-full bg-white/10">
+                                    <span
+                                        class="h-px w-0 bg-accent transition-all duration-700 group-hover:w-full"></span>
+                                </span>
+                                <p class="mt-4 text-xs leading-relaxed text-white/45">
+                                    Search-friendly video content that keeps working long-term.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+          PROCESS
+       ═══════════════════════════════════════════════════════════ -->
+        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-12 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between"
+                    data-reveal>
+                    <div>
+                        <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(04) — Our Process</span>
+                        <h2
+                            class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                            How We Grow<br class="hidden sm:block" /> Your Brand
+                        </h2>
+                    </div>
+                    <p class="max-w-md leading-relaxed text-white/45 md:pb-1 md:text-right">
+                        A repeatable six-step system that moves your brand from research to scale.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5">
+
+                        <!-- Step 01 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">01</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 01</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Research Your Business</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                We understand your brand, audience, competitors, and current content gaps.
+                            </p>
+                        </div>
+
+                        <!-- Step 02 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">02</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 02</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Create Content Strategy</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                We plan monthly themes, campaigns, content pillars, and platform direction.
+                            </p>
+                        </div>
+
+                        <!-- Step 03 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">03</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 03</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Design Creatives &amp; Reels</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                Our team creates graphics, carousels, reels, stories, and campaign assets.
+                            </p>
+                        </div>
+
+                        <!-- Step 04 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">04</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 04</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Publish &amp; Engage</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                We maintain consistency with planned posting and audience interaction.
+                            </p>
+                        </div>
+
+                        <!-- Step 05 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">05</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 05</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Analyze Performance</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                We track reach, engagement, saves, shares, traffic, and lead quality.
+                            </p>
+                        </div>
+
+                        <!-- Step 06 -->
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-8">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-display text-5xl leading-none tracking-tight text-white/15 transition-colors duration-500 group-hover:text-accent/60">06</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Step 06</span>
+                            </div>
+                            <div class="mt-6 h-px w-10 bg-accent/70 transition-all duration-500 group-hover:w-full"></div>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-tight tracking-tight text-white transition-colors duration-500 group-hover:text-accent">
+                                Optimize &amp; Scale</h3>
+                            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
+                                We improve what works and scale the content that drives results.
+                            </p>
+                        </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             WHY CHOOSE SCALIXO
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-12 md:grid-cols-12 md:gap-14">
+
+                    <div class="md:col-span-5" data-reveal>
+                        <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(05) — Why Choose
+                            Scalixo</span>
+                        <h2
+                            class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-5xl">
+                            Social Media With Strategy, Not Random Posting
+                        </h2>
+                        <p class="mt-6 leading-relaxed text-white/45">
+                            We combine content strategy, creative direction, platform understanding,
+                            and analytics to build a social presence that supports business growth.
+                        </p>
+                        <a href="contact.html"
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:bg-accent/85">
+                            Start Your Project
+                            <span
+                                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2">
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
+                                    </h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">No random posting. Every
+                                        content piece has a purpose.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Creative
+                                        Excellence</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Content designed to stop
+                                        scrolling and build recall.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Consistent
+                                        Branding</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every post strengthens your
+                                        brand identity.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Audience
+                                        Growth</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Build an engaged community,
+                                        not fake followers.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Data Driven
+                                    </h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every decision is backed by
+                                        analytics and insights.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent
+                                        Reporting</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Monthly reports with clear,
+                                        measurable results.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mx-auto mb-16 max-w-[760px] text-center" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(06) — Results You Can
+                        Expect</span>
+                    <h2
+                        class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                        What Success Looks Like
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                            Increased Brand Awareness</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            More people discover, remember, and recognize your brand online.
+                        </p>
+                    </div>
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Higher
+                            Engagement Rate</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            Better interaction through saves, shares, comments, and profile visits.
+                        </p>
+                    </div>
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">More
+                            Website Traffic</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            Social content that sends more interested visitors to your website.
+                        </p>
+                    </div>
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Better
+                            Customer Trust</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            Consistent content builds credibility before customers contact you.
+                        </p>
+                    </div>
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">More
+                            Qualified Leads</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            Content designed to attract people who are more likely to enquire.
+                        </p>
+                    </div>
+
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                        <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                            Consistent Online Presence</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-white/45">
+                            Your brand stays active, visible, and professional every month.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             PORTFOLIO
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mx-auto mb-16 max-w-[760px] text-center" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(07) — Portfolio
+                        Showcase</span>
+                    <h2
+                        class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl">
+                        See Our Social Work In Action
+                    </h2>
+                    <p class="mt-6 leading-relaxed text-white/45">
+                        Explore recent content and creative work created to help brands increase
+                        attention and trust.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+
+                    <div data-reveal
+                        class="group flex flex-col rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Reel 01</span>
+                        <h3 class="mt-4 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                            Marketing Campaign</h3>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed text-white/45">
+                            Creative reel focused on brand visibility and engagement.
+                        </p>
+                        <a href="https://www.instagram.com/reel/DZpfkh1R00N/" target="_blank" rel="noopener noreferrer"
+                            class="mt-7 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent/10">
+                            Watch Reel
+                            <span
+                                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                        </a>
+                    </div>
+
+                    <div data-reveal
+                        class="group flex flex-col rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Reel 02</span>
+                        <h3 class="mt-4 font-display text-2xl uppercase leading-none tracking-tight text-white">Content
+                            Strategy</h3>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed text-white/45">
+                            Performance-driven content designed to attract and convert.
+                        </p>
+                        <a href="https://www.instagram.com/reel/DZz6RndM4EI/" target="_blank" rel="noopener noreferrer"
+                            class="mt-7 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent/10">
+                            Watch Reel
+                            <span
+                                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                        </a>
+                    </div>
+
+                    <div data-reveal
+                        class="group flex flex-col rounded-[20px] border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.45)]">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Reel 03</span>
+                        <h3 class="mt-4 font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
+                            Growth</h3>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed text-white/45">
+                            Results-focused creative that helps businesses stand out online.
+                        </p>
+                        <a href="https://www.instagram.com/reel/DaF0MCPMFE_/" target="_blank" rel="noopener noreferrer"
+                            class="mt-7 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent/10">
+                            Watch Reel
+                            <span
+                                class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             FINAL CTA
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-10" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(08)</span>
+                </div>
+
+                <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[0.92] tracking-tight"
+                    data-reveal>
+                    Your growth<br />starts with one<br />conversation<span class="text-accent">.</span>
+                </h2>
+
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
+                    data-reveal>
+
+                    <a href="tel:+919328792160"
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        +91 93287 92160
+                        <span
+                            class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+
+                    <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer"
+                            class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank"
+                            rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer"
+                            class="transition-colors hover:text-accent">Facebook</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════════ -->
+    <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+        <div
+            class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+
+            <a href="#" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
+
+      <!-- ══════════ SCRIPTS ══════════ -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
