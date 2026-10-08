@@ -480,6 +480,52 @@ body.lightbox-open {
   overflow: hidden;
 }
 
+/* Performance page reveal / split-word animation */
+body[data-page="performance"] [data-hero],
+body[data-page="performance"] [data-reveal],
+body[data-page="performance"] [data-split],
+body[data-page="performance"] [data-split-cta] {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 0.8s cubic-bezier(.16, 1, .3, 1), transform 0.8s cubic-bezier(.16, 1, .3, 1);
+}
+
+body[data-page="performance"] [data-hero].is-in,
+body[data-page="performance"] [data-reveal].is-in,
+body[data-page="performance"] [data-split].is-in,
+body[data-page="performance"] [data-split-cta].is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-page="performance"] .split-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(.16, 1, .3, 1), transform 0.7s cubic-bezier(.16, 1, .3, 1);
+  white-space: pre-wrap;
+}
+
+body[data-page="performance"] [data-hero-split].is-in .split-word,
+body[data-page="performance"] [data-split].is-in .split-word,
+body[data-page="performance"] [data-split-cta].is-in .split-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  body[data-page="performance"] [data-hero],
+  body[data-page="performance"] [data-reveal],
+  body[data-page="performance"] [data-split],
+  body[data-page="performance"] [data-split-cta],
+  body[data-page="performance"] .split-word {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* Tailwind doesn't ship -rotate-30; add one helper */
 .-rotate-30 {
   transform: rotate(-30deg);
