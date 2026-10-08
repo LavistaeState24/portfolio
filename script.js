@@ -214,6 +214,23 @@ if (fine) {
   });
 }
 
+
+if (!reduced) {
+  document.querySelectorAll("[data-magnetic]").forEach(el => {
+    const xTo = gsap.quickTo(el, "x", { duration: 0.6, ease: "power3.out" });
+    const yTo = gsap.quickTo(el, "y", { duration: 0.6, ease: "power3.out" });
+    el.addEventListener("mousemove", e => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) * 0.35;
+      const y = (e.clientY - rect.top - rect.height / 2) * 0.35;
+      xTo(x); yTo(y);
+    });
+    el.addEventListener("mouseleave", () => {
+      gsap.to(el, { x: 0, y: 0, duration: 0.8, ease: "elastic.out(1, 0.35)" });
+    });
+  });
+}
+
 /* ───────── Mobile menu ───────── */
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -675,5 +692,63 @@ document.addEventListener('DOMContentLoaded', () => {
       once: true,
     });
   });
+
+});
+// performance optimizations page
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof gsap === "undefined") return;
+
+  gsap.registerPlugin(ScrollTrigger);
+  if (typeof SplitText !== "undefined") gsap.registerPlugin(SplitText);
+  if (typeof DrawSVGPlugin !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+
+  /* ═══════════════════════════════════════════════════════
+                 14. ORBIT DOT
+              ═══════════════════════════════════════════════════════ */
+  gsap.utils.toArray(".orbit-dot").forEach((orbit) => {
+    gsap.to(orbit, { rotation: 360, duration: 8, repeat: -1, ease: "none", transformOrigin: "center center" });
+  });
+
+
+  /* ═══════════════════════════════════════════════════════
+     16. PROCESS STEP REVEAL + DRAWSVG
+  ═══════════════════════════════════════════════════════ */
+  gsap.utils.toArray(".process-step").forEach((step, i) => {
+    gsap.fromTo(step,
+      { x: -30, opacity: 0 },
+      {
+        x: 0, opacity: 1, duration: 0.9, delay: (i % 3) * 0.06, ease: "expo.out",
+        scrollTrigger: { trigger: step, start: "top 88%" },
+      }
+    );
+  });
+
+  /* ═══════════════════════════════════════════════════════
+                17. CTA HEADLINE — Char reveal
+             ═══════════════════════════════════════════════════════ */
+  const ctaHeadline = document.querySelector(".cta-headline");
+  if (ctaHeadline && !prefersReduced && typeof SplitText !== "undefined") {
+    const s = new SplitText(ctaHeadline, { type: "chars,words,lines" });
+    gsap.from(s.chars, {
+      opacity: 0, yPercent: 100,
+      stagger: 0.015, duration: 0.9, ease: "power4.out",
+      scrollTrigger: { trigger: ctaHeadline, start: "top 85%", once: true },
+    });
+  }
+
+
+
+  /* ═══════════════════════════════════════════════════════
+     21. MARQUEE PAUSE ON HOVER
+  ═══════════════════════════════════════════════════════ */
+  const marquee = document.querySelector(".marquee-track");
+  if (marquee) {
+    marquee.addEventListener("mouseenter", () => { marquee.style.animationPlayState = "paused"; });
+    marquee.addEventListener("mouseleave", () => { marquee.style.animationPlayState = "running"; });
+  }
+
 
 });

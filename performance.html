@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Marketing — Scalixo Media Agency</title>
+    <meta name="description"
+        content="Performance marketing services by Scalixo Media. Meta, Google, and YouTube ad campaigns engineered for leads, conversions, and measurable ROI. Based in Ahmedabad." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Tiny safelist shim so Tailwind CDN picks up dynamic classes (harmless with compiled build) -->
+    <style>
+        :root { color-scheme: dark; }
+        body { background-color: #0b0b0b; }
+        /* Conic ring needs a CSS var; Tailwind can't compute it */
+        .ring-progress {
+            background: conic-gradient(from -90deg,
+                #1c58e3 0%,
+                #1c58e3 calc(var(--p, 0) * 1%),
+                rgba(255,255,255,0.06) calc(var(--p, 0) * 1%),
+                rgba(255,255,255,0.06) 100%);
+        }
+        /* Prevent FOUC on GSAP-animated elements */
+        .gsap-fade { opacity: 0; }
+    </style>
+</head>
+
+<body id="top" data-page="performance" class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- ══════════ PROGRESS BAR ══════════ -->
+    <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
+
+    <!-- ══════════ CURSOR ══════════ -->
+    <div id="cursorRing" class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
+    <div id="cursorDot" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+
+            <a href="index.html" class="group relative flex items-center gap-3">
+                <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                <img src="./assets/scalixo.png" alt="Scalixo Media"
+                    class="relative h-10 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+            </a>
+
+            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] md:flex">
+                <a href="index.html#services" class="transition-opacity duration-300 hover:opacity-40">Services</a>
+                <a href="index.html#work" class="transition-opacity duration-300 hover:opacity-40">Work</a>
+                <a href="contact.html" class="text-accent transition-opacity duration-300 hover:opacity-60">Contact</a>
+            </nav>
+
+            <a href="contact.html"
+                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-40 md:block">
+                Start a project ↗
+            </a>
+
+            <button id="menuBtn" type="button" aria-controls="mobileMenu" aria-expanded="false"
+                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] md:hidden">Menu</button>
+        </div>
+
+        <div id="mobileMenu"
+            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-4 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Services</a>
+            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Work</a>
+            <a href="contact.html" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-accent">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             HERO
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
+
+            <!-- Grid bg -->
+            <div class="pointer-events-none absolute inset-0 opacity-[0.35]
+                bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                bg-[size:72px_72px]
+                [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
+
+            <!-- Parallax orbs -->
+            <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
+            <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
+            <div data-parallax="0.08" class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
+
+            <div class="relative mx-auto max-w-[1500px]">
+
+                <!-- Breadcrumb -->
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white" data-hero-breadcrumb>
+                    <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                    <span class="text-white/20">/</span>
+                    <span class="text-white/70">Performance Marketing</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>Paid ads that turn</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>clicks into real</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block text-accent" data-hero-line>
+                            revenue &amp; ROI<span class="text-accent">.</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <!-- Sub copy + meta -->
+                <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-5" data-hero-sub>
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl">
+                            Performance marketing campaigns engineered for leads, conversions,
+                            and measurable ROI across Meta, Google, and YouTube — built and
+                            optimized weekly against your CPL.
+                        </p>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <a href="#services" data-magnetic
+                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                                <span class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                <span class="relative">Explore Channels</span>
+                                <i class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
+                            </a>
+                            <a href="contact.html" data-magnetic
+                                class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
+                                <i class="fa-solid fa-comments text-xs"></i>
+                                Get Free Audit
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-10 md:col-span-6 md:col-start-7" data-hero-sub>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">ROAS</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Channels</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Meta · Google</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Ahmedabad</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             MARQUEE
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
+            <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
+                <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Meta Ads</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Google Ads</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">YouTube</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Retarget</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Optimize</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Convert</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             WHY IT MATTERS
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="grid gap-10 md:grid-cols-12 md:gap-14">
+                    <div class="md:col-span-5">
+                        <div class="sticky top-32">
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                                <span class="text-white/30"></span> 01 — Why It Matters
+                            </span>
+                            <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                                Every rupee<br />has to work.
+                            </h2>
+                            <div class="mt-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40" data-reveal>
+                                <span class="h-px w-10 bg-accent"></span>
+                                <span>Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 md:col-span-6 md:col-start-7">
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            Most ad accounts quietly <span class="text-accent">burn 30–50%</span> of their
+                            budget on poor targeting, weak creative, and broken tracking — long
+                            before anyone notices.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            At Scalixo Media, we treat ad spend like our own money. Every
+                            campaign is built around CPL, ROAS, and lead quality — so you can
+                            see exactly what every rupee is doing.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 pt-6 sm:grid-cols-3" data-reveal>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="54">0</span><span class="text-accent">%</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. Budget Waste</div>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="42">0</span><span class="text-accent">%</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">CPL Reduction</div>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="320">0</span><span class="text-accent">%</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. ROAS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             SERVICES — 6-card grid
+        ═══════════════════════════════════════════════════════════ -->
+        <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 02 — What We Do
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Performance<br />channels that scale.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Every channel is managed by specialists and optimized weekly against your CPL.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Service card template -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-meta"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Meta Ads</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Facebook &amp; Instagram campaigns engineered for lead generation, sales, and retargeting.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>meta-ads.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Google Ads</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Search, Display &amp; Shopping campaigns that capture high-intent buyers at the moment of intent.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>google-ads.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">YouTube Ads</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Video campaigns for awareness, recall &amp; measurable conversion lift.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>youtube.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Remarketing</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Sequenced retargeting that wins back visitors and revives cold pipelines.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>remarket.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">CPL Reporting</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Live dashboards on spend, CPL, ROAS, and campaign-level performance.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>cpl-report.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Conversion Optimization</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Landing page testing, form optimization, and funnel CRO backed by data.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>cro.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             PLATFORMS — GSAP pinned horizontal scroll
+        ═══════════════════════════════════════════════════════════ -->
+        <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
+
+            <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
+                <div class="grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 03 — Platforms
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Where your ad<br />budget works hardest.
+                        </h2>
+                    </div>
+                    <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-base leading-relaxed text-white/50">
+                            We buy media only on platforms we've proven — matched to your funnel stage, audience, and CPL target.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GSAP will pin this section and translate the track horizontally -->
+            <div id="railViewport" class="overflow-hidden px-6 md:px-10">
+                <div id="railTrack" class="flex gap-6 will-change-transform">
+
+                    <!-- Tile template -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-brands fa-meta text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Meta</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Facebook &amp; Instagram — the widest B2C reach for leads and sales.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>social</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-brands fa-google text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Google</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Search, Display &amp; Shopping — capture high-intent buyers.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>search</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-brands fa-youtube text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">YouTube</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Video campaigns for awareness, consideration, and conversion lift.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>video</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-brands fa-linkedin text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">05</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">LinkedIn</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">B2B lead gen with precise firmographic and role targeting.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>b2b</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             PROCESS — GSAP-driven progress line
+        ═══════════════════════════════════════════════════════════ -->
+        <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 04 — Our Process
+                        </div>
+                        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            How we scale<br />your campaigns.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            A clear six-step process from audit to scale and beyond.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Static baseline -->
+                    <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
+                    <!-- Animated accent line, height driven by GSAP -->
+                    <div id="processLine" class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block" style="height: 0;"></div>
+
+                    <div id="processList" class="space-y-6 md:space-y-8">
+
+                        <!-- Step template -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 01</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Strategy &amp; Audit</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We audit your current campaigns, competitors, and funnel to identify wasted spend and untapped opportunities.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audit</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Benchmark</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Research</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 02</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Campaign Setup</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    Tracking, pixels, audience structure, and creative assets built for clean attribution from day one.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Tracking</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audiences</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Creative</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 03</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Launch</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    Campaigns go live with controlled budgets, clean tracking, and clear success metrics.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Go-live</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">QA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 04</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Optimize</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We iterate creative, targeting, and bids daily to bring CPL down week over week.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Testing</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Bids</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 05</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Report</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    Transparent weekly and monthly reports on CPL, ROAS, spend, and lead quality.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Dashboard</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Weekly Call</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 06</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Scale</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We scale what works, cut what doesn't, and reinvest budget into the highest-performing channels.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Scale</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Reinvest</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             WHY CHOOSE
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-16 md:grid-cols-12 md:gap-16">
+
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            <span class="text-white/30"></span> 05 — Why Scalixo
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Campaigns built<br />to convert, not<br />just run.
+                        </h2>
+                        <p class="mt-6 leading-relaxed text-white/50">
+                            We combine media buying, creative testing, tracking, and conversion thinking — so every campaign contributes to pipeline and revenue.
+                        </p>
+                        <a href="contact.html" data-magnetic
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                            Start Your Campaign
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-bullseye text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">ROAS Focused</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every decision is tied to return on ad spend and lead quality.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-chart-simple text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent Reporting</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Live dashboards on spend, CPL, ROAS, and campaign-level performance.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Creative + Media</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Creative testing and media buying under one roof — rare combo.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-crosshairs text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Clean Tracking</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Pixels, events, and attribution set up so every lead is accounted for.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-gauge-high text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Daily Optimization</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Active monitoring — not "set it and forget it."</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-headset text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Direct Access</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Talk directly to the team running your campaigns — no middlemen.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 06 — Results
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            What great ads<br />actually do.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Every campaign ships with these outcomes built in.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Lower CPL</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Continuous creative and audience testing brings your cost per lead down week over week.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Higher ROAS</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Every campaign is built around return on ad spend — not vanity metrics.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Better Lead Quality</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">We optimize for qualified leads, not just volume — so your sales team spends time on real buyers.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Clean Attribution</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Pixels, events, and conversion tracking set up so you know exactly what's working.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Faster Learning</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Weekly creative tests and structured experiments compound into faster growth.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Scalable Foundation</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">What works gets doubled. What doesn't gets cut. Budget always follows performance.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             FEATURED METRIC — conic ring, GSAP counter
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-6 md:grid-cols-12">
+
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-10">
+                            <span class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-accent/15 blur-[100px]"></span>
+                            <span class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-accent/10 blur-[100px]"></span>
+
+                            <div class="relative">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Featured Metric</span>
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+                                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent"></span>
+                                    </span>
+                                </div>
+
+                                <div class="relative mt-12 flex items-center justify-center">
+                                    <div class="relative h-56 w-56 md:h-64 md:w-64">
+                                        <div class="absolute inset-0 rounded-full border border-white/[0.06]"></div>
+                                        <div id="metricRing" class="ring-progress absolute inset-0 rounded-full" style="--p: 0;"></div>
+                                        <div class="absolute inset-[14px] rounded-full bg-ink"></div>
+                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]"></div>
+
+                                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                            <span class="font-display text-6xl leading-none tracking-tight text-white md:text-7xl">
+                                                <span data-counter="87">0</span><span class="text-accent">%</span>
+                                            </span>
+                                            <span class="mt-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Excellent</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-12 text-center">
+                                    <div class="font-display text-xl uppercase leading-tight tracking-tight text-white">Lead Quality Score</div>
+                                    <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Averaged across all accounts · 2025</div>
+                                </div>
+                            </div>
+
+                            <div class="relative mt-10 flex flex-wrap gap-2 border-t border-white/10 pt-6">
+                                <span class="rounded-full border border-white/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-white/50">Meta Ads</span>
+                                <span class="rounded-full border border-white/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-white/50">Google Ads</span>
+                                <span class="rounded-full border border-accent/40 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 md:col-span-7 md:gap-6">
+                        <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04] md:p-8">
+                            <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                            <div class="relative">
+                                <div class="flex items-start justify-between gap-6">
+                                    <div>
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+                                        <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Average ROAS</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                            <span data-counter="320">0</span><span class="text-accent">%</span>
+                                        </span>
+                                        <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/30">3.2x Return</div>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex items-end gap-1.5">
+                                    <span class="h-3 w-1 rounded-full bg-white/10"></span>
+                                    <span class="h-5 w-1 rounded-full bg-white/10"></span>
+                                    <span class="h-4 w-1 rounded-full bg-white/15"></span>
+                                    <span class="h-7 w-1 rounded-full bg-white/15"></span>
+                                    <span class="h-6 w-1 rounded-full bg-white/20"></span>
+                                    <span class="h-9 w-1 rounded-full bg-accent/40"></span>
+                                    <span class="h-11 w-1 rounded-full bg-accent/60"></span>
+                                    <span class="h-8 w-1 rounded-full bg-accent/60"></span>
+                                    <span class="h-12 w-1 rounded-full bg-accent"></span>
+                                    <span class="h-14 w-1 rounded-full bg-accent"></span>
+                                    <span class="h-10 w-1 rounded-full bg-accent/80"></span>
+                                    <span class="h-16 w-1 rounded-full bg-accent"></span>
+                                    <span class="ml-3 h-3 w-3 self-end rounded-full bg-accent shadow-[0_0_15px_rgba(28,88,227,0.8)]"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-5 sm:grid-cols-2 md:gap-6">
+                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                                <div class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
+                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </span>
+                                    </div>
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Retention Rate</div>
+                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                        <span data-counter="94">0</span><span class="text-accent">%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                                <div class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
+                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                            <i class="fa-solid fa-arrow-trend-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">CPL Reduction</div>
+                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                        <span data-counter="42">0</span><span class="text-accent">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             FINAL CTA
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-10" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(07)</span>
+                </div>
+
+                <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
+                    Ready to turn ad<br />spend into<br />revenue<span class="text-accent">.</span>
+                </h2>
+
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between" data-reveal>
+                    <a href="tel:+919328792160" data-magnetic
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        +91 93287 92160
+                        <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+
+                    <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Facebook</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+        <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+            <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         GSAP — reveals, split, counters, ring, pinned rail, progress
+    ═══════════════════════════════════════════════════════════ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            /* ── Prefers-reduced-motion ── */
+            const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+            gsap.defaults({ ease: "power3.out" });
+
+            /* ═══════════════════════════════════════════════════
+               1. PROGRESS BAR
+            ═══════════════════════════════════════════════════ */
+            const bar = document.getElementById("scrollProgress");
+            const setBarScale = gsap.quickSetter(bar, "scaleX");
+
+            ScrollTrigger.create({
+                start: 0,
+                end: "max",
+                onUpdate: (self) => setBarScale(self.progress),
+            });
+
+            /* ═══════════════════════════════════════════════════
+               2. CUSTOM CURSOR
+            ═══════════════════════════════════════════════════ */
+            const ring = document.getElementById("cursorRing");
+            const dot = document.getElementById("cursorDot");
+            if (ring && dot && window.innerWidth >= 768 && !reduced) {
+                const ringX = gsap.quickTo(ring, "x", { duration: 0.5, ease: "power3" });
+                const ringY = gsap.quickTo(ring, "y", { duration: 0.5, ease: "power3" });
+                const dotX = gsap.quickTo(dot, "x", { duration: 0.15, ease: "power3" });
+                const dotY = gsap.quickTo(dot, "y", { duration: 0.15, ease: "power3" });
+
+                gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
+
+                window.addEventListener("mousemove", (e) => {
+                    ringX(e.clientX); ringY(e.clientY);
+                    dotX(e.clientX);  dotY(e.clientY);
+                });
+
+                document.querySelectorAll("a, button, [data-glow]").forEach((el) => {
+                    el.addEventListener("mouseenter", () => gsap.to(ring, { scale: 1.6, borderColor: "rgba(28,88,227,0.9)", duration: 0.3 }));
+                    el.addEventListener("mouseleave", () => gsap.to(ring, { scale: 1, borderColor: "rgba(255,255,255,0.3)", duration: 0.3 }));
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               3. MOBILE MENU
+            ═══════════════════════════════════════════════════ */
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const header = document.getElementById("siteHeader");
+            let menuOpen = false;
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener("click", () => {
+                    menuOpen = !menuOpen;
+                    if (menuOpen) {
+                        mobileMenu.classList.remove("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.add("pointer-events-auto", "opacity-100");
+                        header.classList.add("bg-ink");
+                        header.classList.remove("mix-blend-difference");
+                        document.body.classList.add("overflow-hidden");
+                        menuBtn.textContent = "Close";
+                        menuBtn.setAttribute("aria-expanded", "true");
+                        gsap.fromTo(".mobile-link",
+                            { opacity: 0, y: 40 },
+                            { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" });
+                    } else {
+                        mobileMenu.classList.add("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.remove("pointer-events-auto", "opacity-100");
+                        header.classList.remove("bg-ink");
+                        header.classList.add("mix-blend-difference");
+                        document.body.classList.remove("overflow-hidden");
+                        menuBtn.textContent = "Menu";
+                        menuBtn.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               4. HERO INTRO TIMELINE
+            ═══════════════════════════════════════════════════ */
+            const heroTl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
+
+            heroTl
+                .from("[data-hero-breadcrumb]", { opacity: 0, y: 20, duration: 0.6 })
+                .from("[data-hero-line]", {
+                    yPercent: 110,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.08,
+                    ease: "power4.out",
+                }, "-=0.3")
+                .from("[data-hero-sub]", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.9,
+                    stagger: 0.12,
+                }, "-=0.6");
+
+            /* ═══════════════════════════════════════════════════
+               5. GENERIC REVEALS (data-reveal)
+            ═══════════════════════════════════════════════════ */
+            if (!reduced) {
+                gsap.utils.toArray("[data-reveal]").forEach((el) => {
+                    gsap.from(el, {
+                        opacity: 0,
+                        y: 40,
+                        duration: 0.9,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 88%",
+                            once: true,
+                        },
+                    });
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               6. SPLIT-HEADING REVEALS (data-split)
+                  Splits into lines manually so no SplitText plugin needed
+            ═══════════════════════════════════════════════════ */
+            gsap.utils.toArray("[data-split]").forEach((el) => {
+                const html = el.innerHTML.trim();
+                const lines = html.split(/<br\s*\/?>/i);
+
+                el.innerHTML = lines
+                    .map((line) => `
+                        <span class="block overflow-hidden">
+                            <span class="split-line block">${line}</span>
+                        </span>
+                    `)
+                    .join("");
+
+                if (!reduced) {
+                    gsap.from(el.querySelectorAll(".split-line"), {
+                        yPercent: 110,
+                        opacity: 0,
+                        duration: 1,
+                        stagger: 0.08,
+                        ease: "power4.out",
+                        scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    });
+                }
+            });
+
+            /* ═══════════════════════════════════════════════════
+               7. COUNTERS (data-counter)
+            ═══════════════════════════════════════════════════ */
+            gsap.utils.toArray("[data-counter]").forEach((el) => {
+                const end = parseFloat(el.dataset.counter);
+                if (isNaN(end)) return;
+                const obj = { v: 0 };
+
+                gsap.to(obj, {
+                    v: end,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    onUpdate: () => { el.textContent = Math.floor(obj.v); },
+                    onComplete: () => { el.textContent = end; },
+                });
+            });
+
+            /* ═══════════════════════════════════════════════════
+               8. METRIC RING (conic-gradient progress via CSS var)
+            ═══════════════════════════════════════════════════ */
+            const metricRing = document.getElementById("metricRing");
+            if (metricRing) {
+                const obj = { v: 0 };
+                gsap.to(obj, {
+                    v: 87,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: { trigger: metricRing, start: "top 80%", once: true },
+                    onUpdate: () => metricRing.style.setProperty("--p", obj.v.toFixed(2)),
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               9. MARQUEE — seamless, driven by GSAP
+            ═══════════════════════════════════════════════════ */
+            const track = document.getElementById("marqueeTrack");
+            if (track) {
+                // Duplicate once so the loop is seamless
+                track.innerHTML += track.innerHTML;
+
+                if (!reduced) {
+                    gsap.to(track, {
+                        xPercent: -50,
+                        duration: 40,
+                        ease: "none",
+                        repeat: -1,
+                    });
+                }
+            }
+
+            /* ═══════════════════════════════════════════════════
+               10. PINNED HORIZONTAL RAIL (platforms)
+            ═══════════════════════════════════════════════════ */
+            const rail = document.getElementById("railTrack");
+            const railSection = document.getElementById("platforms");
+            if (rail && railSection && !reduced && window.innerWidth >= 768) {
+                const getScrollAmount = () => -(rail.scrollWidth - railSection.clientWidth + 48);
+
+                gsap.to(rail, {
+                    x: getScrollAmount,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: railSection,
+                        start: "top top",
+                        end: () => `+=${rail.scrollWidth}`,
+                        pin: true,
+                        scrub: 1,
+                        invalidateOnRefresh: true,
+                        anticipatePin: 1,
+                    },
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               11. PROCESS LINE — scrubbed to scroll progress
+            ═══════════════════════════════════════════════════ */
+            const processList = document.getElementById("processList");
+            const processLine = document.getElementById("processLine");
+            if (processList && processLine) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: processList,
+                        start: "top 70%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    },
+                });
+
+                tl.fromTo(processLine,
+                    { height: "0%" },
+                    { height: "100%", ease: "none" }
+                );
+
+                // Each step highlights as it enters view
+                gsap.utils.toArray(".process-step").forEach((step) => {
+                    gsap.from(step, {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.7,
+                        scrollTrigger: { trigger: step, start: "top 85%", once: true },
+                    });
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               12. MAGNETIC BUTTONS
+            ═══════════════════════════════════════════════════ */
+            if (!reduced) {
+                document.querySelectorAll("[data-magnetic]").forEach((el) => {
+                    const strength = 0.3;
+
+                    el.addEventListener("mousemove", (e) => {
+                        const r = el.getBoundingClientRect();
+                        const x = e.clientX - r.left - r.width / 2;
+                        const y = e.clientY - r.top - r.height / 2;
+                        gsap.to(el, { x: x * strength, y: y * strength, duration: 0.3, ease: "power3.out" });
+                    });
+                    el.addEventListener("mouseleave", () => {
+                        gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.4)" });
+                    });
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               13. PARALLAX ORBS
+            ═══════════════════════════════════════════════════ */
+            if (!reduced) {
+                document.querySelectorAll("[data-parallax]").forEach((el) => {
+                    const speed = parseFloat(el.dataset.parallax) || 0.1;
+                    gsap.to(el, {
+                        yPercent: -speed * 100,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: el.closest("section"),
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: true,
+                        },
+                    });
+                });
+            }
+
+            /* ═══════════════════════════════════════════════════
+               14. CARD GLOW — set --x/--y for radial hover
+            ═══════════════════════════════════════════════════ */
+            document.querySelectorAll("[data-glow]").forEach((card) => {
+                card.addEventListener("mousemove", (e) => {
+                    const r = card.getBoundingClientRect();
+                    card.style.setProperty("--x", `${((e.clientX - r.left) / r.width) * 100}%`);
+                    card.style.setProperty("--y", `${((e.clientY - r.top) / r.height) * 100}%`);
+                });
+            });
+
+            /* ═══════════════════════════════════════════════════
+               15. HEADER STATE ON SCROLL
+            ═══════════════════════════════════════════════════ */
+            ScrollTrigger.create({
+                start: 20,
+                end: "max",
+                onToggle: (self) => {
+                    header.classList.toggle("backdrop-blur-md", self.isActive);
+                    header.classList.toggle("bg-ink/60", self.isActive);
+                },
+            });
+
+            /* ═══════════════════════════════════════════════════
+               16. CLOCK + YEAR
+            ═══════════════════════════════════════════════════ */
+            const clock = document.getElementById("clock");
+            if (clock) {
+                const tick = () => {
+                    clock.textContent = new Date().toLocaleTimeString("en-IN", {
+                        timeZone: "Asia/Kolkata", hour12: false,
+                        hour: "2-digit", minute: "2-digit", second: "2-digit",
+                    });
+                };
+                tick();
+                setInterval(tick, 1000);
+            }
+            const year = document.getElementById("year");
+            if (year) year.textContent = new Date().getFullYear();
+
+            /* ═══════════════════════════════════════════════════
+               17. REFRESH AFTER FONTS LOAD
+            ═══════════════════════════════════════════════════ */
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => ScrollTrigger.refresh());
+            }
+            window.addEventListener("load", () => ScrollTrigger.refresh());
+        });
+    </script>
+
+</body>
+
+</html>
