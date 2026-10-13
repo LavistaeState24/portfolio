@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Services — Scalixo Media Agency</title>
+    <meta name="description"
+        content="SEO services by Scalixo Media for search engine optimization, keyword strategy, technical SEO, on-page SEO, local SEO, content optimization, and organic growth. Based in Ahmedabad." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+</head>
+
+<body id="top" data-page="seo" class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- PROGRESS BAR -->
+    <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
+
+    <!-- CURSOR -->
+    <div id="cursorRing" class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
+    <div id="cursorDot" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
+
+    <!-- HEADER -->
+    <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+            <a href="index.html" class="group relative flex items-center gap-3">
+                <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                <img src="./assets/scalixo.png" alt="Scalixo Media"
+                    class="relative h-10 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+            </a>
+
+            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] md:flex">
+                <a href="index.html#services" class="transition-opacity duration-300 hover:opacity-40">Services</a>
+                <a href="index.html#work" class="transition-opacity duration-300 hover:opacity-40">Work</a>
+                <a href="contact.html" class="text-accent transition-opacity duration-300 hover:opacity-60">Contact</a>
+            </nav>
+
+            <a href="contact.html"
+                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-40 md:block">
+                Start a project ↗
+            </a>
+
+            <button id="menuBtn" type="button" aria-controls="mobileMenu" aria-expanded="false"
+                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] md:hidden">Menu</button>
+        </div>
+
+        <div id="mobileMenu"
+            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-4 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Services</a>
+            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Work</a>
+            <a href="contact.html" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-accent">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
+            <div class="pointer-events-none absolute inset-0 opacity-[0.35]
+                bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                bg-[size:72px_72px]
+                [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
+
+            <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
+            <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
+            <div data-parallax="0.08" class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
+
+            <div class="relative mx-auto max-w-[1500px]">
+
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white" data-hero-breadcrumb>
+                    <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                    <span class="text-white/20">/</span>
+                    <span class="text-white/70">Search Engine Optimization</span>
+                </div>
+
+                <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>SEO That Helps</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>Your Brand Get Found</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block text-accent" data-hero-line>
+                            By The Right Customers<span class="text-accent">.</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-5" data-hero-sub>
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl">
+                            Scalixo Media helps businesses improve search visibility,
+                            attract qualified organic traffic, and build long-term digital
+                            authority with practical SEO strategies.
+                        </p>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <a href="#services" data-magnetic
+                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                                <span class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                <span class="relative">Explore SEO Services</span>
+                                <i class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
+                            </a>
+                            <a href="contact.html" data-magnetic
+                                class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
+                                <i class="fa-solid fa-comments text-xs"></i>
+                                Get Free SEO Audit
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-10 md:col-span-6 md:col-start-7" data-hero-sub>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">Organic</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Services</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Technical · Local</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Ahmedabad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
+            <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
+                <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Keyword Research</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">On-Page SEO</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Technical SEO</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Local SEO</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Content Optimization</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Link Building</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY IT MATTERS -->
+        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-10 md:grid-cols-12 md:gap-14">
+                    <div class="md:col-span-5">
+                        <div class="sticky top-32">
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                                <span class="text-white/30"></span> 01 — Why It Matters
+                            </span>
+                            <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                                Your customers<br />are searching.
+                            </h2>
+                            <div class="mt-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40" data-reveal>
+                                <span class="h-px w-10 bg-accent"></span>
+                                <span>Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 md:col-span-6 md:col-start-7">
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            Paid ads can bring quick traffic, but SEO builds long-term
+                            visibility. When your website ranks for the right keywords, your
+                            business gets discovered by people who are already searching for
+                            your services.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            At Scalixo Media, we focus on SEO that supports real business
+                            growth: better rankings, stronger website structure, useful
+                            content, local visibility, and higher-quality organic enquiries.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            SEO means optimizing your website so it can rank better on
+                            search engines and attract organic traffic from people searching
+                            for your products or services.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            SEO is a long-term growth channel. Some improvements can be
+                            visible within weeks, but strong ranking and traffic growth
+                            generally needs consistent work over a few months.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            We optimize Google Business Profile, local keywords, location
+                            pages, citations, reviews, and map visibility for city-based
+                            businesses.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            We provide clear SEO reports covering ranking movement, organic
+                            traffic, website improvements, technical fixes, and next-step
+                            recommendations.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 pt-6 sm:grid-cols-3" data-reveal>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="90">0</span><span class="text-accent">%</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Organic Clicks</div>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="3">0</span><span class="text-accent">x</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Lead Quality</div>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                    <span data-counter="12">0</span><span class="text-accent">mo</span>
+                                </div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. Growth Cycle</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 02 — What We Offer
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Complete SEO<br />services for growth.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            We improve your website from every angle: keywords, content, technical
+                            performance, local presence, and authority building.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Keyword Research & Strategy -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Keyword Research &amp; Strategy</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We find the search terms your customers use and build an SEO roadmap around high-intent keywords.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>keywords.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- On-Page SEO -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">On-Page SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Meta titles, descriptions, headings, internal links, image alt text, and page structure optimized for search.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>on-page.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Technical SEO -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Technical SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We improve site speed, crawlability, indexing, mobile usability, schema, sitemap, and technical health.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>technical.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SEO Content Optimization -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">SEO Content Optimization</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Website copy, blogs, service pages, and landing pages optimized to answer real user queries.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>content.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Local SEO -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Local SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Google Business Profile, local keywords, location pages, and map visibility for city-based growth.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>local-seo.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Authority & Link Building -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Authority &amp; Link Building</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Build credibility with ethical authority signals, citations, content assets, and quality backlink opportunities.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>authority.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO FOCUS AREAS (was Platforms) -->
+        <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
+            <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
+                <div class="grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 03 — SEO Focus Areas
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Where we improve<br />your search presence.
+                        </h2>
+                    </div>
+                    <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-base leading-relaxed text-white/50">
+                            We improve every part of your search presence — matched to your website stage, audience, and business goal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="railViewport" class="overflow-hidden px-6 md:px-10">
+                <div id="railTrack" class="flex gap-6 will-change-transform">
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-globe text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Website SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Complete on-page and technical optimization for your core website pages.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>core</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-map-location-dot text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Local SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Google Business Profile, local keywords, citations, reviews, and map visibility.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>local</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-mobile-screen text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Mobile SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Mobile-first experience, speed, and usability for users and search engines.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>mobile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-newspaper text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">04</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Blog SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Topic clusters, content calendars, and blogs built around search intent.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>content</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-cart-shopping text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">05</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">E-commerce SEO</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Product pages, category structure, and technical optimization for online stores.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>ecommerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-chart-line text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">06</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Analytics</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Rankings, organic traffic, conversions, and SEO performance reporting.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 04 — Our Process
+                        </div>
+                        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            How we build<br />your SEO system.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            A clear six-step process from audit to continuous growth and beyond.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
+                    <div id="processLine" class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block" style="height: 0;"></div>
+
+                    <div id="processList" class="space-y-6 md:space-y-8">
+                        <!-- Step 01 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 01</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Audit Your Website</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We analyze current rankings, speed, indexing, technical issues, content gaps, and competitor visibility.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Rankings</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Speed</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Competitors</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 02 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 02</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Research Keywords</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We identify business-relevant keywords based on intent, competition, location, and conversion potential.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Intent</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Competition</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Location</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 03 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 03</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Fix Technical Issues</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We improve crawlability, speed, mobile experience, URL structure, schema, sitemap, and on-site SEO health.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Crawlability</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Schema</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Sitemap</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 04 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 04</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Optimize Pages</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We improve headings, meta tags, copy, internal linking, images, and service page structure.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Meta Tags</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Internal Links</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Copy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 05 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 05</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Create Content Plan</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We plan blogs, service pages, FAQs, and topic clusters that answer customer questions and build authority.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Blogs</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">FAQs</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Topic Clusters</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 06 -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 06</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Track &amp; Improve</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We monitor rankings, traffic, conversions, and search performance, then continuously optimize.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Rankings</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Traffic</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Conversions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-16 md:grid-cols-12 md:gap-16">
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            <span class="text-white/30"></span> 05 — Why Scalixo
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            SEO built for rankings,<br />traffic, and<br />real enquiries.
+                        </h2>
+                        <p class="mt-6 leading-relaxed text-white/50">
+                            We do not treat SEO as a one-time checklist. We build a long-term growth
+                            system that improves your website, content, and search authority step by step.
+                        </p>
+                        <a href="contact.html" data-magnetic
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                            Start Your SEO
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-lightbulb text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Strategy First</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every SEO action is connected to your business goals and customer intent.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-screwdriver-wrench text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Technical Clarity</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">We fix issues that stop search engines and users from understanding your website.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-pen text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Useful Content</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">We create and optimize content that answers what your audience actually searches.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-map-marker-alt text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Local Growth</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Perfect for businesses that want more visibility in Ahmedabad and target cities.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-file-lines text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent Reports</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">You get clear updates on rankings, traffic, improvements, and next actions.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-seedling text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Long-Term Growth</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">SEO builds compounding visibility that supports your brand beyond paid ads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 06 — Results
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            What SEO success<br />actually looks like.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Every SEO campaign ships with these outcomes built in.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Higher Search Rankings</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Improve visibility for keywords your potential customers are searching for.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">More Organic Traffic</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Attract visitors without relying only on paid advertising every month.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Better Enquiry Quality</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Reach people who already have intent and are actively searching for solutions.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Improved Website Health</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Better speed, structure, indexing, and mobile experience for users and search engines.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Stronger Brand Trust</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Ranking organically helps your brand look more credible and established.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Long-Term Growth</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Build compounding search visibility that supports growth month after month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED METRIC -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-6 md:grid-cols-12">
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-8">
+                            <span class="pointer-events-none absolute -right-24 -top-6 h-56 w-56 rounded-full bg-accent/15 blur-[100px]"></span>
+                            <span class="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-accent/10 blur-[100px]"></span>
+
+                            <div class="relative">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Featured Metric</span>
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+                                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent"></span>
+                                    </span>
+                                </div>
+
+                                <div class="relative mt-12 flex items-center justify-center">
+                                    <div class="relative h-56 w-56 md:h-64 md:w-64">
+                                        <div class="absolute inset-0 rounded-full border border-white/[0.06]"></div>
+                                        <div id="metricRing" class="ring-progress absolute inset-0 rounded-full" style="--p: 0;"></div>
+                                        <div class="absolute inset-[14px] rounded-full bg-ink"></div>
+                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]"></div>
+
+                                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                            <span class="font-display text-6xl leading-none tracking-tight text-white md:text-7xl">
+                                                <span data-counter="87">0</span><span class="text-accent">%</span>
+                                            </span>
+                                            <span class="mt-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Excellent</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 text-center">
+                                    <div class="font-display text-xl uppercase leading-tight tracking-tight text-white">Lead Quality Score</div>
+                                    <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Averaged across all accounts · 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 md:col-span-7 md:gap-6">
+                        <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04] md:p-8">
+                            <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                            <div class="relative">
+                                <div class="flex items-start justify-between gap-6">
+                                    <div>
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+                                        <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Organic Traffic Growth</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                            <span data-counter="180">0</span><span class="text-accent">%</span>
+                                        </span>
+                                        <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/30">Avg. 12-month lift</div>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex items-end gap-1.5">
+                                    <span class="h-3 w-1 rounded-full bg-white/10"></span>
+                                    <span class="h-5 w-1 rounded-full bg-white/10"></span>
+                                    <span class="h-4 w-1 rounded-full bg-white/15"></span>
+                                    <span class="h-7 w-1 rounded-full bg-white/15"></span>
+                                    <span class="h-6 w-1 rounded-full bg-white/20"></span>
+                                    <span class="h-9 w-1 rounded-full bg-accent/40"></span>
+                                    <span class="h-11 w-1 rounded-full bg-accent/60"></span>
+                                    <span class="h-8 w-1 rounded-full bg-accent/60"></span>
+                                    <span class="h-12 w-1 rounded-full bg-accent"></span>
+                                    <span class="h-14 w-1 rounded-full bg-accent"></span>
+                                    <span class="h-10 w-1 rounded-full bg-accent/80"></span>
+                                    <span class="h-16 w-1 rounded-full bg-accent"></span>
+                                    <span class="ml-3 h-3 w-3 self-end rounded-full bg-accent shadow-[0_0_15px_rgba(28,88,227,0.8)]"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-5 sm:grid-cols-2 md:gap-6">
+                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                                <div class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
+                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </span>
+                                    </div>
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Keyword Rankings</div>
+                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                        <span data-counter="65">0</span><span class="text-accent">%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                                <div class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
+                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                            <i class="fa-solid fa-arrow-trend-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Cost Per Lead</div>
+                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                        <span data-counter="32">0</span><span class="text-accent">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO PACKAGES / PLANS -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            <span class="text-white/30"></span> 07 — SEO Plans
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            SEO plans we can<br />build for your brand.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Choose the SEO direction that matches your current website stage and business goal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-search-location"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Local SEO Growth</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                For businesses that want stronger visibility in local searches, maps, and city-based keywords.
+                            </p>
+                            <a href="contact.html" class="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-all duration-500 hover:gap-3">
+                                Start SEO <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Organic Growth Plan</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Full-service SEO for businesses that want consistent organic traffic and stronger rankings.
+                            </p>
+                            <a href="contact.html" class="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-all duration-500 hover:gap-3">
+                                Start SEO <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">E-commerce SEO Plan</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                For online stores that need stronger product visibility, category rankings, and organic sales.
+                            </p>
+                            <a href="contact.html" class="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-all duration-500 hover:gap-3">
+                                Start SEO <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-10" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(08)</span>
+                </div>
+
+                <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
+                    Ready to rank<br />higher and grow<br />organically<span class="text-accent">.</span>
+                </h2>
+
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between" data-reveal>
+                    <a href="tel:+919328792160" data-magnetic
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        +91 93287 92160
+                        <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+
+                    <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+        <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+            <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- GSAP script — unchanged -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+            gsap.defaults({ ease: "power3.out" });
+
+            // 1. Progress bar
+            const bar = document.getElementById("scrollProgress");
+            const setBarScale = gsap.quickSetter(bar, "scaleX");
+            ScrollTrigger.create({
+                start: 0,
+                end: "max",
+                onUpdate: (self) => setBarScale(self.progress),
+            });
+
+            // 2. Custom cursor
+            const ring = document.getElementById("cursorRing");
+            const dot = document.getElementById("cursorDot");
+            if (ring && dot && window.innerWidth >= 768 && !reduced) {
+                const ringX = gsap.quickTo(ring, "x", { duration: 0.5, ease: "power3" });
+                const ringY = gsap.quickTo(ring, "y", { duration: 0.5, ease: "power3" });
+                const dotX = gsap.quickTo(dot, "x", { duration: 0.15, ease: "power3" });
+                const dotY = gsap.quickTo(dot, "y", { duration: 0.15, ease: "power3" });
+                gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
+                window.addEventListener("mousemove", (e) => {
+                    ringX(e.clientX); ringY(e.clientY);
+                    dotX(e.clientX);  dotY(e.clientY);
+                });
+                document.querySelectorAll("a, button, [data-glow]").forEach((el) => {
+                    el.addEventListener("mouseenter", () => gsap.to(ring, { scale: 1.6, borderColor: "rgba(28,88,227,0.9)", duration: 0.3 }));
+                    el.addEventListener("mouseleave", () => gsap.to(ring, { scale: 1, borderColor: "rgba(255,255,255,0.3)", duration: 0.3 }));
+                });
+            }
+
+            // 3. Mobile menu
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const header = document.getElementById("siteHeader");
+            let menuOpen = false;
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener("click", () => {
+                    menuOpen = !menuOpen;
+                    if (menuOpen) {
+                        mobileMenu.classList.remove("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.add("pointer-events-auto", "opacity-100");
+                        header.classList.add("bg-ink");
+                        header.classList.remove("mix-blend-difference");
+                        document.body.classList.add("overflow-hidden");
+                        menuBtn.textContent = "Close";
+                        menuBtn.setAttribute("aria-expanded", "true");
+                        gsap.fromTo(".mobile-link",
+                            { opacity: 0, y: 40 },
+                            { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" });
+                    } else {
+                        mobileMenu.classList.add("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.remove("pointer-events-auto", "opacity-100");
+                        header.classList.remove("bg-ink");
+                        header.classList.add("mix-blend-difference");
+                        document.body.classList.remove("overflow-hidden");
+                        menuBtn.textContent = "Menu";
+                        menuBtn.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+
+            // 4. Hero intro
+            const heroTl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
+            heroTl
+                .from("[data-hero-breadcrumb]", { opacity: 0, y: 20, duration: 0.6 })
+                .from("[data-hero-line]", {
+                    yPercent: 110,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.08,
+                    ease: "power4.out",
+                }, "-=0.3")
+                .from("[data-hero-sub]", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.9,
+                    stagger: 0.12,
+                }, "-=0.6");
+
+            // 5. Generic reveals
+            if (!reduced) {
+                gsap.utils.toArray("[data-reveal]").forEach((el) => {
+                    gsap.from(el, {
+                        opacity: 0, y: 40, duration: 0.9, ease: "power3.out",
+                        scrollTrigger: { trigger: el, start: "top 88%", once: true },
+                    });
+                });
+            }
+
+            // 6. Split headings
+            gsap.utils.toArray("[data-split]").forEach((el) => {
+                const html = el.innerHTML.trim();
+                const lines = html.split(/<br\s*\/?>/i);
+                el.innerHTML = lines
+                    .map((line) => `
+                        <span class="block overflow-hidden">
+                            <span class="split-line block">${line}</span>
+                        </span>
+                    `)
+                    .join("");
+                if (!reduced) {
+                    gsap.from(el.querySelectorAll(".split-line"), {
+                        yPercent: 110, opacity: 0, duration: 1, stagger: 0.08, ease: "power4.out",
+                        scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    });
+                }
+            });
+
+            // 7. Counters
+            gsap.utils.toArray("[data-counter]").forEach((el) => {
+                const end = parseFloat(el.dataset.counter);
+                if (isNaN(end)) return;
+                const obj = { v: 0 };
+                gsap.to(obj, {
+                    v: end, duration: 2, ease: "power3.out",
+                    scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    onUpdate: () => { el.textContent = Math.floor(obj.v); },
+                    onComplete: () => { el.textContent = end; },
+                });
+            });
+
+            // 8. Metric ring
+            const metricRing = document.getElementById("metricRing");
+            if (metricRing) {
+                const obj = { v: 0 };
+                gsap.to(obj, {
+                    v: 87, duration: 2, ease: "power3.out",
+                    scrollTrigger: { trigger: metricRing, start: "top 80%", once: true },
+                    onUpdate: () => metricRing.style.setProperty("--p", obj.v.toFixed(2)),
+                });
+            }
+
+            // 9. Marquee
+            const track = document.getElementById("marqueeTrack");
+            if (track) {
+                track.innerHTML += track.innerHTML;
+                if (!reduced) {
+                    gsap.to(track, { xPercent: -50, duration: 40, ease: "none", repeat: -1 });
+                }
+            }
+
+            // 10. Pinned horizontal rail
+            const rail = document.getElementById("railTrack");
+            const railSection = document.getElementById("platforms");
+            if (rail && railSection && !reduced && window.innerWidth >= 768) {
+                const getScrollAmount = () => -(rail.scrollWidth - railSection.clientWidth + 48);
+                gsap.to(rail, {
+                    x: getScrollAmount, ease: "none",
+                    scrollTrigger: {
+                        trigger: railSection,
+                        start: "top top",
+                        end: () => `+=${rail.scrollWidth}`,
+                        pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
+                    },
+                });
+            }
+
+            // 11. Process line
+            const processList = document.getElementById("processList");
+            const processLine = document.getElementById("processLine");
+            if (processList && processLine) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: processList, start: "top 70%", end: "bottom 60%", scrub: true,
+                    },
+                });
+                tl.fromTo(processLine, { height: "0%" }, { height: "100%", ease: "none" });
+                gsap.utils.toArray(".process-step").forEach((step) => {
+                    gsap.from(step, {
+                        opacity: 0, y: 30, duration: 0.7,
+                        scrollTrigger: { trigger: step, start: "top 85%", once: true },
+                    });
+                });
+            }
+
+            // 12. Magnetic buttons
+            if (!reduced) {
+                document.querySelectorAll("[data-magnetic]").forEach((el) => {
+                    const strength = 0.3;
+                    el.addEventListener("mousemove", (e) => {
+                        const r = el.getBoundingClientRect();
+                        const x = e.clientX - r.left - r.width / 2;
+                        const y = e.clientY - r.top - r.height / 2;
+                        gsap.to(el, { x: x * strength, y: y * strength, duration: 0.3, ease: "power3.out" });
+                    });
+                    el.addEventListener("mouseleave", () => {
+                        gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.4)" });
+                    });
+                });
+            }
+
+            // 13. Parallax orbs
+            if (!reduced) {
+                document.querySelectorAll("[data-parallax]").forEach((el) => {
+                    const speed = parseFloat(el.dataset.parallax) || 0.1;
+                    gsap.to(el, {
+                        yPercent: -speed * 100, ease: "none",
+                        scrollTrigger: {
+                            trigger: el.closest("section"),
+                            start: "top bottom", end: "bottom top", scrub: true,
+                        },
+                    });
+                });
+            }
+
+            // 14. Card glow
+            document.querySelectorAll("[data-glow]").forEach((card) => {
+                card.addEventListener("mousemove", (e) => {
+                    const r = card.getBoundingClientRect();
+                    card.style.setProperty("--x", `${((e.clientX - r.left) / r.width) * 100}%`);
+                    card.style.setProperty("--y", `${((e.clientY - r.top) / r.height) * 100}%`);
+                });
+            });
+
+            // 15. Header scroll state
+            ScrollTrigger.create({
+                start: 20, end: "max",
+                onToggle: (self) => {
+                    header.classList.toggle("backdrop-blur-md", self.isActive);
+                    header.classList.toggle("bg-ink/60", self.isActive);
+                },
+            });
+
+            // 16. Clock + year
+            const clock = document.getElementById("clock");
+            if (clock) {
+                const tick = () => {
+                    clock.textContent = new Date().toLocaleTimeString("en-IN", {
+                        timeZone: "Asia/Kolkata", hour12: false,
+                        hour: "2-digit", minute: "2-digit", second: "2-digit",
+                    });
+                };
+                tick();
+                setInterval(tick, 1000);
+            }
+            const year = document.getElementById("year");
+            if (year) year.textContent = new Date().getFullYear();
+
+            // 17. Refresh after fonts load
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => ScrollTrigger.refresh());
+            }
+            window.addEventListener("load", () => ScrollTrigger.refresh());
+        });
+    </script>
+
+</body>
+
+</html>
