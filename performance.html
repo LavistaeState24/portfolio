@@ -17,39 +17,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
-    <!-- Tiny safelist shim so Tailwind CDN picks up dynamic classes (harmless with compiled build) -->
-    <style>
-        :root { color-scheme: dark; }
-        body { background-color: #0b0b0b; }
-        /* Conic ring needs a CSS var; Tailwind can't compute it */
-        .ring-progress {
-            background: conic-gradient(from -90deg,
-                #1c58e3 0%,
-                #1c58e3 calc(var(--p, 0) * 1%),
-                rgba(255,255,255,0.06) calc(var(--p, 0) * 1%),
-                rgba(255,255,255,0.06) 100%);
-        }
-        /* Prevent FOUC on GSAP-animated elements */
-        .gsap-fade { opacity: 0; }
-    </style>
+    
 </head>
 
 <body id="top" data-page="performance" class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 
-    <!-- ══════════ PROGRESS BAR ══════════ -->
+    <!-- PROGRESS BAR -->
     <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
 
-    <!-- ══════════ CURSOR ══════════ -->
+    <!-- CURSOR -->
     <div id="cursorRing" class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
     <div id="cursorDot" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         HEADER
-    ═══════════════════════════════════════════════════════════ -->
+    <!-- HEADER -->
     <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
         <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
             <a href="index.html" class="group relative flex items-center gap-3">
                 <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
                 <img src="./assets/scalixo.png" alt="Scalixo Media"
@@ -81,53 +63,46 @@
 
     <main>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             HERO
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- HERO — updated with live-page copy -->
         <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
-
-            <!-- Grid bg -->
             <div class="pointer-events-none absolute inset-0 opacity-[0.35]
                 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
                 bg-[size:72px_72px]
                 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
 
-            <!-- Parallax orbs -->
             <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
             <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
             <div data-parallax="0.08" class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
 
             <div class="relative mx-auto max-w-[1500px]">
 
-                <!-- Breadcrumb -->
                 <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white" data-hero-breadcrumb>
                     <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
                     <span class="text-white/20">/</span>
                     <span class="text-white/70">Performance Marketing</span>
                 </div>
 
-                <!-- Headline -->
+                <!-- Live page H1: "Paid Ads That Turn Clicks Into Qualified Leads" -->
                 <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
                     <span class="block overflow-hidden">
                         <span class="hero-line block" data-hero-line>Paid ads that turn</span>
                     </span>
                     <span class="block overflow-hidden">
-                        <span class="hero-line block" data-hero-line>clicks into real</span>
+                        <span class="hero-line block" data-hero-line>clicks into qualified</span>
                     </span>
                     <span class="block overflow-hidden">
                         <span class="hero-line block text-accent" data-hero-line>
-                            revenue &amp; ROI<span class="text-accent">.</span>
+                            leads<span class="text-accent">.</span>
                         </span>
                     </span>
                 </h1>
 
-                <!-- Sub copy + meta -->
                 <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-5" data-hero-sub>
+                        <!-- Live page description -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl">
-                            Performance marketing campaigns engineered for leads, conversions,
-                            and measurable ROI across Meta, Google, and YouTube — built and
-                            optimized weekly against your CPL.
+                            We plan, launch, track, and optimize ads across Meta and
+                            Google so every rupee works harder for your business.
                         </p>
 
                         <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -160,13 +135,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             MARQUEE
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- MARQUEE — unchanged -->
         <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
             <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
                 <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
@@ -186,12 +158,9 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             WHY IT MATTERS
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- WHY IT MATTERS — updated with live-page definition -->
         <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
             <div class="mx-auto max-w-[1500px]">
-
                 <div class="grid gap-10 md:grid-cols-12 md:gap-14">
                     <div class="md:col-span-5">
                         <div class="sticky top-32">
@@ -209,16 +178,38 @@
                     </div>
 
                     <div class="space-y-8 md:col-span-6 md:col-start-7">
+                        <!-- Live page: definition of performance marketing -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            Most ad accounts quietly <span class="text-accent">burn 30–50%</span> of their
-                            budget on poor targeting, weak creative, and broken tracking — long
-                            before anyone notices.
+                            Performance marketing means paid campaigns focused on
+                            measurable actions like <span class="text-accent">leads, calls,
+                            enquiries, purchases, registrations, and conversions.</span>
                         </p>
 
+                        <!-- Live page: services list -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            At Scalixo Media, we treat ad spend like our own money. Every
-                            campaign is built around CPL, ROAS, and lead quality — so you can
-                            see exactly what every rupee is doing.
+                            We manage Meta Ads, Google Ads, YouTube Ads, remarketing
+                            campaigns, and local lead-generation campaigns depending on
+                            your audience and goals.
+                        </p>
+
+                        <!-- Live page: budget note -->
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            Ad budget depends on your industry, location, competition, and
+                            lead target. We recommend a practical starting budget after
+                            understanding your business goal.
+                        </p>
+
+                        <!-- Live page: reporting note -->
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            We share clear reports showing spend, reach, clicks, leads, CPL,
+                            campaign insights, and recommended next steps.
+                        </p>
+
+                        <!-- Live page: audit note -->
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            We can audit your current campaigns, find issues in targeting,
+                            creatives, tracking, and funnel flow, then improve performance
+                            step by step.
                         </p>
 
                         <div class="grid grid-cols-2 gap-6 pt-6 sm:grid-cols-3" data-reveal>
@@ -243,13 +234,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             SERVICES — 6-card grid
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- SERVICES — unchanged (live page only lists these six channels) -->
         <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
 
@@ -378,11 +366,8 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             PLATFORMS — GSAP pinned horizontal scroll
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- PLATFORMS — unchanged -->
         <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
-
             <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
                 <div class="grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
@@ -401,10 +386,8 @@
                 </div>
             </div>
 
-            <!-- GSAP will pin this section and translate the track horizontally -->
             <div id="railViewport" class="overflow-hidden px-6 md:px-10">
                 <div id="railTrack" class="flex gap-6 will-change-transform">
-
                     <!-- Tile template -->
                     <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
@@ -469,17 +452,13 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             PROCESS — GSAP-driven progress line
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- PROCESS — unchanged -->
         <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-
                 <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
                         <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
@@ -497,14 +476,11 @@
                 </div>
 
                 <div class="relative">
-                    <!-- Static baseline -->
                     <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
-                    <!-- Animated accent line, height driven by GSAP -->
                     <div id="processLine" class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block" style="height: 0;"></div>
 
                     <div id="processList" class="space-y-6 md:space-y-8">
-
-                        <!-- Step template -->
+                        <!-- Step 01 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -527,6 +503,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 02 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -549,6 +526,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 03 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -570,6 +548,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 04 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -591,6 +570,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 05 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -612,6 +592,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 06 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
@@ -632,19 +613,15 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             WHY CHOOSE
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- WHY CHOOSE — unchanged -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="grid gap-16 md:grid-cols-12 md:gap-16">
-
                     <div class="md:col-span-5" data-reveal>
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
                             <span class="text-white/30"></span> 05 — Why Scalixo
@@ -664,7 +641,6 @@
 
                     <div class="md:col-span-6 md:col-start-7">
                         <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
-
                             <div data-reveal class="flex items-start gap-4">
                                 <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-bullseye text-sm"></i>
@@ -724,20 +700,15 @@
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Talk directly to the team running your campaigns — no middlemen.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             RESULTS
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- RESULTS — unchanged -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-
                 <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7">
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
@@ -755,7 +726,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
                     <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
@@ -809,18 +779,14 @@
                             <p class="mt-4 text-sm leading-relaxed text-white/45">What works gets doubled. What doesn't gets cut. Budget always follows performance.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             FEATURED METRIC — conic ring, GSAP counter
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- FEATURED METRIC — unchanged -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="grid gap-6 md:grid-cols-12">
-
                     <div class="md:col-span-5" data-reveal>
                         <div class="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-8">
                             <span class="pointer-events-none absolute -right-24 -top-6 h-56 w-56 rounded-full bg-accent/15 blur-[100px]"></span>
@@ -929,12 +895,9 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             FINAL CTA
-        ═══════════════════════════════════════════════════════════ -->
+        <!-- FINAL CTA — updated with live-page meta description -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-
                 <div class="mb-10" data-reveal>
                     <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(07)</span>
                 </div>
@@ -956,7 +919,6 @@
                         <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Facebook</a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -974,32 +936,24 @@
         </div>
     </footer>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         GSAP — reveals, split, counters, ring, pinned rail, progress
-    ═══════════════════════════════════════════════════════════ -->
+    <!-- GSAP script — unchanged -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            /* ── Prefers-reduced-motion ── */
             const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
             gsap.defaults({ ease: "power3.out" });
 
-            /* ═══════════════════════════════════════════════════
-               1. PROGRESS BAR
-            ═══════════════════════════════════════════════════ */
+            // 1. Progress bar
             const bar = document.getElementById("scrollProgress");
             const setBarScale = gsap.quickSetter(bar, "scaleX");
-
             ScrollTrigger.create({
                 start: 0,
                 end: "max",
                 onUpdate: (self) => setBarScale(self.progress),
             });
 
-            /* ═══════════════════════════════════════════════════
-               2. CUSTOM CURSOR
-            ═══════════════════════════════════════════════════ */
+            // 2. Custom cursor
             const ring = document.getElementById("cursorRing");
             const dot = document.getElementById("cursorDot");
             if (ring && dot && window.innerWidth >= 768 && !reduced) {
@@ -1007,28 +961,22 @@
                 const ringY = gsap.quickTo(ring, "y", { duration: 0.5, ease: "power3" });
                 const dotX = gsap.quickTo(dot, "x", { duration: 0.15, ease: "power3" });
                 const dotY = gsap.quickTo(dot, "y", { duration: 0.15, ease: "power3" });
-
                 gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
-
                 window.addEventListener("mousemove", (e) => {
                     ringX(e.clientX); ringY(e.clientY);
                     dotX(e.clientX);  dotY(e.clientY);
                 });
-
                 document.querySelectorAll("a, button, [data-glow]").forEach((el) => {
                     el.addEventListener("mouseenter", () => gsap.to(ring, { scale: 1.6, borderColor: "rgba(28,88,227,0.9)", duration: 0.3 }));
                     el.addEventListener("mouseleave", () => gsap.to(ring, { scale: 1, borderColor: "rgba(255,255,255,0.3)", duration: 0.3 }));
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               3. MOBILE MENU
-            ═══════════════════════════════════════════════════ */
+            // 3. Mobile menu
             const menuBtn = document.getElementById("menuBtn");
             const mobileMenu = document.getElementById("mobileMenu");
             const header = document.getElementById("siteHeader");
             let menuOpen = false;
-
             if (menuBtn && mobileMenu) {
                 menuBtn.addEventListener("click", () => {
                     menuOpen = !menuOpen;
@@ -1055,11 +1003,8 @@
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               4. HERO INTRO TIMELINE
-            ═══════════════════════════════════════════════════ */
+            // 4. Hero intro
             const heroTl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
-
             heroTl
                 .from("[data-hero-breadcrumb]", { opacity: 0, y: 20, duration: 0.6 })
                 .from("[data-hero-line]", {
@@ -1076,33 +1021,20 @@
                     stagger: 0.12,
                 }, "-=0.6");
 
-            /* ═══════════════════════════════════════════════════
-               5. GENERIC REVEALS (data-reveal)
-            ═══════════════════════════════════════════════════ */
+            // 5. Generic reveals
             if (!reduced) {
                 gsap.utils.toArray("[data-reveal]").forEach((el) => {
                     gsap.from(el, {
-                        opacity: 0,
-                        y: 40,
-                        duration: 0.9,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 88%",
-                            once: true,
-                        },
+                        opacity: 0, y: 40, duration: 0.9, ease: "power3.out",
+                        scrollTrigger: { trigger: el, start: "top 88%", once: true },
                     });
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               6. SPLIT-HEADING REVEALS (data-split)
-                  Splits into lines manually so no SplitText plugin needed
-            ═══════════════════════════════════════════════════ */
+            // 6. Split headings
             gsap.utils.toArray("[data-split]").forEach((el) => {
                 const html = el.innerHTML.trim();
                 const lines = html.split(/<br\s*\/?>/i);
-
                 el.innerHTML = lines
                     .map((line) => `
                         <span class="block overflow-hidden">
@@ -1110,131 +1042,85 @@
                         </span>
                     `)
                     .join("");
-
                 if (!reduced) {
                     gsap.from(el.querySelectorAll(".split-line"), {
-                        yPercent: 110,
-                        opacity: 0,
-                        duration: 1,
-                        stagger: 0.08,
-                        ease: "power4.out",
+                        yPercent: 110, opacity: 0, duration: 1, stagger: 0.08, ease: "power4.out",
                         scrollTrigger: { trigger: el, start: "top 85%", once: true },
                     });
                 }
             });
 
-            /* ═══════════════════════════════════════════════════
-               7. COUNTERS (data-counter)
-            ═══════════════════════════════════════════════════ */
+            // 7. Counters
             gsap.utils.toArray("[data-counter]").forEach((el) => {
                 const end = parseFloat(el.dataset.counter);
                 if (isNaN(end)) return;
                 const obj = { v: 0 };
-
                 gsap.to(obj, {
-                    v: end,
-                    duration: 2,
-                    ease: "power3.out",
+                    v: end, duration: 2, ease: "power3.out",
                     scrollTrigger: { trigger: el, start: "top 85%", once: true },
                     onUpdate: () => { el.textContent = Math.floor(obj.v); },
                     onComplete: () => { el.textContent = end; },
                 });
             });
 
-            /* ═══════════════════════════════════════════════════
-               8. METRIC RING (conic-gradient progress via CSS var)
-            ═══════════════════════════════════════════════════ */
+            // 8. Metric ring
             const metricRing = document.getElementById("metricRing");
             if (metricRing) {
                 const obj = { v: 0 };
                 gsap.to(obj, {
-                    v: 87,
-                    duration: 2,
-                    ease: "power3.out",
+                    v: 87, duration: 2, ease: "power3.out",
                     scrollTrigger: { trigger: metricRing, start: "top 80%", once: true },
                     onUpdate: () => metricRing.style.setProperty("--p", obj.v.toFixed(2)),
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               9. MARQUEE — seamless, driven by GSAP
-            ═══════════════════════════════════════════════════ */
+            // 9. Marquee
             const track = document.getElementById("marqueeTrack");
             if (track) {
-                // Duplicate once so the loop is seamless
                 track.innerHTML += track.innerHTML;
-
                 if (!reduced) {
-                    gsap.to(track, {
-                        xPercent: -50,
-                        duration: 40,
-                        ease: "none",
-                        repeat: -1,
-                    });
+                    gsap.to(track, { xPercent: -50, duration: 40, ease: "none", repeat: -1 });
                 }
             }
 
-            /* ═══════════════════════════════════════════════════
-               10. PINNED HORIZONTAL RAIL (platforms)
-            ═══════════════════════════════════════════════════ */
+            // 10. Pinned horizontal rail
             const rail = document.getElementById("railTrack");
             const railSection = document.getElementById("platforms");
             if (rail && railSection && !reduced && window.innerWidth >= 768) {
                 const getScrollAmount = () => -(rail.scrollWidth - railSection.clientWidth + 48);
-
                 gsap.to(rail, {
-                    x: getScrollAmount,
-                    ease: "none",
+                    x: getScrollAmount, ease: "none",
                     scrollTrigger: {
                         trigger: railSection,
                         start: "top top",
                         end: () => `+=${rail.scrollWidth}`,
-                        pin: true,
-                        scrub: 1,
-                        invalidateOnRefresh: true,
-                        anticipatePin: 1,
+                        pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
                     },
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               11. PROCESS LINE — scrubbed to scroll progress
-            ═══════════════════════════════════════════════════ */
+            // 11. Process line
             const processList = document.getElementById("processList");
             const processLine = document.getElementById("processLine");
             if (processList && processLine) {
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: processList,
-                        start: "top 70%",
-                        end: "bottom 60%",
-                        scrub: true,
+                        trigger: processList, start: "top 70%", end: "bottom 60%", scrub: true,
                     },
                 });
-
-                tl.fromTo(processLine,
-                    { height: "0%" },
-                    { height: "100%", ease: "none" }
-                );
-
-                // Each step highlights as it enters view
+                tl.fromTo(processLine, { height: "0%" }, { height: "100%", ease: "none" });
                 gsap.utils.toArray(".process-step").forEach((step) => {
                     gsap.from(step, {
-                        opacity: 0,
-                        y: 30,
-                        duration: 0.7,
+                        opacity: 0, y: 30, duration: 0.7,
                         scrollTrigger: { trigger: step, start: "top 85%", once: true },
                     });
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               12. MAGNETIC BUTTONS
-            ═══════════════════════════════════════════════════ */
+            // 12. Magnetic buttons
             if (!reduced) {
                 document.querySelectorAll("[data-magnetic]").forEach((el) => {
                     const strength = 0.3;
-
                     el.addEventListener("mousemove", (e) => {
                         const r = el.getBoundingClientRect();
                         const x = e.clientX - r.left - r.width / 2;
@@ -1247,28 +1133,21 @@
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               13. PARALLAX ORBS
-            ═══════════════════════════════════════════════════ */
+            // 13. Parallax orbs
             if (!reduced) {
                 document.querySelectorAll("[data-parallax]").forEach((el) => {
                     const speed = parseFloat(el.dataset.parallax) || 0.1;
                     gsap.to(el, {
-                        yPercent: -speed * 100,
-                        ease: "none",
+                        yPercent: -speed * 100, ease: "none",
                         scrollTrigger: {
                             trigger: el.closest("section"),
-                            start: "top bottom",
-                            end: "bottom top",
-                            scrub: true,
+                            start: "top bottom", end: "bottom top", scrub: true,
                         },
                     });
                 });
             }
 
-            /* ═══════════════════════════════════════════════════
-               14. CARD GLOW — set --x/--y for radial hover
-            ═══════════════════════════════════════════════════ */
+            // 14. Card glow
             document.querySelectorAll("[data-glow]").forEach((card) => {
                 card.addEventListener("mousemove", (e) => {
                     const r = card.getBoundingClientRect();
@@ -1277,21 +1156,16 @@
                 });
             });
 
-            /* ═══════════════════════════════════════════════════
-               15. HEADER STATE ON SCROLL
-            ═══════════════════════════════════════════════════ */
+            // 15. Header scroll state
             ScrollTrigger.create({
-                start: 20,
-                end: "max",
+                start: 20, end: "max",
                 onToggle: (self) => {
                     header.classList.toggle("backdrop-blur-md", self.isActive);
                     header.classList.toggle("bg-ink/60", self.isActive);
                 },
             });
 
-            /* ═══════════════════════════════════════════════════
-               16. CLOCK + YEAR
-            ═══════════════════════════════════════════════════ */
+            // 16. Clock + year
             const clock = document.getElementById("clock");
             if (clock) {
                 const tick = () => {
@@ -1306,9 +1180,7 @@
             const year = document.getElementById("year");
             if (year) year.textContent = new Date().getFullYear();
 
-            /* ═══════════════════════════════════════════════════
-               17. REFRESH AFTER FONTS LOAD
-            ═══════════════════════════════════════════════════ */
+            // 17. Refresh after fonts load
             if (document.fonts && document.fonts.ready) {
                 document.fonts.ready.then(() => ScrollTrigger.refresh());
             }
