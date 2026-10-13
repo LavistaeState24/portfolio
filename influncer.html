@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Influencer Marketing — Scalixo Media Agency</title>
+    <meta name="description"
+        content="Influencer marketing services by Scalixo Media for creator collaborations, reels campaigns, local influencer promotions, brand awareness, engagement, and trust-building growth." />
+    <meta name="keywords"
+        content="Influencer Marketing, Creator Campaigns, Influencer Agency, Scalixo Media, Ahmedabad" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body id="top" data-page="influencer" class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- PROGRESS BAR -->
+    <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
+
+    <!-- CURSOR -->
+    <div id="cursorRing" class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
+    <div id="cursorDot" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
+
+    <!-- HEADER -->
+    <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+            <a href="index.html" class="group relative flex items-center gap-3">
+                <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+                <img src="./assets/scalixo.png" alt="Scalixo Media"
+                    class="relative h-10 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+            </a>
+
+            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] md:flex">
+                <a href="index.html#services" class="transition-opacity duration-300 hover:opacity-40">Services</a>
+                <a href="index.html#work" class="transition-opacity duration-300 hover:opacity-40">Work</a>
+                <a href="contact.html" class="text-accent transition-opacity duration-300 hover:opacity-60">Contact</a>
+            </nav>
+
+            <a href="contact.html"
+                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-40 md:block">
+                Start a project ↗
+            </a>
+
+            <button id="menuBtn" type="button" aria-controls="mobileMenu" aria-expanded="false"
+                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] md:hidden">Menu</button>
+        </div>
+
+        <div id="mobileMenu"
+            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-4 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Services</a>
+            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Work</a>
+            <a href="contact.html" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-accent">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO — Influencer Marketing -->
+        <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
+            <div class="pointer-events-none absolute inset-0 opacity-[0.35]
+                bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                bg-[size:72px_72px]
+                [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
+
+            <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
+            <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
+            <div data-parallax="0.08" class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
+
+            <div class="relative mx-auto max-w-[1500px]">
+
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white" data-hero-breadcrumb>
+                    <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                    <span class="text-white/20">/</span>
+                    <span class="text-white/70">Influencer Marketing</span>
+                </div>
+
+                <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>Creator-led campaigns</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block" data-hero-line>that build trust</span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span class="hero-line block text-accent" data-hero-line>
+                            and drive action<span class="text-accent">.</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-5" data-hero-sub>
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl">
+                            Scalixo Media helps brands grow through strategic influencer
+                            marketing campaigns that create awareness, social proof,
+                            engagement, and qualified enquiries.
+                        </p>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <a href="#services" data-magnetic
+                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                                <span class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                <span class="relative">Explore Services</span>
+                                <i class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
+                            </a>
+                            <a href="contact.html" data-magnetic
+                                class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
+                                <i class="fa-solid fa-comments text-xs"></i>
+                                Plan Campaign
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-10 md:col-span-6 md:col-start-7" data-hero-sub>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">Creator Trust</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Services</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Research · Campaign · Coordination</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Ahmedabad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE — Influencer terms -->
+        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
+            <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
+                <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Influencer Research</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Campaign Strategy</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Creator Coordination</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Reels Campaigns</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Product Promotions</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Performance Review</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY IT MATTERS — People Trust People -->
+        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-10 md:grid-cols-12 md:gap-14">
+                    <div class="md:col-span-5">
+                        <div class="sticky top-32">
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                                <span class="text-white/30"></span> 01 — Why It Matters
+                            </span>
+                            <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                                People trust<br />people more than ads.
+                            </h2>
+                            <div class="mt-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40" data-reveal>
+                                <span class="h-px w-10 bg-accent"></span>
+                                <span>Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 md:col-span-6 md:col-start-7">
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            Today's audience does not connect with brands only through
+                            polished ads. They trust real people, real experiences, and
+                            authentic recommendations.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            Influencer marketing helps your brand enter the conversation
+                            naturally through creators your audience already follows and
+                            trusts.
+                        </p>
+
+                        <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
+                            At Scalixo Media, we do not randomly pick influencers. We plan
+                            campaigns based on your business goal, target audience,
+                            location, creator fit, content quality, and measurable
+                            campaign outcomes.
+                        </p>
+
+                        <div class="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-3" data-reveal>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">01</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Authenticity</div>
+                                <p class="mt-2 text-sm text-white/45">Real creators, real recommendations.</p>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">02</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Trust</div>
+                                <p class="mt-2 text-sm text-white/45">Credibility through familiar voices.</p>
+                            </div>
+                            <div class="pl-4">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">03</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Reach</div>
+                                <p class="mt-2 text-sm text-white/45">Access to engaged, relevant audiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES — Complete Influencer Marketing Management -->
+        <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 02 — What We Offer
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Complete influencer<br />marketing management.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            From creator shortlisting to campaign execution, content approvals, posting, tracking, and reporting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Influencer Research & Shortlisting -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Influencer Research</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We identify relevant creators based on niche, audience type, location, content quality, and brand fit.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>research.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Campaign Strategy -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Campaign Strategy</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We plan the campaign objective, messaging, deliverables, content format, timeline, and expected outcomes.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>strategy.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Creator Coordination -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Creator Coordination</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We handle influencer communication, briefing, collaboration flow, approvals, and posting coordination.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>coordination.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Reels & Video Campaigns -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Reels &amp; Video</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Creator-led reels and videos designed to increase reach, trust, engagement, and audience action.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>reels.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product & Brand Promotions -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Product Promotions</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Promotional creator content for launches, offers, events, services, products, and brand awareness campaigns.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>promotions.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Reporting & Performance Review -->
+                    <article data-reveal data-glow
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Reporting</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                We review reach, engagement, saves, shares, profile visits, enquiries, and overall campaign response.
+                            </p>
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                <span>reporting.ts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CREATOR CATEGORIES — Influencer Campaigns For Every Goal -->
+        <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
+            <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
+                <div class="grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 03 — Creator Categories
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Influencer campaigns<br />for every brand goal.
+                        </h2>
+                    </div>
+                    <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-base leading-relaxed text-white/50">
+                            We match your brand with the right creator tier — from niche micro influencers to macro reach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="railViewport" class="overflow-hidden px-6 md:px-10">
+                <div id="railTrack" class="flex gap-6 will-change-transform">
+
+                    <!-- Micro Influencers -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-user text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Micro</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">High-engagement creators with loyal, niche audiences.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>engagement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Macro Influencers -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-star text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Macro</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Larger reach for broad awareness and brand recall.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>reach</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Local Creators -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-map-marker-alt text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Local</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">City-focused creators who drive footfall and local trust.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>local</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lifestyle Creators -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-shopping-bag text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">04</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Lifestyle</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Creators who showcase products within aspirational content.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>lifestyle</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food & Cafe Creators -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-utensils text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">05</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Food &amp; Cafe</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">For restaurants, cafes, and food brands seeking footfall.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>food</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Creators -->
+                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-8 flex items-center justify-between">
+                                <i class="fa-solid fa-briefcase text-4xl text-accent"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">06</span>
+                            </div>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Business</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">B2B and professional creators for service-based brands.</p>
+                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                <span>b2b</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS — How We Run Influencer Campaigns -->
+        <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-6">
+                        <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 04 — Our Process
+                        </div>
+                        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            How we run<br />influencer campaigns.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            A clear six-step process from goal to reporting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
+                    <div id="processLine" class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block" style="height: 0;"></div>
+
+                    <div id="processList" class="space-y-6 md:space-y-8">
+
+                        <!-- Step 01 — Understand Brand Goal -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 01</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Understand Goal</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We identify whether you need awareness, enquiries, footfall, product promotion, or launch visibility.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Brief</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Objectives</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 02 — Find Right Creators -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 02</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Find Creators</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We shortlist creators whose audience, tone, niche, and content style match your brand.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Shortlist</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Match</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 03 — Plan Content Brief -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 03</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Plan Brief</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We prepare clear talking points, deliverables, campaign message, CTA, and brand guidelines.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Messaging</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Deliverables</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 04 — Coordinate Execution -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 04</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Coordinate</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We manage schedules, approvals, posting timelines, creator communication, and campaign flow.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Scheduling</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Approvals</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 05 — Publish & Amplify -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 05</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Publish</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    Creator content goes live with the right caption, tags, CTA, story support, and brand visibility.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Go-live</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Amplify</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 06 — Track & Report -->
+                        <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
+                            <div class="md:col-span-1">
+                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 06</span>
+                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Track &amp; Report</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-base leading-relaxed text-white/50 md:text-lg">
+                                    We evaluate campaign performance and share insights for future creator-led growth.
+                                </p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Analytics</span>
+                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Insights</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE — Influencer Marketing With Strategy -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-16 md:grid-cols-12 md:gap-16">
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            <span class="text-white/30"></span> 05 — Why Scalixo
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Strategy, not random<br />collaborations.
+                        </h2>
+                        <p class="mt-6 leading-relaxed text-white/50">
+                            We focus on choosing the right creators, creating clear campaign messaging, and making influencer content support real business goals.
+                        </p>
+                        <a href="contact.html" data-magnetic
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                            Start Your Campaign
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-search text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Right Creator Fit</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">We match creators with your audience, category, location, and brand tone.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-check-circle text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Authentic Promotion</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Content feels natural, relatable, and trustworthy instead of forced advertising.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-bullhorn text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Strong Campaign Brief</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every creator gets clear messaging, deliverables, CTA, and brand direction.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-comments text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Smooth Coordination</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">We manage creator communication so your campaign runs professionally.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-chart-bar text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Performance Review</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">We track campaign response and learn what content creates better impact.</p>
+                                </div>
+                            </div>
+
+                            <div data-reveal class="flex items-start gap-4">
+                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    <i class="fa-solid fa-rocket text-sm"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Growth-Focused</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Campaigns are planned for awareness, trust, enquiries, and long-term brand growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS — What Influencer Campaign Success Looks Like -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 06 — Results
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            What influencer<br />campaign success looks like.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Every creator campaign ships with these outcomes built in.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Higher Brand Awareness</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Reach new audiences through creators your target customers already follow.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Better Brand Trust</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Authentic recommendations help your business feel more credible and approachable.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">More Engagement</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Creator content can increase comments, shares, saves, profile visits, and conversations.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">New Audience Growth</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Drive relevant followers and community attention from creator-led discovery.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Qualified Enquiries</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Campaigns can be planned around WhatsApp messages, calls, website visits, or bookings.</p>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Reusable Content</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Creator videos and testimonials can support ads, social media, and future campaigns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMPAIGN TYPES — Influencer Campaigns We Can Build -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="text-white/30"></span> 07 — Campaign Types
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Influencer campaigns<br />we can build.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                            Choose a creator campaign based on your business goal, launch plan, or brand growth stage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Local Business Promotions</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">For salons, cafes, clinics, real estate brands, restaurants, and local service businesses that want visibility and footfall.</p>
+                            <a href="contact.html" class="mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-colors hover:text-white">
+                                Plan Campaign <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Product Launch Campaigns</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">For brands launching a new product, service, offer, collection, event, or experience with creator support.</p>
+                            <a href="contact.html" class="mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-colors hover:text-white">
+                                Plan Campaign <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div class="relative">
+                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Reels Collaboration</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">For high-reach short-form content that introduces your brand in a relatable, engaging, and trust-building way.</p>
+                            <a href="contact.html" class="mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-colors hover:text-white">
+                                Plan Campaign <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ — Influencer Marketing Questions -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="grid gap-16 md:grid-cols-12 md:gap-16">
+                    <div class="md:col-span-5" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            <span class="text-white/30"></span> 08 — FAQs
+                        </div>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            Questions before<br />starting your campaign?
+                        </h2>
+                        <p class="mt-6 leading-relaxed text-white/50">
+                            Here are common questions businesses ask before starting their influencer marketing campaign with Scalixo Media.
+                        </p>
+                        <a href="contact.html" data-magnetic
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
+                            Ask Your Question
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="space-y-4">
+                            <details data-reveal class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-500 open:border-accent/30 open:bg-white/[0.04]">
+                                <summary class="flex cursor-pointer items-center justify-between font-display text-lg uppercase tracking-tight text-white">
+                                    What is influencer marketing?
+                                    <span class="text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+                                </summary>
+                                <p class="mt-4 text-sm leading-relaxed text-white/50">
+                                    Influencer marketing is a strategy where brands collaborate with creators to promote products, services, offers, or experiences through trusted content.
+                                </p>
+                            </details>
+
+                            <details data-reveal class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-500 open:border-accent/30 open:bg-white/[0.04]">
+                                <summary class="flex cursor-pointer items-center justify-between font-display text-lg uppercase tracking-tight text-white">
+                                    Do you only work with famous influencers?
+                                    <span class="text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+                                </summary>
+                                <p class="mt-4 text-sm leading-relaxed text-white/50">
+                                    No. We shortlist suitable creators based on your niche, location, audience, content quality, budget, and campaign goal.
+                                </p>
+                            </details>
+
+                            <details data-reveal class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-500 open:border-accent/30 open:bg-white/[0.04]">
+                                <summary class="flex cursor-pointer items-center justify-between font-display text-lg uppercase tracking-tight text-white">
+                                    Does influencer marketing work for local businesses?
+                                    <span class="text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+                                </summary>
+                                <p class="mt-4 text-sm leading-relaxed text-white/50">
+                                    Yes. Influencer marketing works well for salons, cafes, restaurants, real estate, fashion, beauty, healthcare, education, events, e-commerce, and local businesses.
+                                </p>
+                            </details>
+
+                            <details data-reveal class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-500 open:border-accent/30 open:bg-white/[0.04]">
+                                <summary class="flex cursor-pointer items-center justify-between font-display text-lg uppercase tracking-tight text-white">
+                                    Do you manage creator coordination?
+                                    <span class="text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+                                </summary>
+                                <p class="mt-4 text-sm leading-relaxed text-white/50">
+                                    Yes. We manage creator shortlisting, briefing, coordination, content approvals, posting timeline, and performance review.
+                                </p>
+                            </details>
+
+                            <details data-reveal class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-500 open:border-accent/30 open:bg-white/[0.04]">
+                                <summary class="flex cursor-pointer items-center justify-between font-display text-lg uppercase tracking-tight text-white">
+                                    Can we reuse influencer content?
+                                    <span class="text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+                                </summary>
+                                <p class="mt-4 text-sm leading-relaxed text-white/50">
+                                    Yes, influencer content can often be repurposed for social proof, website sections, reels, stories, and paid ad creatives, depending on campaign terms and permissions.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA — Ready To Grow Through Creator-Led Campaigns? -->
+        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+            <div class="mx-auto max-w-[1500px]">
+                <div class="mb-10" data-reveal>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(09)</span>
+                </div>
+
+                <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
+                    Ready to grow<br />through creator-led<br />campaigns<span class="text-accent">.</span>
+                </h2>
+
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between" data-reveal>
+                    <a href="tel:+919328792160" data-magnetic
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        +91 93287 92160
+                        <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+
+                    <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+        <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+            <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- GSAP script — unchanged -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+            gsap.defaults({ ease: "power3.out" });
+
+            // 1. Progress bar
+            const bar = document.getElementById("scrollProgress");
+            const setBarScale = gsap.quickSetter(bar, "scaleX");
+            ScrollTrigger.create({
+                start: 0,
+                end: "max",
+                onUpdate: (self) => setBarScale(self.progress),
+            });
+
+            // 2. Custom cursor
+            const ring = document.getElementById("cursorRing");
+            const dot = document.getElementById("cursorDot");
+            if (ring && dot && window.innerWidth >= 768 && !reduced) {
+                const ringX = gsap.quickTo(ring, "x", { duration: 0.5, ease: "power3" });
+                const ringY = gsap.quickTo(ring, "y", { duration: 0.5, ease: "power3" });
+                const dotX = gsap.quickTo(dot, "x", { duration: 0.15, ease: "power3" });
+                const dotY = gsap.quickTo(dot, "y", { duration: 0.15, ease: "power3" });
+                gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
+                window.addEventListener("mousemove", (e) => {
+                    ringX(e.clientX); ringY(e.clientY);
+                    dotX(e.clientX);  dotY(e.clientY);
+                });
+                document.querySelectorAll("a, button, [data-glow]").forEach((el) => {
+                    el.addEventListener("mouseenter", () => gsap.to(ring, { scale: 1.6, borderColor: "rgba(28,88,227,0.9)", duration: 0.3 }));
+                    el.addEventListener("mouseleave", () => gsap.to(ring, { scale: 1, borderColor: "rgba(255,255,255,0.3)", duration: 0.3 }));
+                });
+            }
+
+            // 3. Mobile menu
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const header = document.getElementById("siteHeader");
+            let menuOpen = false;
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener("click", () => {
+                    menuOpen = !menuOpen;
+                    if (menuOpen) {
+                        mobileMenu.classList.remove("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.add("pointer-events-auto", "opacity-100");
+                        header.classList.add("bg-ink");
+                        header.classList.remove("mix-blend-difference");
+                        document.body.classList.add("overflow-hidden");
+                        menuBtn.textContent = "Close";
+                        menuBtn.setAttribute("aria-expanded", "true");
+                        gsap.fromTo(".mobile-link",
+                            { opacity: 0, y: 40 },
+                            { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" });
+                    } else {
+                        mobileMenu.classList.add("pointer-events-none", "opacity-0");
+                        mobileMenu.classList.remove("pointer-events-auto", "opacity-100");
+                        header.classList.remove("bg-ink");
+                        header.classList.add("mix-blend-difference");
+                        document.body.classList.remove("overflow-hidden");
+                        menuBtn.textContent = "Menu";
+                        menuBtn.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+
+            // 4. Hero intro
+            const heroTl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
+            heroTl
+                .from("[data-hero-breadcrumb]", { opacity: 0, y: 20, duration: 0.6 })
+                .from("[data-hero-line]", {
+                    yPercent: 110,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.08,
+                    ease: "power4.out",
+                }, "-=0.3")
+                .from("[data-hero-sub]", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.9,
+                    stagger: 0.12,
+                }, "-=0.6");
+
+            // 5. Generic reveals
+            if (!reduced) {
+                gsap.utils.toArray("[data-reveal]").forEach((el) => {
+                    gsap.from(el, {
+                        opacity: 0, y: 40, duration: 0.9, ease: "power3.out",
+                        scrollTrigger: { trigger: el, start: "top 88%", once: true },
+                    });
+                });
+            }
+
+            // 6. Split headings
+            gsap.utils.toArray("[data-split]").forEach((el) => {
+                const html = el.innerHTML.trim();
+                const lines = html.split(/<br\s*\/?>/i);
+                el.innerHTML = lines
+                    .map((line) => `
+                        <span class="block overflow-hidden">
+                            <span class="split-line block">${line}</span>
+                        </span>
+                    `)
+                    .join("");
+                if (!reduced) {
+                    gsap.from(el.querySelectorAll(".split-line"), {
+                        yPercent: 110, opacity: 0, duration: 1, stagger: 0.08, ease: "power4.out",
+                        scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    });
+                }
+            });
+
+            // 7. Counters
+            gsap.utils.toArray("[data-counter]").forEach((el) => {
+                const end = parseFloat(el.dataset.counter);
+                if (isNaN(end)) return;
+                const obj = { v: 0 };
+                gsap.to(obj, {
+                    v: end, duration: 2, ease: "power3.out",
+                    scrollTrigger: { trigger: el, start: "top 85%", once: true },
+                    onUpdate: () => { el.textContent = Math.floor(obj.v); },
+                    onComplete: () => { el.textContent = end; },
+                });
+            });
+
+            // 8. Metric ring
+            const metricRing = document.getElementById("metricRing");
+            if (metricRing) {
+                const obj = { v: 0 };
+                gsap.to(obj, {
+                    v: 87, duration: 2, ease: "power3.out",
+                    scrollTrigger: { trigger: metricRing, start: "top 80%", once: true },
+                    onUpdate: () => metricRing.style.setProperty("--p", obj.v.toFixed(2)),
+                });
+            }
+
+            // 9. Marquee
+            const track = document.getElementById("marqueeTrack");
+            if (track) {
+                track.innerHTML += track.innerHTML;
+                if (!reduced) {
+                    gsap.to(track, { xPercent: -50, duration: 40, ease: "none", repeat: -1 });
+                }
+            }
+
+            // 10. Pinned horizontal rail
+            const rail = document.getElementById("railTrack");
+            const railSection = document.getElementById("platforms");
+            if (rail && railSection && !reduced && window.innerWidth >= 768) {
+                const getScrollAmount = () => -(rail.scrollWidth - railSection.clientWidth + 48);
+                gsap.to(rail, {
+                    x: getScrollAmount, ease: "none",
+                    scrollTrigger: {
+                        trigger: railSection,
+                        start: "top top",
+                        end: () => `+=${rail.scrollWidth}`,
+                        pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
+                    },
+                });
+            }
+
+            // 11. Process line
+            const processList = document.getElementById("processList");
+            const processLine = document.getElementById("processLine");
+            if (processList && processLine) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: processList, start: "top 70%", end: "bottom 60%", scrub: true,
+                    },
+                });
+                tl.fromTo(processLine, { height: "0%" }, { height: "100%", ease: "none" });
+                gsap.utils.toArray(".process-step").forEach((step) => {
+                    gsap.from(step, {
+                        opacity: 0, y: 30, duration: 0.7,
+                        scrollTrigger: { trigger: step, start: "top 85%", once: true },
+                    });
+                });
+            }
+
+            // 12. Magnetic buttons
+            if (!reduced) {
+                document.querySelectorAll("[data-magnetic]").forEach((el) => {
+                    const strength = 0.3;
+                    el.addEventListener("mousemove", (e) => {
+                        const r = el.getBoundingClientRect();
+                        const x = e.clientX - r.left - r.width / 2;
+                        const y = e.clientY - r.top - r.height / 2;
+                        gsap.to(el, { x: x * strength, y: y * strength, duration: 0.3, ease: "power3.out" });
+                    });
+                    el.addEventListener("mouseleave", () => {
+                        gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.4)" });
+                    });
+                });
+            }
+
+            // 13. Parallax orbs
+            if (!reduced) {
+                document.querySelectorAll("[data-parallax]").forEach((el) => {
+                    const speed = parseFloat(el.dataset.parallax) || 0.1;
+                    gsap.to(el, {
+                        yPercent: -speed * 100, ease: "none",
+                        scrollTrigger: {
+                            trigger: el.closest("section"),
+                            start: "top bottom", end: "bottom top", scrub: true,
+                        },
+                    });
+                });
+            }
+
+            // 14. Card glow
+            document.querySelectorAll("[data-glow]").forEach((card) => {
+                card.addEventListener("mousemove", (e) => {
+                    const r = card.getBoundingClientRect();
+                    card.style.setProperty("--x", `${((e.clientX - r.left) / r.width) * 100}%`);
+                    card.style.setProperty("--y", `${((e.clientY - r.top) / r.height) * 100}%`);
+                });
+            });
+
+            // 15. Header scroll state
+            ScrollTrigger.create({
+                start: 20, end: "max",
+                onToggle: (self) => {
+                    header.classList.toggle("backdrop-blur-md", self.isActive);
+                    header.classList.toggle("bg-ink/60", self.isActive);
+                },
+            });
+
+            // 16. Clock + year
+            const clock = document.getElementById("clock");
+            if (clock) {
+                const tick = () => {
+                    clock.textContent = new Date().toLocaleTimeString("en-IN", {
+                        timeZone: "Asia/Kolkata", hour12: false,
+                        hour: "2-digit", minute: "2-digit", second: "2-digit",
+                    });
+                };
+                tick();
+                setInterval(tick, 1000);
+            }
+            const year = document.getElementById("year");
+            if (year) year.textContent = new Date().getFullYear();
+
+            // 17. Refresh after fonts load
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => ScrollTrigger.refresh());
+            }
+            window.addEventListener("load", () => ScrollTrigger.refresh());
+        });
+    </script>
+
+</body>
+
+</html>
