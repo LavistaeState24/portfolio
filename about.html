@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Scalixo Media Agency</title>
+  <meta name="description" content="Scalixo Media is a full-service digital marketing agency in Ahmedabad. We don't just market brands — we build businesses that scale." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="bg-ink font-sans text-white antialiased">
+
+  <!-- Cursor -->
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Progress -->
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="inset-x-0 top-0 z-50 mix-blend-difference">
+    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+      <a href="index.html" class="group relative flex items-center gap-3">
+        <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+        <img src="./assets/scalixo.png" alt="Scalixo Media" class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+      </a>
+
+      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
+        <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
+        <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
+        <a href="about.html" class="text-accent transition-opacity hover:opacity-50">About</a>
+        <a href="contact.html" class="transition-opacity hover:opacity-25">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
+        Start a project ↗
+      </a>
+
+      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">Menu</button>
+    </div>
+
+    <div id="mobileMenu" class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+      <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
+      <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
+      <a href="about.html" class="mobile-link font-display text-5xl uppercase text-accent">About</a>
+      <a href="contact.html" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ 1. HERO — Line Reveal Animation ══════════ -->
+    <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
+
+      <div class="pointer-events-none absolute inset-0 opacity-[0.35] bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
+
+      <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
+      <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+
+        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white" data-hero-breadcrumb>
+          <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+          <span class="text-white/20">/</span>
+          <span class="text-white/70">About</span>
+        </div>
+
+        <h1 class="mt-8 max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
+          <span class="block overflow-hidden">
+            <span class="hero-line block" data-hero-line>We don't just</span>
+          </span>
+          <span class="block overflow-hidden">
+            <span class="hero-line block" data-hero-line>market brands. We</span>
+          </span>
+          <span class="block overflow-hidden">
+            <span class="hero-line block text-accent" data-hero-line>build businesses<span class="text-accent">.</span></span>
+          </span>
+        </h1>
+
+        <p class="mt-8 max-w-[560px] text-lg leading-relaxed text-white/55 md:text-xl" data-hero-sub>
+          At Scalixo Media, we believe marketing isn't about posting every day or running random ads.
+          It's about building a predictable system that attracts the right audience, generates qualified
+          leads, and helps businesses grow consistently.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ══════════ 2. METRICS — Number Ticker Animation ══════════ -->
+    <section class="border-t border-white/10 px-6 py-16 md:px-10 md:py-20">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="mb-10 flex flex-wrap items-end justify-between gap-4" data-slide-up>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(By The Numbers)</span>
+            <h2 class="mt-3 font-display text-3xl uppercase leading-none text-white md:text-5xl">
+              Growth you can count.
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-4">
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10">
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="num-ticker" data-value="50">0</span>+</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Brands Grown</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10">
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl">₹<span class="num-ticker" data-value="12">0</span>Cr+</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Ad Spend Managed</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10">
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="num-ticker" data-value="95">0</span>%</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Client Retention</div>
+          </div>
+          <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10">
+            <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="num-ticker" data-value="4.8" data-decimals="1">0</span>x</div>
+            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. ROAS</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ 3. ABOUT — Slide From Left + Right ══════════ -->
+    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="grid gap-12 md:grid-cols-12 md:gap-14">
+
+          <!-- Image column — slides from left -->
+          <div class="relative md:col-span-5" data-slide-left>
+            <div class="relative overflow-hidden rounded-3xl border border-white/10">
+              <img src="https://scalixomedia.com/img/about1.jpg" alt="About Scalixo Media" class="h-full w-full object-cover" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating stat chip -->
+            <div class="pointer-events-none absolute -bottom-4 -right-4 hidden rotate-3 items-center gap-3 rounded-2xl border border-accent/40 bg-ink/90 px-5 py-4 backdrop-blur-md md:inline-flex">
+              <span class="font-display text-3xl leading-none text-accent">50+</span>
+              <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-white/60">Brands<br />Grown</span>
+            </div>
+          </div>
+
+          <!-- Text column — slides from right -->
+          <div class="md:col-span-7" data-slide-right>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(About Us)</span>
+
+            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+              We Don't Just Market<br />Brands. We Build<br />
+              <span class="text-white/40">Businesses That Scale.</span>
+            </h2>
+
+            <div class="mt-8 space-y-5 text-base leading-relaxed text-white/55 md:text-lg">
+              <p>
+                At Scalixo Media, we believe marketing isn't about posting every day or running random ads.
+                It's about building a predictable system that attracts the right audience, generates
+                qualified leads, and helps businesses grow consistently.
+              </p>
+              <p>
+                Whether you're a startup, local business, or established brand, we combine creativity,
+                strategy, and performance marketing to turn your vision into measurable results.
+              </p>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-4">
+              <a href="contact.html" class="group inline-flex items-center gap-3 rounded-full bg-accent px-16 py-4 font-mono text-[11px] uppercase tracking-[0.25em] text-white transition-all duration-500 hover:bg-accent/80 hover:shadow-[0_15px_40px_-10px_rgba(28,88,227,0.7)]">
+                Let's Grow Together
+                <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+              </a>
+              <a href="service.html" class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.25em] text-white transition-all duration-500 hover:border-accent hover:text-accent">
+                View Our Services
+                <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 4. FOUNDER STORY — Scale-In + Fade Animation ══════════ -->
+    <section class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"></div>
+      <div class="pointer-events-none absolute -right-40 top-1/3 h-[420px] w-[420px] rounded-full bg-accent/[0.08] blur-[130px]"></div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+        <div class="grid gap-12 md:grid-cols-12 md:gap-14">
+
+          <!-- Founder photo — scale in -->
+          <div class="md:col-span-5" data-scale-in>
+            <div class="relative">
+              <div class="relative overflow-hidden rounded-3xl border border-white/10">
+                <img src="https://scalixomedia.com/img/founder.jpg" alt="Founder — Scalixo Media" class="h-full w-full object-cover" />
+                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Signature badge -->
+              <div class="pointer-events-none absolute bottom-6 left-6 right-6">
+                <div class="rounded-2xl border border-white/15 bg-ink/80 p-5 backdrop-blur-md">
+                  <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-accent">Founder & Director</div>
+                  <div class="mt-2 font-display text-2xl uppercase leading-none text-white">Your Name</div>
+                  <div class="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/45">Ahmedabad · Since 2021</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story — scale in with delay -->
+          <div class="md:col-span-7" data-scale-in>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Founder's Note)</span>
+
+            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-5xl">
+              Why We<br />Started<br />
+              <span class="text-white/40">Scalixo.</span>
+            </h2>
+
+            <div class="mt-8 space-y-5 text-base leading-relaxed text-white/55 md:text-lg">
+              <p>
+                After years of watching businesses burn money on ads that don't convert and content that
+                doesn't sell, we saw a gap. Most agencies chase vanity metrics — likes, follows, impressions.
+                Few actually build systems that produce revenue.
+              </p>
+              <p>
+                Scalixo Media started with one simple promise: <span class="text-white">build marketing that pays for itself</span>.
+                Every campaign, every piece of content, every rupee spent — engineered to move the needle on
+                what actually matters for your business.
+              </p>
+              <p>
+                Today, we work with founders across India who care about growth — not fluff. And we're just
+                getting started.
+              </p>
+            </div>
+
+            <!-- Signature line -->
+            <div class="mt-10 flex items-center gap-4 border-t border-white/10 pt-6">
+              <div class="h-px w-12 bg-accent"></div>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">A note from the founder</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 5. TEAM — Stagger Animation ══════════ -->
+    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-slide-up>
+          <div class="max-w-[640px]">
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(The Team)</span>
+            <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+              The minds behind<br />the growth.
+            </h2>
+            <p class="mt-5 leading-relaxed text-white/45">
+              A small, senior-led team obsessed with making marketing work. No rotating juniors.
+              No account managers who don't touch the work.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.02] px-5 py-3">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+            </span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/60">We're hiring</span>
+          </div>
+        </div>
+
+        <!-- Team grid with stagger -->
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6" data-stagger>
+
+          <!-- Team Member 01 -->
+          <div class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
+            <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
+              <img src="https://scalixomedia.com/img/team1.jpg" alt="Team Member" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
+              <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-accent">Founder · Strategy</div>
+              <div class="mt-2 font-display text-xl uppercase leading-none text-white">Name Here</div>
+              <div class="mt-2 max-h-0 overflow-hidden text-xs leading-relaxed text-white/50 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
+                Heads strategy & client growth · 8 yrs in D2C marketing
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 02 -->
+          <div class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
+            <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
+              <img src="https://scalixomedia.com/img/team2.jpg" alt="Team Member" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
+              <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-accent">Creative Director</div>
+              <div class="mt-2 font-display text-xl uppercase leading-none text-white">Name Here</div>
+              <div class="mt-2 max-h-0 overflow-hidden text-xs leading-relaxed text-white/50 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
+                Leads content & visuals · ex-agency creative lead
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 03 -->
+          <div class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
+            <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
+              <img src="https://scalixomedia.com/img/team3.jpg" alt="Team Member" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
+              <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-accent">Performance Lead</div>
+              <div class="mt-2 font-display text-xl uppercase leading-none text-white">Name Here</div>
+              <div class="mt-2 max-h-0 overflow-hidden text-xs leading-relaxed text-white/50 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
+                Manages ₹5Cr+ in ad spend · Meta & Google certified
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 04 -->
+          <div class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
+            <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
+              <img src="https://scalixomedia.com/img/team4.jpg" alt="Team Member" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
+              <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-accent">Content Strategist</div>
+              <div class="mt-2 font-display text-xl uppercase leading-none text-white">Name Here</div>
+              <div class="mt-2 max-h-0 overflow-hidden text-xs leading-relaxed text-white/50 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
+                Writes words that convert · 6 yrs content marketing
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ 6. VALUES — Fade-Up Stagger ══════════ -->
+    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="mx-auto max-w-[700px] text-center" data-slide-up>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(What We Stand For)</span>
+          <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-5xl">
+            Principles behind<br />every campaign.
+          </h2>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" data-stagger>
+
+          <div class="value-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-8">
+            <span class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative">
+              <div class="font-display text-5xl leading-none text-accent">01</div>
+              <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Outcomes Over Optics</h3>
+              <p class="mt-4 text-sm leading-relaxed text-white/45">
+                We measure success in revenue, not likes. Every action maps to a business goal.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-8">
+            <span class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative">
+              <div class="font-display text-5xl leading-none text-accent">02</div>
+              <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Radical Transparency</h3>
+              <p class="mt-4 text-sm leading-relaxed text-white/45">
+                Live dashboards, weekly reviews, and honest conversations. No surprises.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-8">
+            <span class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative">
+              <div class="font-display text-5xl leading-none text-accent">03</div>
+              <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Senior-Led Work</h3>
+              <p class="mt-4 text-sm leading-relaxed text-white/45">
+                Your strategy is built by seniors, not handed off to juniors.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-8">
+            <span class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></span>
+            <div class="relative">
+              <div class="font-display text-5xl leading-none text-accent">04</div>
+              <h3 class="mt-5 font-display text-xl uppercase leading-none text-white">Long-Term Thinking</h3>
+              <p class="mt-4 text-sm leading-relaxed text-white/45">
+                We build compounding systems — not one-off campaigns designed to disappear.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 7. TESTIMONIALS — Mask Reveal Animation ══════════ -->
+    <section class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+
+      <div class="pointer-events-none absolute -left-40 top-1/3 h-[420px] w-[420px] rounded-full bg-accent/[0.06] blur-[130px]"></div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+
+        <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-slide-up>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Client Stories)</span>
+            <h2 class="mt-3 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+              Don't take<br />our word for it.
+            </h2>
+          </div>
+          <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+            <span class="text-accent">4.9/5</span>
+            <span class="h-3 w-px bg-white/20"></span>
+            <span>Across 50+ Reviews</span>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Testimonial 01 -->
+          <div class="testi-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-9" data-mask-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/65 md:text-base">
+              "Scalixo rebuilt our entire funnel from scratch. Within 4 months, our ROAS jumped from
+              2.1x to 5.4x and our cost per acquisition dropped by 60%. The team actually cares about
+              the numbers — not just deliverables."
+            </p>
+            <div class="mt-6 flex items-center gap-3 border-t border-white/5 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 font-display text-sm text-accent">RK</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Rahul K.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, D2C Fashion Brand</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 02 -->
+          <div class="testi-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-9" data-mask-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/65 md:text-base">
+              "We came to Scalixo with an outdated website, no ad strategy, and a social presence that
+              was invisible. Within 6 months they've built us a full growth engine — 280+ qualified leads
+              per month, and our brand finally looks like a category leader."
+            </p>
+            <div class="mt-6 flex items-center gap-3 border-t border-white/5 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 font-display text-sm text-accent">PM</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Priya M.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CMO, SaaS Platform</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 03 -->
+          <div class="testi-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.04] md:p-9" data-mask-reveal>
+            <div class="flex gap-1 text-accent">★★★★★</div>
+            <p class="mt-5 text-sm leading-relaxed text-white/65 md:text-base">
+              "The best agency we've worked with in Ahmedabad. They understand both brand building and
+              hardcore performance. Their weekly reports are honest, their content is genuinely creative,
+              and their team feels like an extension of ours."
+            </p>
+            <div class="mt-6 flex items-center gap-3 border-t border-white/5 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 font-display text-sm text-accent">AS</div>
+              <div>
+                <div class="font-display text-sm uppercase text-white">Amit S.</div>
+                <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Director, UrbanRoots</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 8. FAQ — Accordion Animation ══════════ -->
+    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="grid gap-14 md:grid-cols-12 md:gap-12">
+
+          <!-- Left: Intro -->
+          <div class="md:col-span-5" data-slide-left>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(FAQ)</span>
+            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-5xl">
+              Questions<br />we hear<br />
+              <span class="text-white/40">all the time.</span>
+            </h2>
+            <p class="mt-6 leading-relaxed text-white/55">
+              Still curious about something? Reach out — we usually reply within a business day.
+            </p>
+            <a href="contact.html" class="group mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.25em] text-white transition-all duration-500 hover:border-accent hover:bg-accent hover:text-white">
+              Ask Us Anything
+              <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
+          <!-- Right: Accordion -->
+          <div class="md:col-span-7" data-slide-right>
+            <div class="divide-y divide-white/10 border-y border-white/10">
+
+              <details class="faq-item group py-6" open>
+                <summary class="flex cursor-pointer items-center justify-between gap-6 font-display text-lg uppercase leading-tight text-white transition-colors duration-500 group-hover:text-accent md:text-xl">
+                  What's your minimum engagement?
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition-all duration-500 group-hover:border-accent group-open:bg-accent group-open:border-accent">
+                    <svg class="h-3 w-3 transition-transform duration-500 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 pr-10 text-sm leading-relaxed text-white/55">
+                  Most engagements start at 3 months — enough time to plan, launch, optimize, and see
+                  meaningful results. For one-off projects (like branding or web development), we scope
+                  by deliverable instead of timeline.
+                </p>
+              </details>
+
+              <details class="faq-item group py-6">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 font-display text-lg uppercase leading-tight text-white transition-colors duration-500 group-hover:text-accent md:text-xl">
+                  Do you work with startups?
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition-all duration-500 group-hover:border-accent group-open:bg-accent group-open:border-accent">
+                    <svg class="h-3 w-3 transition-transform duration-500 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 pr-10 text-sm leading-relaxed text-white/55">
+                  Absolutely. Startups are some of our favourite clients — no legacy baggage, fast
+                  decision-making, and a hunger for growth. We have starter packages specifically
+                  designed for early-stage brands with tight budgets.
+                </p>
+              </details>
+
+              <details class="faq-item group py-6">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 font-display text-lg uppercase leading-tight text-white transition-colors duration-500 group-hover:text-accent md:text-xl">
+                  How long until I see results?
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition-all duration-500 group-hover:border-accent group-open:bg-accent group-open:border-accent">
+                    <svg class="h-3 w-3 transition-transform duration-500 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 pr-10 text-sm leading-relaxed text-white/55">
+                  Paid ads typically show early signals in 2–4 weeks. Organic content and SEO take
+                  60–90 days to compound. We share weekly reporting so you always know where things
+                  stand — no waiting in the dark.
+                </p>
+              </details>
+
+              <details class="faq-item group py-6">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 font-display text-lg uppercase leading-tight text-white transition-colors duration-500 group-hover:text-accent md:text-xl">
+                  Who owns the content you create?
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition-all duration-500 group-hover:border-accent group-open:bg-accent group-open:border-accent">
+                    <svg class="h-3 w-3 transition-transform duration-500 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 pr-10 text-sm leading-relaxed text-white/55">
+                  You do. Every creative asset, video, website, and campaign we produce becomes
+                  your property upon payment. No watermarks, no dependency — if you ever leave,
+                  you take everything with you.
+                </p>
+              </details>
+
+              <details class="faq-item group py-6">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 font-display text-lg uppercase leading-tight text-white transition-colors duration-500 group-hover:text-accent md:text-xl">
+                  What's your pricing model?
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition-all duration-500 group-hover:border-accent group-open:bg-accent group-open:border-accent">
+                    <svg class="h-3 w-3 transition-transform duration-500 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 pr-10 text-sm leading-relaxed text-white/55">
+                  Retainer-based for ongoing marketing (monthly), project-based for one-off work
+                  (website, branding, etc.). Ad spend is billed separately and paid directly to
+                  Meta/Google — we never mark it up.
+                </p>
+              </details>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 9. FINAL CTA — Shimmer Animation ══════════ -->
+    <section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+
+      <div class="pointer-events-none absolute -right-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[140px]"></div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+        <div class="mb-10" data-slide-up>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Let's Talk)</span>
+        </div>
+
+        <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-slide-up>
+          Let's grow<br />together<span class="text-accent">.</span>
+        </h2>
+
+        <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between" data-slide-up>
+          <div class="flex flex-wrap gap-5">
+            <a href="tel:+919328792160" data-magnetic class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+              +91 93287 92160
+              <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+            <a href="mailto:hello@scalixomedia.com" data-magnetic class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+              hello@scalixomedia.com
+              <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+          </div>
+          <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+            <a href="https://www.instagram.com/scalixo.media" class="transition-colors hover:text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/company/scalixomedia" class="transition-colors hover:text-accent">LinkedIn</a>
+            <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+      <span class="flex items-center gap-2">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        Ahmedabad <span id="clock">--:--:--</span>
+      </span>
+      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ═══════════ 1. HERO — Line Reveal ═══════════
+      const heroLines = document.querySelectorAll('[data-hero-line]');
+      if (heroLines.length) {
+        gsap.fromTo(heroLines,
+          { y: '110%' },
+          { y: '0%', duration: 1.1, ease: 'power4.out', stagger: 0.12, delay: 0.2 }
+        );
+      }
+
+      const heroSubs = document.querySelectorAll('[data-hero-sub]');
+      if (heroSubs.length) {
+        gsap.fromTo(heroSubs,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.15, delay: 0.7 }
+        );
+      }
+
+      const breadcrumb = document.querySelector('[data-hero-breadcrumb]');
+      if (breadcrumb) {
+        gsap.fromTo(breadcrumb, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.1 });
+      }
+
+      // ═══════════ 2. NUMBER TICKERS ═══════════
+      document.querySelectorAll('.num-ticker').forEach((el) => {
+        const target = parseFloat(el.dataset.value);
+        const decimals = parseInt(el.dataset.decimals || '0');
+        const obj = { val: 0 };
+        ScrollTrigger.create({
+          trigger: el, start: 'top 90%',
+          onEnter: () => {
+            gsap.to(obj, {
+              val: target, duration: 2, ease: 'power2.out',
+              onUpdate: () => { el.textContent = obj.val.toFixed(decimals); },
+            });
+          },
+          once: true,
+        });
+      });
+
+      // ═══════════ 3. SLIDE-UP REVEAL ═══════════
+      gsap.utils.toArray('[data-slide-up]').forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 4. SLIDE-LEFT REVEAL ═══════════
+      gsap.utils.toArray('[data-slide-left]').forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, x: -80 },
+          {
+            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 5. SLIDE-RIGHT REVEAL ═══════════
+      gsap.utils.toArray('[data-slide-right]').forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, x: 80 },
+          {
+            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 6. SCALE-IN REVEAL ═══════════
+      gsap.utils.toArray('[data-scale-in]').forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, scale: 0.9, y: 40 },
+          {
+            opacity: 1, scale: 1, y: 0, duration: 1, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 7. STAGGER REVEAL (Children) ═══════════
+      gsap.utils.toArray('[data-stagger]').forEach((container) => {
+        const children = container.children;
+        gsap.fromTo(children,
+          { opacity: 0, y: 40, scale: 0.98 },
+          {
+            opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.1,
+            scrollTrigger: { trigger: container, start: 'top 80%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 8. MASK REVEAL ═══════════
+      gsap.utils.toArray('[data-mask-reveal]').forEach((el) => {
+        gsap.fromTo(el,
+          { clipPath: 'inset(100% 0 0 0)', opacity: 0 },
+          {
+            clipPath: 'inset(0% 0 0 0)', opacity: 1, duration: 1.1, ease: 'power4.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          }
+        );
+      });
+
+      // ═══════════ 9. PARALLAX GLOWS ═══════════
+      document.querySelectorAll('[data-parallax]').forEach((el) => {
+        const speed = parseFloat(el.dataset.parallax) || 0.1;
+        gsap.to(el, {
+          yPercent: -speed * 100,
+          ease: 'none',
+          scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 1 },
+        });
+      });
+
+      // ═══════════ 10. MAGNETIC BUTTONS ═══════════
+      document.querySelectorAll('[data-magnetic]').forEach((btn) => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          gsap.to(btn, { x: x * 0.2, y: y * 0.2, duration: 0.4, ease: 'power2.out' });
+        });
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
+        });
+      });
+
+      // ═══════════ 11. LIVE CLOCK ═══════════
+      function updateClock() {
+        const now = new Date();
+        const opts = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const el = document.getElementById('clock');
+        if (el) el.textContent = now.toLocaleTimeString('en-IN', opts);
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // ═══════════ 12. MOBILE MENU ═══════════
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const open = mobileMenu.classList.toggle('open');
+          mobileMenu.style.opacity = open ? '1' : '0';
+          mobileMenu.style.pointerEvents = open ? 'auto' : 'none';
+          menuBtn.textContent = open ? 'Close' : 'Menu';
+        });
+      }
+    });
+  </script>
+
+  <style>
+    #mobileMenu.open { opacity: 1; pointer-events: auto; }
+  </style>
+
+</body>
+</html>
