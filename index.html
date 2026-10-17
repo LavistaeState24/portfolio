@@ -8,183 +8,61 @@
   <meta name="description"
     content="Scalixo Media is a performance-driven social media marketing agency in Ahmedabad. We grow brands through social media, performance marketing, SEO, and content that converts." />
   <meta name="robots" content="index, follow" />
-  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
-
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="./tailwind.css" />
   <link rel="stylesheet" href="./style.css" />
-
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <style>
-    /* ==== GRAIN ==== */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9998;
-      pointer-events: none;
-      opacity: .05;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    /* ==== SCROLL BAR ==== */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #08090B;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #1C58E3;
-      border-radius: 999px;
-    }
-
-    html {
-      scrollbar-width: thin;
-      scrollbar-color: #1C58E3 #08090B;
-    }
-
-    /* ==== LINE REVEAL ==== */
-    .line-reveal {
-      position: relative;
-      overflow: hidden;
-      display: block;
-    }
-
-    .line-reveal>span {
-      display: block;
-      will-change: transform;
-    }
-
-    /* ==== MARQUEE ==== */
-    @keyframes marquee {
-      0% {
-        transform: translateX(0)
-      }
-
-      100% {
-        transform: translateX(-50%)
-      }
-    }
-
-    .marquee {
-      animation: marquee 40s linear infinite;
-    }
-
-    .marquee:hover {
-      animation-play-state: paused;
-    }
-
-    /* ==== BLINK ==== */
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1
-      }
-
-      50% {
-        opacity: .2
-      }
-    }
-
-    .blink {
-      animation: blink 1.4s ease-in-out infinite;
-    }
-
-    /* ==== LINK HOVER ==== */
-    .hover-swap {
-      transition: color .4s ease, letter-spacing .4s ease;
-    }
-
-    .hover-swap:hover {
-      letter-spacing: .35em;
-    }
-
-    /* ==== UNDERLINE ==== */
-    .u-line {
-      position: relative;
-    }
-
-    .u-line::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform .5s cubic-bezier(.77, 0, .175, 1);
-    }
-
-    .u-line:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    /* ==== CURSOR ==== */
-    #cursor {
-      mix-blend-mode: difference;
-    }
-
-    /* ==== HORIZONTAL TRACK ==== */
-    .h-scroll {
-      will-change: transform;
-    }
-
-    /* ==== INPUT ==== */
-    input,
-    textarea,
-    button {
-      font-family: inherit;
-    }
-
-    /* ==== REDUCED MOTION ==== */
-    @media (prefers-reduced-motion: reduce) {
-      .marquee {
-        animation: none;
-      }
-
-      * {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-      }
-    }
-  </style>
 </head>
 
-<body class="overflow-x-hidden bg-ink font-sans text-white antialiased selection:bg-accent selection:text-white">
+<body id="top" data-page="web"
+  class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 
-  <!-- ══════════ CURSOR ══════════ -->
-  <div id="cursor"
-    class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-3 w-3 rounded-full bg-accent md:block"></div>
-  <div id="cursorLabel"
-    class="pointer-events-none fixed left-0 top-0 z-[9999] hidden font-mono text-[10px] uppercase tracking-[0.2em] text-accent opacity-0 md:block">
-    View
-  </div>
+  <!-- ══════════ PROGRESS BAR ══════════ -->
+  <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
 
-  <!-- ══════════ PROGRESS ══════════ -->
-  <div id="progressBar"
-    class="fixed left-0 top-0 z-[60] h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-accent to-accent-2">
-  </div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
 
-  <!-- ══════════ HEADER ══════════ -->
-  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50">
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+      <a href="index.html" class="group relative flex items-center gap-3">
+        <span
+          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+        <img src="./assets/scalixo.png" alt="Scalixo Media"
+          class="relative h-10 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+      </a>
+
+      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] md:flex">
+        <a href="index.html#services" class="transition-opacity duration-300 hover:opacity-40">Services</a>
+        <a href="index.html#work" class="transition-opacity duration-300 hover:opacity-40">Work</a>
+        <a href="contact.html" class="text-accent transition-opacity duration-300 hover:opacity-60">Contact</a>
+      </nav>
+
+      <a href="contact.html"
+        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-40 md:block">
+        Start a project
+      </a>
+
+      <button id="menuBtn" type="button" aria-controls="mobileMenu" aria-expanded="false"
+        class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] md:hidden">Menu</button>
+    </div>
+
+    <div id="mobileMenu"
+      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-4 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+      <a href="index.html#services"
+        class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Services</a>
+      <a href="index.html#work"
+        class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Work</a>
+      <a href="contact.html"
+        class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-accent">Contact</a>
+    </div>
   </header>
-
 
   <main>
 
@@ -193,10 +71,10 @@
     ══════════════════════════════════════════════ -->
     <section id="home"
       class="relative min-h-[100svh] overflow-hidden border-b border-white/10 px-6 pb-10 pt-32 md:px-10 md:pt-40">
+      <!-- grid backdrop -->
       <div
-        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_75%)]">
+        class="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_75%)]">
       </div>
-
       <div
         class="pointer-events-none absolute -right-40 -top-40 h-[700px] w-[700px] rounded-full bg-accent/20 blur-[180px]">
       </div>
@@ -205,54 +83,30 @@
       </div>
 
       <div class="relative mx-auto max-w-[1600px]">
-        <!-- Top meta row -->
-        <div
-          class="mb-8 grid grid-cols-2 gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 md:grid-cols-4"
-          data-hero-meta>
-          <div>
-            <div class="text-white/30">Based in</div>
-            <div class="mt-1 text-white">Ahmedabad, IN</div>
-          </div>
-          <div>
-            <div class="text-white/30">Since</div>
-            <div class="mt-1 text-white">2019</div>
-          </div>
-          <div class="hidden md:block">
-            <div class="text-white/30">Focus</div>
-            <div class="mt-1 text-white">Social · SEO · Ads</div>
-          </div>
-          <div class="hidden text-right md:block">
-            <div class="text-white/30">Local time</div>
-            <div class="mt-1 text-white"><span id="heroClock">--:--</span> IST</div>
-          </div>
-        </div>
-
-        <!-- Bento grid hero -->
+        <!-- bento -->
         <div class="grid grid-cols-12 gap-3 md:gap-4">
 
-          <!-- Big headline cell -->
-          <div class="col-span-12 md:col-span-8 rounded-2xl border border-white/10 bg-ink-2/60 p-6 md:p-10">
+          <!-- headline -->
+          <div
+            class="col-span-12 rounded-2xl border border-white/10 bg-ink-2/60 p-6 transition-colors duration-500 hover:border-accent/40 md:col-span-8 md:p-10">
             <div class="flex items-start gap-3">
               <span class="h-2 w-2 flex-shrink-0 translate-y-3 rounded-full bg-accent"></span>
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50" data-hero-label>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">
                 Social Media Marketing Agency
               </span>
             </div>
 
             <h1 class="mt-8 font-display text-[clamp(2.4rem,8.5vw,7.6rem)] uppercase leading-[0.88] tracking-[-0.03em]">
-              <span class="line-reveal" data-hero-line><span>We grow</span></span>
-              <span class="line-reveal" data-hero-line><span>brands on</span></span>
-              <span class="line-reveal" data-hero-line>
-                <span>
-                  <span class="italic font-serif text-accent-2 normal-case">social</span> media.
-                </span>
+              <span class="block">We grow</span>
+              <span class="block">brands on</span>
+              <span class="block">
+                <span class="font-serif italic normal-case text-accent-2">social</span> media.
               </span>
             </h1>
 
-            <div class="mt-10 flex flex-wrap items-end gap-4" data-hero-cta>
+            <div class="mt-10 flex flex-wrap items-end gap-4">
               <a href="#contact"
-                class="group inline-flex items-center gap-3 rounded-full px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_14px_40px_-12px_rgba(28,88,227,0.75)] transition-all duration-500 hover:-translate-y-0.5"
-                style="background: linear-gradient(135deg,#1C58E3,#4B7BFF);">
+                class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-accent to-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_14px_40px_-12px_rgba(28,88,227,0.75)] transition-all duration-500 hover:-translate-y-0.5">
                 Book Free Strategy Call
                 <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
               </a>
@@ -264,121 +118,127 @@
             </div>
           </div>
 
-          <!-- Image cell -->
-          <div class="col-span-12 md:col-span-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60"
-            data-hero-image>
+          <!-- image -->
+          <div
+            class="group col-span-12 overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 transition-colors duration-500 hover:border-accent/40 md:col-span-4">
             <div class="relative aspect-[4/5] w-full overflow-hidden">
               <img src="./assets/hero.png" alt="Scalixo Media — social media marketing agency"
-                class="absolute inset-0 h-full w-full object-cover" data-hero-img />
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
               <div
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent">
               </div>
-              <div
-                class="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-white/80">
-                <span>V / 01</span>
-                <span class="flex items-center gap-2"><span
-                    class="h-1.5 w-1.5 blink rounded-full bg-accent-2"></span>Live</span>
-              </div>
+
             </div>
           </div>
 
-          <!-- Stat: brands -->
-          <div class="col-span-6 md:col-span-3 rounded-2xl border border-white/10 bg-ink-2/60 p-5 md:p-6"
-            data-hero-stat>
+          <!-- stat -->
+          <div
+            class="col-span-6 rounded-2xl border border-white/10 bg-ink-2/60 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 md:col-span-3 md:p-6">
             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Brands Grown</div>
             <div class="mt-3 flex items-baseline gap-1">
-              <span class="font-display text-4xl leading-none text-accent-2 md:text-5xl" data-counter="50">0</span>
+              <span class="font-display text-4xl leading-none text-accent-2 md:text-5xl">30</span>
               <span class="font-display text-2xl leading-none text-accent-2/70 md:text-3xl">+</span>
             </div>
           </div>
 
-          <!-- Stat: adspend -->
-          <div class="col-span-6 md:col-span-3 rounded-2xl border border-white/10 bg-ink-2/60 p-5 md:p-6"
-            data-hero-stat>
+          <!-- stat -->
+          <div
+            class="col-span-6 rounded-2xl border border-white/10 bg-ink-2/60 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 md:col-span-3 md:p-6">
             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Ad Spend Managed</div>
             <div class="mt-3 flex items-baseline gap-1">
-              <span class="font-display text-4xl leading-none text-white md:text-5xl">₹<span
-                  data-counter="12">0</span></span>
-              <span class="font-display text-2xl leading-none text-white/60 md:text-3xl">Cr+</span>
+              <span class="font-display text-4xl leading-none text-white md:text-5xl">₹10</span>
+              <span class="font-display text-2xl leading-none text-white/60 md:text-3xl">Lc+</span>
             </div>
           </div>
 
-          <!-- Tagline cell -->
+          <!-- tagline -->
           <div
-            class="col-span-12 md:col-span-6 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:p-8"
-            data-hero-stat>
+            class="col-span-12 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/40 md:col-span-6 md:p-8">
             <p class="text-base leading-relaxed text-white/70 md:text-lg">
               Scalixo Media is a performance-driven social media marketing agency. We help brands grow through
               <span class="text-accent-2">social media</span>, <span class="text-accent-2">performance marketing</span>,
               <span class="text-accent-2">SEO</span>, and content that converts.
             </p>
-            <div
-              class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-              <span class="flex items-center gap-2"><span class="h-1 w-1 rounded-full bg-accent-2"></span>4.9/5
-                rating</span>
-              <span class="flex items-center gap-2"><span class="h-1 w-1 rounded-full bg-accent-2"></span>95%
-                retention</span>
-              <span class="flex items-center gap-2"><span class="h-1 w-1 rounded-full bg-accent-2"></span>Free
-                consultation</span>
-            </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Scroll indicator -->
+      <!-- scroll hint -->
       <div
         class="pointer-events-none absolute bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-3 font-mono text-[9px] uppercase tracking-[0.35em] text-white/30 md:flex">
         <span>Scroll</span>
         <span class="relative h-[1px] w-16 overflow-hidden bg-white/15">
-          <span class="absolute inset-y-0 left-0 w-6 bg-accent-2" data-scroll-dot></span>
+          <span class="absolute inset-y-0 left-0 w-6 animate-floaty bg-accent-2"></span>
         </span>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         02 · INFINITE MARQUEE
+         02 · BRAND NAMES MARQUEE (two rows, opposite)
     ══════════════════════════════════════════════ -->
-    <section class="relative overflow-hidden border-b border-white/10 py-6 md:py-8">
-      <div class="marquee flex w-max items-center gap-12 md:gap-16">
-        <div class="flex items-center gap-12 md:gap-16">
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Social Media</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Performance</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Search</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Web Design</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Branding</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Influencers</span>
-          <span class="text-accent/60">✺</span>
+    <section class="relative overflow-hidden border-b border-white/10 py-12 md:py-16">
+      <div class="mx-auto mb-8 max-w-[1600px] px-6 md:px-10">
+        <div class="flex items-center gap-3 font-mono text-[30px] uppercase tracking-[0.3em] text-white/35">
+          <span class="h-px w-8 bg-white/20"></span>
+          Trusted by 50+ brands across India
         </div>
-        <div class="flex items-center gap-12 md:gap-16" aria-hidden="true">
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Social Media</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Performance</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Search</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Web Design</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-serif italic text-3xl text-accent-2 md:text-5xl">Branding</span>
-          <span class="text-accent/60">✺</span>
-          <span class="font-display text-3xl uppercase tracking-tight text-white/85 md:text-5xl">Influencers</span>
-          <span class="text-accent/60">✺</span>
+      </div>
+
+      <!-- row 1 -->
+      <div
+        class="group relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
+          <div class="flex shrink-0 items-center gap-12 pr-12 md:gap-20 md:pr-20">
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Creata</span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Mint
+              Salon</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Grace
+              Coffee Cafe </span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Pintoo</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Customized
+              Polycast </span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Casa
+              Atelier Luxe</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Amber
+              by Heer</span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Nature
+              Valley</span>
+          </div>
+          <div class="flex shrink-0 items-center gap-12 pr-12 md:gap-20 md:pr-20" aria-hidden="true">
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Desi
+              Rituals</span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Lavsita
+              Marketing</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Pintoo</span>
+            <span
+              class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Lavista</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Polycast</span>
+            <span
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">chanakya</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         03 · SERVICES — horizontal pin scroll
+         03 · SERVICES — horizontal snap scroller
     ══════════════════════════════════════════════ -->
-    <section id="services" class="relative overflow-hidden border-b border-white/10">
-
-      <div class="mx-auto max-w-[1600px] px-6 pt-20 md:px-10 md:pt-28">
-        <div class="mb-12 grid gap-8 md:grid-cols-12">
+    <section id="services" class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
+      <div class="mx-auto max-w-[1600px] px-6 md:px-10">
+        <div class="mb-10 grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7">
             <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
               <span class="h-px w-8 bg-accent-2"></span>
@@ -391,24 +251,38 @@
           </div>
           <div class="md:col-span-4 md:col-start-9 md:self-end">
             <p class="text-sm leading-relaxed text-white/50 md:text-base">
-              From strategy and content to paid performance and analytics — we handle the complete growth
-              engine so you can focus on running your business.
+              From strategy and content to paid performance and analytics — we handle the complete growth engine so you
+              can focus on running your business.
             </p>
-            <div class="mt-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
-              <span class="h-px w-8 bg-accent-2"></span>
-              Scroll to explore →
+            <div class="mt-6 flex items-center gap-3">
+              <button type="button" data-scroll-btn="svcTrack" data-dir="prev" aria-label="Previous services"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2 hover:text-white">←</button>
+              <button type="button" data-scroll-btn="svcTrack" data-dir="next" aria-label="Next services"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2 hover:text-white">→</button>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">Drag / scroll →</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="overflow-hidden pb-20 md:pb-28">
-        <div id="hTrack" class="h-scroll flex gap-5 pl-6 pr-6 md:gap-6 md:pl-10 md:pr-10">
+      <div class="relative">
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-ink to-transparent md:w-20">
+        </div>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-ink to-transparent md:w-20">
+        </div>
 
-          <!-- Service 01 -->
+        <div id="svcTrack"
+          class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-6 pb-6 md:gap-6 md:px-10 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+
+          <!-- 01 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">01</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">social.ts</span>
@@ -418,8 +292,8 @@
                   Social<br /><span class="text-white/40">Media</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  Complete social media management with content calendars, creative production, community
-                  management, and platform-native growth for Instagram, LinkedIn, and YouTube.
+                  Complete social media management with content calendars, creative production, community management,
+                  and platform-native growth for Instagram, LinkedIn, and YouTube.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -433,10 +307,13 @@
             </div>
           </article>
 
-          <!-- Service 02 -->
+          <!-- 02 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">02</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">performance.ts</span>
@@ -446,8 +323,8 @@
                   Performance<br /><span class="text-white/40">Marketing</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  Data-driven Meta and Google Ads campaigns built for ROAS with funnel strategy, creative
-                  testing, audience targeting, and continuous optimization.
+                  Data-driven Meta and Google Ads campaigns built for ROAS with funnel strategy, creative testing,
+                  audience targeting, and continuous optimization.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -461,10 +338,13 @@
             </div>
           </article>
 
-          <!-- Service 03 -->
+          <!-- 03 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">03</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">seo.ts</span>
@@ -474,8 +354,8 @@
                   SEO &amp;<br /><span class="text-white/40">Content</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  Technical SEO, keyword research, blog content, and on-page optimization that builds
-                  sustainable organic traffic and long-term authority.
+                  Technical SEO, keyword research, blog content, and on-page optimization that builds sustainable
+                  organic traffic and long-term authority.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -489,10 +369,13 @@
             </div>
           </article>
 
-          <!-- Service 04 -->
+          <!-- 04 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">04</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">web.ts</span>
@@ -502,8 +385,8 @@
                   Web<br /><span class="text-white/40">Development</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  High-converting landing pages, business sites, and e-commerce stores engineered for
-                  speed, SEO, and conversion.
+                  High-converting landing pages, business sites, and e-commerce stores engineered for speed, SEO, and
+                  conversion.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -518,10 +401,13 @@
             </div>
           </article>
 
-          <!-- Service 05 -->
+          <!-- 05 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">05</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">brand.ts</span>
@@ -531,8 +417,8 @@
                   Branding &amp;<br /><span class="text-white/40">Identity</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  Brand strategy, visual identity, logo design, and guidelines that make your business
-                  unforgettable across every touchpoint.
+                  Brand strategy, visual identity, logo design, and guidelines that make your business unforgettable
+                  across every touchpoint.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -546,10 +432,13 @@
             </div>
           </article>
 
-          <!-- Service 06 -->
+          <!-- 06 -->
           <article
-            class="service-card group relative w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:w-[520px]">
-            <div class="flex h-full flex-col p-8 md:p-10">
+            class="group relative w-[85vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 md:w-[440px]">
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+            </div>
+            <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">06</span>
                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">influencer.ts</span>
@@ -559,8 +448,8 @@
                   Influencer<br /><span class="text-white/40">Marketing</span>
                 </h3>
                 <p class="mt-6 text-sm leading-relaxed text-white/55 md:text-base">
-                  Creator partnerships, UGC campaigns, and influencer collabs that build trust, spark
-                  engagement, and drive real conversions.
+                  Creator partnerships, UGC campaigns, and influencer collabs that build trust, spark engagement, and
+                  drive real conversions.
                 </p>
               </div>
               <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
@@ -574,140 +463,137 @@
             </div>
           </article>
 
+          <!-- end spacer card -->
+          <div class="flex w-[60vw] shrink-0 snap-start items-center justify-center md:w-[280px]">
+            <a href="contact.html" class="group flex flex-col items-center gap-3 text-center">
+              <span
+                class="flex h-16 w-16 items-center justify-center rounded-full border border-white/15 text-xl text-white/60 transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-white">→</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Start a project</span>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         04 · STATS — oversized counters
+         04 · STATS BAND
     ══════════════════════════════════════════════ -->
-    <section class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
-      <div class="mx-auto max-w-[1600px] px-6 md:px-10">
-        <div class="mb-14 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
-          <span class="h-px w-8 bg-accent-2"></span>
-          02 / Numbers
-        </div>
 
-        <div class="grid grid-cols-2 gap-y-12 md:grid-cols-4">
-          <div class="stat-cell">
-            <div class="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.9] tracking-[-0.04em] text-white">
-              <span data-counter="50">0</span><span class="text-accent-2">+</span>
-            </div>
-            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Brands Grown</div>
-          </div>
-          <div class="stat-cell">
-            <div class="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.9] tracking-[-0.04em] text-white">
-              ₹<span data-counter="12">0</span><span class="text-accent-2">Cr+</span>
-            </div>
-            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Ad Spend</div>
-          </div>
-          <div class="stat-cell">
-            <div class="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.9] tracking-[-0.04em] text-white">
-              <span data-counter="95">0</span><span class="text-accent-2">%</span>
-            </div>
-            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Retention</div>
-          </div>
-          <div class="stat-cell">
-            <div class="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.9] tracking-[-0.04em] text-white">
-              <span data-counter="4.9" data-decimals="1">0</span><span class="text-accent-2">★</span>
-            </div>
-            <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Client Rating</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ══════════════════════════════════════════════
-         05 · PROCESS — sticky sidebar
+         05 · PROCESS — HOVER CARD STACK (fan out / in)
     ══════════════════════════════════════════════ -->
-    <section id="process" class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section id="process" class="relative overflow-hidden border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1600px]">
-        <div class="grid gap-12 md:grid-cols-12 md:gap-16">
 
-          <div class="md:col-span-5">
-            <div class="md:sticky md:top-32">
-              <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
-                <span class="h-px w-8 bg-accent-2"></span>
-                03 / Process
-              </div>
-              <h2 class="mt-6 font-display text-[clamp(2.4rem,6vw,5.5rem)] uppercase leading-[0.9] tracking-[-0.02em]">
-                A growth<br />system,<br /><span class="text-white/40">not guesswork.</span>
-              </h2>
-              <p class="mt-6 max-w-md text-base leading-relaxed text-white/50">
-                Every engagement follows a proven four-phase framework designed for clarity, speed, and measurable
-                results.
-              </p>
-              <div
-                class="mt-10 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
-                <div class="h-[1px] flex-1 bg-white/10">
-                  <div id="procProgress" class="h-full w-0 bg-accent-2 transition-[width] duration-500"></div>
-                </div>
-                <span><span id="procCurrent">01</span> / 04</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="mb-14 grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7">
-            <div class="relative">
-              <div class="absolute left-[19px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
-
-              <div class="space-y-6">
-                <div
-                  class="proc-step group relative grid grid-cols-[40px_1fr] gap-6 rounded-2xl border border-white/10 bg-ink-2/60 p-6 transition-all duration-500 hover:border-accent/50 md:p-8">
-                  <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-ink font-display text-sm text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
-                    01</div>
-                  <div>
-                    <h3 class="font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Discover</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
-                      Deep-dive audit of your brand, audience, competitors, and current marketing performance.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="proc-step group relative grid grid-cols-[40px_1fr] gap-6 rounded-2xl border border-white/10 bg-ink-2/60 p-6 transition-all duration-500 hover:border-accent/50 md:p-8">
-                  <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-ink font-display text-sm text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
-                    02</div>
-                  <div>
-                    <h3 class="font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Strategize</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
-                      Custom growth roadmap with channel mix, content pillars, budget allocation, and KPIs.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="proc-step group relative grid grid-cols-[40px_1fr] gap-6 rounded-2xl border border-white/10 bg-ink-2/60 p-6 transition-all duration-500 hover:border-accent/50 md:p-8">
-                  <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-ink font-display text-sm text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
-                    03</div>
-                  <div>
-                    <h3 class="font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Execute</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
-                      Content production, campaign launch, daily optimization, and agile creative iteration.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="proc-step group relative grid grid-cols-[40px_1fr] gap-6 rounded-2xl border border-white/10 bg-ink-2/60 p-6 transition-all duration-500 hover:border-accent/50 md:p-8">
-                  <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-ink font-display text-sm text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
-                    04</div>
-                  <div>
-                    <h3 class="font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Scale</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
-                      Double down on what works, expand to new channels, and build compounding growth loops.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
+              <span class="h-px w-8 bg-accent-2"></span>
+              03 / Process
+            </div>
+            <h2 class="mt-6 font-display text-[clamp(2.4rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-0.02em]">
+              A growth system,<br /><span class="text-white/40">not guesswork.</span>
+            </h2>
+          </div>
+          <div class="md:col-span-4 md:col-start-9 md:self-end">
+            <p class="text-sm leading-relaxed text-white/50 md:text-base">
+              Four phases, one deck. Hover the stack and each phase slides out of the pile — so you can see exactly how
+              the system works.
+            </p>
+            <div class="mt-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/35">
+              <span class="h-px w-8 bg-accent-2"></span>Hover the deck
             </div>
           </div>
+        </div>
+
+        <!-- STACK -->
+        <div class="group relative mx-auto h-[440px] w-full max-w-2xl md:h-[400px]">
+
+          <!-- card 04 (back) -->
+          <article
+            class="absolute inset-0 z-10 translate-x-10 -translate-y-10 scale-90 rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-40 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:-rotate-[8deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">04</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">scale.ts</span>
+            </div>
+            <h3 class="mt-10 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Scale</h3>
+            <p class="mt-4 text-sm leading-relaxed text-white/55 md:text-base">
+              Double down on what works, expand to new channels, and build compounding growth loops that keep paying
+              off month after month.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Compounding growth
+            </div>
+          </article>
+
+          <!-- card 03 -->
+          <article
+            class="absolute inset-0 z-20 translate-x-6 -translate-y-6 scale-95 rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-60 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:-rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">03</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">execute.ts</span>
+            </div>
+            <h3 class="mt-10 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Execute</h3>
+            <p class="mt-4 text-sm leading-relaxed text-white/55 md:text-base">
+              Content production, campaign launch, daily optimization, and agile creative iteration across every
+              channel.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Daily optimization
+            </div>
+          </article>
+
+          <!-- card 02 -->
+          <article
+            class="absolute inset-0 z-30 translate-x-3 -translate-y-3 scale-[0.98] rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-80 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">02</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">strategy.ts</span>
+            </div>
+            <h3 class="mt-10 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Strategize</h3>
+            <p class="mt-4 text-sm leading-relaxed text-white/55 md:text-base">
+              Custom growth roadmap with channel mix, content pillars, budget allocation, and clear KPIs everyone agrees
+              on.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Roadmap + KPIs
+            </div>
+          </article>
+
+          <!-- card 01 (front) -->
+          <article
+            class="absolute inset-0 z-40 rounded-3xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-8 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:rotate-[8deg]">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">01</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">discover.ts</span>
+            </div>
+            <h3 class="mt-10 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Discover</h3>
+            <p class="mt-4 text-sm leading-relaxed text-white/55 md:text-base">
+              Deep-dive audit of your brand, audience, competitors, and current marketing performance before we touch a
+              single rupee.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Full audit first
+            </div>
+          </article>
 
         </div>
+
+        <!-- progress strip -->
+        <div
+          class="mx-auto mt-12 flex max-w-2xl items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+          <div class="h-px flex-1 bg-white/10">
+            <div class="h-full w-1/4 bg-accent-2 transition-all duration-700 group-hover:w-full"></div>
+          </div>
+          <span>01 — 04</span>
+        </div>
+
       </div>
     </section>
 
@@ -723,35 +609,37 @@
               04 / Selected Work
             </div>
             <h2 class="mt-6 font-display text-[clamp(2.4rem,7vw,6.5rem)] uppercase leading-[0.88] tracking-[-0.02em]">
-              Projects<br /><span class="text-white/40">that shipped.</span>
+              Projects<br /><span class="text-white">that shipped.</span>
             </h2>
           </div>
           <div class="md:col-span-4 md:self-end">
             <p class="text-sm leading-relaxed text-white/50 md:text-base">
-              Fast, accessible and conversion-optimized websites — from marketing sites to full web apps.
-              Every project is measured on PageSpeed, SEO, and conversion.
+              Fast, accessible and conversion-optimized websites — from marketing sites to full web apps. Every project
+              is measured on PageSpeed, SEO, and conversion.
             </p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-4">
+        <div class="grid grid-cols-2 gap-3 md:grid-cols-12 md:gap-4">
 
-          <!-- Project 1 — big -->
-          <a href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer" data-cursor="View"
-            class="work-card group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:col-span-8">
+          <!-- Project 1 -->
+          <a href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer"
+            class="group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:border-accent/50 md:col-span-8">
             <div class="relative aspect-[16/10] w-full overflow-hidden">
               <img src="./assets/w1.png" alt="Polycast CRM" loading="lazy"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70"></span>
-              <div class="absolute left-6 bottom-6 right-6 flex items-end justify-between">
+              <span
+                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+              <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                 <div>
                   <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">01 / CRM Platform</div>
                   <div class="mt-2 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Polycast CRM
                   </div>
                 </div>
                 <span
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-ink/60 text-white backdrop-blur transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-ink/60 text-white backdrop-blur transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
                   ↗
                 </span>
               </div>
@@ -759,14 +647,16 @@
           </a>
 
           <!-- Project 2 -->
-          <a href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer" data-cursor="View"
-            class="work-card group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:col-span-4">
+          <a href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer"
+            class="group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:border-accent/50 md:col-span-4">
             <div class="relative aspect-[4/5] w-full overflow-hidden">
               <img src="./assets/w2.png" alt="Lavista E State" loading="lazy"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70"></span>
-              <div class="absolute left-6 bottom-6 right-6">
+              <span
+                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+              <div class="absolute bottom-6 left-6 right-6">
                 <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">02 / Real Estate</div>
                 <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Lavista</div>
               </div>
@@ -774,14 +664,16 @@
           </a>
 
           <!-- Project 3 -->
-          <a href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer" data-cursor="View"
-            class="work-card group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:col-span-4">
+          <a href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer"
+            class="group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:border-accent/50 md:col-span-4">
             <div class="relative aspect-[4/5] w-full overflow-hidden">
               <img src="./assets/w3.png" alt="Lavista Marketing" loading="lazy"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70"></span>
-              <div class="absolute left-6 bottom-6 right-6">
+              <span
+                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+              <div class="absolute bottom-6 left-6 right-6">
                 <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">03 / Agency</div>
                 <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight md:text-3xl">Lavista
                   Marketing</div>
@@ -789,23 +681,24 @@
             </div>
           </a>
 
-          <!-- Project 4 — big -->
+          <!-- Project 4 -->
           <a href="https://property-management-app-seven.vercel.app/" target="_blank" rel="noopener noreferrer"
-            data-cursor="View"
-            class="work-card group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 md:col-span-8">
+            class="group relative col-span-12 block overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:border-accent/50 md:col-span-8">
             <div class="relative aspect-[16/10] w-full overflow-hidden">
               <img src="./assets/w4.png" alt="Real Estate CRM" loading="lazy"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70"></span>
-              <div class="absolute left-6 bottom-6 right-6 flex items-end justify-between">
+              <span
+                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+              <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                 <div>
                   <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">04 / Property SaaS</div>
                   <div class="mt-2 font-display text-3xl uppercase leading-none tracking-tight md:text-4xl">Real Estate
                     CRM</div>
                 </div>
                 <span
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-ink/60 text-white backdrop-blur transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-ink/60 text-white backdrop-blur transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
                   ↗
                 </span>
               </div>
@@ -817,86 +710,335 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         07 · TESTIMONIALS
+         07 · TESTIMONIALS — dual marquee
     ══════════════════════════════════════════════ -->
-    <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <div class="mx-auto max-w-[1600px]">
-        <div class="mb-14 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
-          <span class="h-px w-8 bg-accent-2"></span>
-          05 / Client Voices
+    <section id="voices" class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
+      <div class="mx-auto mb-14 max-w-[1600px] px-6 md:px-10">
+        <div class="grid gap-8 md:grid-cols-12">
+          <div class="md:col-span-7">
+            <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
+              <span class="h-px w-8 bg-accent-2"></span>
+              05 / Client Voices
+            </div>
+            <h2 class="mt-6 font-display text-[clamp(2.2rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-0.02em]">
+              What founders say<br /><span class="text-white/40">when we ship.</span>
+            </h2>
+          </div>
+          <div class="md:col-span-4 md:col-start-9 md:self-end">
+            <p class="text-sm leading-relaxed text-white/50 md:text-base">
+              4.9/5 average rating across 50+ engagements. Hover either row to pause and read.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="grid gap-6 md:grid-cols-3">
-          <div
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
-            <div class="flex items-baseline justify-between">
-              <div class="font-display text-5xl leading-none text-accent-2/30">"</div>
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
-            </div>
-            <p class="mt-4 text-base leading-relaxed text-white/70">
-              Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K to
-              18K followers and our DMs are full of qualified leads.
-            </p>
-            <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
-              <div class="flex items-center gap-3">
-                <div
-                  class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
-                  RK</div>
-                <div>
-                  <div class="font-display text-sm uppercase text-white">Rahul K.</div>
-                  <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, NovaFit</div>
-                </div>
+      <!-- row 1 -->
+      <div
+        class="group relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+        <div class="flex w-max animate-marquee items-stretch group-hover:[animation-play-state:paused]">
+          <div class="flex shrink-0 items-stretch gap-5 pr-5">
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
               </div>
-              <div class="flex gap-1 text-accent-2">★★★★★</div>
-            </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K to
+                18K followers and our DMs are full of qualified leads.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    RK</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Rahul K.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, NovaFit</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our ROAS
+                went from 1.8x to 5.4x.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    PM</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Priya M.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CMO, TechNest</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                The best agency we've worked with in Ahmedabad. They understand both brand building and performance. Our
+                traffic is up 210%.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    AS</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Amit S.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Director, UrbanRoots
+                    </div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
           </div>
 
-          <div
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
-            <div class="flex items-baseline justify-between">
-              <div class="font-display text-5xl leading-none text-accent-2/30">"</div>
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
-            </div>
-            <p class="mt-4 text-base leading-relaxed text-white/70">
-              We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our ROAS
-              went from 1.8x to 5.4x.
-            </p>
-            <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
-              <div class="flex items-center gap-3">
-                <div
-                  class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
-                  PM</div>
-                <div>
-                  <div class="font-display text-sm uppercase text-white">Priya M.</div>
-                  <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CMO, TechNest</div>
-                </div>
+          <div class="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden="true">
+            <article class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
               </div>
-              <div class="flex gap-1 text-accent-2">★★★★★</div>
-            </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K to
+                18K followers and our DMs are full of qualified leads.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    RK</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Rahul K.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, NovaFit</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our ROAS
+                went from 1.8x to 5.4x.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    PM</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Priya M.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CMO, TechNest</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                The best agency we've worked with in Ahmedabad. They understand both brand building and performance. Our
+                traffic is up 210%.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    AS</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Amit S.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Director, UrbanRoots
+                    </div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 (reverse) -->
+      <div
+        class="group relative mt-5 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+        <div class="flex w-max animate-marquee-rev items-stretch group-hover:[animation-play-state:paused]">
+          <div class="flex shrink-0 items-stretch gap-5 pr-5">
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Their content team just gets our brand voice. We stopped explaining and started scaling — posting is
+                finally off my plate.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    NZ</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Nidhi Z.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, ZenFuel</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Reporting is honest and clear. No vanity metrics — just leads, CAC and revenue. That alone made them
+                worth it.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    KV</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Karan V.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CEO, Meridian</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">06</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                New website went live in 3 weeks and PageSpeed jumped from 42 to 94. Organic enquiries doubled in the
+                first month.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    SD</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Sneha D.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">MD, Apex Group</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
           </div>
 
-          <div
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
-            <div class="flex items-baseline justify-between">
-              <div class="font-display text-5xl leading-none text-accent-2/30">"</div>
-              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03</span>
-            </div>
-            <p class="mt-4 text-base leading-relaxed text-white/70">
-              The best agency we've worked with in Ahmedabad. They understand both brand building and performance. Our
-              traffic is up 210%.
-            </p>
-            <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
-              <div class="flex items-center gap-3">
-                <div
-                  class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
-                  AS</div>
-                <div>
-                  <div class="font-display text-sm uppercase text-white">Amit S.</div>
-                  <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Director, UrbanRoots</div>
-                </div>
+          <div class="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden="true">
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04</span>
               </div>
-              <div class="flex gap-1 text-accent-2">★★★★★</div>
-            </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Their content team just gets our brand voice. We stopped explaining and started scaling — posting is
+                finally off my plate.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    NZ</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Nidhi Z.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Founder, ZenFuel</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                Reporting is honest and clear. No vanity metrics — just leads, CAC and revenue. That alone made them
+                worth it.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    KV</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Karan V.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">CEO, Meridian</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
+
+            <article
+              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              <div class="flex items-baseline justify-between">
+                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">06</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                New website went live in 3 weeks and PageSpeed jumped from 42 to 94. Organic enquiries doubled in the
+                first month.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    SD</div>
+                  <div>
+                    <div class="font-display text-sm uppercase text-white">Sneha D.</div>
+                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">MD, Apex Group</div>
+                  </div>
+                </div>
+                <div class="text-sm text-accent-2">★★★★★</div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -919,7 +1061,7 @@
 
         <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
           <div
-            class="why-cell group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
             <div class="flex items-start justify-between">
               <div
                 class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
@@ -934,7 +1076,7 @@
           </div>
 
           <div
-            class="why-cell group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
             <div class="flex items-start justify-between">
               <div
                 class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
@@ -949,7 +1091,7 @@
           </div>
 
           <div
-            class="why-cell group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
             <div class="flex items-start justify-between">
               <div
                 class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
@@ -964,7 +1106,7 @@
           </div>
 
           <div
-            class="why-cell group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
             <div class="flex items-start justify-between">
               <div
                 class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
@@ -996,11 +1138,9 @@
         </div>
 
         <h2 class="font-display text-[clamp(2.6rem,11vw,10rem)] uppercase leading-[0.92] tracking-[-0.03em]">
-          <span class="line-reveal" data-cta-line><span>Your growth</span></span>
-          <span class="line-reveal" data-cta-line><span>starts with one</span></span>
-          <span class="line-reveal" data-cta-line>
-            <span class="italic font-serif text-accent-2 normal-case">conversation.</span>
-          </span>
+          <span class="block">Your growth</span>
+          <span class="block">starts with one</span>
+          <span class="block font-serif italic normal-case text-accent-2">conversation.</span>
         </h2>
 
         <div class="mt-14 grid gap-8 border-t border-white/10 pt-10 md:grid-cols-12">
@@ -1009,13 +1149,15 @@
             <div class="mt-6 space-y-3">
               <a href="tel:+919328792160"
                 class="group flex items-center justify-between border-b border-white/10 py-3 transition-colors hover:border-accent-2">
-                <span class="font-mono text-sm text-white group-hover:text-accent-2">+91 93287 92160</span>
+                <span class="font-mono text-sm text-white transition-colors group-hover:text-accent-2">+91 93287
+                  92160</span>
                 <span
                   class="text-white/40 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-2">↗</span>
               </a>
               <a href="mailto:hello@scalixomedia.com"
                 class="group flex items-center justify-between border-b border-white/10 py-3 transition-colors hover:border-accent-2">
-                <span class="font-mono text-sm text-white group-hover:text-accent-2">hello@scalixomedia.com</span>
+                <span
+                  class="font-mono text-sm text-white transition-colors group-hover:text-accent-2">hello@scalixomedia.com</span>
                 <span
                   class="text-white/40 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-2">↗</span>
               </a>
@@ -1027,19 +1169,19 @@
             <div class="mt-6 space-y-3">
               <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener"
                 class="group flex items-center justify-between border-b border-white/10 py-3 transition-colors hover:border-accent-2">
-                <span class="font-mono text-sm text-white group-hover:text-accent-2">Instagram</span>
+                <span class="font-mono text-sm text-white transition-colors group-hover:text-accent-2">Instagram</span>
                 <span
                   class="text-white/40 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-2">↗</span>
               </a>
               <a href="https://www.linkedin.com/company/scalixomedia" target="_blank" rel="noopener"
                 class="group flex items-center justify-between border-b border-white/10 py-3 transition-colors hover:border-accent-2">
-                <span class="font-mono text-sm text-white group-hover:text-accent-2">LinkedIn</span>
+                <span class="font-mono text-sm text-white transition-colors group-hover:text-accent-2">LinkedIn</span>
                 <span
                   class="text-white/40 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-2">↗</span>
               </a>
               <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener"
                 class="group flex items-center justify-between border-b border-white/10 py-3 transition-colors hover:border-accent-2">
-                <span class="font-mono text-sm text-white group-hover:text-accent-2">Facebook</span>
+                <span class="font-mono text-sm text-white transition-colors group-hover:text-accent-2">Facebook</span>
                 <span
                   class="text-white/40 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-2">↗</span>
               </a>
@@ -1049,8 +1191,7 @@
           <div class="md:col-span-3 md:col-start-10">
             <div class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Start now</div>
             <a href="contact.html"
-              class="group mt-6 inline-flex w-full items-center justify-between rounded-full px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_14px_40px_-12px_rgba(28,88,227,0.75)] transition-all duration-500 hover:-translate-y-0.5"
-              style="background: linear-gradient(135deg,#1C58E3,#4B7BFF);">
+              class="group mt-6 inline-flex w-full items-center justify-between rounded-full bg-gradient-to-br from-accent to-accent-2 px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_14px_40px_-12px_rgba(28,88,227,0.75)] transition-all duration-500 hover:-translate-y-0.5">
               Book a Call
               <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
@@ -1077,173 +1218,29 @@
         class="mt-6 flex flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
         <span>© <span id="year">2025</span> Scalixo Media Agency</span>
         <span class="flex items-center gap-2">
-          <span class="h-1.5 w-1.5 blink rounded-full bg-accent-2"></span>
+          <span class="h-1.5 w-1.5 animate-blink rounded-full bg-accent-2"></span>
           Ahmedabad · <span id="clock">--:--:--</span>
         </span>
         <a href="#home" class="transition-colors hover:text-accent-2">Back to top ↑</a>
       </div>
     </div>
   </footer>
+  <script src="navbar.js"></script>
 
-  <!-- ══════════ SCRIPTS ══════════ -->
+  <!-- ══════════ SCRIPTS (interaction only — all styling is Tailwind) ══════════ -->
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isTouch = matchMedia('(hover: none)').matches;
-
     /* ─── CLOCK ─── */
-    const fmt = () => new Date().toLocaleTimeString('en-IN', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const fmt = () => new Date().toLocaleTimeString('en-IN', { hour12: false });
     const clock = document.getElementById('clock');
     const heroClock = document.getElementById('heroClock');
     const tick = () => {
-      if (clock) clock.textContent = fmt();
-      if (heroClock) heroClock.textContent = fmt().slice(0, 5);
+      const t = fmt();
+      if (clock) clock.textContent = t;
+      if (heroClock) heroClock.textContent = t.slice(0, 5);
     };
-    tick(); setInterval(tick, 1000);
+    tick();
+    setInterval(tick, 1000);
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    /* ─── PROGRESS BAR ─── */
-    gsap.to('#progressBar', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
-
-    /* ─── HEADER ─── */
-    const header = document.getElementById('siteHeader');
-    ScrollTrigger.create({
-      start: 40, end: 'max',
-      onToggle: (self) => {
-        header.querySelector('div > div').classList.toggle('bg-ink/70', self.isActive);
-        header.querySelector('div > div').classList.toggle('border-white/15', self.isActive);
-      },
-    });
-
-    /* ─── CURSOR ─── */
-    if (!isTouch && !reduced) {
-      const cur = document.getElementById('cursor');
-      const lbl = document.getElementById('cursorLabel');
-      const cX = gsap.quickTo(cur, 'x', { duration: 0.35, ease: 'power3' });
-      const cY = gsap.quickTo(cur, 'y', { duration: 0.35, ease: 'power3' });
-      const lX = gsap.quickTo(lbl, 'x', { duration: 0.5, ease: 'power3' });
-      const lY = gsap.quickTo(lbl, 'y', { duration: 0.5, ease: 'power3' });
-
-      gsap.set([cur, lbl], { xPercent: -50, yPercent: -50 });
-
-      window.addEventListener('mousemove', (e) => {
-        cX(e.clientX); cY(e.clientY);
-        lX(e.clientX + 22); lY(e.clientY - 22);
-      });
-
-      document.querySelectorAll('a, button, [data-cursor]').forEach((el) => {
-        el.addEventListener('mouseenter', () => {
-          const label = el.getAttribute('data-cursor') || '';
-          gsap.to(cur, { scale: label ? 6 : 3, duration: 0.35, ease: 'power3' });
-          if (label) gsap.to(lbl, { opacity: 1, duration: 0.3 });
-        });
-        el.addEventListener('mouseleave', () => {
-          gsap.to(cur, { scale: 1, duration: 0.35, ease: 'power3' });
-          gsap.to(lbl, { opacity: 0, duration: 0.3 });
-        });
-      });
-    }
-
-    /* ─── HERO TIMELINE ─── */
-    if (!reduced) {
-      const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-      tl.from('[data-hero-meta]', { opacity: 0, y: 20, duration: 0.7 })
-        .from('[data-hero-label]', { opacity: 0, y: 14, duration: 0.6 }, '-=0.4')
-        .from('[data-hero-line] > span', { yPercent: 115, duration: 1.15, stagger: 0.08 }, '-=0.4')
-        .from('[data-hero-image]', { clipPath: 'inset(0 0 100% 0)', duration: 1.1 }, '-=1')
-        .from('[data-hero-stat]', { opacity: 0, y: 24, duration: 0.7, stagger: 0.08 }, '-=0.6')
-        .from('[data-hero-cta]', { opacity: 0, y: 20, duration: 0.7 }, '-=0.5');
-
-      gsap.set('[data-hero-image]', { clipPath: 'inset(0 0 0% 0)' });
-    }
-
-    /* ─── SCROLL DOT ─── */
-    if (!reduced) {
-      gsap.fromTo('[data-scroll-dot]', { x: 0 }, {
-        x: 40, repeat: -1, yoyo: true, duration: 1.4, ease: 'power2.inOut',
-      });
-    }
-
-    /* ─── HERO PARALLAX ─── */
-    if (!reduced) {
-      gsap.to('[data-hero-img]', {
-        yPercent: 12, scale: 1.08, ease: 'none',
-        scrollTrigger: { trigger: '#home', start: 'top top', end: 'bottom top', scrub: 1 },
-      });
-    }
-
-    /* ─── SECTION REVEALS ─── */
-    gsap.utils.toArray('section').forEach((sec) => {
-      const targets = sec.querySelectorAll('h2, .stat-cell, .why-cell, article, p, [data-reveal]');
-      if (!targets.length) return;
-      gsap.from(targets, {
-        opacity: 0, y: 30, duration: 0.9, ease: 'power3.out', stagger: 0.08,
-        scrollTrigger: { trigger: sec, start: 'top 82%', once: true },
-      });
-    });
-
-    /* ─── COUNTERS ─── */
-    document.querySelectorAll('[data-counter]').forEach((el) => {
-      const target = parseFloat(el.dataset.counter);
-      const decimals = parseInt(el.dataset.decimals || '0', 10);
-      const obj = { v: 0 };
-      gsap.to(obj, {
-        v: target, duration: 2, ease: 'expo.out',
-        snap: { v: decimals ? 0.1 : 1 },
-        scrollTrigger: { trigger: el, start: 'top 88%', once: true },
-        onUpdate: () => el.textContent = decimals ? obj.v.toFixed(decimals) : Math.floor(obj.v),
-        onComplete: () => el.textContent = decimals ? target.toFixed(decimals) : target,
-      });
-    });
-
-    /* ─── HORIZONTAL SERVICES SCROLL ─── */
-    if (!reduced && window.innerWidth >= 768) {
-      const track = document.getElementById('hTrack');
-      const section = document.getElementById('services');
-      const getScroll = () => -(track.scrollWidth - section.clientWidth + 40);
-      gsap.to(track, {
-        x: getScroll, ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: () => `+=${track.scrollWidth}`,
-          pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
-        },
-      });
-    }
-
-    /* ─── PROCESS PROGRESS ─── */
-    const procSteps = document.querySelectorAll('.proc-step');
-    procSteps.forEach((step, i) => {
-      ScrollTrigger.create({
-        trigger: step, start: 'top 60%', end: 'bottom 40%',
-        onEnter: () => {
-          document.getElementById('procProgress').style.width = `${((i + 1) / procSteps.length) * 100}%`;
-          document.getElementById('procCurrent').textContent = `0${i + 1}`;
-          procSteps.forEach((s, j) => s.classList.toggle('border-accent/50', j === i));
-        },
-        onEnterBack: () => {
-          document.getElementById('procProgress').style.width = `${((i + 1) / procSteps.length) * 100}%`;
-          document.getElementById('procCurrent').textContent = `0${i + 1}`;
-          procSteps.forEach((s, j) => s.classList.toggle('border-accent/50', j === i));
-        },
-      });
-    });
-
-    /* ─── WORK CARD CLIP REVEAL ─── */
-    document.querySelectorAll('.work-card').forEach((card) => {
-      gsap.from(card, {
-        clipPath: 'inset(0 0 100% 0)', duration: 1.1, ease: 'expo.out',
-        scrollTrigger: { trigger: card, start: 'top 85%', once: true },
-      });
-    });
-
-    /* ─── CTA LINE REVEAL ─── */
-    gsap.from('[data-cta-line] > span', {
-      yPercent: 115, duration: 1.15, stagger: 0.1, ease: 'expo.out',
-      scrollTrigger: { trigger: '#contact', start: 'top 75%', once: true },
-    });
 
     /* ─── MOBILE MENU ─── */
     const menuBtn = document.getElementById('menuBtn');
@@ -1255,21 +1252,29 @@
       menuBtn.setAttribute('aria-expanded', String(v));
       mobileMenu.classList.toggle('opacity-0', !v);
       mobileMenu.classList.toggle('pointer-events-none', !v);
-      document.body.style.overflow = v ? 'hidden' : '';
-      if (v && !reduced) {
-        gsap.from('.mobile-link', { opacity: 0, y: 40, duration: 0.6, stagger: 0.08, ease: 'power3.out' });
-      }
+      document.body.classList.toggle('overflow-hidden', v);
     };
     menuBtn?.addEventListener('click', () => setMenu(!open));
-    document.querySelectorAll('.mobile-link').forEach((l) => l.addEventListener('click', () => setMenu(false)));
+    mobileMenu?.querySelectorAll('a').forEach((l) => l.addEventListener('click', () => setMenu(false)));
 
-    /* ─── REFRESH ─── */
-    window.addEventListener('load', () => ScrollTrigger.refresh());
+    /* ─── INNER SCROLLER ARROWS ─── */
+    document.querySelectorAll('[data-scroll-btn]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const track = document.getElementById(btn.dataset.scrollBtn);
+        if (!track) return;
+        const dir = btn.dataset.dir === 'next' ? 1 : -1;
+        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.8), behavior: 'smooth' });
+      });
+    });
+
+    /* ─── PAUSE MARQUEES WHEN TAB IS HIDDEN (perf) ─── */
+    document.addEventListener('visibilitychange', () => {
+      document.querySelectorAll('.animate-marquee, .animate-marquee-rev, .animate-marquee-fast').forEach((el) => {
+        el.style.animationPlayState = document.hidden ? 'paused' : 'running';
+      });
+    });
   </script>
-  <script src="script.js"></script>
-
-  <script src="navbar.js"></script>
+  <script src="cursor.js"></script>
 </body>
-
 
 </html>
