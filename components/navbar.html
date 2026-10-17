@@ -1,0 +1,282 @@
+<!-- ══════════════════════════════════════════════
+     DYNAMIC HEADER — Tailwind utilities only
+══════════════════════════════════════════════ -->
+<header id="siteHeader" class="fixed inset-x-0 top-0 z-50">
+  <div class="mx-auto max-w-[1600px] px-6 md:px-10">
+
+    <!-- ── Bar ── -->
+    <div data-header-bar
+      class="mt-4 flex items-center justify-between rounded-full border border-white/10 bg-ink/50 px-5 py-3 backdrop-blur-xl transition-all duration-500 data-[scrolled=true]:border-white/[0.14] data-[scrolled=true]:bg-ink-2/85 data-[scrolled=true]:shadow-[0_14px_40px_-20px_rgba(0,0,0,0.6)] md:px-6">
+
+      <!-- ── Logo ── -->
+      <a href="index.html" class="group relative flex items-center gap-3">
+        <span
+          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+        <img src="./assets/scalixo.png" alt="Scalixo Media"
+          class="relative h-8 w-auto object-contain transition-all duration-500 group-hover:brightness-110 md:h-9" />
+      </a>
+
+      <!-- ── Center nav ── -->
+      <nav class="hidden items-center gap-1 font-sans text-[14px] Capitilize tracking-[0.18em] text-white/70 lg:flex">
+
+        <!-- Home -->
+        <a href="index.html" data-nav
+          class="group relative inline-flex items-center px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white data-[active=true]:text-white">
+          <span>Home</span>
+          <span
+            class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover:origin-left group-hover:scale-x-100 group-data-[active=true]:origin-left group-data-[active=true]:scale-x-100 group-data-[active=true]:text-accent-2"></span>
+        </a>
+
+        <!-- About -->
+        <a href="about.html" data-nav
+          class="group relative inline-flex items-center px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white data-[active=true]:text-white">
+          <span>About</span>
+          <span
+            class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover:origin-left group-hover:scale-x-100 group-data-[active=true]:origin-left group-data-[active=true]:scale-x-100 group-data-[active=true]:text-accent-2"></span>
+        </a>
+
+        <!-- ── Services dropdown ── -->
+        <div class="group/dd relative" data-dropdown>
+
+          <button type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-trigger
+            class="relative inline-flex items-center gap-1.5 px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white group-hover/dd:text-white">
+            <span>Services</span>
+
+            <svg class="h-2.5 w-2.5 transition-all duration-300 group-hover/dd:rotate-180 group-hover/dd:text-accent-2"
+              viewBox="0 0 12 8" fill="none">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            <span
+              class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover/dd:origin-left group-hover/dd:scale-x-100"></span>
+          </button>
+
+          <!-- ── Dropdown panel ── -->
+          <div data-dropdown-panel
+            class="pointer-events-none absolute left-1/2 top-full z-50 -translate-x-1/2 pt-4 opacity-0 transition-opacity duration-300 group-hover/dd:pointer-events-auto group-hover/dd:opacity-100 group-focus-within/dd:pointer-events-auto group-focus-within/dd:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:opacity-100">
+
+            <div
+              class="relative w-[340px] overflow-hidden rounded-2xl border border-white/10 bg-ink-2/95 p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-2xl">
+
+              <!-- Top accent glow -->
+              <span
+                class="pointer-events-none absolute -top-16 left-1/2 h-32 w-56 -translate-x-1/2 rounded-full bg-accent/25 blur-3xl"></span>
+
+              <div class="relative">
+
+                <!-- Item 1 -->
+                <a href="socialmedia.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:30ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">01</span>
+                    Social Media Marketing
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+                <!-- Item 2 -->
+                <a href="performance.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:60ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">02</span>
+                    Performance Marketing
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+                <!-- Item 3 -->
+                <a href="seo.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:90ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">03</span>
+                    Search Engine Optimization
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+                <!-- Item 4 -->
+                <a href="web.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:120ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">04</span>
+                    Website Development
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+                <!-- Item 5 -->
+                <a href="branding.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:150ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">05</span>
+                    Branding &amp; Identity
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+                <!-- Item 6 -->
+                <a href="influncer.html"
+                  class="group/i flex translate-y-1.5 items-center justify-between rounded-xl px-4 py-3 text-[12px] uppercase tracking-[0.12em] text-white/70 opacity-0 transition-all duration-300 group-hover/dd:translate-y-0 group-hover/dd:opacity-100 group-hover/dd:[transition-delay:180ms] hover:bg-white/[0.05] hover:text-white data-[open=true]:translate-y-0 data-[open=true]:opacity-100">
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-[10px] text-accent-2">06</span>
+                    Influencer Marketing
+                  </span>
+                  <span
+                    class="text-white/20 transition-all duration-300 group-hover/i:translate-x-1 group-hover/i:text-accent-2">→</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <a href="portfolio.html" data-nav
+          class="group relative inline-flex items-center px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white data-[active=true]:text-white">
+          <span>Portfolio</span>
+          <span
+            class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover:origin-left group-hover:scale-x-100 group-data-[active=true]:origin-left group-data-[active=true]:scale-x-100 group-data-[active=true]:text-accent-2"></span>
+        </a>
+
+        <!-- FAQ -->
+        <a href="Faq.html" data-nav
+          class="group relative inline-flex items-center px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white data-[active=true]:text-white">
+          <span>FAQ</span>
+          <span
+            class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover:origin-left group-hover:scale-x-100 group-data-[active=true]:origin-left group-data-[active=true]:scale-x-100 group-data-[active=true]:text-accent-2"></span>
+        </a>
+
+        <!-- Contact -->
+        <a href="contact.html" data-nav
+          class="group relative inline-flex items-center px-3.5 py-2 text-white/65 transition-colors duration-300 hover:text-white data-[active=true]:text-white">
+          <span>Contact</span>
+          <span
+            class="pointer-events-none absolute inset-x-3.5 bottom-0.5 h-px origin-right scale-x-0 bg-current transition-transform duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] group-hover:origin-left group-hover:scale-x-100 group-data-[active=true]:origin-left group-data-[active=true]:scale-x-100 group-data-[active=true]:text-accent-2"></span>
+        </a>
+      </nav>
+
+      <!-- ── CTA ── -->
+      <a href="contact.html"
+        class="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-accent px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:shadow-[0_14px_30px_-12px_rgba(28,88,227,0.8)] md:inline-flex">
+        <span
+          class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"></span>
+        <span class="relative flex h-1.5 w-1.5">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+          <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-white"></span>
+        </span>
+        <span class="relative">Get Free Quote</span>
+      </a>
+
+      <!-- ── Mobile menu button ── -->
+      <button id="menuBtn" aria-expanded="false" aria-controls="mobileMenu"
+        class="group relative z-50 flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden">
+        <span
+          class="block h-[1.5px] w-5 bg-white transition-all duration-300 group-data-[open=true]:translate-y-[6px] group-data-[open=true]:rotate-45"></span>
+        <span
+          class="block h-[1.5px] w-5 bg-white transition-all duration-300 group-data-[open=true]:scale-x-0 group-data-[open=true]:opacity-0"></span>
+        <span
+          class="block h-[1.5px] w-5 bg-white transition-all duration-300 group-data-[open=true]:-translate-y-[6px] group-data-[open=true]:-rotate-45"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Mobile menu ── -->
+  <div id="mobileMenu"
+    class="pointer-events-none fixed inset-0 z-40 flex flex-col bg-ink px-6 pt-4 opacity-0 transition-opacity duration-500 data-[open=true]:pointer-events-auto data-[open=true]:opacity-100 lg:hidden">
+
+    <div class="flex-1 overflow-y-auto pb-12">
+
+      <!-- Home -->
+      <a href="index.html"
+        class="group flex items-baseline justify-between border-b border-white/10 py-5 transition-colors hover:border-accent/50">
+        <span class="font-display text-4xl uppercase leading-none text-white transition-colors group-hover:text-accent-2">Home</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
+      </a>
+
+      <!-- About -->
+      <a href="about.html"
+        class="group flex items-baseline justify-between border-b border-white/10 py-5 transition-colors hover:border-accent/50">
+        <span class="font-display text-4xl uppercase leading-none text-white transition-colors group-hover:text-accent-2">About</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
+      </a>
+
+      <!-- Services accordion -->
+      <div class="border-b border-white/10" data-mobile-dd>
+        <button type="button" data-mobile-dd-trigger aria-expanded="false"
+          class="group flex w-full items-baseline justify-between py-5">
+          <span class="font-display text-4xl uppercase leading-none text-white transition-colors group-hover:text-accent-2">Services</span>
+          <span data-mobile-dd-icon
+            class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30 transition-colors group-hover:text-accent-2">03 +</span>
+        </button>
+
+        <div data-mobile-dd-panel
+          class="grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows] duration-500 [transition-timing-function:cubic-bezier(.77,0,.175,1)] data-[open=true]:grid-rows-[1fr]">
+          <div class="min-h-0 overflow-hidden">
+            <div class="flex flex-col gap-1 pb-6">
+              <a href="socialmedia.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Social Media Marketing</a>
+              <a href="performance.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Performance Marketing</a>
+              <a href="seo.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Search Engine Optimization</a>
+              <a href="web.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Website Development</a>
+              <a href="branding.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Branding &amp; Identity</a>
+              <a href="influncer.html"
+                class="rounded-lg px-3 py-3 font-sans text-[14px] Capitilize tracking-[0.15em] text-white/60 transition-colors hover:bg-white/[0.04] hover:text-accent-2">→
+                Influencer Marketing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <a href="portfolio.html"
+        class="group flex items-baseline justify-between border-b border-white/10 py-5 transition-colors hover:border-accent/50">
+        <span class="font-display text-4xl uppercase leading-none text-white transition-colors group-hover:text-accent-2">Portfolio</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04</span>
+      </a>
+
+      <!-- FAQ -->
+      <a href="Faq.html"
+        class="group flex items-baseline justify-between border-b border-white/10 py-5 transition-colors hover:border-accent/50">
+        <span class="font-display text-4xl uppercase leading-none text-white transition-colors group-hover:text-accent-2">FAQ</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05</span>
+      </a>
+
+      <!-- Contact -->
+      <a href="contact.html"
+        class="group flex items-baseline justify-between border-b border-white/10 py-5 transition-colors hover:border-accent/50">
+        <span class="font-display text-4xl uppercase leading-none text-accent-2">Contact</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2/60">06</span>
+      </a>
+
+      <!-- Mobile CTA -->
+      <a href="contact.html"
+        class="group relative mt-10 flex w-full items-center justify-between overflow-hidden rounded-full bg-accent px-6 py-4 font-sans text-[14px] Capitilize tracking-[0.2em] text-white transition-all duration-500 hover:bg-accent-2">
+        <span
+          class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"></span>
+        <span class="relative">Get Free Quote</span>
+        <span class="relative transition-transform duration-500 group-hover:translate-x-1">→</span>
+      </a>
+    </div>
+  </div>
+</header>

@@ -3,13 +3,18 @@ module.exports = {
   content: [
     "./*.html",
     "./**/*.html",
+    "./components/**/*.html",
+    "./navbar.js",
     "./script.js",
   ],
   theme: {
     extend: {
       colors: {
-        ink: "#0b0b0b",
+        ink: "#08090b",
+        "ink-2": "#0e1014",
+        "ink-3": "#141720",
         accent: "#1c58e3",
+        "accent-2": "#4b7bff",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
