@@ -750,5 +750,98 @@ document.addEventListener("DOMContentLoaded", () => {
     marquee.addEventListener("mouseleave", () => { marquee.style.animationPlayState = "running"; });
   }
 
-
 });
+// common header + nav interactions
+
+(function () {
+  const qs = (s, r = document) => r.querySelector(s);
+  const qsa = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* ── 1. Scroll state ── */
+  const bar = qs('[data-header-bar]');
+  const setScrolled = () => bar.setAttribute('data-scrolled', String(window.scrollY > 30));
+  addEventListener('scroll', setScrolled, { passive: true });
+  setScrolled();
+
+  /* ── 2. Active link (matches filename) ── */
+  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  qsa('[data-nav]').forEach((a) => {
+    const href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
+    a.setAttribute('data-active', String(href === path));
+  });
+
+  /* ── 3. Dropdown — hover already handled by CSS; this adds click + ESC + click-outside ── */
+  const dd = qs('[data-dropdown]');
+  if (dd) {
+    const trigger = qs('[data-dropdown-trigger]', dd);
+    const panel = qs('[data-dropdown-panel]', dd);
+    const items = qsa('a', panel);
+    let closeTimer;
+
+    const open = () => {
+      clearTimeout(closeTimer);
+      panel.setAttribute('data-open', 'true');
+      trigger.setAttribute('aria-expanded', 'true');
+      items.forEach((el) => el.setAttribute('data-open', 'true'));
+    };
+    const close = () => {
+      panel.setAttribute('data-open', 'false');
+      trigger.setAttribute('aria-expanded', 'false');
+      items.forEach((el) => el.setAttribute('data-open', 'false'));
+    };
+    const isOpen = () => panel.getAttribute('data-open') === 'true';
+
+    // Hover handling (retains grace period)
+    dd.addEventListener('mouseenter', open);
+    dd.addEventListener('mouseleave', () => { closeTimer = setTimeout(close, 180); });
+
+    // Click toggle (touch + keyboard)
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      isOpen() ? close() : open();
+    });
+
+    // ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) close();
+    });
+
+    // Click outside
+    document.addEventListener('click', (e) => {
+      if (!dd.contains(e.target)) close();
+    });
+  }
+
+  /* ── 4. Mobile menu ── */
+  const menuBtn = qs('#menuBtn');
+  const mobileMenu = qs('#mobileMenu');
+  let menuOpen = false;
+
+  const setMenu = (v) => {
+    menuOpen = v;
+    menuBtn.setAttribute('data-open', String(v));
+    menuBtn.setAttribute('aria-expanded', String(v));
+    mobileMenu.setAttribute('data-open', String(v));
+    document.body.style.overflow = v ? 'hidden' : '';
+  };
+
+  menuBtn.addEventListener('click', () => setMenu(!menuOpen));
+
+  // Close when a link is clicked (not the accordion button)
+  qsa('#mobileMenu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+
+  /* ── 5. Mobile services accordion ── */
+  qsa('[data-mobile-dd]').forEach((wrap) => {
+    const trigger = qs('[data-mobile-dd-trigger]', wrap);
+    const panel = qs('[data-mobile-dd-panel]', wrap);
+    const icon = qs('[data-mobile-dd-icon]', wrap);
+    let open = false;
+
+    trigger.addEventListener('click', () => {
+      open = !open;
+      panel.setAttribute('data-open', String(open));
+      trigger.setAttribute('aria-expanded', String(open));
+      icon.textContent = open ? '03 −' : '03 +';
+    });
+  });
+})();
