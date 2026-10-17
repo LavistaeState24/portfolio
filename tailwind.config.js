@@ -10,46 +10,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#08090b",
-        "ink-2": "#0e1014",
-        "ink-3": "#141720",
-        accent: "#1c58e3",
-        "accent-2": "#4b7bff",
+        ink: '#08090B',
+        'ink-2': '#0E1014',
+        'ink-3': '#15181E',
+        accent: '#1C58E3',
+        'accent-2': '#4B7BFF',
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Anton", "Impact", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Anton', 'Impact', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
-
-      // ═══════════ KEYFRAMES ═══════════
       keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        scrollLine: {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(400%)" },
-        },
         marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeRev: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        blink: {
+          '0%,100%': { opacity: '1' },
+          '50%': { opacity: '.2' },
+        },
+        floaty: {
+          '0%,100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
       },
-
-      // ═══════════ ANIMATIONS ═══════════
       animation: {
-        fadeUp: "fadeUp 0.9s ease-out both",
-        fadeIn: "fadeIn 1s ease-out both",
-        "scroll-line": "scrollLine 2s ease-in-out infinite",
-        marquee: "marquee 40s linear infinite",
+        marquee: 'marquee 45s linear infinite',
+        'marquee-fast': 'marquee 26s linear infinite',
+        'marquee-rev': 'marqueeRev 50s linear infinite',
+        blink: 'blink 1.4s ease-in-out infinite',
+        floaty: 'floaty 4s ease-in-out infinite',
       },
     },
   },
   plugins: [],
 };
+

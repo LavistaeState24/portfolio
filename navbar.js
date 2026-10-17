@@ -53,6 +53,9 @@ function initializeNavbar(navbar) {
     const setDropdownOpen = (open) => {
       trigger.setAttribute('aria-expanded', String(open));
       panel.dataset.open = String(open);
+      panel.querySelectorAll('a').forEach((link) => {
+        link.dataset.open = String(open);
+      });
     };
 
     trigger.addEventListener('click', () => {
@@ -60,6 +63,9 @@ function initializeNavbar(navbar) {
     });
     dropdown.addEventListener('focusout', (event) => {
       if (!dropdown.contains(event.relatedTarget)) setDropdownOpen(false);
+    });
+    document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target)) setDropdownOpen(false);
     });
   });
 
@@ -76,9 +82,11 @@ function initializeNavbar(navbar) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       setMenuOpen(false);
-      navbar.querySelectorAll('[data-dropdown-trigger]').forEach((trigger) => {
-        trigger.setAttribute('aria-expanded', 'false');
-        trigger.nextElementSibling?.removeAttribute('data-open');
+      navbar.querySelectorAll('[data-dropdown]').forEach((dropdown) => {
+        dropdown.querySelector('[data-dropdown-trigger]').setAttribute('aria-expanded', 'false');
+        const panel = dropdown.querySelector('[data-dropdown-panel]');
+        panel.removeAttribute('data-open');
+        panel.querySelectorAll('a').forEach((link) => link.removeAttribute('data-open'));
       });
     }
   });
