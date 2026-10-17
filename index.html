@@ -10,29 +10,8 @@
   <meta name="robots" content="index, follow" />
   <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
 
-  <!-- Tailwind CDN + config -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#08090B',
-            'ink-2': '#0E1014',
-            'ink-3': '#141720',
-            accent: '#1C58E3',
-            'accent-2': '#4B7BFF',
-          },
-          fontFamily: {
-            display: ['Anton', 'Impact', 'sans-serif'],
-            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1287,9 +1266,9 @@
     /* ─── REFRESH ─── */
     window.addEventListener('load', () => ScrollTrigger.refresh());
   </script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
-<script src="navbar.js"></script>
+  <script src="navbar.js"></script>
 </body>
 
 
