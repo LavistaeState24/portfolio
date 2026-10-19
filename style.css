@@ -631,7 +631,6 @@ body[data-page="web"] {
 body[data-page="web"] header {
   mix-blend-mode: normal;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(5, 4, 5, 0.78);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
