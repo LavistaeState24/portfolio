@@ -753,95 +753,101 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // common header + nav interactions
 
-(function () {
-  const qs = (s, r = document) => r.querySelector(s);
-  const qsa = (s, r = document) => [...r.querySelectorAll(s)];
+document.addEventListener('DOMContentLoaded', () => {
+  /* ---------------- Mobile menu ---------------- */
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-  /* ── 1. Scroll state ── */
-  const bar = qs('[data-header-bar]');
-  const setScrolled = () => bar.setAttribute('data-scrolled', String(window.scrollY > 30));
-  addEventListener('scroll', setScrolled, { passive: true });
-  setScrolled();
+  const setMobile = (open) => {
+    if (!menuBtn || !mobileMenu) return;
+    menuBtn.setAttribute('data-open', String(open));
+    menuBtn.setAttribute('aria-expanded', String(open));
+    mobileMenu.setAttribute('data-open', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
 
-  /* ── 2. Active link (matches filename) ── */
-  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  qsa('[data-nav]').forEach((a) => {
-    const href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
-    a.setAttribute('data-active', String(href === path));
+  menuBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setMobile(menuBtn.getAttribute('data-open') !== 'true');
   });
 
-  /* ── 3. Dropdown — hover already handled by CSS; this adds click + ESC + click-outside ── */
-  const dd = qs('[data-dropdown]');
-  if (dd) {
-    const trigger = qs('[data-dropdown-trigger]', dd);
-    const panel = qs('[data-dropdown-panel]', dd);
-    const items = qsa('a', panel);
+  // Close when any link inside the menu is tapped
+  mobileMenu?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => setMobile(false))
+  );
+
+  /* ---------------- Mobile services accordion ---------------- */
+  document.querySelectorAll('[data-mobile-dd]').forEach((dd) => {
+    const trigger = dd.querySelector('[data-mobile-dd-trigger]');
+    const panel = dd.querySelector('[data-mobile-dd-panel]');
+    const icon = dd.querySelector('[data-mobile-dd-icon]');
+
+    trigger?.addEventListener('click', () => {
+      const open = panel.getAttribute('data-open') === 'true';
+      panel.setAttribute('data-open', String(!open));
+      trigger.setAttribute('aria-expanded', String(!open));
+      if (icon) icon.textContent = open ? '03 +' : '03 −';
+    });
+  });
+
+  /* ---------------- Desktop services dropdown ---------------- */
+  const dropdowns = [...document.querySelectorAll('[data-dropdown]')];
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  dropdowns.forEach((dd) => {
+    const trigger = dd.querySelector('[data-dropdown-trigger]');
+    const panel = dd.querySelector('[data-dropdown-panel]');
     let closeTimer;
 
     const open = () => {
       clearTimeout(closeTimer);
       panel.setAttribute('data-open', 'true');
       trigger.setAttribute('aria-expanded', 'true');
-      items.forEach((el) => el.setAttribute('data-open', 'true'));
     };
     const close = () => {
       panel.setAttribute('data-open', 'false');
       trigger.setAttribute('aria-expanded', 'false');
-      items.forEach((el) => el.setAttribute('data-open', 'false'));
     };
-    const isOpen = () => panel.getAttribute('data-open') === 'true';
 
-    // Hover handling (retains grace period)
-    dd.addEventListener('mouseenter', open);
-    dd.addEventListener('mouseleave', () => { closeTimer = setTimeout(close, 180); });
-
-    // Click toggle (touch + keyboard)
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      isOpen() ? close() : open();
+      panel.getAttribute('data-open') === 'true' ? close() : open();
     });
 
-    // ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && isOpen()) close();
+    // Hover only on true mouse devices (avoids the tap → mouseenter → click double-fire on touch)
+    if (fine) {
+      dd.addEventListener('mouseenter', open);
+      dd.addEventListener('mouseleave', () => {
+        closeTimer = setTimeout(close, 150);
+      });
+    }
+
+    // Close when focus leaves the whole dropdown
+    dd.addEventListener('focusout', (e) => {
+      if (!dd.contains(e.relatedTarget)) close();
     });
 
-    // Click outside
-    document.addEventListener('click', (e) => {
-      if (!dd.contains(e.target)) close();
-    });
-  }
+    // Close after selecting an item
+    panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
+  });
 
-  /* ── 4. Mobile menu ── */
-  const menuBtn = qs('#menuBtn');
-  const mobileMenu = qs('#mobileMenu');
-  let menuOpen = false;
+  /* ---------------- Global: ESC + outside click ---------------- */
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
 
-  const setMenu = (v) => {
-    menuOpen = v;
-    menuBtn.setAttribute('data-open', String(v));
-    menuBtn.setAttribute('aria-expanded', String(v));
-    mobileMenu.setAttribute('data-open', String(v));
-    document.body.style.overflow = v ? 'hidden' : '';
-  };
+    if (mobileMenu?.getAttribute('data-open') === 'true') setMobile(false);
 
-  menuBtn.addEventListener('click', () => setMenu(!menuOpen));
-
-  // Close when a link is clicked (not the accordion button)
-  qsa('#mobileMenu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
-
-  /* ── 5. Mobile services accordion ── */
-  qsa('[data-mobile-dd]').forEach((wrap) => {
-    const trigger = qs('[data-mobile-dd-trigger]', wrap);
-    const panel = qs('[data-mobile-dd-panel]', wrap);
-    const icon = qs('[data-mobile-dd-icon]', wrap);
-    let open = false;
-
-    trigger.addEventListener('click', () => {
-      open = !open;
-      panel.setAttribute('data-open', String(open));
-      trigger.setAttribute('aria-expanded', String(open));
-      icon.textContent = open ? '03 −' : '03 +';
+    dropdowns.forEach((dd) => {
+      dd.querySelector('[data-dropdown-panel]')?.setAttribute('data-open', 'false');
+      dd.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
     });
   });
-})();
+
+  document.addEventListener('click', (e) => {
+    dropdowns.forEach((dd) => {
+      if (dd.contains(e.target)) return;
+      dd.querySelector('[data-dropdown-panel]')?.setAttribute('data-open', 'false');
+      dd.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
