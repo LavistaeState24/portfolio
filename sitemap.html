@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitemap — Scalixo Media Agency</title>
+  <meta name="description"
+    content="Complete sitemap of Scalixo Media Agency — every page, service and resource in one place." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body class="font-sans">
+
+  <!-- Cursor -->
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Progress -->
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
+    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+
+      <a href="index.html" class="group relative flex items-center gap-3">
+        <span
+          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
+
+        <img src="./assets/scalixo.png" alt="Scalixo Media"
+          class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
+      </a>
+
+      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
+        <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
+        <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
+        <a href="index.html#contact" class="transition-opacity hover:opacity-25">Contact</a>
+      </nav>
+
+      <a href="index.html#contact"
+        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
+        Start a project ↗
+      </a>
+
+      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
+        Menu
+      </button>
+    </div>
+
+    <div id="mobileMenu"
+      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
+      <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
+      <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
+      <a href="index.html#contact" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ PAGE HEADER ══════════ -->
+    <section class="relative overflow-hidden px-6 pt-36 md:px-10 md:pb-20 md:pt-44">
+
+      <div
+        class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+      </div>
+
+      <div class="relative mx-auto max-w-[1500px]">
+
+        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
+          data-reveal>
+
+          <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+          <span class="text-white/20">/</span>
+          <span class="text-white/70">Sitemap</span>
+        </div>
+
+        <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
+          Site<span class="text-accent">map.</span>
+        </h1>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
+          <div class="md:col-span-5">
+            <p class="text-lg leading-relaxed text-white/75 md:text-xl">
+              Every page, service and resource — mapped in one place so you can jump straight
+              to what you're looking for.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Last updated</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">Jan 2026</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Pages listed</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">15</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Sections</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">05</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ SITEMAP BODY ══════════ -->
+    <section class="px-6 pb-24 md:px-10 md:pb-32">
+      <div class="mx-auto grid max-w-[1500px] gap-12 md:grid-cols-12 md:gap-16">
+
+        <!-- ── Sticky TOC ── -->
+        <aside class="md:col-span-3">
+          <div class="md:sticky md:top-28" data-reveal>
+            <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">(Index)</span>
+            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5">
+              <a href="#main" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · Main pages</a>
+              <a href="#services" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · Services</a>
+              <a href="#company" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · Company</a>
+              <a href="#legal" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · Legal</a>
+              <a href="#connect" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Connect</a>
+            </nav>
+
+            <a href="index.html#contact" data-magnetic
+              class="cta-btn group mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+              <span class="relative z-10 transition-colors duration-500">Can't find a page?</span>
+              <span class="relative z-10 transition-transform duration-500 group-hover:translate-x-0.5">→</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- ── Content ── -->
+        <div class="md:col-span-9 md:col-start-4">
+
+          <!-- Intro card -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-10" data-reveal>
+            <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">Overview</span>
+            <p class="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
+              A full map of the Scalixo Media website — grouped by section so you can move
+              through it the way it was built.
+            </p>
+            <p class="mt-4 leading-relaxed text-white/45">
+              Looking for the machine-readable version? Search engines use
+              <a href="sitemap.xml" class="text-white/70 underline decoration-white/20 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">sitemap.xml</a>.
+            </p>
+          </div>
+
+          <!-- 01 · Main pages -->
+          <div id="main" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">01</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Main pages</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05 links</span>
+            </div>
+
+            <ul class="mt-8 md:pl-12">
+              <li>
+                <a href="index.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Home</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Landing page, overview and primary calls to action.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">About</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Who we are, how we work and the growth system behind it.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="contact.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Contact</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Start a project, book a call or send a brief.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 02 · Services -->
+          <div id="services" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">02</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Services</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">07 links</span>
+            </div>
+
+            <ul class="mt-8 md:pl-12">
+              <li>
+                <a href="socialmedia.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Social Media Marketing</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Content systems, calendars and community management.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="performance.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Performance Marketing</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Paid media across Meta, Google and LinkedIn.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="influncer.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Lead Generation</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Funnels, landing pages and qualification flows.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="seo.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Search Engine Optimisation</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Technical SEO, content and on-page structure.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="web.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Web Design & Development</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Conversion-focused sites and landing pages.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="branding.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Branding & Creative</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Identity, creative direction and content production.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#services"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Influencer Marketing</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Creator partnerships and collaborations.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 03 · Company -->
+          <div id="company" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">03</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Company</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04 links</span>
+            </div>
+
+            <ul class="mt-8 md:pl-12">
+              <li>
+                <a href="about.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Our Story</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">How Scalixo Media started and what drives it.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Process</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Spark → Engine → Momentum → Scale, step by step.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="careers.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Careers</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Open roles and how to join the team.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="faq.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">FAQ</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Pricing, timelines, reporting and ownership.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 04 · Legal -->
+          <div id="legal" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">04</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Legal</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03 links</span>
+            </div>
+
+            <ul class="mt-8 md:pl-12">
+              <li>
+                <a href="privacy.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Privacy Policy</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">What data we collect and how it's handled.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="terms.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Terms of Service</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Engagement terms, billing and termination.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="cookies.html"
+                  class="group flex items-start justify-between gap-6 border-b border-white/[0.06] py-5 transition-colors hover:border-accent/40">
+                  <span>
+                    <span class="block font-display text-lg uppercase leading-none text-white transition-colors group-hover:text-accent md:text-xl">Cookie Policy</span>
+                    <span class="mt-2 block text-sm leading-relaxed text-white/45">Cookies, analytics and tracking choices.</span>
+                  </span>
+                  <span aria-hidden="true" class="mt-1 shrink-0 text-white/20 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-accent">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 05 · Connect -->
+          <div id="connect" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">05</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Connect</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Direct</span>
+            </div>
+
+            <div class="mt-8 md:pl-12">
+              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8">
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Address</div>
+                    <p class="mt-2 text-sm leading-relaxed text-white/70">
+                      301, 3rd Floor, Harvy Complex, Subhash Chowk,<br />
+                      Gurukul Rd, Memnagar, Ahmedabad,<br />
+                      Gujarat 380052
+                    </p>
+                  </div>
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Phone</div>
+                    <a href="tel:+919328792160"
+                      class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent md:text-2xl">
+                      +91 93287 92160
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a href="tel:+919328792160" data-magnetic
+                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                    Call us
+                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  </a>
+                  <a href="index.html#contact" data-magnetic
+                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                    Start a project
+                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT CTA ══════════ -->
+    <section id="contact-cta" class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-10" data-reveal>
+          <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">(03)</span>
+        </div>
+
+        <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-reveal>
+          Can't Find<br />A Page<span class="text-accent">?</span>
+        </h2>
+
+        <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
+          data-reveal>
+          <a href="tel:+919328792160" data-magnetic
+            class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+            +91 93287 92160
+            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+          </a>
+          <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+            <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
+              class="transition-colors hover:text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/company/scalixomedia/posts/"
+              class="transition-colors hover:text-accent">LinkedIn</a>
+            <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+      <span class="flex items-center gap-2">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        Ahmedabad <span id="clock">--:--:--</span>
+      </span>
+      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script src="script.js"></script>
+
+
+  <script src="navbar.js"></script>
+</body>
+
+</html>
