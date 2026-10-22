@@ -20,50 +20,15 @@
 
 <body class="font-sans">
 
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
   <!-- Cursor -->
   <div class="cursor-ring"></div>
   <div class="cursor-dot"></div>
 
   <!-- Progress -->
-  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
 
   <!-- ══════════ HEADER ══════════ -->
-  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
-    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
-      <a href="#home" class="group relative flex items-center gap-3">
-        <!-- Soft blue glow behind logo -->
-        <span
-          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-
-        <!-- Logo -->
-        <img src="./assets/scalixo.png" alt="Scalixo Media"
-          class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
-      </a>
-
-      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
-        <a href="#services" class="transition-opacity hover:opacity-25">Services</a>
-        <a href="#work" class="transition-opacity hover:opacity-25">Work</a>
-        <a href="#contact" class="transition-opacity hover:opacity-25">Contact</a>
-      </nav>
-
-      <a href="#contact"
-        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
-        Start a project ↗
-      </a>
-
-      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
-        Menu
-      </button>
-    </div>
-
-    <div id="mobileMenu"
-      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
-      <a href="#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
-      <a href="#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
-      <a href="#contact" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
-    </div>
-  </header>
+  <header id="siteHeader"></header>
 
   <main>
 
@@ -90,7 +55,7 @@
             with strategy, content,
           </span>
 
-          <span class="block text-white animate-[fadeUp_0.9s_ease-out_both] [animation-delay:550ms]">
+          <span class="block text-accent animate-[fadeUp_0.9s_ease-out_both] [animation-delay:550ms]">
             and performance marketing.
           </span>
         </h1>
@@ -162,83 +127,82 @@
           </span>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
 
-          <a href="#service-01"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 01 Social Media Marketing -->
+          <a href="#service-01" aria-label="Social Media Marketing"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=80"
+              alt="Social media marketing" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">01</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Social Media Marketing</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Social Media Marketing
+              </h3>
             </div>
           </a>
 
-          <a href="#service-02"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 02 Performance Marketing -->
+          <a href="#service-02" aria-label="Performance Marketing"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+              alt="Performance marketing analytics" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">02</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Performance Marketing</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Performance Marketing
+              </h3>
             </div>
           </a>
 
-          <a href="#service-03"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 03 Lead Generation -->
+          <a href="#service-03" aria-label="Lead Generation"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80"
+              alt="Lead generation meeting" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">03</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Lead Generation</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Lead Generation</h3>
             </div>
           </a>
 
-          <a href="#service-04"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 04 Website Development -->
+          <a href="#service-04" aria-label="Website Development"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80"
+              alt="Website development code" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">04</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Website Development</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Website Development
+              </h3>
             </div>
           </a>
 
-          <a href="#service-05"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 05 Branding & Identity -->
+          <a href="#service-05" aria-label="Branding and Identity"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
+              alt="Branding and identity design" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">05</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Branding &amp; Identity</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Branding &amp;
+                Identity</h3>
             </div>
           </a>
 
-          <a href="#service-06"
-            class="service-card group relative flex h-[300px] cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:h-[340px]">
-            <div class="service-media absolute inset-0">
-              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&q=80" alt=""
-                class="h-full w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10">
+          <!-- 06 Influencer Marketing -->
+          <a href="#service-06" aria-label="Influencer Marketing"
+            class="relative block h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:h-[340px]">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&q=80"
+              alt="Influencer marketing content creation" loading="lazy" class="h-full w-full object-cover" />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-5 md:p-6">
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">06</span>
-              <h3 class="mt-2 font-display text-2xl uppercase leading-none md:text-3xl">Influencer Marketing</h3>
+              <h3 class="mt-1 font-display text-xl uppercase leading-none text-white md:text-2xl">Influencer Marketing
+              </h3>
             </div>
           </a>
 
@@ -1123,7 +1087,7 @@
           </div>
           <div class="flex gap-8 md:col-span-2 md:col-start-11">
             <div>
-              <div class="font-display text-3xl leading-none text-accent">42M</div>
+              <div class="font-display text-3xl leading-none text-accent">1M</div>
               <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Reach</div>
             </div>
           </div>
@@ -1136,7 +1100,7 @@
           </div>
 
           <div class="grid grid-cols-1 gap-2 md:grid-cols-4
-             md:gap-2">
+             md:gap-6">
 
             <!-- Collab 1 -->
             <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
@@ -1433,8 +1397,9 @@
   </main>
 
   <!-- ══════════ FOOTER ══════════ -->
-<footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
       <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
       <span class="flex items-center gap-2">
         <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>

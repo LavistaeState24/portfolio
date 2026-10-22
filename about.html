@@ -16,7 +16,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="bg-ink font-sans text-white antialiased">
+<body class=" font-sans">
 
   <!-- Cursor -->
   <div class="cursor-ring"></div>
@@ -26,40 +26,7 @@
   <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
 
   <!-- ══════════ HEADER ══════════ -->
-  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
-    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
-      <a href="index.html" class="group relative flex items-center gap-3">
-        <span
-          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-
-        <img src="./assets/scalixo.png" alt="Scalixo Media"
-          class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
-      </a>
-
-      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
-        <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
-        <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
-        <a href="contact.html" class="text-accent transition-opacity hover:opacity-50">Contact</a>
-      </nav>
-
-      <a href="#contact-form"
-        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
-        Start a project ↗
-      </a>
-
-      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
-        Menu
-      </button>
-    </div>
-
-    <div id="mobileMenu"
-      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
-      <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
-      <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
-      <a href="contact.html" class="mobile-link font-display text-5xl uppercase text-accent">Contact</a>
-    </div>
-  </header>
+  <header id="siteHeader"></header>
 
   <main>
 
@@ -86,16 +53,12 @@
           <span class="text-white/70">About</span>
         </div>
 
-        <h1 class="mt-8 max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
+        <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
           <span class="block overflow-hidden">
-            <span class="hero-line block" data-hero-line>We don't just</span>
+            <span class="hero-line block" data-hero-line>Not just marketing</span>
           </span>
           <span class="block overflow-hidden">
-            <span class="hero-line block" data-hero-line>market brands. We</span>
-          </span>
-          <span class="block overflow-hidden">
-            <span class="hero-line block text-accent" data-hero-line>build businesses<span
-                class="text-accent">.</span></span>
+            <span class="hero-line block text-accent" data-hero-line>Business growth.</span>
           </span>
         </h1>
 
@@ -172,7 +135,8 @@
               <p>
                 At Scalixo Media, we believe marketing isn't about posting every day or running random ads.
                 It's about building a predictable system that attracts the right audience, generates
-                qualified leads, and helps businesses grow consistently.That system doesn't happen by accident. It starts with clarity — understanding your market,
+                qualified leads, and helps businesses grow consistently.That system doesn't happen by accident. It
+                starts with clarity — understanding your market,
                 your offer, and the exact customer you're built to serve.
               </p>
 
@@ -181,12 +145,6 @@
                 step closer to becoming your customer.
               </p>
 
-              <p>
-                We combine creative storytelling with performance data, so nothing is guesswork. Every
-                campaign is tracked, every result is measured, and every insight feeds back into the next
-                move. The outcome is a growth engine that gets sharper month after month — not a one-off
-                spike that fades as soon as the ads stop.
-              </p>
 
 
             </div>
@@ -263,16 +221,13 @@
                 Every campaign, every piece of content, every rupee spent — engineered to move the needle on
                 what actually matters for your business.
               </p>
-              <p>
-                Today, we work with founders across India who care about growth — not fluff. And we're just
-                getting started.
-              </p>
+
               <div class="text-white font-bold text-lg">
                 <p>Founder & Director <br> <span class="text-accent">Deep Thakkar</span></p>
               </div>
             </div>
 
-             <div class="mt-10 flex flex-wrap items-center gap-4">
+            <div class="mt-12 flex flex-wrap items-center gap-4">
               <a href="contact.html"
                 class="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono text-[11px] uppercase tracking-[0.25em] text-white transition-all duration-500 hover:bg-accent/80 hover:shadow-[0_15px_40px_-10px_rgba(28,88,227,0.7)]">
                 Contact Us
@@ -810,7 +765,7 @@
     </section>
 
     <!-- ══════════ 8. FAQ — Accordion Animation ══════════ -->
-    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-6">
       <div class="mx-auto max-w-[1500px]">
 
         <div class="grid gap-14 md:grid-cols-12 md:gap-12">
@@ -963,7 +918,7 @@
               <span
                 class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </a>
-             
+
           </div>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2">
             <a href="https://www.instagram.com/scalixo.media" class="transition-colors hover:text-accent">Instagram</a>

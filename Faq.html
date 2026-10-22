@@ -20,48 +20,13 @@
 
 <body class="font-sans">
 
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
   <!-- Cursor -->
   <div class="cursor-ring"></div>
   <div class="cursor-dot"></div>
 
-  <!-- Progress -->
-  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
-
-  <!-- ══════════ HEADER ══════════ -->
-  <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
-    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
-      <a href="index.html" class="group relative flex items-center gap-3">
-        <span
-          class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-
-        <img src="./assets/scalixo.png" alt="Scalixo Media"
-          class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
-      </a>
-
-      <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
-        <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
-        <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
-        <a href="index.html#contact" class="transition-opacity hover:opacity-25">Contact</a>
-      </nav>
-
-      <a href="index.html#contact"
-        class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
-        Start a project ↗
-      </a>
-
-      <button id="menuBtn" class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
-        Menu
-      </button>
-    </div>
-
-    <div id="mobileMenu"
-      class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
-      <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
-      <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
-      <a href="index.html#contact" class="mobile-link font-display text-5xl uppercase text-white">Contact</a>
-    </div>
-  </header>
+  <header id="siteHeader"></header>
 
   <main>
 
@@ -74,16 +39,15 @@
 
       <div class="relative mx-auto max-w-[1500px]">
 
-        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
-          data-reveal>
-          
+        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]" data-reveal>
+
           <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
           <span class="text-white/20">/</span>
           <span class="text-white/70">FAQ</span>
         </div>
 
         <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
-          Frequently<br />Asked<span class="text-accent">.</span>
+          Frequently<br /><span class="text-accent">Asked.</span>
         </h1>
 
         <div class="mt-10 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
@@ -99,7 +63,8 @@
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Applies to</div>
-              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">scalixomedia.com</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">scalixomedia.com
+              </div>
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Questions</div>
@@ -120,18 +85,42 @@
           <div class="md:sticky md:top-28" data-reveal>
             <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">(Index)</span>
             <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5">
-              <a href="#q1" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · What we do</a>
-              <a href="#q2" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · Services offered</a>
-              <a href="#q3" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · Getting started</a>
-              <a href="#q4" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · Pricing &amp; billing</a>
-              <a href="#q5" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Timelines</a>
-              <a href="#q6" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06 · Results &amp; guarantees</a>
-              <a href="#q7" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07 · Business size</a>
-              <a href="#q8" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · Ownership of work</a>
-              <a href="#q9" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · Reporting</a>
-              <a href="#q10" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Pausing &amp; cancelling</a>
-              <a href="#q11" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · Locations served</a>
-              <a href="#q12" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · Still have questions</a>
+              <a href="#q1"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01
+                · What we do</a>
+              <a href="#q2"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02
+                · Services offered</a>
+              <a href="#q3"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03
+                · Getting started</a>
+              <a href="#q4"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04
+                · Pricing &amp; billing</a>
+              <a href="#q5"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05
+                · Timelines</a>
+              <a href="#q6"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06
+                · Results &amp; guarantees</a>
+              <a href="#q7"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07
+                · Business size</a>
+              <a href="#q8"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08
+                · Ownership of work</a>
+              <a href="#q9"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09
+                · Reporting</a>
+              <a href="#q10"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10
+                · Pausing &amp; cancelling</a>
+              <a href="#q11"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11
+                · Locations served</a>
+              <a href="#q12"
+                class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12
+                · Still have questions</a>
             </nav>
 
             <a href="index.html#contact" data-magnetic
@@ -162,7 +151,8 @@
           <details id="q1" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal open>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">01</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">What does Scalixo Media do?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">What does Scalixo Media do?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -183,7 +173,8 @@
           <details id="q2" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">02</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Which services do you offer?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Which services do you offer?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -238,15 +229,18 @@
               <ul class="space-y-3">
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Discovery call</strong> — we understand your business and objectives.</span>
+                  <span><strong class="font-normal text-white/80">Discovery call</strong> — we understand your business
+                    and objectives.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Proposal</strong> — you receive a scope, timeline, and pricing document.</span>
+                  <span><strong class="font-normal text-white/80">Proposal</strong> — you receive a scope, timeline, and
+                    pricing document.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Onboarding</strong> — once approved and the advance is received, we kick off.</span>
+                  <span><strong class="font-normal text-white/80">Onboarding</strong> — once approved and the advance is
+                    received, we kick off.</span>
                 </li>
               </ul>
             </div>
@@ -256,7 +250,8 @@
           <details id="q4" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">04</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How much do your services cost?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How much do your services
+                cost?</h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -276,7 +271,8 @@
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Ad spend and third-party costs (platforms, hosting, domains, stock assets) are billed separately.</span>
+                  <span>Ad spend and third-party costs (platforms, hosting, domains, stock assets) are billed
+                    separately.</span>
                 </li>
               </ul>
               <p>
@@ -290,7 +286,8 @@
           <details id="q5" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">05</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How long until I see results?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How long until I see results?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -310,7 +307,8 @@
           <details id="q6" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">06</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you guarantee rankings or leads?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you guarantee rankings or
+                leads?</h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -331,7 +329,8 @@
           <details id="q7" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">07</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work with small businesses?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work with small
+                businesses?</h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -351,7 +350,8 @@
           <details id="q8" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">08</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Who owns the work you create?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Who owns the work you create?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -377,7 +377,8 @@
           <details id="q9" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">09</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do you report on performance?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do you report on
+                performance?</h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -397,7 +398,8 @@
           <details id="q10" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">10</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Can I pause or cancel anytime?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Can I pause or cancel anytime?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -417,7 +419,8 @@
           <details id="q11" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
             <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">11</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work outside Ahmedabad?</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work outside Ahmedabad?
+              </h2>
               <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
             </summary>
             <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -467,12 +470,14 @@
                   <a href="tel:+919328792160" data-magnetic
                     class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
                     Call us
-                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    <span
+                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                   </a>
                   <a href="index.html#contact" data-magnetic
                     class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
                     Start a project
-                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    <span
+                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                   </a>
                 </div>
               </div>
@@ -499,7 +504,8 @@
           <a href="tel:+919328792160" data-magnetic
             class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
             +91 93287 92160
-            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            <span
+              class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
           </a>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
             <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
@@ -516,7 +522,8 @@
 
   <!-- ══════════ FOOTER ══════════ -->
   <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
       <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
       <span class="flex items-center gap-2">
         <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
@@ -528,7 +535,7 @@
 
   <!-- ══════════ SCRIPTS ══════════ -->
   <script src="script.js"></script>
- 
+
 
   <script src="navbar.js"></script>
 </body>

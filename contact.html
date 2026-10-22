@@ -19,52 +19,15 @@
 
 <body class="font-sans">
 
+    <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
     <!-- Cursor -->
     <div class="cursor-ring"></div>
     <div class="cursor-dot"></div>
 
-    <!-- Progress -->
-    <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
-
-    <!-- ══════════ HEADER ══════════ -->
-    <header class=" inset-x-0 top-0 z-50 bg-transparent mix-blend-difference">
-        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-
-            <a href="index.html" class="group relative flex items-center gap-3">
-                <span
-                    class="pointer-events-none absolute -inset-4 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-
-                <img src="./assets/scalixo.png" alt="Scalixo Media"
-                    class="relative h-26 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
-            </a>
-
-            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:flex">
-                <a href="index.html#services" class="transition-opacity hover:opacity-25">Services</a>
-                <a href="index.html#work" class="transition-opacity hover:opacity-25">Work</a>
-                <a href="contact.html" class="text-accent transition-opacity hover:opacity-50">Contact</a>
-            </nav>
-
-            <a href="#contact-form"
-                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-50 md:block">
-                Start a project ↗
-            </a>
-
-            <button id="menuBtn"
-                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] text-white md:hidden">
-                Menu
-            </button>
-        </div>
-
-        <div id="mobileMenu"
-            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-2 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
-            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase text-white">Services</a>
-            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase text-white">Work</a>
-            <a href="contact.html" class="mobile-link font-display text-5xl uppercase text-accent">Contact</a>
-        </div>
-    </header>
+    <header id="siteHeader"></header>
 
     <main>
-
         <!-- ══════════ PAGE HEADER ══════════ -->
         <section class="relative overflow-hidden px-6 pt-36 md:px-10 md:pb-20 md:pt-44">
 
@@ -82,7 +45,7 @@
                 </div>
 
                 <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
-                    Let's<br />Connect<span class="text-accent">.</span>
+                    Let's<br /><span class="text-accent">Connect.</span>
                 </h1>
 
                 <div class="mt-4 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
@@ -138,7 +101,7 @@
                                 +91 93287 92160
                             </p>
                             <p class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35">
-                                Mon – Sat · 10:00 AM – 7:00 PM
+                                Mon – Sat · 10:30 AM – 7:00 PM
                             </p>
                         </div>
                     </a>
@@ -184,7 +147,7 @@
                             <div class="flex items-baseline justify-between border-b border-white/10 pb-3">
                                 <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Mon –
                                     Sat</span>
-                                <span class="font-display text-lg leading-none text-white">10 AM – 7 PM</span>
+                                <span class="font-display text-lg leading-none text-white">10:30 AM – 7:00 PM</span>
                             </div>
                             <div class="flex items-baseline justify-between pt-3">
                                 <span
@@ -226,7 +189,7 @@
                                     class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                             </a>
 
-                            
+
                         </div>
                     </div>
 
@@ -362,60 +325,6 @@
             </div>
         </section>
 
-        <!-- ══════════ WHY CONTACT ══════════ -->
-        <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
-            <div class="mx-auto max-w-[1500px]">
-
-                <div class="mb-12 max-w-[720px]" data-reveal>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(03)</span>
-                    <h2 class="mt-3 mb-8 font-display text-3xl uppercase leading-[0.95] text-white md:text-5xl">
-                        Marketing guidance designed around your business goals.
-                    </h2>
-                </div>
-
-                <div
-                    class="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
-
-                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
-                        <div class="font-display text-4xl leading-none text-accent">01</div>
-                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Experienced Team
-                        </h3>
-                        <p class="mt-3 text-sm leading-relaxed text-white/45">
-                            Work with professionals focused on strategy, content, performance and measurable growth.
-                        </p>
-                    </div>
-
-                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
-                        <div class="font-display text-4xl leading-none text-accent">02</div>
-                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Performance Focused
-                        </h3>
-                        <p class="mt-3 text-sm leading-relaxed text-white/45">
-                            Campaigns planned to improve leads, conversions, visibility and long-term brand growth.
-                        </p>
-                    </div>
-
-                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
-                        <div class="font-display text-4xl leading-none text-accent">03</div>
-                        <h3 class="mt-5 mb-6 font-display text-xl uppercase leading-none text-white">Personalized
-                            Consultation</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-white/45">
-                            Get practical suggestions based on your current marketing stage and business goals.
-                        </p>
-                    </div>
-
-                    <div class="bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.03] md:p-9" data-reveal>
-                        <div class="font-display mb-4 text-4xl leading-none text-accent">04</div>
-                        <h3 class=" mb-6 font-display text-xl uppercase leading-none text-white">Transparent Process
-                        </h3>
-                        <p class="mt-3 text-sm leading-relaxed text-white/45">
-                            Clear communication, practical reporting and a growth system built with accountability.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <!-- ══════════ FINAL CTA ══════════ -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
@@ -451,15 +360,16 @@
 
     <!-- ══════════ FOOTER ══════════ -->
     <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
-      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
-      <span class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-        Ahmedabad <span id="clock">--:--:--</span>
-      </span>
-      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
-    </div>
-  </footer>
+        <div
+            class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+            <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
 
     <!-- ══════════ SCRIPTS ══════════ -->
     <script src="script.js"></script>

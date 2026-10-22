@@ -12,54 +12,28 @@
     <link rel="shortcut icon" href="./assets/favicon (2).png" type="image/x-icon" />
     <link rel="stylesheet" href="./tailwind.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    
+
 </head>
 
-<body id="top" data-page="performance" class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+<body id="top" data-page="performance"
+    class="bg-ink text-white font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 
     <!-- PROGRESS BAR -->
     <div id="scrollProgress" class="fixed left-0 top-0 z-[9999] h-[2px] w-full origin-left scale-x-0 bg-accent"></div>
 
     <!-- CURSOR -->
-    <div id="cursorRing" class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
-    <div id="cursorDot" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
+    <div id="cursorRing"
+        class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block">
+    </div>
+    <div id="cursorDot"
+        class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block">
+    </div>
 
-    <!-- HEADER -->
-    <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 mix-blend-difference">
-        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
-            <a href="index.html" class="group relative flex items-center gap-3">
-                <span class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
-                <img src="./assets/scalixo.png" alt="Scalixo Media"
-                    class="relative h-10 w-auto object-contain transition-all duration-500 group-hover:brightness-125 md:h-12" />
-            </a>
-
-            <nav class="hidden items-center gap-10 font-mono text-[11px] uppercase tracking-[0.2em] md:flex">
-                <a href="index.html#services" class="transition-opacity duration-300 hover:opacity-40">Services</a>
-                <a href="index.html#work" class="transition-opacity duration-300 hover:opacity-40">Work</a>
-                <a href="contact.html" class="text-accent transition-opacity duration-300 hover:opacity-60">Contact</a>
-            </nav>
-
-            <a href="contact.html"
-                class="hidden font-mono text-[11px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-40 md:block">
-                Start a project ↗
-            </a>
-
-            <button id="menuBtn" type="button" aria-controls="mobileMenu" aria-expanded="false"
-                class="relative z-50 font-mono text-[11px] uppercase tracking-[0.2em] md:hidden">Menu</button>
-        </div>
-
-        <div id="mobileMenu"
-            class="pointer-events-none fixed inset-0 z-40 flex flex-col justify-center gap-4 bg-ink px-8 opacity-0 transition-opacity duration-500 md:hidden">
-            <a href="index.html#services" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Services</a>
-            <a href="index.html#work" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-white">Work</a>
-            <a href="contact.html" class="mobile-link font-display text-5xl uppercase leading-none tracking-tight text-accent">Contact</a>
-        </div>
-    </header>
+    <header id="siteHeader"></header>
 
     <main>
 
@@ -70,13 +44,20 @@
                 bg-[size:72px_72px]
                 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
 
-            <div data-parallax="0.15" class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
-            <div data-parallax="-0.1" class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
-            <div data-parallax="0.08" class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
+            <div data-parallax="0.15"
+                class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]">
+            </div>
+            <div data-parallax="-0.1"
+                class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+            </div>
+            <div data-parallax="0.08"
+                class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]">
+            </div>
 
             <div class="relative mx-auto max-w-[1500px]">
 
-                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white" data-hero-breadcrumb>
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white"
+                    data-hero-breadcrumb>
                     <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
                     <span class="text-white/20">/</span>
                     <span class="text-white/70">Performance Marketing</span>
@@ -85,15 +66,10 @@
                 <!-- Live page H1: "Paid Ads That Turn Clicks Into Qualified Leads" -->
                 <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
                     <span class="block overflow-hidden">
-                        <span class="hero-line block" data-hero-line>Paid ads that turn</span>
+                        <span class="hero-line block" data-hero-line>Paid ads turn</span>
                     </span>
                     <span class="block overflow-hidden">
-                        <span class="hero-line block" data-hero-line>clicks into qualified</span>
-                    </span>
-                    <span class="block overflow-hidden">
-                        <span class="hero-line block text-accent" data-hero-line>
-                            leads<span class="text-accent">.</span>
-                        </span>
+                        <span class="hero-line block text-accent-2" data-hero-line>clicks into leads.</span>
                     </span>
                 </h1>
 
@@ -108,9 +84,11 @@
                         <div class="mt-8 flex flex-wrap items-center gap-4">
                             <a href="#services" data-magnetic
                                 class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
-                                <span class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                <span
+                                    class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
                                 <span class="relative">Explore Channels</span>
-                                <i class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
+                                <i
+                                    class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
                             </a>
                             <a href="contact.html" data-magnetic
                                 class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
@@ -123,15 +101,18 @@
                     <div class="flex flex-wrap items-end gap-10 md:col-span-6 md:col-start-7" data-hero-sub>
                         <div>
                             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
-                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">ROAS</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">ROAS
+                            </div>
                         </div>
                         <div>
                             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Channels</div>
-                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Meta · Google</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Meta ·
+                                Google</div>
                         </div>
                         <div>
                             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
-                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Ahmedabad</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">
+                                Ahmedabad</div>
                         </div>
                     </div>
                 </div>
@@ -142,15 +123,19 @@
         <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
             <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
                 <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Meta Ads</span>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Meta
+                        Ads</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Google Ads</span>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Google
+                        Ads</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">YouTube</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Retarget</span>
+                    <span
+                        class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Retarget</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Optimize</span>
+                    <span
+                        class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Optimize</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Convert</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
@@ -167,10 +152,12 @@
                             <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                                 <span class="text-white/30"></span> 01 — Why It Matters
                             </span>
-                            <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                            <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                                data-split>
                                 Every rupee<br />has to work.
                             </h2>
-                            <div class="mt-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40" data-reveal>
+                            <div class="mt-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40"
+                                data-reveal>
                                 <span class="h-px w-10 bg-accent"></span>
                                 <span>Scroll</span>
                             </div>
@@ -182,7 +169,7 @@
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
                             Performance marketing means paid campaigns focused on
                             measurable actions like <span class="text-accent">leads, calls,
-                            enquiries, purchases, registrations, and conversions.</span>
+                                enquiries, purchases, registrations, and conversions.</span>
                         </p>
 
                         <!-- Live page: services list -->
@@ -217,19 +204,22 @@
                                 <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
                                     <span data-counter="54">0</span><span class="text-accent">%</span>
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. Budget Waste</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg.
+                                    Budget Waste</div>
                             </div>
                             <div class="pl-4">
                                 <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
                                     <span data-counter="42">0</span><span class="text-accent">%</span>
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">CPL Reduction</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">CPL
+                                    Reduction</div>
                             </div>
                             <div class="pl-4">
                                 <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">
                                     <span data-counter="320">0</span><span class="text-accent">%</span>
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg. ROAS</div>
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Avg.
+                                    ROAS</div>
                             </div>
                         </div>
                     </div>
@@ -246,7 +236,8 @@
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 02 — What We Do
                         </div>
-                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                            data-split>
                             Performance<br />channels that scale.
                         </h2>
                     </div>
@@ -262,16 +253,22 @@
                     <!-- Service card template -->
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-brands fa-meta"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Meta Ads</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Meta Ads
+                            </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Facebook &amp; Instagram campaigns engineered for lead generation, sales, and retargeting.
+                                Facebook &amp; Instagram campaigns engineered for lead generation, sales, and
+                                retargeting.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>meta-ads.ts</span>
                             </div>
                         </div>
@@ -279,16 +276,22 @@
 
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-brands fa-google"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Google Ads</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Google
+                                Ads</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Search, Display &amp; Shopping campaigns that capture high-intent buyers at the moment of intent.
+                                Search, Display &amp; Shopping campaigns that capture high-intent buyers at the moment
+                                of intent.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>google-ads.ts</span>
                             </div>
                         </div>
@@ -296,16 +299,21 @@
 
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-brands fa-youtube"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">YouTube Ads</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">YouTube
+                                Ads</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Video campaigns for awareness, recall &amp; measurable conversion lift.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>youtube.ts</span>
                             </div>
                         </div>
@@ -313,16 +321,21 @@
 
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-solid fa-arrows-rotate"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Remarketing</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Remarketing</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Sequenced retargeting that wins back visitors and revives cold pipelines.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>remarket.ts</span>
                             </div>
                         </div>
@@ -330,16 +343,21 @@
 
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">CPL Reporting</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">CPL
+                                Reporting</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Live dashboards on spend, CPL, ROAS, and campaign-level performance.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>cpl-report.ts</span>
                             </div>
                         </div>
@@ -347,16 +365,21 @@
 
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
-                        <div class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                        <div
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
-                            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                            <div
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-solid fa-flask-vial"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Conversion Optimization</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Conversion Optimization</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Landing page testing, form optimization, and funnel CRO backed by data.
                             </p>
-                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>cro.ts</span>
                             </div>
                         </div>
@@ -374,13 +397,15 @@
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 03 — Platforms
                         </div>
-                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                            data-split>
                             Where your ad<br />budget works hardest.
                         </h2>
                     </div>
                     <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-base leading-relaxed text-white/50">
-                            We buy media only on platforms we've proven — matched to your funnel stage, audience, and CPL target.
+                            We buy media only on platforms we've proven — matched to your funnel stage, audience, and
+                            CPL target.
                         </p>
                     </div>
                 </div>
@@ -389,64 +414,87 @@
             <div id="railViewport" class="overflow-hidden px-6 md:px-10">
                 <div id="railTrack" class="flex gap-6 will-change-transform">
                     <!-- Tile template -->
-                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
-                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-glow
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-meta text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Meta</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Facebook &amp; Instagram — the widest B2C reach for leads and sales.</p>
-                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Facebook &amp; Instagram — the widest
+                                B2C reach for leads and sales.</p>
+                            <div
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
                                 <span>social</span>
                             </div>
                         </div>
                     </div>
 
-                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
-                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-glow
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-google text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Google</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Search, Display &amp; Shopping — capture high-intent buyers.</p>
-                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Google
+                            </h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Search, Display &amp; Shopping —
+                                capture high-intent buyers.</p>
+                            <div
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
                                 <span>search</span>
                             </div>
                         </div>
                     </div>
 
-                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
-                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-glow
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-youtube text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">YouTube</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Video campaigns for awareness, consideration, and conversion lift.</p>
-                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">YouTube
+                            </h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Video campaigns for awareness,
+                                consideration, and conversion lift.</p>
+                            <div
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
                                 <span>video</span>
                             </div>
                         </div>
                     </div>
 
-                    <div data-glow class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
-                        <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-glow
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        <div
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-linkedin text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">05</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">LinkedIn</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">B2B lead gen with precise firmographic and role targeting.</p>
-                            <div class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">LinkedIn
+                            </h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">B2B lead gen with precise firmographic
+                                and role targeting.</p>
+                            <div
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
                                 <span>b2b</span>
                             </div>
@@ -464,7 +512,8 @@
                         <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 04 — Our Process
                         </div>
-                        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                            data-split>
                             How we scale<br />your campaigns.
                         </h2>
                     </div>
@@ -476,29 +525,42 @@
                 </div>
 
                 <div class="relative">
-                    <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
-                    <div id="processLine" class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block" style="height: 0;"></div>
+                    <div
+                        class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block">
+                    </div>
+                    <div id="processLine"
+                        class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block"
+                        style="height: 0;"></div>
 
                     <div id="processList" class="space-y-6 md:space-y-8">
                         <!-- Step 01 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 01</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Strategy &amp; Audit</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    01</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Strategy &amp; Audit</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    We audit your current campaigns, competitors, and funnel to identify wasted spend and untapped opportunities.
+                                    We audit your current campaigns, competitors, and funnel to identify wasted spend
+                                    and untapped opportunities.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audit</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Benchmark</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Research</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audit</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Benchmark</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Research</span>
                                 </div>
                             </div>
                         </div>
@@ -506,22 +568,31 @@
                         <!-- Step 02 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 02</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Campaign Setup</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    02</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Campaign Setup</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    Tracking, pixels, audience structure, and creative assets built for clean attribution from day one.
+                                    Tracking, pixels, audience structure, and creative assets built for clean
+                                    attribution from day one.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Tracking</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audiences</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Creative</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Tracking</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audiences</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Creative</span>
                                 </div>
                             </div>
                         </div>
@@ -529,21 +600,29 @@
                         <!-- Step 03 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 03</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Launch</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    03</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Launch</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    Campaigns go live with controlled budgets, clean tracking, and clear success metrics.
+                                    Campaigns go live with controlled budgets, clean tracking, and clear success
+                                    metrics.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Go-live</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">QA</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Go-live</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">QA</span>
                                 </div>
                             </div>
                         </div>
@@ -551,21 +630,28 @@
                         <!-- Step 04 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 04</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Optimize</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    04</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Optimize</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
                                     We iterate creative, targeting, and bids daily to bring CPL down week over week.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Testing</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Bids</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Testing</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Bids</span>
                                 </div>
                             </div>
                         </div>
@@ -573,21 +659,29 @@
                         <!-- Step 05 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 05</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Report</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    05</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Report</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
                                     Transparent weekly and monthly reports on CPL, ROAS, spend, and lead quality.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Dashboard</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Weekly Call</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Dashboard</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Weekly
+                                        Call</span>
                                 </div>
                             </div>
                         </div>
@@ -595,21 +689,29 @@
                         <!-- Step 06 -->
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
-                                <div class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                <div
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 06</span>
-                                <h3 class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Scale</h3>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                    06</span>
+                                <h3
+                                    class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
+                                    Scale</h3>
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    We scale what works, cut what doesn't, and reinvest budget into the highest-performing channels.
+                                    We scale what works, cut what doesn't, and reinvest budget into the
+                                    highest-performing channels.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Scale</span>
-                                    <span class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Reinvest</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Scale</span>
+                                    <span
+                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Reinvest</span>
                                 </div>
                             </div>
                         </div>
@@ -626,78 +728,99 @@
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
                             <span class="text-white/30"></span> 05 — Why Scalixo
                         </div>
-                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                            data-split>
                             Campaigns built<br />to convert, not<br />just run.
                         </h2>
                         <p class="mt-6 leading-relaxed text-white/50">
-                            We combine media buying, creative testing, tracking, and conversion thinking — so every campaign contributes to pipeline and revenue.
+                            We combine media buying, creative testing, tracking, and conversion thinking — so every
+                            campaign contributes to pipeline and revenue.
                         </p>
                         <a href="contact.html" data-magnetic
                             class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
                             Start Your Campaign
-                            <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
                         </a>
                     </div>
 
                     <div class="md:col-span-6 md:col-start-7">
                         <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-bullseye text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">ROAS Focused</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every decision is tied to return on ad spend and lead quality.</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">ROAS Focused
+                                    </h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every decision is tied to
+                                        return on ad spend and lead quality.</p>
                                 </div>
                             </div>
 
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-chart-simple text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent Reporting</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Live dashboards on spend, CPL, ROAS, and campaign-level performance.</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent
+                                        Reporting</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Live dashboards on spend, CPL,
+                                        ROAS, and campaign-level performance.</p>
                                 </div>
                             </div>
 
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Creative + Media</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Creative testing and media buying under one roof — rare combo.</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Creative +
+                                        Media</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Creative testing and media
+                                        buying under one roof — rare combo.</p>
                                 </div>
                             </div>
 
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-crosshairs text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Clean Tracking</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Pixels, events, and attribution set up so every lead is accounted for.</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Clean Tracking
+                                    </h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Pixels, events, and
+                                        attribution set up so every lead is accounted for.</p>
                                 </div>
                             </div>
 
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-gauge-high text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Daily Optimization</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Active monitoring — not "set it and forget it."</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Daily
+                                        Optimization</h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Active monitoring — not "set
+                                        it and forget it."</p>
                                 </div>
                             </div>
 
                             <div data-reveal class="flex items-start gap-4">
-                                <span class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                <span
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                                     <i class="fa-solid fa-headset text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Direct Access</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Talk directly to the team running your campaigns — no middlemen.</p>
+                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Direct Access
+                                    </h4>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Talk directly to the team
+                                        running your campaigns — no middlemen.</p>
                                 </div>
                             </div>
                         </div>
@@ -714,7 +837,8 @@
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 06 — Results
                         </div>
-                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl" data-split>
+                        <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                            data-split>
                             What great ads<br />actually do.
                         </h2>
                     </div>
@@ -726,57 +850,87 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Lower CPL</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Continuous creative and audience testing brings your cost per lead down week over week.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Lower CPL</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Continuous creative and audience
+                                testing brings your cost per lead down week over week.</p>
                         </div>
                     </div>
 
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Higher ROAS</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Every campaign is built around return on ad spend — not vanity metrics.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Higher ROAS</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Every campaign is built around return
+                                on ad spend — not vanity metrics.</p>
                         </div>
                     </div>
 
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Better Lead Quality</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">We optimize for qualified leads, not just volume — so your sales team spends time on real buyers.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Better Lead Quality</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">We optimize for qualified leads, not
+                                just volume — so your sales team spends time on real buyers.</p>
                         </div>
                     </div>
 
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Clean Attribution</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Pixels, events, and conversion tracking set up so you know exactly what's working.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Clean Attribution</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Pixels, events, and conversion
+                                tracking set up so you know exactly what's working.</p>
                         </div>
                     </div>
 
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Faster Learning</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Weekly creative tests and structured experiments compound into faster growth.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Faster Learning</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">Weekly creative tests and structured
+                                experiments compound into faster growth.</p>
                         </div>
                     </div>
 
-                    <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
-                        <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                    <div data-reveal
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        <div
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                        </div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
-                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Scalable Foundation</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">What works gets doubled. What doesn't gets cut. Budget always follows performance.</p>
+                            <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                                Scalable Foundation</h3>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">What works gets doubled. What doesn't
+                                gets cut. Budget always follows performance.</p>
                         </div>
                     </div>
                 </div>
@@ -788,15 +942,21 @@
             <div class="mx-auto max-w-[1500px]">
                 <div class="grid gap-6 md:grid-cols-12">
                     <div class="md:col-span-5" data-reveal>
-                        <div class="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-8">
-                            <span class="pointer-events-none absolute -right-24 -top-6 h-56 w-56 rounded-full bg-accent/15 blur-[100px]"></span>
-                            <span class="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-accent/10 blur-[100px]"></span>
+                        <div
+                            class="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-8">
+                            <span
+                                class="pointer-events-none absolute -right-24 -top-6 h-56 w-56 rounded-full bg-accent/15 blur-[100px]"></span>
+                            <span
+                                class="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-accent/10 blur-[100px]"></span>
 
                             <div class="relative">
                                 <div class="flex items-center justify-between">
-                                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Featured Metric</span>
+                                    <span
+                                        class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Featured
+                                        Metric</span>
                                     <span class="relative flex h-1.5 w-1.5">
-                                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+                                        <span
+                                            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
                                         <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent"></span>
                                     </span>
                                 </div>
@@ -804,41 +964,56 @@
                                 <div class="relative mt-12 flex items-center justify-center">
                                     <div class="relative h-56 w-56 md:h-64 md:w-64">
                                         <div class="absolute inset-0 rounded-full border border-white/[0.06]"></div>
-                                        <div id="metricRing" class="ring-progress absolute inset-0 rounded-full" style="--p: 0;"></div>
+                                        <div id="metricRing" class="ring-progress absolute inset-0 rounded-full"
+                                            style="--p: 0;"></div>
                                         <div class="absolute inset-[14px] rounded-full bg-ink"></div>
-                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]"></div>
+                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]">
+                                        </div>
 
                                         <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                            <span class="font-display text-6xl leading-none tracking-tight text-white md:text-7xl">
+                                            <span
+                                                class="font-display text-6xl leading-none tracking-tight text-white md:text-7xl">
                                                 <span data-counter="87">0</span><span class="text-accent">%</span>
                                             </span>
-                                            <span class="mt-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Excellent</span>
+                                            <span
+                                                class="mt-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Excellent</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="mt-6 text-center">
-                                    <div class="font-display text-xl uppercase leading-tight tracking-tight text-white">Lead Quality Score</div>
-                                    <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Averaged across all accounts · 2025</div>
+                                <div class="mt- text-center">
+                                    <div class="font-display text-xl uppercase leading-tight tracking-tight text-white">
+                                        Lead Quality Score</div>
+                                    <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+                                        Averaged across all accounts · 2025</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex flex-col gap-5 md:col-span-7 md:gap-6">
-                        <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04] md:p-8">
-                            <div class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
+                        <div data-reveal
+                            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04] md:p-8">
+                            <div
+                                class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            </div>
                             <div class="relative">
                                 <div class="flex items-start justify-between gap-6">
                                     <div>
-                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
-                                        <div class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Average ROAS</div>
+                                        <span
+                                            class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+                                        <div
+                                            class="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+                                            Average ROAS</div>
                                     </div>
                                     <div class="text-right">
-                                        <span class="font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                        <span
+                                            class="font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
                                             <span data-counter="320">0</span><span class="text-accent">%</span>
                                         </span>
-                                        <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/30">3.2x Return</div>
+                                        <div
+                                            class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/30">
+                                            3.2x Return</div>
                                     </div>
                                 </div>
                                 <div class="mt-8 flex items-end gap-1.5">
@@ -854,37 +1029,48 @@
                                     <span class="h-14 w-1 rounded-full bg-accent"></span>
                                     <span class="h-10 w-1 rounded-full bg-accent/80"></span>
                                     <span class="h-16 w-1 rounded-full bg-accent"></span>
-                                    <span class="ml-3 h-3 w-3 self-end rounded-full bg-accent shadow-[0_0_15px_rgba(28,88,227,0.8)]"></span>
+                                    <span
+                                        class="ml-3 h-3 w-3 self-end rounded-full bg-accent shadow-[0_0_15px_rgba(28,88,227,0.8)]"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="grid gap-5 sm:grid-cols-2 md:gap-6">
-                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                            <div data-reveal
+                                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
                                 <div class="relative">
                                     <div class="flex items-center justify-between">
-                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
-                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                        <span
+                                            class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
+                                        <span
+                                            class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
                                             <i class="fa-solid fa-arrow-trend-up"></i>
                                         </span>
                                     </div>
-                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Retention Rate</div>
-                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+                                        Retention Rate</div>
+                                    <div
+                                        class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
                                         <span data-counter="94">0</span><span class="text-accent">%</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div data-reveal class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
+                            <div data-reveal
+                                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04]">
                                 <div class="relative">
                                     <div class="flex items-center justify-between">
-                                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
-                                        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
+                                        <span
+                                            class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
+                                        <span
+                                            class="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[10px] text-accent transition-colors duration-500 group-hover:border-accent/50 group-hover:bg-accent/10">
                                             <i class="fa-solid fa-arrow-trend-down"></i>
                                         </span>
                                     </div>
-                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">CPL Reduction</div>
-                                    <div class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
+                                    <div class="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+                                        CPL Reduction</div>
+                                    <div
+                                        class="mt-2 font-display text-4xl leading-none tracking-tight text-white md:text-5xl">
                                         <span data-counter="42">0</span><span class="text-accent">%</span>
                                     </div>
                                 </div>
@@ -906,17 +1092,22 @@
                     Ready to turn ad<br />spend into<br />revenue<span class="text-accent">.</span>
                 </h2>
 
-                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between" data-reveal>
+                <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
+                    data-reveal>
                     <a href="tel:+919328792160" data-magnetic
                         class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
                         +91 93287 92160
-                        <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                        <span
+                            class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                     </a>
 
                     <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
-                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Instagram</a>
-                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
-                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-accent">Facebook</a>
+                        <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer"
+                            class="transition-colors hover:text-accent">Instagram</a>
+                        <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank"
+                            rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                        <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer"
+                            class="transition-colors hover:text-accent">Facebook</a>
                     </div>
                 </div>
             </div>
@@ -926,15 +1117,16 @@
 
     <!-- FOOTER -->
     <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
-      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
-      <span class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-        Ahmedabad <span id="clock">--:--:--</span>
-      </span>
-      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
-    </div>
-  </footer>
+        <div
+            class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+            <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+            <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                Ahmedabad <span id="clock">--:--:--</span>
+            </span>
+            <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+        </div>
+    </footer>
 
     <!-- GSAP script — unchanged -->
     <script>
@@ -964,7 +1156,7 @@
                 gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
                 window.addEventListener("mousemove", (e) => {
                     ringX(e.clientX); ringY(e.clientY);
-                    dotX(e.clientX);  dotY(e.clientY);
+                    dotX(e.clientX); dotY(e.clientY);
                 });
                 document.querySelectorAll("a, button, [data-glow]").forEach((el) => {
                     el.addEventListener("mouseenter", () => gsap.to(ring, { scale: 1.6, borderColor: "rgba(28,88,227,0.9)", duration: 0.3 }));
