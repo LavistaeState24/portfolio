@@ -8,6 +8,17 @@
 }
 
 @layer components {
+  /* .site-footer {
+    background:
+      radial-gradient(ellipse at 12% 0%, rgb(28 88 227 / 0.18), transparent 42%),
+      linear-gradient(135deg, #0b1020 0%, #08090b 58%, #0b1020 100%);
+  } */
+
+  @keyframes brand-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   /* Cursor */
   .cursor-ring {
     @apply pointer-events-none fixed left-0 top-0 z-[999] hidden h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/60 transition-transform duration-200 ease-out md:block;

@@ -521,17 +521,17 @@
   </main>
 
   <!-- ══════════ FOOTER ══════════ -->
-  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div
-      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
-      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
-      <span class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-        Ahmedabad <span id="clock">--:--:--</span>
-      </span>
-      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
-    </div>
-  </footer>
+  <div id="footer-slot">
+    <footer class="site-footer border-t border-white/10 px-6 py-8 md:px-10" aria-label="Site footer">
+      <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/55 md:flex-row md:items-center md:justify-between">
+        <span>© <span>2025</span> Scalixo Media Agency — All rights reserved</span>
+        <nav class="flex gap-6" aria-label="Legal">
+          <a href="privacy.html" class="transition-colors hover:text-accent-2">Privacy Policy</a>
+          <a href="terms.html" class="transition-colors hover:text-accent-2">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 
   <!-- ══════════ SCRIPTS ══════════ -->
   <script src="script.js"></script>
