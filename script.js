@@ -1,3 +1,60 @@
+(() => {
+  const scriptUrl = document.currentScript?.src;
+  if (!scriptUrl) {
+    console.error('Could not determine the script URL; the shared footer was not loaded.');
+    return;
+  }
+
+  const slot = document.getElementById('footer-slot');
+  const existingFooter = slot ? null : document.querySelector('body > footer, body footer');
+  if (!slot && !existingFooter) {
+    console.error('Could not find a footer mount point on this page.');
+    return;
+  }
+
+  const footerUrl = new URL('./components/footer.html', scriptUrl);
+  fetch(footerUrl)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Footer request failed with status ${response.status}.`);
+      return response.text();
+    })
+    .then((html) => {
+      const footer = new DOMParser().parseFromString(html, 'text/html')
+        .querySelector('footer[aria-label="Site footer"]');
+      if (!footer) throw new Error('The shared footer component is missing its footer element.');
+
+      if (slot) slot.replaceChildren(footer);
+      else existingFooter.replaceWith(footer);
+
+      const fontAwesome = document.createElement('link');
+      fontAwesome.rel = 'stylesheet';
+      fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+      fontAwesome.crossOrigin = 'anonymous';
+      fontAwesome.referrerPolicy = 'no-referrer';
+      document.head.append(fontAwesome);
+
+      footer.querySelectorAll('[data-footer-year]').forEach((year) => {
+        year.textContent = new Date().getFullYear();
+      });
+
+      const clock = footer.querySelector('[data-footer-clock]');
+      if (clock) {
+        const updateClock = () => {
+          clock.textContent = new Date().toLocaleTimeString('en-IN', {
+            timeZone: 'Asia/Kolkata',
+            hour12: false,
+          });
+        };
+        updateClock();
+        window.setInterval(updateClock, 1000);
+      }
+    })
+    .catch((error) => {
+      console.error('Could not load the shared footer:', error);
+    });
+})();
+
+if (!document.body.hasAttribute('data-footer-only')) {
 gsap.registerPlugin(ScrollTrigger);
 
 const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -13,9 +70,9 @@ document.querySelectorAll('img').forEach(img => {
 });
 
 /* ───────── Custom cursor ───────── */
-if (fine) {
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
+const dot = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+if (fine && dot && ring) {
   gsap.set([dot, ring], { xPercent: -50, yPercent: -50 });
 
   const dotX = gsap.quickTo(dot, 'x', { duration: 0.10, ease: 'power3' });
@@ -37,8 +94,8 @@ if (fine) {
     );
   });
 } else {
-  document.querySelector('.cursor-dot')?.remove();
-  document.querySelector('.cursor-ring')?.remove();
+  dot?.remove();
+  ring?.remove();
 }
 
 (function () {
@@ -851,3 +908,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+}
