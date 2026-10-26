@@ -1265,35 +1265,23 @@
     </section>
   </main>
 
- <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
       <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
-      
+
       <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
     </div>
   </footer>
 
   <!-- ══════════ SCRIPTS ══════════ -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <script src="script.js"></script>
-
   <script src="navbar.js"></script>
-
-  <script>
-    document.querySelectorAll('[data-scroll-btn]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const track = document.getElementById(btn.dataset.scrollBtn);
-        if (!track) return;
-        const dir = btn.dataset.dir === 'next' ? 1 : -1;
-        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.8), behavior: 'smooth' });
-      });
-    });
-
-    document.addEventListener('visibilitychange', () => {
-      document.querySelectorAll('.animate-marquee, .animate-marquee-rev, .animate-marquee-fast').forEach((el) => {
-        el.style.animationPlayState = document.hidden ? 'paused' : 'running';
-      });
-    });
-  </script>
   <script src="cursor.js"></script>
 </body>
 

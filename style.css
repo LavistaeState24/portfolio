@@ -635,7 +635,7 @@ body[data-page="web"] header {
   backdrop-filter: blur(18px);
 }
 
-body[data-page="web"] main > section:first-child {
+body[data-page="web"] main>section:first-child {
   display: flex;
   min-height: min(900px, 100svh);
   flex-direction: column;
@@ -644,17 +644,17 @@ body[data-page="web"] main > section:first-child {
   padding-bottom: clamp(4rem, 9vh, 7rem);
 }
 
-body[data-page="web"] main > section:first-child h1 {
+body[data-page="web"] main>section:first-child h1 {
   max-width: 100%;
   letter-spacing: -0.045em;
   text-wrap: balance;
 }
 
-body[data-page="web"] main > section:first-child [data-hero] p {
+body[data-page="web"] main>section:first-child [data-hero] p {
   color: rgba(255, 255, 255, 0.66);
 }
 
-body[data-page="web"] main > section:not(:first-child) {
+body[data-page="web"] main>section:not(:first-child) {
   position: relative;
 }
 
@@ -726,7 +726,7 @@ body[data-page="web"] button:focus-visible {
 }
 
 @media (max-width: 767px) {
-  body[data-page="web"] main > section:first-child {
+  body[data-page="web"] main>section:first-child {
     min-height: 100svh;
   }
 
@@ -749,4 +749,10 @@ body[data-page="web"] button:focus-visible {
   body[data-page="web"] .tech-rail .h-scroll-track {
     scroll-behavior: auto;
   }
+}
+
+/* about us */
+#mobileMenu.open {
+  opacity: 1;
+  pointer-events: auto;
 }

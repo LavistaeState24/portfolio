@@ -3,17 +3,16 @@
      Drop-in partial for all pages
      ============================================================ -->
 
-<footer class=" relative border-border-t overflow-hidden px-10 md:px-10 md:pb-10" aria-label="Site footer">
+<footer class="relative overflow-hidden px-16 pb-6 mt-10 sm:px-8 md:px-10 md:pb-10" aria-label="Site footer">
 
-    <div class="relative mx-auto max-w-[1800px]">
+    <div class="mx-auto max-w-[1500px] px-4">
 
-        <!-- ── 1. CLOSING CTA ─────────────────────────────────── -->
-
-        <!-- ── 2. SITEMAP GRID ────────────────────────────────── -->
-        <div class="grid gap-12  py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-4">
+        <!-- ── 1. SITEMAP GRID ────────────────────────────────── -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 py-12 sm:gap-x-8 sm:gap-y-14 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-4">
 
             <!-- brand + description -->
-            <div class="lg:col-span-4">
+            <div class="col-span-2 lg:col-span-4">
                 <a href="index.html" class="group relative flex items-center gap-3">
                     <span
                         class="pointer-events-none absolute -inset-4 rounded-full bg-accent/25 opacity-0 blur-2xl transition-opacity duration-700 group-hover:opacity-100"></span>
@@ -27,7 +26,7 @@
                 </p>
 
                 <!-- social — Font Awesome -->
-                <div class="mt-8 flex flex-wrap gap-3">
+                <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
                     <a href="#" aria-label="Instagram"
                         class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/50 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]">
                         <i class="fa-brands fa-instagram text-sm" aria-hidden="true"></i>
@@ -36,18 +35,17 @@
                         class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/50 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]">
                         <i class="fa-brands fa-linkedin-in text-sm" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.facebook.com/scalixo.media" aria-label="facebook"
-                        class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/50 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]"><i
-                            class="fa-brands fa-facebook text-sm" aria-hidden="true"></i></a>
-
-
+                    <a href="https://www.facebook.com/scalixo.media" aria-label="Facebook"
+                        class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/50 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]">
+                        <i class="fa-brands fa-facebook text-sm" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
 
             <!-- Pages -->
             <nav class="lg:col-span-2" aria-label="Pages">
-                <h3 class="font-sans font-semibold text-[24px] Capitize text-white">Pages</h3>
-                <ul class="mt-5 space-y-3 text-sm text-white/55">
+                <h3 class="font-sans text-xl font-semibold text-white lg:text-[24px]">Pages</h3>
+                <ul class="mt-4 space-y-3 text-sm text-white/55 sm:mt-5">
                     <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
                     <li><a href="about.html" class="transition-colors hover:text-white">About</a></li>
                     <li><a href="sitemap.html" class="transition-colors hover:text-white">All pages</a></li>
@@ -58,8 +56,8 @@
 
             <!-- Services -->
             <nav class="lg:col-span-2" aria-label="Services">
-                <h3 class="font-sans font-semibold text-[24px] Capitize  text-white">Services</h3>
-                <ul class="mt-5 space-y-3 text-sm text-white/55">
+                <h3 class="font-sans text-xl font-semibold text-white lg:text-[24px]">Services</h3>
+                <ul class="mt-4 space-y-3 text-sm text-white/55 sm:mt-5">
                     <li><a href="branding.html" class="transition-colors hover:text-white">Brand Strategy</a></li>
                     <li><a href="performance.html" class="transition-colors hover:text-white">Performance Marketing</a>
                     </li>
@@ -72,11 +70,11 @@
 
             <!-- Company -->
             <nav class="lg:col-span-2" aria-label="Company">
-                <h3 class="font-sans font-semibold text-[24px] Capitize  text-white">Company</h3>
-                <ul class="mt-5 space-y-3 text-sm text-white/55">
+                <h3 class="font-sans text-xl font-semibold text-white lg:text-[24px]">Company</h3>
+                <ul class="mt-4 space-y-3 text-sm text-white/55 sm:mt-5">
                     <li><a href="about.html" class="transition-colors hover:text-white">Our Story</a></li>
                     <li><a href="privacy.html" class="transition-colors hover:text-white">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="transition-colors hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="terms.html" class="transition-colors hover:text-white">Terms &amp; Conditions</a></li>
                     <li><a href="Faq.html" class="transition-colors hover:text-white">FAQ</a></li>
                     <li><a href="sitemap.html" class="transition-colors hover:text-white">Sitemap</a></li>
                 </ul>
@@ -84,67 +82,67 @@
 
             <!-- Contact / info -->
             <div class="lg:col-span-2">
-                <h3 class="font-sans font-semibold text-[24px] Capitize  text-white">Get in touch</h3>
-                <ul class="mt-5 space-y-4 text-sm text-white/55">
+                <h3 class="font-sans text-xl font-semibold text-white lg:text-[24px]">Get in touch</h3>
+                <ul class="mt-4 space-y-4 text-sm text-white/55 sm:mt-5">
                     <li>
                         <a href="tel:+919328792160"
-                            class="mt-1 inline-flex items-center gap-2 transition-colors hover:text-white">
-                            <i class="fa-solid fa-phone text-md text-accent" aria-hidden="true"></i>
+                            class="inline-flex items-center gap-2 transition-colors hover:text-white">
+                            <i class="fa-solid fa-phone text-base text-accent" aria-hidden="true"></i>
                             +91 93287 92160
                         </a>
                     </li>
                     <li class="inline-flex items-start gap-2 leading-6">
-                        <i class="fa-solid fa-location-dot mt-1 text-md text-accent" aria-hidden="true"></i>
-                        <span>Ahmedabad,<br />Gujarat, India</span>
+                        <i class="fa-solid fa-location-dot mt-1 text-base text-accent" aria-hidden="true"></i>
+                        <a href="https://maps.google.com/?q=301,+3rd+Floor,+Harvy+Complex,+Subhash+Chowk,+Gurukul+Rd,+Memnagar,+Ahmedabad,+Gujarat+380052"
+                            target="_blank" rel="noopener noreferrer" class="group transition-colors hover:text-accent">
+                            <span>301, 3rd floor,Harvy  <br> Complex,Subhash Chowk,Gurukul Rd</span>
+                            <span
+                                class="ml-1 inline-block opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- ── 3. LEGAL + BOTTOM BAR ──────────────────────────── -->
-
-        <div class="pointer-events-none relative mt-10 select-none overflow-hidden" aria-hidden="true">
+        <!-- ── 2. ANIMATED BRAND MARQUEE ──────────────────────── -->
+        <div class="pointer-events-none relative 
+         select-none overflow-hidden md:mt-4" aria-hidden="true">
             <div
-                class="flex w-max items-center gap-8 animate-[brand-marquee_45s_linear_infinite] motion-reduce:animate-none md:gap-12">
+                class="flex w-max items-center gap-4 animate-[brand-marquee_45s_linear_infinite] motion-reduce:animate-none md:gap-4">
 
                 <span
-                    class="whitespace-nowrap font-display text-[16px] uppercase leading-[0.8] py-5 tracking-tighter text-white/40 md:text-[10vw]">Scalixo
+                    class="whitespace-nowrap py-5 font-display text-[16vw] uppercase leading-[1.24em] tracking-tighter text-white/40 md:text-[10vw]">Scalixo
                     Media</span>
-                <i class="fa-solid fa-asterisk text-3xl text-accent-2/30 md:text-5xl"></i>
 
                 <span
-                    class="whitespace-nowrap font-display text-[16px] uppercase leading-[0.8] py-5 tracking-tighter text-white/40 md:text-[10vw]">Scalixo
+                    class="whitespace-nowrap py-5 font-display text-[16vw] uppercase leading-[1.24em] tracking-tighter text-white/40 md:text-[10vw]">Scalixo
                     Media</span>
-                <i class="fa-solid fa-asterisk text-3xl text-accent-2/30 md:text-5xl"></i>
 
                 <span
-                    class="whitespace-nowrap font-display text-[16px] uppercase leading-[0.8] py-5 tracking-tighter text-white/40 md:text-[10vw]">Scalixo
+                    class="whitespace-nowrap py-5 font-display text-[16vw] uppercase leading-[1.24em] tracking-tighter text-white/40 md:text-[10vw]">Scalixo
                     Media</span>
-                <i class="fa-solid fa-asterisk text-3xl text-accent-2/30 md:text-5xl"></i>
 
                 <span
-                    class="whitespace-nowrap font-display text-[16px] uppercase leading-[0.8] py-5 tracking-tighter text-white/40 md:text-[10vw]">Scalixo
+                    class="whitespace-nowrap py-5 font-display text-[16vw] uppercase leading-[1.24em] tracking-tighter text-white/40 md:text-[10vw]">Scalixo
                     Media</span>
-                <i class="fa-solid fa-asterisk text-3xl text-accent-2/30 md:text-5xl"></i>
 
             </div>
         </div>
-    </div>
 
-    <!-- ── 4. ANIMATED BRAND MARQUEE ──────────────────────── -->
+        <!-- ── 3. LEGAL + BOTTOM BAR ──────────────────────────── -->
+        <div
+            class="flex flex-col gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/40 sm:flex-row sm:items-center sm:justify-between md:pt-7">
+            <span>© <span data-footer-year>2025</span> Scalixo Media Agency <span class="text-white/20">—</span> All
+                rights reserved</span>
 
-    <div
-        class="flex flex-col gap-5 pt-7 font-mono text-[10px] uppercase tracking-[0.18em] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-        <span>© <span data-footer-year>2025</span> Scalixo Media Agency <span class="text-white/20">—</span> All
-            rights reserved</span>
-
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
-            <a href="#top"
-                class="group inline-flex items-center gap-2 text-white/60 transition-colors hover:text-accent">
-                Back to top
-                <i class="fa-solid fa-arrow-up text-[10px] transition-transform duration-300 group-hover:-translate-y-1"
-                    aria-hidden="true"></i>
-            </a>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a href="#top"
+                    class="group inline-flex items-center gap-2 text-white/60 transition-colors hover:text-accent">
+                    Back to top
+                    <i class="fa-solid fa-arrow-up text-[10px] transition-transform duration-300 group-hover:-translate-y-1"
+                        aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
