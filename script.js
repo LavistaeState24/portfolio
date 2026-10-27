@@ -728,186 +728,45 @@ if (!document.body.hasAttribute('data-footer-only')) {
     }
   })();
 
+}
 
-  // home page no js 
-  // ── GSAP reveals (same pattern as home page) ──
-  document.addEventListener('DOMContentLoaded', () => {
+const initHeadingAndSectionAnimations = () => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) return;
 
-    // ── Number tickers ──
-    const tickers = document.querySelectorAll('.number-ticker');
-    tickers.forEach((el) => {
-      const target = parseFloat(el.dataset.value);
-      const decimals = parseInt(el.dataset.decimals || '0');
-      const obj = { val: 0 };
-      ScrollTrigger.create({
-        trigger: el, start: 'top 90%',
-        onEnter: () => {
-          gsap.to(obj, {
-            val: target, duration: 2, ease: 'power2.out',
-            onUpdate: () => { el.textContent = obj.val.toFixed(decimals); },
-          });
-        },
-        once: true,
-      });
-    });
+  gsap.registerPlugin(ScrollTrigger);
 
-  });
-  // performance optimizations page
-  document.addEventListener("DOMContentLoaded", () => {
-    if (typeof gsap === "undefined") return;
+  const existingAnimation = '[data-reveal], [data-slide-up], [data-slide-left], [data-slide-right], [data-scale-in], [data-stagger], [data-mask-reveal], [data-hero-line], [data-split]';
 
-    gsap.registerPlugin(ScrollTrigger);
-    if (typeof SplitText !== "undefined") gsap.registerPlugin(SplitText);
-    if (typeof DrawSVGPlugin !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
+  gsap.utils.toArray('main h1, main h2, main h3').forEach((heading) => {
+    if (heading.matches(existingAnimation) || heading.closest(existingAnimation) || heading.querySelector('[data-hero-line], [data-split]')) return;
 
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-
-    /* ═══════════════════════════════════════════════════════
-    14. ORBIT DOT  ═══════════════════════════════════════════════════════ */
-    gsap.utils.toArray(".orbit-dot").forEach((orbit) => {
-      gsap.to(orbit, { rotation: 360, duration: 8, repeat: -1, ease: "none", transformOrigin: "center center" });
-    });
-
-
-    /* ═══════════════════════════════════════════════════════
-       16. PROCESS STEP REVEAL + DRAWSVG
-    ═══════════════════════════════════════════════════════ */
-    gsap.utils.toArray(".process-step").forEach((step, i) => {
-      gsap.fromTo(step,
-        { x: -30, opacity: 0 },
-        {
-          x: 0, opacity: 1, duration: 0.9, delay: (i % 3) * 0.06, ease: "expo.out",
-          scrollTrigger: { trigger: step, start: "top 88%" },
-        }
-      );
-    });
-
-    /* ═══════════════════════════════════════════════════════
-                  17. CTA HEADLINE — Char reveal
-               ═══════════════════════════════════════════════════════ */
-    const ctaHeadline = document.querySelector(".cta-headline");
-    if (ctaHeadline && !prefersReduced && typeof SplitText !== "undefined") {
-      const s = new SplitText(ctaHeadline, { type: "chars,words,lines" });
-      gsap.from(s.chars, {
-        opacity: 0, yPercent: 100,
-        stagger: 0.015, duration: 0.9, ease: "power4.out",
-        scrollTrigger: { trigger: ctaHeadline, start: "top 85%", once: true },
-      });
-    }
-
-
-
-    /* ═══════════════════════════════════════════════════════
-       21. MARQUEE PAUSE ON HOVER
-    ═══════════════════════════════════════════════════════ */
-    const marquee = document.querySelector(".marquee-track");
-    if (marquee) {
-      marquee.addEventListener("mouseenter", () => { marquee.style.animationPlayState = "paused"; });
-      marquee.addEventListener("mouseleave", () => { marquee.style.animationPlayState = "running"; });
-    }
-
-  });
-  // common header + nav interactions
-
-  document.addEventListener('DOMContentLoaded', () => {
-    /* ---------------- Mobile menu ---------------- */
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    const setMobile = (open) => {
-      if (!menuBtn || !mobileMenu) return;
-      menuBtn.setAttribute('data-open', String(open));
-      menuBtn.setAttribute('aria-expanded', String(open));
-      mobileMenu.setAttribute('data-open', String(open));
-      document.body.style.overflow = open ? 'hidden' : '';
-    };
-
-    menuBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      setMobile(menuBtn.getAttribute('data-open') !== 'true');
-    });
-
-    // Close when any link inside the menu is tapped
-    mobileMenu?.querySelectorAll('a').forEach((a) =>
-      a.addEventListener('click', () => setMobile(false))
-    );
-
-    /* ---------------- Mobile services accordion ---------------- */
-    document.querySelectorAll('[data-mobile-dd]').forEach((dd) => {
-      const trigger = dd.querySelector('[data-mobile-dd-trigger]');
-      const panel = dd.querySelector('[data-mobile-dd-panel]');
-      const icon = dd.querySelector('[data-mobile-dd-icon]');
-
-      trigger?.addEventListener('click', () => {
-        const open = panel.getAttribute('data-open') === 'true';
-        panel.setAttribute('data-open', String(!open));
-        trigger.setAttribute('aria-expanded', String(!open));
-        if (icon) icon.textContent = open ? '03 +' : '03 −';
-      });
-    });
-
-    /* ---------------- Desktop services dropdown ---------------- */
-    const dropdowns = [...document.querySelectorAll('[data-dropdown]')];
-    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    dropdowns.forEach((dd) => {
-      const trigger = dd.querySelector('[data-dropdown-trigger]');
-      const panel = dd.querySelector('[data-dropdown-panel]');
-      let closeTimer;
-
-      const open = () => {
-        clearTimeout(closeTimer);
-        panel.setAttribute('data-open', 'true');
-        trigger.setAttribute('aria-expanded', 'true');
-      };
-      const close = () => {
-        panel.setAttribute('data-open', 'false');
-        trigger.setAttribute('aria-expanded', 'false');
-      };
-
-      trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        panel.getAttribute('data-open') === 'true' ? close() : open();
-      });
-
-      // Hover only on true mouse devices (avoids the tap → mouseenter → click double-fire on touch)
-      if (fine) {
-        dd.addEventListener('mouseenter', open);
-        dd.addEventListener('mouseleave', () => {
-          closeTimer = setTimeout(close, 150);
-        });
-      }
-
-      // Close when focus leaves the whole dropdown
-      dd.addEventListener('focusout', (e) => {
-        if (!dd.contains(e.relatedTarget)) close();
-      });
-
-      // Close after selecting an item
-      panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
-    });
-
-    /* ---------------- Global: ESC + outside click ---------------- */
-    document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Escape') return;
-
-      if (mobileMenu?.getAttribute('data-open') === 'true') setMobile(false);
-
-      dropdowns.forEach((dd) => {
-        dd.querySelector('[data-dropdown-panel]')?.setAttribute('data-open', 'false');
-        dd.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      dropdowns.forEach((dd) => {
-        if (dd.contains(e.target)) return;
-        dd.querySelector('[data-dropdown-panel]')?.setAttribute('data-open', 'false');
-        dd.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
-      });
+    gsap.from(heading, {
+      autoAlpha: 0,
+      y: 28,
+      duration: 0.85,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: heading, start: 'top 88%', once: true },
     });
   });
+
+  gsap.utils.toArray('main > section').slice(1).forEach((section) => {
+    if (section.matches(existingAnimation) || section.querySelector(existingAnimation)) return;
+
+    gsap.from(section, {
+      autoAlpha: 0,
+      y: 32,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: section, start: 'top 88%', once: true },
+    });
+  });
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHeadingAndSectionAnimations, { once: true });
+} else {
+  initHeadingAndSectionAnimations();
 }
 
 // about us page 
@@ -1300,4 +1159,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("load", () => ScrollTrigger.refresh());
 });
-
