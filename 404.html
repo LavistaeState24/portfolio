@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Scalixo Media Agency</title>
+  <meta name="description"
+    content="The page you're looking for doesn't exist or has moved. Head back to Scalixo Media's homepage to find what you need." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans">
+
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+
+  <header id="siteHeader"></header>
+
+  <main>
+
+    <!-- ══════════ 404 ══════════ -->
+    <section class="relative flex min-h-[80vh] items-center overflow-hidden px-6 py-24 md:px-10">
+
+      <div
+        class="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+      </div>
+      <div
+        class="pointer-events-none absolute -left-60 bottom-0 h-[420px] w-[420px] rounded-full bg-accent-2/10 blur-[140px]">
+      </div>
+
+      <div class="relative mx-auto max-w-[1100px]" data-reveal>
+
+        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]">
+          <a href="index.html" class="text-white/40 transition-colors hover:text-accent">Home</a>
+          <span class="text-white/20">/</span>
+          <span class="text-white/70">404</span>
+        </div>
+
+        <h1 class="mt-8 font-display text-[clamp(3rem,16vw,11rem)] uppercase leading-[0.9]">
+          404<span class="text-accent">.</span>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/60 md:text-xl">
+          This page doesn't exist, has been moved, or the link you followed is broken.
+          Let's get you back on track.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="index.html" data-magnetic
+            class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_18px_50px_-15px_rgba(28,88,227,0.8)] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_-15px_rgba(28,88,227,0.95)]">
+            Back to Home
+            <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+          </a>
+          <a href="contact.html"
+            class="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/75 backdrop-blur transition-all duration-500 hover:border-accent-2/60 hover:text-white">
+            Contact Us <span
+              class="transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
+          </a>
+        </div>
+
+        <div class="mt-16 flex flex-wrap gap-x-10 gap-y-4 border-t border-white/10 pt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+          <a href="portfolio.html" class="transition-colors hover:text-accent">Portfolio</a>
+          <a href="seo.html" class="transition-colors hover:text-accent">SEO Services</a>
+          <a href="performance.html" class="transition-colors hover:text-accent">Performance Marketing</a>
+          <a href="web.html" class="transition-colors hover:text-accent">Web Development</a>
+          <a href="Faq.html" class="transition-colors hover:text-accent">FAQ</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="border-t border-white/10 px-6 py-8 md:px-10">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+      <span>© <span id="year">2025</span> Scalixo Media Agency — All rights reserved</span>
+      <span class="flex items-center gap-2">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        Ahmedabad <span id="clock">--:--:--</span>
+      </span>
+      <a href="#top" class="transition-colors hover:text-accent">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script src="script.js"></script>
+
+  <script src="navbar.js"></script>
+</body>
+
+</html>
