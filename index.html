@@ -732,130 +732,115 @@
          06 · WORK — editorial grid
     ══════════════════════════════════════════════ -->
     <section id="work" class="relative overflow-hidden border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
-      <div class="mx-auto max-w-[1600px]">
+    <div class="mx-auto max-w-[1500px]">
 
         <!-- Section header -->
         <div class="mb-14 grid gap-8 md:grid-cols-12">
-          <div class="md:col-span-8">
-            <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
-              <span class="h-px w-8 bg-accent-2"></span>
-              04 / Selected Work
+            <div class="md:col-span-8" data-reveal>
+                <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+                    <span class="h-px w-8 bg-accent"></span>
+                    04 / Selected Work
+                </div>
+                <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
+                    Projects<br /><span class="text-white/40">that shipped.</span>
+                </h2>
             </div>
-            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
-              Projects<br /><span class="text-white">that shipped.</span>
-            </h2>
-          </div>
-          <div class="md:col-span-4 md:self-end">
-            <p class="text-sm leading-relaxed text-white/50 md:text-base">
-              Fast, accessible and conversion-optimized websites — from marketing sites to full web apps. Every
-              project
-              is measured on PageSpeed, SEO, and conversion.
-            </p>
-          </div>
+            <div class="md:col-span-4 md:self-end" data-reveal>
+                <p class="text-sm leading-relaxed text-white/50 md:text-base">
+                    Fast, accessible, and conversion-optimized websites — from marketing sites to full web apps. Every project is measured on PageSpeed, SEO, and conversion.
+                </p>
+            </div>
         </div>
 
-        <!-- Uniform grid: 1 → 2 → 4 -->
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
+        <!-- Redesigned Grid: 1 → 2 columns -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
 
-          <!-- Project 1 -->
-          <a href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-white/10 bg-ink-2
-               transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
-            <div class="relative aspect-[4/5] w-full overflow-hidden">
-              <img src="./assets/w1.png" alt="Polycast CRM" loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-80"></span>
-              <span
-                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+            <!-- Project 1 -->
+            <a href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer" data-reveal
+                class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+                <div class="relative aspect-[4/3] w-full overflow-hidden">
+                    <img src="./assets/w1.png" alt="Polycast CRM" loading="lazy"
+                        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                    
+                    <!-- Dark Overlay for Readability -->
+                    <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-              <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20
-                       bg-ink/60 text-white backdrop-blur transition-all duration-500
-                       group-hover:border-accent group-hover:bg-accent">
-                ↗
-              </span>
+                    <!-- Top Right Arrow -->
+                    <span class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                        &nearr;
+                    </span>
 
-              <div class="absolute inset-x-5 bottom-5">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">01 / CRM Platform</div>
-                <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight">Polycast CRM</div>
-              </div>
-            </div>
-          </a>
+                    <!-- Bottom Content -->
+                    <div class="absolute inset-x-6 bottom-6">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">01 / CRM Platform</div>
+                        <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Polycast CRM</h3>
+                    </div>
+                </div>
+            </a>
 
-          <!-- Project 2 -->
-          <a href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-white/10 bg-ink-2
-               transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
-            <div class="relative aspect-[4/5] w-full overflow-hidden">
-              <img src="./assets/w2.png" alt="Lavista E State" loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-80"></span>
-              <span
-                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+            <!-- Project 2 -->
+            <a href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer" data-reveal
+                class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+                <div class="relative aspect-[4/3] w-full overflow-hidden">
+                    <img src="./assets/w2.png" alt="Lavista E State" loading="lazy"
+                        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                    
+                    <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-              <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20
-                       bg-ink/60 text-white backdrop-blur transition-all duration-500
-                       group-hover:border-accent group-hover:bg-accent">
-                ↗
-              </span>
+                    <span class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                        &nearr;
+                    </span>
 
-              <div class="absolute inset-x-5 bottom-5">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">02 / Real Estate</div>
-                <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight">Lavista</div>
-              </div>
-            </div>
-          </a>
+                    <div class="absolute inset-x-6 bottom-6">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">02 / Real Estate</div>
+                        <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Lavista</h3>
+                    </div>
+                </div>
+            </a>
 
-          <!-- Project 3 -->
-          <a href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-white/10 bg-ink-2
-               transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
-            <div class="relative aspect-[4/5] w-full overflow-hidden">
-              <img src="./assets/w3.png" alt="Lavista Marketing" loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-80"></span>
-              <span
-                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+            <!-- Project 3 -->
+            <a href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer" data-reveal
+                class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+                <div class="relative aspect-[4/3] w-full overflow-hidden">
+                    <img src="./assets/w3.png" alt="Lavista Marketing" loading="lazy"
+                        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                    
+                    <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-              <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20
-                       bg-ink/60 text-white backdrop-blur transition-all duration-500
-                       group-hover:border-accent group-hover:bg-accent">
-                ↗
-              </span>
+                    <span class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                        &nearr;
+                    </span>
 
-              <div class="absolute inset-x-5 bottom-5">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">03 / Agency</div>
-                <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight">Lavista Marketing</div>
-              </div>
-            </div>
-          </a>
+                    <div class="absolute inset-x-6 bottom-6">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">03 / Agency</div>
+                        <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Lavista Marketing</h3>
+                    </div>
+                </div>
+            </a>
 
-          <!-- Project 4 -->
-          <a href="https://property-management-app-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-white/10 bg-ink-2
-               transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
-            <div class="relative aspect-[4/5] w-full overflow-hidden">
-              <img src="./assets/w4.png" alt="Real Estate CRM" loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-              <span
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-80"></span>
-              <span
-                class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/25 to-transparent transition-all duration-500 group-hover:h-full"></span>
+            <!-- Project 4 -->
+            <a href="https://property-management-app-seven.vercel.app/" target="_blank" rel="noopener noreferrer" data-reveal
+                class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+                <div class="relative aspect-[4/3] w-full overflow-hidden">
+                    <img src="./assets/w4.png" alt="Real Estate CRM" loading="lazy"
+                        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                    
+                    <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-              <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20
-                       bg-ink/60 text-white backdrop-blur transition-all duration-500
-                       group-hover:border-accent group-hover:bg-accent">
-                ↗
-              </span>
+                    <span class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                        &nearr;
+                    </span>
 
-              <div class="absolute inset-x-5 bottom-5">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">04 / Property SaaS</div>
-                <div class="mt-2 font-display text-2xl uppercase leading-none tracking-tight">Real Estate CRM</div>
-              </div>
-            </div>
-          </a>
+                    <div class="absolute inset-x-6 bottom-6">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">04 / Property SaaS</div>
+                        <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Real Estate CRM</h3>
+                    </div>
+                </div>
+            </a>
 
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!-- ══════════════════════════════════════════════
          07 · TESTIMONIALS — dual marquee
