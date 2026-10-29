@@ -55,7 +55,7 @@
           <ul class="mt-5 space-y-3 text-sm text-white/55">
             <li><a href="/index.html" class="transition-colors hover:text-white">Home</a></li>
             <li><a href="/about.html" class="transition-colors hover:text-white">About</a></li>
-            <li><a href="/services.html" class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="/index.html#services" class="transition-colors hover:text-white">Services</a></li>
             <li><a href="/portfolio.html" class="transition-colors hover:text-white">Work</a></li>
             <li><a href="/contact.html" class="transition-colors hover:text-white">Contact</a></li>
           </ul>

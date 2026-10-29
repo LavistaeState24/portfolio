@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/services.html", "destination": "/#services", "permanent": true },
+    { "source": "/faq.html", "destination": "/Faq.html", "permanent": true },
+    { "source": "/faq", "destination": "/Faq.html", "permanent": true },
+    { "source": "/influencer.html", "destination": "/influncer.html", "permanent": true }
+  ]
+}
