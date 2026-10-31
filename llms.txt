@@ -1,0 +1,34 @@
+# Scalixo Media
+
+> Scalixo Media is a digital marketing and growth agency based in Ahmedabad, India. The website describes its marketing, creative, and web services, shares selected work, and provides company and contact information.
+
+Use the links below as a guide to public information on the website. For the most current page inventory, see the [XML sitemap](https://scalixomedia.com/sitemap.xml).
+
+## Main pages
+
+- [Home](https://scalixomedia.com/): Overview of Scalixo Media and its services.
+- [About](https://scalixomedia.com/about.html): Company information, principles, and founder's note.
+- [Portfolio](https://scalixomedia.com/portfolio.html): Selected work, case studies, and live digital marketing projects.
+- [Contact](https://scalixomedia.com/contact.html): Office address, phone number, and inquiry information.
+- [FAQ](https://scalixomedia.com/Faq.html): Frequently asked questions about pricing, timelines, and services.
+
+## Services
+
+- [Social media marketing](https://scalixomedia.com/socialmedia.html): Complete management, content creation, and platform strategies.
+- [Performance marketing](https://scalixomedia.com/performance.html): Paid ad campaign frameworks, funnel design, and ROAS targeting.
+- [SEO services](https://scalixomedia.com/seo.html): Technical audits, on-page optimization, and local SEO focus areas.
+- [Website development](https://scalixomedia.com/web.html): Conversion-focused web design, UI/UX, frontend development, and CMS setup.
+- [Branding and identity design](https://scalixomedia.com/branding.html): Visual systems, guidelines, and core brand asset packages.
+- [Influencer marketing](https://scalixomedia.com/influncer.html): Creator collaborations, trusted brand voices, and UGC campaigns.
+
+## Policies and site navigation
+
+- [Privacy policy](https://scalixomedia.com/privacy.html): Data protection statements and user privacy information.
+- [Terms and conditions](https://scalixomedia.com/terms.html): Standard engagement terms and asset ownership guidelines.
+- [HTML sitemap](https://scalixomedia.com/sitemap.html): Plain visual map of public webpages.
+- [XML sitemap](https://scalixomedia.com/sitemap.xml): Machine-readable index of public URLs.
+
+## Crawling notes
+
+- This file is an informational index; it does not control crawler access or guarantee indexing.
+- Crawl rules are set in robots.txt, and the XML sitemap lists public pages. Individual AI services may have their own crawler policies.
