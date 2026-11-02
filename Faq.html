@@ -2,20 +2,23 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ — Scalixo Media</title>
   <meta name="description"
     content="Frequently asked questions about Scalixo Media's digital marketing services — pricing, timelines, process, reporting, and more." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://scalixomedia.com/Faq" />
+  <link rel="canonical" href="https://scalixomedia.com/faq" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Scalixo Media" />
   <meta property="og:title" content="FAQ — Scalixo Media" />
   <meta property="og:description"
     content="Frequently asked questions about Scalixo Media's digital marketing services — pricing, timelines, process, reporting, and more." />
-  <meta property="og:url" content="https://scalixomedia.com/Faq" />
+  <meta property="og:url" content="https://scalixomedia.com/faq" />
   <meta property="og:image" content="https://scalixomedia.com/assets/scalixo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -28,9 +31,217 @@
 
   <link rel="stylesheet" href="./tailwind.css" />
   <link rel="stylesheet" href="./style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </noscript>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://scalixomedia.com/#organization",
+      "name": "Scalixo Media",
+      "url": "https://scalixomedia.com/",
+      "logo": "https://scalixomedia.com/assets/scalixo.png",
+      "image": "https://scalixomedia.com/assets/scalixo.png",
+      "telephone": "+91-93287-92160",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380052",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+91-93287-92160",
+        "email": "scalixomedia@gmail.com",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Gujarati"]
+      },
+      "founder": { "@id": "https://scalixomedia.com/about#author" },
+      "sameAs": [
+        "https://www.instagram.com/scalixo.media",
+        "https://www.linkedin.com/company/scalixomedia",
+        "https://www.facebook.com/scalixo.media"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://scalixomedia.com/#website",
+      "url": "https://scalixomedia.com/",
+      "name": "Scalixo Media",
+      "publisher": { "@id": "https://scalixomedia.com/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://scalixomedia.com/faq#webpage",
+      "url": "https://scalixomedia.com/faq",
+      "name": "FAQ — Scalixo Media",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-11-02",
+      "description": "Frequently asked questions about Scalixo Media's digital marketing services — pricing, timelines, process, reporting, and more.",
+      "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+      "about": { "@id": "https://scalixomedia.com/#organization" },
+      "author": { "@id": "https://scalixomedia.com/about#author" },
+      "breadcrumb": { "@id": "https://scalixomedia.com/faq#breadcrumb" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://scalixomedia.com/faq#faqpage",
+      "url": "https://scalixomedia.com/faq",
+      "name": "FAQ — Scalixo Media",
+      "description": "Frequently asked questions about Scalixo Media's digital marketing services.",
+      "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+      "about": { "@id": "https://scalixomedia.com/#organization" },
+      "author": { "@id": "https://scalixomedia.com/about#author" },
+      "breadcrumb": { "@id": "https://scalixomedia.com/faq#breadcrumb" },
+      "inLanguage": "en-IN",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Scalixo Media do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scalixo Media is a full-service digital marketing and creative agency based in Ahmedabad. We help brands grow online through strategy, content, paid media, and performance-driven campaigns. We work as an extension of your team — planning, producing, launching, and optimising everything needed to build visibility and generate qualified demand. Learn more about our team or explore recent work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which services do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scalixo Media offers seven core services: social media marketing and content production, performance marketing and paid advertising across Meta, Google and LinkedIn, lead generation and funnel building, search engine optimisation, website design and development, branding and creative direction, and influencer marketing. You can engage us for a single service or a fully integrated retainer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Getting started takes three steps. First, a discovery call where we understand your business, goals, and current challenges. Second, you receive a proposal with scope, timeline, and pricing. Third, once approved and the advance is received, we begin onboarding and kick off. Most clients go from first call to kickoff in one to two weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do your services cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing depends on scope, channels, deliverables, and the level of ongoing management required, so Scalixo Media quotes per project rather than publishing fixed rates. Project-based pricing applies to one-time work like websites or branding, while monthly retainers cover ongoing marketing, content and ad management. Ad spend and third-party costs such as platforms, hosting, domains and stock assets are billed separately. A non-refundable advance is required before work begins. Contact us for a scoped quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until I see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results vary by channel and category. Paid campaigns can generate traffic and leads within days, while SEO and organic social typically need three to six months to build meaningful momentum. We set expectations upfront in the proposal and review performance against agreed milestones rather than vague promises. For SEO timelines, see Google's SEO starter guide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee rankings or leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Scalixo Media does not guarantee rankings, traffic, leads, revenue or return on ad spend. Results depend on factors outside anyone's control — market conditions, platform algorithms, competition, pricing, and the strength of your own product or offer. What we commit to is industry best practice, transparent reporting, and continuous optimisation. This is aligned with Google's search essentials and standard marketing ethics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Scalixo Media works with early-stage startups, local businesses, D2C brands and established companies. The approach is scaled to fit your stage and budget. If your budget can't support the scope you need yet, we'll tell you honestly and suggest a leaner starting point. See our portfolio for examples across business sizes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns the work you create?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once the agreed fees are paid in full, ownership of final approved deliverables created specifically for you transfers to you. Scalixo Media retains ownership of concepts, drafts, working files, internal frameworks and methodologies. Third-party assets such as fonts, stock footage and licensed software remain subject to their own licences. We may feature completed work in our portfolio unless you request otherwise in writing. Full details are in our terms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you report on performance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You receive a monthly report covering the metrics that matter to your goals — reach, engagement, traffic, leads, cost per result and spend — along with commentary on what worked and what we're changing next. Larger retainers can include scheduled review calls and access to live dashboards built in Google Analytics and platform-native tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pause or cancel anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either party may terminate an engagement with written notice as specified in the relevant agreement. On termination, you remain responsible for fees covering work completed up to the termination date, plus any non-cancellable third-party costs already incurred on your behalf. Full details are in our terms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work outside Ahmedabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Scalixo Media is based in Ahmedabad, Gujarat, but works with clients across India and internationally. Most collaboration happens remotely over email, calls, and shared workspaces. In-person meetings can be arranged locally when needed. If you're outside India, see Ahmedabad for location context, or contact us to discuss timezone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact Scalixo Media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reach out to Scalixo Media and we'll get back to you, usually within one business day. Our office is at 301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052. Call us at +91 93287 92160 or use the contact form."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://scalixomedia.com/faq#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scalixomedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://scalixomedia.com/faq"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://scalixomedia.com/about#author",
+      "name": "Deep Thakkar",
+      "jobTitle": "Founder",
+      "url": "https://scalixomedia.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/deep-thakkar-904899425/"
+      ],
+      "worksFor": { "@id": "https://scalixomedia.com/#organization" }
+    }
+  ]
+}
+</script>
 
 </head>
 
@@ -38,7 +249,6 @@
 
   <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
 
-  <!-- Cursor -->
   <div class="cursor-ring"></div>
   <div class="cursor-dot"></div>
 
@@ -55,12 +265,13 @@
 
       <div class="relative mx-auto max-w-[1500px]">
 
-        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]" data-reveal>
-
-          <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
-          <span class="text-white/20">/</span>
-          <span class="text-white/70">FAQ</span>
-        </div>
+        <nav aria-label="Breadcrumb" data-reveal>
+          <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]">
+            <li><a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a></li>
+            <li class="text-white/20" aria-hidden="true">/</li>
+            <li class="text-white/70" aria-current="page">FAQ</li>
+          </ol>
+        </nav>
 
         <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
           Frequently<br /><span class="text-accent">Asked.</span>
@@ -75,7 +286,9 @@
           <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Last updated</div>
-              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">Jan 2026</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">
+                <time datetime="2026-11-02">Nov 2026</time>
+              </div>
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Applies to</div>
@@ -150,355 +363,279 @@
         <!-- ── Content ── -->
         <div class="md:col-span-9 md:col-start-4">
 
-          <!-- Intro card -->
+          <!-- 00 · What this FAQ covers -->
           <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-10" data-reveal>
             <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">Overview</span>
-            <p class="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
-              Everything you might want to know before working with Scalixo Media —
-              collected in one place.
-            </p>
-            <p class="mt-4 leading-relaxed text-white/45">
-              Can't find your answer here? Reach out directly and we'll walk you through
-              it. We usually reply within one business day.
+            <h2 class="mt-3 font-display text-2xl uppercase leading-none text-white md:text-3xl">
+              What does this FAQ cover?
+            </h2>
+            <p class="mt-4 leading-relaxed text-white/55">
+              This FAQ covers how Scalixo Media works, what we charge, timelines, process, reporting, ownership of work,
+              and where we operate. It is designed to answer the questions most businesses ask before starting a project
+              with us. If you can't find your answer here, <a href="/contact"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">reach out
+                directly</a> and we'll walk you through it — we usually reply within one business day.
             </p>
           </div>
 
           <!-- 01 · What we do -->
-          <details id="q1" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal open>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q1" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">01</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">What does Scalixo Media do?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                What does Scalixo Media do?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Scalixo Media is a full-service digital marketing and creative agency.
-                We help brands grow online through strategy, content, paid media, and
-                performance-driven campaigns.
-              </p>
-              <p>
-                We work as an extension of your team — planning, producing, launching,
-                and optimising everything needed to build visibility and generate
-                qualified demand.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Scalixo Media is a full-service digital marketing and creative agency based in Ahmedabad. We help brands
+              grow online through strategy, content, paid media, and performance-driven campaigns. We work as an
+              extension of your team — planning, producing, launching, and optimising everything needed to build
+              visibility and generate qualified demand. Learn more <a href="/about"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">about our
+                team</a> or explore <a href="/portfolio"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">recent
+                work</a>.
+            </p>
+          </section>
 
           <!-- 02 · Services -->
-          <details id="q2" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q2" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">02</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Which services do you offer?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Which services do you offer?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <ul class="space-y-3">
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Social media marketing and content production</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Performance marketing and paid advertising (Meta, Google, LinkedIn)</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Lead generation and funnel building</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Search engine optimisation (SEO)</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Website design and development</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Branding, identity, and creative direction</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Influencer marketing and collaborations</span>
-                </li>
-              </ul>
-              <p>
-                You can engage us for a single service or a fully integrated retainer.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Scalixo Media offers seven core services: <a href="/socialmedia"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">social
+                media marketing</a> and content production, <a href="/performance"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">performance
+                marketing</a> and paid advertising across Meta, Google and LinkedIn, lead generation and funnel
+              building, <a href="/seo"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">search
+                engine optimisation</a>, <a href="/web"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">website
+                design and development</a>, <a href="/branding"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">branding
+                and creative direction</a>, and influencer marketing. You can engage us for a single service or a fully
+              integrated retainer.
+            </p>
+          </section>
 
           <!-- 03 · Getting started -->
-          <details id="q3" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q3" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">03</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do I get started?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                It starts with a conversation. Share your goals, current challenges, and
-                budget range through our contact form or a quick call.
-              </p>
-              <ul class="space-y-3">
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Discovery call</strong> — we understand your business
-                    and objectives.</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Proposal</strong> — you receive a scope, timeline, and
-                    pricing document.</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span><strong class="font-normal text-white/80">Onboarding</strong> — once approved and the advance is
-                    received, we kick off.</span>
-                </li>
-              </ul>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                How do I get started?
+              </h2>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Getting started takes three steps. First, a <a href="/contact"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">discovery
+                call</a> where we understand your business, goals, and current challenges. Second, you receive a
+              proposal with scope, timeline, and pricing. Third, once approved and the advance is received, we begin
+              onboarding and kick off. Most clients go from first call to kickoff in one to two weeks.
+            </p>
+          </section>
 
           <!-- 04 · Pricing -->
-          <details id="q4" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q4" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">04</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How much do your services
-                cost?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Pricing depends on scope, channels, deliverables, and the level of
-                ongoing management required. Because of that, we quote per project
-                rather than publish fixed rates.
-              </p>
-              <ul class="space-y-3">
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Project-based pricing for one-time work like websites or branding.</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Monthly retainers for ongoing marketing, content, and ad management.</span>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Ad spend and third-party costs (platforms, hosting, domains, stock assets) are billed
-                    separately.</span>
-                </li>
-              </ul>
-              <p>
-                A non-refundable advance is required before work begins, and invoices
-                are due within the period stated on the invoice.
-              </p>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                How much do your services cost?
+              </h2>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Pricing depends on scope, channels, deliverables, and the level of ongoing management required, so Scalixo
+              Media quotes per project rather than publishing fixed rates. Project-based pricing applies to one-time
+              work like websites or branding, while monthly retainers cover ongoing marketing, content and ad
+              management. Ad spend and third-party costs such as platforms, hosting, domains and stock assets are billed
+              separately. A non-refundable advance is required before work begins. <a href="/contact"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Contact
+                us</a> for a scoped quote.
+            </p>
+          </section>
 
           <!-- 05 · Timelines -->
-          <details id="q5" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q5" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">05</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How long until I see results?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                How long until I see results?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                It varies by channel and category. Paid campaigns can generate traffic
-                and leads within days, while SEO and organic social typically need
-                three to six months to build meaningful momentum.
-              </p>
-              <p>
-                We set expectations upfront in the proposal and review performance
-                against agreed milestones rather than vague promises.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Results vary by channel and category. Paid campaigns can generate traffic and leads within days, while SEO
+              and organic social typically need three to six months to build meaningful momentum. We set expectations
+              upfront in the proposal and review performance against agreed milestones rather than vague promises. For
+              SEO timelines, see <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                target="_blank" rel="noopener noreferrer"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Google's
+                SEO starter guide</a>.
+            </p>
+          </section>
 
           <!-- 06 · Guarantees -->
-          <details id="q6" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q6" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">06</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you guarantee rankings or
-                leads?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                No. Digital marketing results depend on factors outside anyone's
-                control — market conditions, platform algorithms, competition, pricing,
-                and the strength of your own product or offer.
-              </p>
-              <p>
-                What we do commit to is industry best practice, transparent reporting,
-                and continuous optimisation. We won't promise specific rankings, traffic
-                volumes, leads, revenue, or return on ad spend.
-              </p>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Do you guarantee rankings or leads?
+              </h2>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              No, Scalixo Media does not guarantee rankings, traffic, leads, revenue or return on ad spend. Results
+              depend on factors outside anyone's control — market conditions, platform algorithms, competition, pricing,
+              and the strength of your own product or offer. What we commit to is industry best practice, transparent
+              reporting, and continuous optimisation. This is aligned with <a
+                href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener noreferrer"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Google's
+                search essentials</a> and standard marketing ethics.
+            </p>
+          </section>
 
           <!-- 07 · Business size -->
-          <details id="q7" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q7" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">07</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work with small
-                businesses?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Yes. We work with early-stage startups, local businesses, D2C brands,
-                and established companies. The approach is scaled to fit your stage and
-                budget.
-              </p>
-              <p>
-                If your budget can't support the scope you need yet, we'll tell you
-                honestly and suggest a leaner starting point.
-              </p>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Do you work with small businesses?
+              </h2>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Yes. Scalixo Media works with early-stage startups, local businesses, D2C brands and established
+              companies. The approach is scaled to fit your stage and budget. If your budget can't support the scope you
+              need yet, we'll tell you honestly and suggest a leaner starting point. See our <a href="/portfolio"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">portfolio</a>
+              for examples across business sizes.
+            </p>
+          </section>
 
           <!-- 08 · Ownership -->
-          <details id="q8" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q8" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">08</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Who owns the work you create?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Who owns the work you create?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Once the agreed fees are paid in full, ownership of final approved
-                deliverables created specifically for you transfers to you, unless
-                stated otherwise in the agreement.
-              </p>
-              <p>
-                Scalixo Media retains ownership of concepts, drafts, working files,
-                internal frameworks, and methodologies. Third-party assets such as
-                fonts, stock footage, and licensed software remain subject to their own
-                licences.
-              </p>
-              <p>
-                We may feature completed work in our portfolio unless you request
-                otherwise in writing.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Once the agreed fees are paid in full, ownership of final approved deliverables created specifically for
+              you transfers to you. Scalixo Media retains ownership of concepts, drafts, working files, internal
+              frameworks and methodologies. Third-party assets such as fonts, stock footage and licensed software remain
+              subject to their own licences. We may feature completed work in our portfolio unless you request otherwise
+              in writing. Full details are in our <a href="/terms"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">terms</a>.
+            </p>
+          </section>
 
           <!-- 09 · Reporting -->
-          <details id="q9" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q9" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">09</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">How do you report on
-                performance?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                You get a monthly report covering the metrics that matter to your goals
-                — reach, engagement, traffic, leads, cost per result, and spend — along
-                with commentary on what worked and what we're changing next.
-              </p>
-              <p>
-                Larger retainers can include scheduled review calls and access to live
-                dashboards.
-              </p>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                How do you report on performance?
+              </h2>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              You receive a monthly report covering the metrics that matter to your goals — reach, engagement, traffic,
+              leads, cost per result and spend — along with commentary on what worked and what we're changing next.
+              Larger retainers can include scheduled review calls and access to live dashboards built in <a
+                href="https://analytics.google.com/analytics/academy/" target="_blank" rel="noopener noreferrer"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Google
+                Analytics</a> and platform-native tools.
+            </p>
+          </section>
 
           <!-- 10 · Pausing / cancelling -->
-          <details id="q10" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q10" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">10</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Can I pause or cancel anytime?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Can I pause or cancel anytime?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Either party may terminate an engagement with written notice as
-                specified in the relevant agreement.
-              </p>
-              <p>
-                On termination, you remain responsible for fees covering work completed
-                up to the termination date, plus any non-cancellable third-party costs
-                already incurred on your behalf.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Either party may terminate an engagement with written notice as specified in the relevant agreement. On
+              termination, you remain responsible for fees covering work completed up to the termination date, plus any
+              non-cancellable third-party costs already incurred on your behalf. Full details are in our <a
+                href="/terms"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">terms</a>.
+            </p>
+          </section>
 
           <!-- 11 · Locations -->
-          <details id="q11" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q11" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">11</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Do you work outside Ahmedabad?
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                Do you work outside Ahmedabad?
               </h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Absolutely. We're based in Ahmedabad, Gujarat, but we work with clients
-                across India and internationally. Most collaboration happens remotely
-                over email, calls, and shared workspaces.
-              </p>
-              <p>
-                In-person meetings can be arranged locally when needed.
-              </p>
             </div>
-          </details>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Yes. Scalixo Media is based in Ahmedabad, Gujarat, but works with clients across India and
+              internationally. Most collaboration happens remotely over email, calls, and shared workspaces. In-person
+              meetings can be arranged locally when needed. If you're outside India, see <a
+                href="https://en.wikipedia.org/wiki/Ahmedabad" target="_blank" rel="noopener noreferrer"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Ahmedabad</a>
+              for location context, or <a href="/contact"
+                class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">contact
+                us</a> to discuss timezone.
+            </p>
+          </section>
 
           <!-- 12 · Contact -->
-          <details id="q12" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14 group" data-reveal>
-            <summary class="faq-summary flex cursor-pointer list-none items-baseline gap-4">
+          <section id="q12" class="faq-item scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
               <span class="font-mono text-[16px] uppercase tracking-[0.3em] text-accent">12</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl flex-1">Still have questions?</h2>
-              <span class="faq-icon text-accent text-xl transition-transform duration-300">+</span>
-            </summary>
-            <div class="faq-content mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Reach out and we'll get back to you, usually within one business day.
-              </p>
+              <h2 class="font-display text-2xl uppercase leading-none text-white md:text-4xl">
+                How do I contact Scalixo Media?
+              </h2>
+            </div>
+            <p class="mt-6 leading-relaxed text-white/60 md:pl-12">
+              Reach out to Scalixo Media and we'll get back to you, usually within one business day. Our office is at
+              301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052. Call us at
+              +91 93287 92160 or use the contact form.
+            </p>
 
-              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8">
-                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Address</div>
-                    <p class="mt-2 text-sm leading-relaxed text-white/70">
-                      301, 3rd Floor, Harvy Complex, Subhash Chowk,<br />
-                      Gurukul Rd, Memnagar, Ahmedabad,<br />
-                      Gujarat 380052
-                    </p>
-                  </div>
-                  <div>
-                    <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Phone</div>
-                    <a href="tel:+919328792160"
-                      class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent md:text-2xl">
-                      +91 93287 92160
-                    </a>
-                  </div>
+            <div class="mt-8 rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:ml-12 md:p-8">
+              <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Address</div>
+                  <p class="mt-2 text-sm leading-relaxed text-white/70">
+                    301, 3rd Floor, Harvy Complex, Subhash Chowk,<br />
+                    Gurukul Rd, Memnagar, Ahmedabad,<br />
+                    Gujarat 380052
+                  </p>
                 </div>
-
-                <div class="mt-8 flex flex-wrap gap-4">
-                  <a href="tel:+919328792160" data-magnetic
-                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
-                    Call us
-                    <span
-                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-                  </a>
-                  <a href="/contact" data-magnetic
-                    class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
-                    Start a project
-                    <span
-                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                <div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Phone</div>
+                  <a href="tel:+919328792160"
+                    class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent md:text-2xl">
+                    +91 93287 92160
                   </a>
                 </div>
               </div>
+
+              <div class="mt-8 flex flex-wrap gap-4">
+                <a href="tel:+919328792160" data-magnetic
+                  class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                  Call us
+                  <span
+                    class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                </a>
+                <a href="/contact" data-magnetic
+                  class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
+                  Start a project
+                  <span
+                    class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                </a>
+              </div>
             </div>
-          </details>
+          </section>
 
         </div>
       </div>
@@ -524,9 +661,8 @@
               class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
           </a>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
-            <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
-              class="transition-colors hover:text-accent">Instagram</a>
-            <a href="https://www.linkedin.com/company/scalixomedia/posts/"
+            <a href="https://www.instagram.com/scalixo.media" class="transition-colors hover:text-accent">Instagram</a>
+            <a href="https://www.linkedin.com/company/scalixomedia"
               class="transition-colors hover:text-accent">LinkedIn</a>
             <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
           </div>
@@ -537,21 +673,29 @@
   </main>
 
   <!-- ══════════ FOOTER ══════════ -->
-  <div id="footer-slot">
-    <footer class="site-footer border-t border-white/10 px-6 py-8 md:px-10" aria-label="Site footer">
-      <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/55 md:flex-row md:items-center md:justify-between">
-        <span>© <span>2025</span> Scalixo Media — All rights reserved</span>
-        <nav class="flex gap-6" aria-label="Legal">
-          <a href="/privacy" class="transition-colors hover:text-accent-2">Privacy Policy</a>
-          <a href="/terms" class="transition-colors hover:text-accent-2">Terms of Service</a>
-        </nav>
-      </div>
-    </footer>
-  </div>
+  <footer class="site-footer border-t border-white/10 px-6 py-8 md:px-10" aria-label="Site footer">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/55 md:flex-row md:items-center md:justify-between">
+      <span>© <span>2025</span> Scalixo Media — All rights reserved</span>
+      <nav class="flex gap-6" aria-label="Legal">
+        <a href="/privacy" class="transition-colors hover:text-accent-2">Privacy Policy</a>
+        <a href="/terms" class="transition-colors hover:text-accent-2">Terms of Service</a>
+      </nav>
+    </div>
 
-  <!-- ══════════ SCRIPTS ══════════ -->
-  <script src="script.js"></script>
-  <script src="navbar.js"></script>
+    <!-- Author byline + last updated -->
+    <div
+      class="mx-auto mt-5 max-w-[1500px] border-t border-white/5 pt-5 font-mono text-[10px] tracking-[0.15em] text-white/30">
+      Maintained by the Scalixo Media team —
+      <a href="https://scalixomedia.com/about"
+        class="text-white/60 underline decoration-white/15 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">Deep
+        Thakkar</a>, Founder
+      · Last updated <time datetime="2026-11-02">2 November 2026</time>
+    </div>
+  </footer>
+
+  <script defer src="script.js"></script>
+  <script defer src="navbar.js"></script>
 </body>
 
 </html>
