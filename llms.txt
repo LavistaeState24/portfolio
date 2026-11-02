@@ -2,6 +2,8 @@
 
 > Scalixo Media is a digital marketing and growth agency based in Ahmedabad, India. The website describes its marketing, creative, and web services, shares selected work, and provides company and contact information.
 
+Founded by Deep Thakkar. Office hours: Monday to Saturday, 10:30 AM to 7:00 PM IST (closed Sundays). Phone: +91 93287 92160. Email: scalixomedia@gmail.com. Response time: within 24 business hours.
+
 Use the links below as a guide to public information on the website. For the most current page inventory, see the [XML sitemap](https://scalixomedia.com/sitemap.xml).
 
 ## Main pages
@@ -9,7 +11,7 @@ Use the links below as a guide to public information on the website. For the mos
 - [Home](https://scalixomedia.com/): Overview of Scalixo Media and its services.
 - [About](https://scalixomedia.com/about.html): Company information, principles, and founder's note.
 - [Portfolio](https://scalixomedia.com/portfolio.html): Selected work, case studies, and live digital marketing projects.
-- [Contact](https://scalixomedia.com/contact.html): Office address, phone number, and inquiry information.
+- [Contact](https://scalixomedia.com/contact.html): Office address, phone number, email, office hours, and inquiry form.
 - [FAQ](https://scalixomedia.com/Faq.html): Frequently asked questions about pricing, timelines, and services.
 
 ## Services

@@ -1,0 +1,121 @@
+# Scalixo Media — Full Content for LLM Ingestion
+# Generated: 2026-11-02
+# Source: https://scalixomedia.com/
+
+## Organization
+
+Scalixo Media is a digital marketing and growth agency based in Ahmedabad,
+Gujarat, India. The agency builds brand systems, performance marketing
+campaigns, content, and funnels for businesses across India and
+internationally. Founded by Deep Thakkar.
+
+- Website: https://scalixomedia.com/
+- Phone: +91 93287 92160
+- Email: scalixomedia@gmail.com
+- Address: 301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd,
+  Memnagar, Ahmedabad, Gujarat 380052, India
+- Office hours: Monday to Saturday, 10:30 AM to 7:00 PM IST. Closed Sunday.
+- Response time: Within 24 business hours.
+- Founder: Deep Thakkar
+
+## Social profiles
+
+- Instagram: https://www.instagram.com/scalixo.media
+- LinkedIn: https://www.linkedin.com/company/scalixomedia
+- Facebook: https://www.facebook.com/scalixo.media
+
+## Pages
+
+- Home: https://scalixomedia.com/
+  Overview of Scalixo Media and its services.
+- About: https://scalixomedia.com/about
+  Company information, principles, and founder's note.
+- Portfolio: https://scalixomedia.com/portfolio
+  Selected work, case studies, and live digital marketing projects.
+- Contact: https://scalixomedia.com/contact
+  Office address, phone number, email, office hours, and inquiry form.
+- FAQ: https://scalixomedia.com/faq
+  Frequently asked questions about pricing, timelines, and services.
+
+## Services
+
+### Social media marketing
+https://scalixomedia.com/socialmedia
+Complete social media management, content creation, and platform-specific
+strategies for brands.
+
+### Performance marketing
+https://scalixomedia.com/performance
+Paid ad campaign frameworks, funnel design, and ROAS targeting across
+platforms.
+
+### SEO services
+https://scalixomedia.com/seo
+Technical SEO audits, on-page optimization, and local SEO focus areas.
+
+### Website development
+https://scalixomedia.com/web
+Conversion-focused web design, UI/UX, frontend development, and CMS setup.
+
+### Branding and identity design
+https://scalixomedia.com/branding
+Visual systems, brand guidelines, and core brand asset packages.
+
+### Influencer marketing
+https://scalixomedia.com/influencer
+Creator collaborations, trusted brand voices, and UGC campaigns.
+
+## Contact page — FAQ
+
+### How do I contact Scalixo Media?
+
+You can reach Scalixo Media by phone at +91 93287 92160, by email at
+scalixomedia@gmail.com, or by filling out the contact form at
+https://scalixomedia.com/contact. We respond to all enquiries within 24
+business hours.
+
+### Where is Scalixo Media located?
+
+Scalixo Media is based in Ahmedabad, Gujarat, India. Our office is at
+301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar,
+Ahmedabad 380052. You can view the exact location on Google Maps. We work
+with clients across India and internationally.
+
+### What are Scalixo Media's office hours?
+
+Scalixo Media is open Monday to Saturday, 10:30 AM to 7:00 PM IST. We are
+closed on Sundays. You can still send an enquiry via the form outside
+business hours, and we will reply the next business day.
+
+### Does Scalixo Media offer a free consultation?
+
+Yes. Scalixo Media offers a free strategy call for new enquiries. Select
+Free Strategy Call in the enquiry type field on the contact form and we
+will schedule a 30-minute call to discuss your goals, timeline, and
+current marketing setup.
+
+### What services does Scalixo Media offer?
+
+Scalixo Media offers performance marketing, social media marketing, SEO,
+website design, brand strategy, and influencer marketing. You can explore
+recent work at https://scalixomedia.com/portfolio or read about the
+agency's approach at https://scalixomedia.com/about.
+
+## Policies
+
+- Privacy policy: https://scalixomedia.com/privacy
+  Data protection statements and user privacy information.
+- Terms and conditions: https://scalixomedia.com/terms
+  Standard engagement terms and asset ownership guidelines.
+
+## Site navigation
+
+- HTML sitemap: https://scalixomedia.com/sitemap
+- XML sitemap: https://scalixomedia.com/sitemap.xml
+
+## Crawling notes
+
+- This file is an informational index; it does not control crawler access
+  or guarantee indexing.
+- Crawl rules are set in robots.txt, and the XML sitemap lists public
+  pages. Individual AI services may have their own crawler policies.
