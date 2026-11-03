@@ -34,6 +34,191 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Structured data: JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://scalixomedia.com/#organization",
+          "name": "Scalixo Media",
+          "url": "https://scalixomedia.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://scalixomedia.com/#logo",
+            "url": "https://scalixomedia.com/assets/scalixo.png",
+            "caption": "Scalixo Media"
+          },
+          "image": { "@id": "https://scalixomedia.com/#logo" },
+          "description": "Scalixo Media is a branding and digital agency creating strategic brand identities, visual systems, and marketing assets for growing businesses.",
+          "sameAs": [
+            "https://www.instagram.com/scalixo.media",
+            "https://www.linkedin.com/company/scalixomedia/posts/",
+            "https://www.facebook.com/scalixo.media"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-93287-92160",
+            "contactType": "sales",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "hi", "gu"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://scalixomedia.com/#website",
+          "url": "https://scalixomedia.com",
+          "name": "Scalixo Media",
+          "publisher": { "@id": "https://scalixomedia.com/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://scalixomedia.com/branding#webpage",
+          "url": "https://scalixomedia.com/branding",
+          "name": "Branding & Identity Design — Scalixo Media",
+          "description": "Build a memorable brand identity with Scalixo Media. We create strategic branding, logo design, visual systems, brand messaging, and identity guidelines for growing businesses.",
+          "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+          "about": { "@id": "https://scalixomedia.com/branding#service" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://scalixomedia.com/assets/scalixo.png"
+          },
+          "datePublished": "2024-11-01",
+          "dateModified": "2025-01-15",
+          "author": { "@id": "https://scalixomedia.com/#author" },
+          "publisher": { "@id": "https://scalixomedia.com/#organization" },
+          "breadcrumb": { "@id": "https://scalixomedia.com/branding#breadcrumb" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://scalixomedia.com/branding#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://scalixomedia.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Branding & Identity Design",
+              "item": "https://scalixomedia.com/branding"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://scalixomedia.com/branding#service",
+          "name": "Branding & Identity Design",
+          "serviceType": "Branding & Identity Design",
+          "description": "Strategic brand identity services including brand strategy, logo design, visual identity, brand messaging, brand guidelines, and marketing collaterals for growing businesses.",
+          "provider": { "@id": "https://scalixomedia.com/#organization" },
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Branding & Identity Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Strategy" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Design" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visual Identity" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Messaging" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Guidelines" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Collaterals" } }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://scalixomedia.com/#author",
+          "name": "Scalixo Media Studio",
+          "url": "https://scalixomedia.com/about",
+          "jobTitle": "Branding & Identity Team",
+          "worksFor": { "@id": "https://scalixomedia.com/#organization" },
+          "sameAs": [
+            "https://www.instagram.com/scalixo.media",
+            "https://www.linkedin.com/company/scalixomedia/posts/"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://scalixomedia.com/branding#faq",
+          "isPartOf": { "@id": "https://scalixomedia.com/branding#webpage" },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is included in branding and identity design?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It includes brand strategy, logo design, visual identity (color palette, typography), brand messaging, brand guidelines, and marketing collaterals. You get a complete brand system, not just a standalone logo — so your business looks professional, communicates clearly, and stays consistent everywhere, from your website and ads to packaging and social media."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you only design logos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. We build complete identity systems, not just logos. A logo is one element; an identity is the entire system that element lives in — including typography, color palette, graphic elements, tone of voice, and usage rules. We deliver all of it together so your brand stays consistent everywhere your customers see it."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does a branding project take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most branding projects take 3 to 8 weeks depending on scope. A full identity system with strategy, messaging, and brand guidelines typically takes 4 to 8 weeks; a focused logo refresh can be completed in 2 to 3 weeks. Timeline depends on the number of deliverables, feedback turnaround, and revision rounds."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does branding cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing depends on scope, not just hours. A logo-only project costs significantly less than a full identity system with strategy, messaging, and brand guidelines. We provide a clear, itemized quote based on your specific deliverables — no hidden fees, no surprise line items, and no paying for services you don't need."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you rebrand my existing business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We can refresh or fully redesign your existing brand while keeping the parts that already work for your audience. If your positioning is right but the visual execution is dated or inconsistent, a refresh is often enough; if your market or promise has fundamentally changed, a full rebrand is the better path. We'll recommend the right scope after reviewing your current brand."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will I receive editable files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide editable source files (AI, Figma, PSD) and final exports (PNG, JPG, SVG, PDF) so your team can use your identity across every platform. Full ownership of the final files is transferred to you upon project completion — no licensing fees, no ongoing charges."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many revisions are included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Revision rounds are included in every project based on scope. We typically include two to three rounds of refinements so you can fine-tune the identity without worrying about extra costs. Additional rounds beyond the included scope are always quoted upfront before any work begins."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" data-page="branding" data-footer-only
@@ -68,12 +253,16 @@
 
             <div class="relative mx-auto max-w-[1500px]">
 
-                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white"
-                    data-hero-breadcrumb>
-                    <a href="index" class="text-white/40 transition-colors hover:text-accent">Home</a>
-                    <span class="text-white/20">/</span>
-                    <span class="text-white/70">Branding &amp; Identity Design</span>
-                </div>
+                <!-- VISIBLE BREADCRUMB TRAIL (semantic nav/ol/li) -->
+                <nav aria-label="Breadcrumb" data-hero-breadcrumb class="mb-6">
+                    <ol class="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
+                        <li>
+                            <a href="index" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                        </li>
+                        <li aria-hidden="true" class="text-white/20">/</li>
+                        <li aria-current="page" class="text-white/70">Branding &amp; Identity Design</li>
+                    </ol>
+                </nav>
 
                 <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
                     <span class="block overflow-hidden">
@@ -89,11 +278,23 @@
 
                 <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-5" data-hero-sub>
+                        <!-- ANSWER BLOCK: 44 words, definition-first -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl">
-                            Scalixo Media creates strategic brand identities that make your
-                            business look professional, communicate clearly, and stand out
-                            across every platform.
+                            Scalixo Media is a branding and identity design studio in Ahmedabad.
+                            We create strategic brand identities that make your business look
+                            professional, communicate clearly, and stand out across every
+                            platform — from your logo and website to ads, packaging, and social
+                            media.
                         </p>
+
+                        <!-- Visible byline (matches the Person node in JSON-LD) -->
+                        <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
+                            <span>By <a href="/about" class="text-white/70 transition-colors hover:text-accent">Scalixo Media Studio</a></span>
+                            <span class="text-white/20">·</span>
+                            <span>Reviewed by the Scalixo Brand Team</span>
+                            <span class="text-white/20">·</span>
+                            <span>Updated <time datetime="2025-01-15">Jan 2025</time></span>
+                        </div>
 
                         <div class="mt-8 flex flex-wrap items-center gap-4">
                             <a href="#services" data-magnetic
@@ -181,11 +382,15 @@
                     </div>
 
                     <div class="space-y-8 md:col-span-6 md:col-start-7">
+                        <!-- ANSWER BLOCK: 60 words -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            A strong brand creates trust before the first
-                            conversation. It helps customers understand who you are,
-                            what you offer, and why they should choose you over
-                            competitors.
+                            <a href="https://www.ama.org/resources/Pages/Dictionary.aspx?dLetter=B" target="_blank" rel="noopener noreferrer" class="underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent">Branding</a>
+                            is the strategy and visual system that shapes how customers
+                            perceive your business — combining positioning, messaging, identity,
+                            and consistency across every touchpoint. A strong brand creates trust
+                            before the first conversation, helps customers understand who you are
+                            and why they should choose you over competitors, and makes every
+                            interaction feel premium and worth remembering.
                         </p>
 
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
@@ -239,8 +444,15 @@
                         </h2>
                     </div>
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <!-- ANSWER BLOCK: 55 words -->
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            Everything your business needs to look professional, consistent, and ready to scale.
+                            Branding and identity design services include six core elements:
+                            brand strategy, logo design, visual identity, brand messaging, brand
+                            guidelines, and marketing collaterals. Together these form a complete
+                            brand system — not a standalone logo — so your business looks
+                            professional, communicates clearly, and stays visually consistent
+                            across every platform, from your website and ads to packaging and
+                            social media.
                         </p>
                     </div>
                 </div>
@@ -261,7 +473,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
                                 Strategy</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                We define your positioning, target audience, tone, personality, and market direction.
+                                We define your positioning, target audience, tone, personality, and
+                                market direction. You get a clear strategic foundation that tells you
+                                exactly who you're for, what you offer, and how to stand out from
+                                competitors — so every design and marketing decision becomes faster
+                                and more confident.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -284,7 +500,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Logo
                                 Design</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Unique logo concepts designed to represent your brand clearly and professionally.
+                                Unique logo concepts designed to represent your brand clearly and
+                                professionally. We create logo marks, wordmarks, and combination
+                                logos with variations for every context — digital, print, favicon,
+                                social avatar — plus clear usage rules so your logo stays sharp and
+                                recognizable at any size.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -307,7 +527,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Visual
                                 Identity</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Color palettes, typography, visual style, and creative direction for brand consistency.
+                                Color palettes, typography, visual style, and creative direction for
+                                brand consistency. Beyond the logo, we define the complete visual
+                                language of your brand — primary and secondary colors, type
+                                hierarchies, imagery style, graphic elements, and layout patterns —
+                                so every asset your team creates looks unmistakably yours.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -330,7 +554,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
                                 Messaging</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Taglines, brand voice, key messages, and communication style for stronger recall.
+                                Taglines, brand voice, key messages, and communication style for
+                                stronger recall. We craft the words your brand uses everywhere —
+                                positioning statements, taglines, tone of voice, value props, and
+                                key messages — so your team communicates consistently and customers
+                                instantly understand what you offer and why it matters.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -353,7 +581,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
                                 Guidelines</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                A clear brand rulebook that helps your team use your identity correctly everywhere.
+                                A clear brand rulebook that helps your team use your identity
+                                correctly everywhere. We deliver a practical guidelines document
+                                covering logo usage, color codes, typography, spacing, imagery, tone
+                                of voice, and example applications — so your brand stays consistent
+                                no matter who on your team is creating the asset.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -376,8 +608,11 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Marketing
                                 Collaterals</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Business cards, brochures, social templates, pitch decks, posters, and digital
-                                creatives.
+                                Business cards, brochures, social templates, pitch decks, posters,
+                                and digital creatives. We design the practical marketing pieces your
+                                team needs to launch your brand — from business cards and letterheads
+                                to pitch decks, social media templates, and ad creatives — all built
+                                from your brand system and ready to use from day one.
                             </p>
                             <div
                                 class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
@@ -404,8 +639,13 @@
                         </h2>
                     </div>
                     <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <!-- ANSWER BLOCK: 45 words -->
                         <p class="text-base leading-relaxed text-white/50">
-                            We build identities for businesses across industries — matched to your audience and market.
+                            We create brand identities for growing businesses across real estate,
+                            beauty and wellness, food and hospitality, and education. Each
+                            identity is matched to your audience, competitive landscape, and
+                            market position — so the brand feels relevant, credible, and premium
+                            to the customers you most want to attract and retain.
                         </p>
                     </div>
                 </div>
@@ -426,8 +666,13 @@
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Real
                                 Estate</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Building trust and recognition for
-                                property brands.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Building trust and recognition for property brands. We create real
+                                estate brand identities that communicate credibility and premium
+                                quality — from developer logos and property project brands to agent
+                                marketing, signage, and sales collateral — so buyers feel confident
+                                choosing you over the competition.
+                            </p>
                             <div
                                 class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
@@ -448,8 +693,13 @@
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Salons
                             </h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Creating premium identities for beauty
-                                and wellness.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Creating premium identities for beauty and wellness. We design salon
+                                and spa brand identities that feel elevated, trustworthy, and
+                                memorable — covering logos, color palettes, typography, packaging,
+                                interior signage, and Instagram templates — so your customers
+                                experience a premium brand at every touchpoint.
+                            </p>
                             <div
                                 class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
@@ -470,8 +720,13 @@
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
                                 Restaurants</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Building memorable food and
-                                hospitality brands.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Building memorable food and hospitality brands. We create
+                                restaurant and café brand identities that make people want to walk
+                                in and come back — combining menus, packaging, signage, interior
+                                branding, and social templates into one cohesive, appetite-driven
+                                brand system.
+                            </p>
                             <div
                                 class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
@@ -492,8 +747,13 @@
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Education
                             </h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Trustworthy identities for institutes
-                                and ed-tech brands.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Trustworthy identities for institutes and ed-tech brands. We build
+                                education brand identities that communicate credibility and care —
+                                covering logos, color systems, prospectus design, admission
+                                campaign assets, and digital templates — so parents and students
+                                instantly trust your institute.
+                            </p>
                             <div
                                 class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
                                 <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
@@ -520,8 +780,14 @@
                         </h2>
                     </div>
                     <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
+                        <!-- ANSWER BLOCK: 55 words -->
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            A clear four-step process from discovery to launch.
+                            Our branding process follows four clear steps — Discover, Position,
+                            Design, and Launch — from kickoff to a launch-ready identity your
+                            team can use immediately. Most branding projects take 3 to 8 weeks
+                            depending on scope. A full identity system with strategy, messaging,
+                            and guidelines takes 4 to 8 weeks; a focused logo refresh can be
+                            completed in 2 to 3 weeks.
                         </p>
                     </div>
                 </div>
@@ -554,7 +820,11 @@
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    We understand your business, audience, competitors, and brand goals.
+                                    We understand your business, audience, competitors, and brand
+                                    goals. This discovery phase covers stakeholder interviews,
+                                    competitor audits, audience research, and positioning inputs —
+                                    so every design decision that follows is rooted in real insight,
+                                    not guesswork.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
@@ -583,7 +853,11 @@
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    We define your brand direction, messaging, personality, and differentiation.
+                                    We define your brand direction, messaging, personality, and
+                                    differentiation. This phase produces your brand strategy:
+                                    positioning statement, target audience, tone of voice, key
+                                    messages, and visual direction — giving the design team a clear,
+                                    focused brief to work from.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
@@ -613,6 +887,10 @@
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
                                     We create logo concepts, visual identity, and brand applications.
+                                    This is where the visual system comes to life — logo concepts and
+                                    variations, color palette, typography, graphic elements, and
+                                    mockup applications across digital, print, and social — reviewed
+                                    together in structured revision rounds.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
@@ -641,7 +919,11 @@
                             </div>
                             <div class="md:col-span-7">
                                 <p class="text-base leading-relaxed text-white/50 md:text-lg">
-                                    We deliver final files, guidelines, and launch-ready marketing assets.
+                                    We deliver final files, guidelines, and launch-ready marketing
+                                    assets. You receive organized source files (AI, Figma, etc.),
+                                    export-ready logos, the brand guidelines PDF, and design
+                                    templates for social, pitch decks, and marketing — so your team
+                                    can start using the new identity immediately.
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
@@ -669,9 +951,15 @@
                             data-split>
                             Identities built<br />to be remembered.
                         </h2>
+                        <!-- ANSWER BLOCK: 55 words -->
                         <p class="mt-6 leading-relaxed text-white/50">
-                            We combine strategy, design, and messaging — so your brand looks premium and communicates
-                            clearly everywhere.
+                            Scalixo Media builds brand identities that combine strategy, design,
+                            and messaging — so your business looks premium, communicates clearly,
+                            and stays consistent everywhere. Every identity we deliver is
+                            strategy-first (built on real positioning and audience insight),
+                            shipped with a practical guideline rulebook your team can actually
+                            use, and includes launch-ready templates, collaterals, and source
+                            files for day one.
                         </p>
                         <a href="/contact" data-magnetic
                             class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
@@ -689,10 +977,15 @@
                                     <i class="fa-solid fa-bullseye text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
-                                    </h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Every design decision is
-                                        rooted in positioning and audience insight.</p>
+                                    <!-- FIXED: h4 → h3 to avoid skipped heading level -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Every design decision is rooted in positioning and audience
+                                        insight. We don't design in a vacuum — we start with a clear
+                                        strategy so every logo, color, and message serves a purpose
+                                        and speaks directly to the customers you want to attract.
+                                    </p>
                                 </div>
                             </div>
 
@@ -702,10 +995,15 @@
                                     <i class="fa-solid fa-palette text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Consistent
-                                        Visuals</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Color, type, and style systems
-                                        that work across every platform.</p>
+                                    <!-- FIXED: h4 → h3 -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Consistent
+                                        Visuals</h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Color, type, and style systems that work across every platform.
+                                        Your brand stays visually coherent whether you're publishing
+                                        on Instagram, printing a brochure, or running a paid campaign
+                                        — so customers recognize you instantly at every touchpoint.
+                                    </p>
                                 </div>
                             </div>
 
@@ -715,10 +1013,16 @@
                                     <i class="fa-solid fa-comments text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Clear Messaging
-                                    </h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Taglines and brand voice that
-                                        communicate who you are.</p>
+                                    <!-- FIXED: h4 → h3 -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Clear Messaging
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Taglines and brand voice that communicate who you are. We
+                                        define your brand's key messages and tone of voice so your
+                                        team communicates clearly and consistently across ads,
+                                        website, email, and social — building recognition and trust
+                                        over time.
+                                    </p>
                                 </div>
                             </div>
 
@@ -728,10 +1032,16 @@
                                     <i class="fa-solid fa-layer-group text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Practical
-                                        Guidelines</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">A rulebook your team can
-                                        actually use — not just a pretty PDF.</p>
+                                    <!-- FIXED: h4 → h3 -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Practical
+                                        Guidelines</h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        A rulebook your team can actually use — not just a pretty PDF.
+                                        Our brand guidelines cover logo usage, color codes,
+                                        typography, spacing, imagery, and real example applications
+                                        — so anyone on your team can create on-brand assets without
+                                        asking a designer.
+                                    </p>
                                 </div>
                             </div>
 
@@ -741,10 +1051,16 @@
                                     <i class="fa-solid fa-photo-video text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Launch-Ready
-                                        Assets</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Templates, collaterals, and
-                                        files ready for day one.</p>
+                                    <!-- FIXED: h4 → h3 -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Launch-Ready
+                                        Assets</h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Templates, collaterals, and files ready for day one. Beyond
+                                        the logo, you get social templates, pitch decks, business
+                                        cards, and export-ready files — so your team can start
+                                        publishing, presenting, and marketing with the new brand
+                                        immediately.
+                                    </p>
                                 </div>
                             </div>
 
@@ -754,10 +1070,16 @@
                                     <i class="fa-solid fa-headset text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Direct Access
-                                    </h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Talk directly to the team
-                                        building your identity — no middlemen.</p>
+                                    <!-- FIXED: h4 → h3 -->
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Direct Access
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Talk directly to the team building your identity — no
+                                        middlemen. You work with the same designers and strategists
+                                        throughout your project, so feedback moves fast, nothing gets
+                                        lost in translation, and your brand gets the attention it
+                                        deserves.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -780,8 +1102,15 @@
                         </h2>
                     </div>
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
+                        <!-- ANSWER BLOCK: 52 words -->
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            Every identity ships with these outcomes built in.
+                            A professionally designed brand identity delivers six clear
+                            outcomes: instant trust, stronger recall, clear positioning,
+                            premium perception, team alignment, and scale readiness. Your
+                            business builds credibility before the first conversation, becomes
+                            recognizable across every touchpoint, communicates who you are
+                            instantly, looks premium everywhere, keeps your team consistent,
+                            and stays flexible as you grow.
                         </p>
                     </div>
                 </div>
@@ -796,8 +1125,12 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Instant Trust</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">A professional identity builds
-                                credibility before the first conversation.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                A professional identity builds credibility before the first
+                                conversation. When customers land on your website, see your ads, or
+                                receive your pitch deck, a cohesive, premium-looking brand signals
+                                that you're a serious business worth their attention.
+                            </p>
                         </div>
                     </div>
 
@@ -810,8 +1143,12 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Stronger Recall</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">A memorable identity customers
-                                recognize across every touchpoint.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                A memorable identity customers recognize across every touchpoint.
+                                Consistent colors, logo, and messaging make your brand stick — so
+                                customers who see you once on Instagram can spot your ad on
+                                Facebook and remember exactly who you are.
+                            </p>
                         </div>
                     </div>
 
@@ -824,8 +1161,12 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Clear Positioning</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Customers instantly understand who you
-                                are and what you offer.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Customers instantly understand who you are and what you offer. A
+                                focused brand identity — with clear messaging, distinctive
+                                visuals, and consistent communication — cuts through noise and
+                                makes it obvious why they should choose you over the competition.
+                            </p>
                         </div>
                     </div>
 
@@ -838,8 +1179,13 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Premium Perception</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Visual consistency that makes your
-                                business look premium everywhere.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Visual consistency that makes your business look premium
+                                everywhere. From your website and ads to packaging and pitch
+                                decks, a well-designed identity system signals quality and
+                                elevates how much customers are willing to pay for your product
+                                or service.
+                            </p>
                         </div>
                     </div>
 
@@ -852,8 +1198,12 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Team
                                 Alignment</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Guidelines that keep your team
-                                consistent across every asset.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                Guidelines that keep your team consistent across every asset.
+                                When designers, marketers, and sales all work from the same brand
+                                system, every piece of content feels unified — and your brand
+                                looks more professional as a result.
+                            </p>
                         </div>
                     </div>
 
@@ -866,8 +1216,12 @@
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Scale Ready</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">A flexible identity system that grows
-                                with your business.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                A flexible identity system that grows with your business. As you
+                                launch new products, enter new markets, or hire new team members,
+                                your brand guidelines ensure consistency at every stage — without
+                                slowing down your growth.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -900,9 +1254,13 @@
                             Questions before<br />building your brand?
                         </h2>
 
+                        <!-- ANSWER BLOCK: 50 words -->
                         <p class="mt-6 max-w-md leading-relaxed text-white/50">
-                            Here are common questions businesses ask before starting their branding and identity project
-                            with Scalixo Media.
+                            Here are the most common questions businesses ask before starting
+                            their branding and identity project with Scalixo Media — covering
+                            what's included, how long it takes, pricing, revisions, editable
+                            files, and rebranding. If your question isn't answered here, contact
+                            us directly and we'll respond within one business day.
                         </p>
 
                         <a href="/contact" data-magnetic
@@ -935,9 +1293,13 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        It includes brand strategy, logo design, visual identity, color palette,
-                                        typography, brand messaging, social templates, and brand guidelines. You get a
-                                        complete system, not just a standalone logo.
+                                        It includes brand strategy, logo design, visual identity
+                                        (color palette, typography), brand messaging, brand
+                                        guidelines, and marketing collaterals. You get a complete
+                                        brand system, not just a standalone logo — so your business
+                                        looks professional, communicates clearly, and stays
+                                        consistent everywhere, from your website and ads to
+                                        packaging and social media.
                                     </p>
                                 </div>
                             </details>
@@ -960,10 +1322,12 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        No. We build complete identity systems, not just logos. A logo is one element;
-                                        an identity is the system that element lives in—including typography, color,
-                                        graphic elements, and usage rules to keep your brand consistent
-                                        everywhere.[reference:0]
+                                        No. We build complete identity systems, not just logos. A
+                                        logo is one element; an identity is the entire system that
+                                        element lives in — including typography, color palette,
+                                        graphic elements, tone of voice, and usage rules. We deliver
+                                        all of it together so your brand stays consistent everywhere
+                                        your customers see it.
                                     </p>
                                 </div>
                             </details>
@@ -986,9 +1350,12 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        Most branding projects take 3 to 8 weeks depending on scope. A full identity
-                                        system with strategy, messaging, and brand guidelines typically takes 4 to 8
-                                        weeks; a focused logo refresh can be completed in 2 to 3 weeks.[reference:1]
+                                        Most branding projects take 3 to 8 weeks depending on scope.
+                                        A full identity system with strategy, messaging, and brand
+                                        guidelines typically takes 4 to 8 weeks; a focused logo
+                                        refresh can be completed in 2 to 3 weeks. Timeline depends on
+                                        the number of deliverables, feedback turnaround, and revision
+                                        rounds.
                                     </p>
                                 </div>
                             </details>
@@ -1011,10 +1378,12 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        Pricing depends on scope, not just hours. A logo-only project costs
-                                        significantly less than a full identity system with strategy, messaging, and
-                                        brand guidelines. We provide a clear, itemized quote based on your specific
-                                        deliverables—no hidden fees.[reference:3][reference:4]
+                                        Pricing depends on scope, not just hours. A logo-only project
+                                        costs significantly less than a full identity system with
+                                        strategy, messaging, and brand guidelines. We provide a
+                                        clear, itemized quote based on your specific deliverables —
+                                        no hidden fees, no surprise line items, and no paying for
+                                        services you don't need.
                                     </p>
                                 </div>
                             </details>
@@ -1037,11 +1406,13 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        Yes. We can refresh or fully redesign your existing brand while keeping the
-                                        parts that already work for your audience. If your positioning is right but the
-                                        visual execution is dated or inconsistent, a refresh is often enough; if your
-                                        market or promise has fundamentally changed, a full rebrand is the better
-                                        path.[reference:5]
+                                        Yes. We can refresh or fully redesign your existing brand
+                                        while keeping the parts that already work for your audience.
+                                        If your positioning is right but the visual execution is
+                                        dated or inconsistent, a refresh is often enough; if your
+                                        market or promise has fundamentally changed, a full rebrand
+                                        is the better path. We'll recommend the right scope after
+                                        reviewing your current brand.
                                     </p>
                                 </div>
                             </details>
@@ -1064,9 +1435,11 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        Yes. We provide editable source files and final exports so your team can use
-                                        your identity across every platform. Full ownership of the final files is
-                                        transferred to you upon project completion.[reference:6][reference:7]
+                                        Yes. We provide editable source files (AI, Figma, PSD) and
+                                        final exports (PNG, JPG, SVG, PDF) so your team can use your
+                                        identity across every platform. Full ownership of the final
+                                        files is transferred to you upon project completion — no
+                                        licensing fees, no ongoing charges.
                                     </p>
                                 </div>
                             </details>
@@ -1089,9 +1462,11 @@
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
                                     <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                        Revision rounds are included in every project based on the scope. We typically
-                                        include two to three rounds of refinements so you can fine-tune the identity
-                                        without worrying about extra costs.[reference:8][reference:9]
+                                        Revision rounds are included in every project based on scope.
+                                        We typically include two to three rounds of refinements so you
+                                        can fine-tune the identity without worrying about extra costs.
+                                        Additional rounds beyond the included scope are always quoted
+                                        upfront before any work begins.
                                     </p>
                                 </div>
                             </details>
@@ -1116,7 +1491,7 @@
                 <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
                     data-reveal>
                     <a href="tel:+919328792160" data-magnetic
-                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
                         +91 93287 92160
                         <span
                             class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
