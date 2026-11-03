@@ -32,6 +32,144 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- ══════════ JSON-LD STRUCTURED DATA ══════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://scalixomedia.com/#organization",
+          "name": "Scalixo Media",
+          "url": "https://scalixomedia.com/",
+          "logo": "https://scalixomedia.com/assets/scalixo.png",
+          "description": "Custom website development, design and digital services. Fast, scalable, conversion-focused websites built with modern technology. Based in Ahmedabad, India.",
+          "sameAs": [
+            "https://www.instagram.com/scalixo.media",
+            "https://www.linkedin.com/company/scalixomedia/posts/",
+            "https://www.facebook.com/scalixo.media"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-93287-92160",
+            "contactType": "sales",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "hi"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://scalixomedia.com/#website",
+          "url": "https://scalixomedia.com/",
+          "name": "Scalixo Media",
+          "description": "Custom website development services by Scalixo Media.",
+          "publisher": { "@id": "https://scalixomedia.com/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://scalixomedia.com/web#webpage",
+          "url": "https://scalixomedia.com/web",
+          "name": "Website Development — Scalixo Media",
+          "description": "Custom website development services by Scalixo Media. Fast, scalable, conversion-focused websites built with modern technology. Based in Ahmedabad.",
+          "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+          "about": { "@id": "https://scalixomedia.com/#organization" },
+          "author": { "@id": "https://scalixomedia.com/#author" },
+          "breadcrumb": { "@id": "https://scalixomedia.com/web#breadcrumb" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://scalixomedia.com/assets/scalixo.png"
+          },
+          "datePublished": "2025-01-15",
+          "dateModified": "2025-11-01",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://scalixomedia.com/#author",
+          "name": "Scalixo Media Team",
+          "url": "https://scalixomedia.com/",
+          "worksFor": { "@id": "https://scalixomedia.com/#organization" },
+          "sameAs": [
+            "https://www.linkedin.com/company/scalixomedia/posts/",
+            "https://www.instagram.com/scalixo.media"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://scalixomedia.com/web#service",
+          "name": "Website Development",
+          "serviceType": "Website Development",
+          "provider": { "@id": "https://scalixomedia.com/#organization" },
+          "areaServed": { "@type": "Place", "name": "Ahmedabad" },
+          "description": "End-to-end website development: UI/UX design, frontend development, backend & CMS, e-commerce, speed & SEO, and maintenance & support.",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Web Development Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI / UX Design" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frontend Development" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backend & CMS" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-Commerce" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Speed & SEO" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & Support" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://scalixomedia.com/web#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is included in your web development service?",
+              "acceptedAnswer": { "@type": "Answer", "text": "We provide end-to-end development. This includes UI/UX design, responsive coding, content management system (CMS) setup, basic on-page SEO, contact form integration, and website deployment. We build sites designed to look great and convert visitors into leads." }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a new website cost?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on the number of pages, custom features (like e-commerce or booking systems), and whether you need a template or fully custom design. A standard business website costs significantly less than a complex web application. We provide transparent, fixed-price quotes based on your exact requirements." }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to build a website?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A standard 5-page business website typically takes 3 to 5 weeks from start to launch. E-commerce or custom web applications can take 6 to 10 weeks. The timeline largely depends on how quickly you provide content, feedback, and approvals during the design phase." }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my website be mobile-friendly and SEO-optimized?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Every website we build is fully responsive and tested across devices (mobile, tablet, desktop). We also build with SEO best practices in mind—including clean code structure, fast loading speeds, meta tags, and proper heading hierarchies—so you rank higher on Google." }
+            },
+            {
+              "@type": "Question",
+              "name": "Will I be able to update the website myself?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build our websites on user-friendly CMS platforms (like WordPress, Webflow, or custom dashboards). We provide a training session and video walkthrough so you can easily change text, update images, and add blog posts without needing to know how to code." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you handle domain registration and hosting?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, we can manage the entire setup for you. If you already have a domain and hosting, we will connect them to your new site. If you are starting from scratch, we will help you purchase the domain name, set up secure and fast hosting, and configure your business emails." }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://scalixomedia.com/web#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalixomedia.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Website Development", "item": "https://scalixomedia.com/web" }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" data-page="web" data-footer-only
@@ -42,11 +180,9 @@
 
     <!-- ══════════ CURSOR ══════════ -->
     <div id="cursorRing"
-        class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block">
-    </div>
+        class="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-10 w-10 rounded-full border border-white/30 mix-blend-difference md:block"></div>
     <div id="cursorDot"
-        class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block">
-    </div>
+        class="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-1.5 w-1.5 rounded-full bg-accent mix-blend-difference md:block"></div>
 
     <!-- ═══════════════════════════════════════════════════════════
          HEADER
@@ -102,23 +238,37 @@
 
             <!-- Parallax orbs -->
             <div data-parallax="0.15"
-                class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]">
-            </div>
+                class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]"></div>
             <div data-parallax="-0.1"
-                class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
-            </div>
+                class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"></div>
             <div data-parallax="0.08"
-                class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]">
-            </div>
+                class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]"></div>
 
             <div class="relative mx-auto max-w-[1500px]">
 
-                <!-- Breadcrumb -->
-                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white"
+                <!-- Breadcrumb (semantic nav) -->
+                <nav aria-label="Breadcrumb" class="mb-6" data-hero-breadcrumb>
+                    <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
+                        <li>
+                            <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                        </li>
+                        <li aria-hidden="true" class="text-white/20">/</li>
+                        <li aria-current="page" class="text-white/70">Website Development</li>
+                    </ol>
+                </nav>
+
+                <!-- Byline -->
+                <div class="mb-8 flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40"
                     data-hero-breadcrumb>
-                    <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
-                    <span class="text-white/20">/</span>
-                    <span class="text-white/70">Website Development</span>
+                    <span>By
+                        <a href="https://scalixomedia.com/"
+                            class="text-white/60 underline-offset-4 transition-colors hover:text-accent hover:underline">Scalixo
+                            Media Team</a>
+                    </span>
+                    <span class="h-1 w-1 rounded-full bg-white/20"></span>
+                    <time datetime="2025-11-01">Updated Nov 2025</time>
+                    <span class="h-1 w-1 rounded-full bg-white/20"></span>
+                    <span>Ahmedabad</span>
                 </div>
 
                 <!-- Headline -->
@@ -139,8 +289,10 @@
                     <div class="md:col-span-5" data-hero-sub>
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl">
                             Fast, scalable, conversion-focused websites designed and
-                            engineered for growth. From strategy and design to development
-                            and launch — we handle the full journey.
+                            engineered for growth. We handle the full journey — strategy,
+                            UI/UX design, frontend and backend development, e-commerce,
+                            SEO, and post-launch support — so you can focus on your
+                            business while we build the site that grows it.
                         </p>
 
                         <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -168,8 +320,7 @@
                         </div>
                         <div>
                             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Stack</div>
-                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Modern
-                            </div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">Modern</div>
                         </div>
                         <div>
                             <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
@@ -190,13 +341,11 @@
                 <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
                     <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Design</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span
-                        class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Develop</span>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Develop</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Launch</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span
-                        class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Optimize</span>
+                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Optimize</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Scale</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
@@ -238,8 +387,10 @@
                         </p>
 
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            At Scalixo Media, we build websites with performance, clarity,
-                            and conversion at the centre — not just something that looks
+                            At Scalixo Media, we build websites with
+                            <a href="https://web.dev/vitals/" target="_blank" rel="noopener"
+                                class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">performance</a>,
+                            clarity, and conversion at the centre — not just something that looks
                             good but something that actively grows your business.
                         </p>
 
@@ -290,8 +441,15 @@
                     </div>
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            From strategy and design to development, launch, and ongoing
-                            optimization — the full website lifecycle.
+                            We offer complete web development services that cover the full
+                            lifecycle of a website — strategy, UI/UX design, frontend and
+                            backend engineering, e-commerce builds, speed optimization,
+                            technical SEO, and post-launch maintenance. Whether you need a
+                            marketing site, an online store, or a custom web application,
+                            every engagement is scoped around your business goals and the
+                            conversion outcomes you need. We deliver production-ready code,
+                            documentation, and handover training so your team can operate
+                            the site independently after launch.
                         </p>
                     </div>
                 </div>
@@ -302,8 +460,7 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
@@ -314,8 +471,7 @@
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Clean, modern interfaces designed around user behaviour and your business goals.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>ui-design.tsx</span>
                             </div>
                         </div>
@@ -325,8 +481,7 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
@@ -337,8 +492,7 @@
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Fast, responsive, pixel-perfect frontends built with modern frameworks and clean code.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>frontend.ts</span>
                             </div>
                         </div>
@@ -348,8 +502,7 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
@@ -360,8 +513,7 @@
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Scalable backends, CMS integrations, and admin panels that make content easy to manage.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>backend.ts</span>
                             </div>
                         </div>
@@ -371,21 +523,18 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
-                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">
-                                E-Commerce</h3>
+                            <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">E-Commerce</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Conversion-optimized online stores with secure payments, cart flows, and product
                                 management.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>commerce.ts</span>
                             </div>
                         </div>
@@ -395,8 +544,7 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
@@ -405,10 +553,14 @@
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Speed
                                 &amp; SEO</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
-                                Core Web Vitals, clean markup, and technical SEO baked in from day one.
+                                <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener"
+                                    class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">Core
+                                    Web Vitals</a>, clean markup, and
+                                <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener"
+                                    class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">technical
+                                    SEO</a> baked in from day one.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>perf-seo.ts</span>
                             </div>
                         </div>
@@ -418,8 +570,7 @@
                     <article data-reveal data-glow
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
                         <div
-                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div
                                 class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
@@ -430,8 +581,7 @@
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
                                 Ongoing updates, monitoring, backups, and improvements after launch.
                             </p>
-                            <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                            <div class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
                                 <span>maintain.ts</span>
                             </div>
                         </div>
@@ -459,7 +609,15 @@
                     </div>
                     <div class="mt-8 md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-base leading-relaxed text-white/50">
-                            Battle-tested tech chosen for performance, longevity, and developer experience.
+                            We build websites using a modern, battle-tested technology stack
+                            chosen for performance, longevity, and developer experience.
+                            HTML5 and CSS3 provide the semantic, accessible foundation.
+                            JavaScript and React power fast, interactive frontends that
+                            scale from MVP to enterprise. Node.js handles the backend, APIs,
+                            and integrations. Every technology we choose is actively
+                            maintained, widely adopted, and supported by extensive
+                            documentation — so your site remains easy to maintain, extend,
+                            and hand off to any future team.
                         </p>
                     </div>
                 </div>
@@ -472,14 +630,15 @@
                     <div data-glow
                         class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div
-                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-html5 text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">HTML5
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener"
+                                    class="transition-colors hover:text-accent">HTML5</a>
                             </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">Semantic, accessible markup that
                                 renders perfectly everywhere.</p>
@@ -495,14 +654,16 @@
                     <div data-glow
                         class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div
-                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-css3-alt text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">CSS3</h3>
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener"
+                                    class="transition-colors hover:text-accent">CSS3</a>
+                            </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">Modern layout, animation, and
                                 responsive styling.</p>
                             <div
@@ -517,15 +678,16 @@
                     <div data-glow
                         class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div
-                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-js text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
-                                JavaScript</h3>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener"
+                                    class="transition-colors hover:text-accent">JavaScript</a>
+                            </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">Interactive frontends and full-stack
                                 apps with modern JS.</p>
                             <div
@@ -540,14 +702,15 @@
                     <div data-glow
                         class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div
-                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-react text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">04</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">React
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                <a href="https://react.dev/" target="_blank" rel="noopener"
+                                    class="transition-colors hover:text-accent">React</a>
                             </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">Component-driven frontends that scale
                                 from MVP to enterprise.</p>
@@ -563,14 +726,15 @@
                     <div data-glow
                         class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
                         <div
-                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
                                 <i class="fa-brands fa-node-js text-4xl text-accent"></i>
                                 <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">05</span>
                             </div>
-                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Node.js
+                            <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
+                                <a href="https://nodejs.org/en" target="_blank" rel="noopener"
+                                    class="transition-colors hover:text-accent">Node.js</a>
                             </h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">Fast, event-driven backends for APIs,
                                 tools, and integrations.</p>
@@ -604,15 +768,21 @@
                     </div>
                     <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            A clear six-step process from discovery to launch and beyond.
+                            Our website development process follows six clear stages:
+                            discovery and research, strategy and sitemap, UI/UX design,
+                            development and QA, launch and handover, and ongoing
+                            optimization. Each stage has defined deliverables and
+                            checkpoints, so you always know where the project stands. The
+                            process is designed to eliminate surprises, reduce rework, and
+                            keep the project aligned with your business goals. Most business
+                            websites are delivered within 3–6 weeks, while e-commerce and
+                            custom applications typically take longer depending on scope.
                         </p>
                     </div>
                 </div>
 
                 <div class="relative">
-                    <div
-                        class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block">
-                    </div>
+                    <div class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block"></div>
                     <div id="processLine"
                         class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block"
                         style="height: 0;"></div>
@@ -629,8 +799,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    01</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 01</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     Discovery &amp; Research</h3>
@@ -660,8 +829,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    02</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 02</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     Strategy &amp; Sitemap</h3>
@@ -691,8 +859,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    03</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 03</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     UI / UX Design</h3>
@@ -723,8 +890,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    04</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 04</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     Development &amp; QA</h3>
@@ -754,8 +920,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    05</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 05</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     Launch &amp; Handover</h3>
@@ -785,8 +950,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
-                                    06</span>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step 06</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                                     Optimize &amp; Scale</h3>
@@ -827,9 +991,14 @@
                             Websites built<br />to perform, not<br />just exist.
                         </h2>
                         <p class="mt-6 leading-relaxed text-white/50">
-                            We combine design, development, speed, SEO, and conversion
-                            thinking into every build — so your website actively contributes
-                            to growth.
+                            We build websites to perform, not just exist. That means
+                            combining clean design with fast load times, technical SEO,
+                            responsive layouts, conversion-focused structure, maintainable
+                            code, and reliable post-launch support. Every decision — from
+                            the framework we choose to the way we structure headings and
+                            forms — is made with performance and growth in mind. The result
+                            is a site that ranks, converts, and stays easy to maintain as
+                            your business evolves, instead of becoming technical debt.
                         </p>
                         <a href="/contact" data-magnetic
                             class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
@@ -848,8 +1017,8 @@
                                     <i class="fa-solid fa-bolt text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Performance
-                                        First</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Performance
+                                        First</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Fast load times and Core Web
                                         Vitals treated as baseline.</p>
                                 </div>
@@ -861,8 +1030,8 @@
                                     <i class="fa-solid fa-mobile-screen text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Fully
-                                        Responsive</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Fully
+                                        Responsive</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Looks and works perfectly on
                                         every device size.</p>
                                 </div>
@@ -874,9 +1043,13 @@
                                     <i class="fa-solid fa-magnifying-glass text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">SEO Ready</h4>
-                                    <p class="mt-2 text-sm leading-relaxed text-white/45">Clean structure and technical
-                                        SEO from day one.</p>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">SEO Ready</h3>
+                                    <p class="mt-2 text-sm leading-relaxed text-white/45">
+                                        Clean structure and
+                                        <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener"
+                                            class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">technical
+                                            SEO</a> from day one.
+                                    </p>
                                 </div>
                             </div>
 
@@ -886,8 +1059,8 @@
                                     <i class="fa-solid fa-bullseye text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Conversion
-                                        Focused</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Conversion
+                                        Focused</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Layouts designed to turn
                                         visitors into enquiries.</p>
                                 </div>
@@ -899,7 +1072,7 @@
                                     <i class="fa-solid fa-code text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Clean Code</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Clean Code</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Maintainable, scalable code
                                         your future team will thank you for.</p>
                                 </div>
@@ -911,8 +1084,8 @@
                                     <i class="fa-solid fa-headset text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Post-Launch
-                                        Support</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Post-Launch
+                                        Support</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">We stay available after launch
                                         for updates and fixes.</p>
                                 </div>
@@ -943,7 +1116,14 @@
                     </div>
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            Every project ships with these outcomes built in.
+                            A great website does more than look good — it actively drives
+                            business outcomes. It loads quickly so visitors don't bounce,
+                            follows SEO best practices so Google can rank it, uses
+                            conversion-focused layouts to turn visitors into enquiries, and
+                            builds brand trust on first contact. It's also easy for your
+                            team to update, and built on a scalable foundation so you can
+                            add pages, features, and integrations as your business grows.
+                            Every project we ship includes these outcomes as standard.
                         </p>
                     </div>
                 </div>
@@ -953,8 +1133,7 @@
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -967,22 +1146,23 @@
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Higher Search Rankings</h3>
-                            <p class="mt-4 text-sm leading-relaxed text-white/45">Technical SEO and clean structure help
-                                Google understand your site.</p>
+                            <p class="mt-4 text-sm leading-relaxed text-white/45">
+                                <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener"
+                                    class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">Technical
+                                    SEO</a> and clean structure help Google understand your site.
+                            </p>
                         </div>
                     </div>
 
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">More
@@ -995,8 +1175,7 @@
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -1009,8 +1188,7 @@
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Easy
@@ -1023,8 +1201,7 @@
                     <div data-reveal
                         class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                        </div>
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                         <div class="relative">
                             <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -1039,7 +1216,7 @@
         </section>
 
         <!-- ═══════════════════════════════════════════════════════════
-             FEATURED METRIC — conic ring + GSAP counters
+             FEATURED METRIC
         ═══════════════════════════════════════════════════════════ -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
@@ -1071,8 +1248,7 @@
                                         <div id="metricRing" class="ring-progress absolute inset-0 rounded-full"
                                             style="--p: 0;"></div>
                                         <div class="absolute inset-[14px] rounded-full bg-ink"></div>
-                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]">
-                                        </div>
+                                        <div class="absolute inset-[14px] rounded-full border border-white/[0.04]"></div>
 
                                         <div class="absolute inset-0 flex flex-col items-center justify-center">
                                             <span
@@ -1086,14 +1262,17 @@
                                 </div>
 
                                 <div class=" text-center">
-                                    <div
-                                        class=" mt-5 font-display text-xl uppercase leading-tight tracking-tight text-white">
-                                        Lighthouse Score</div>
+                                    <div class=" mt-5 font-display text-xl uppercase leading-tight tracking-tight text-white">
+                                        <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank"
+                                            rel="noopener" class="transition-colors hover:text-accent">Lighthouse Score</a>
+                                    </div>
                                     <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
-                                        Averaged across all projects · 2025</div>
+                                        Averaged across all projects · 2025 ·
+                                        <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener"
+                                            class="underline underline-offset-2 decoration-white/20 transition-colors hover:text-accent hover:decoration-accent">Verified</a>
+                                    </div>
                                 </div>
                             </div>
-
 
                         </div>
                     </div>
@@ -1102,8 +1281,7 @@
                         <div data-reveal
                             class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-accent/40 hover:bg-white/[0.04] md:p-8">
                             <div
-                                class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
-                            </div>
+                                class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"></div>
                             <div class="relative">
                                 <div class="flex items-start justify-between gap-6">
                                     <div>
@@ -1189,162 +1367,217 @@
         </section>
 
         <!-- ═══════════════════════════════════════════════════════════
-     FAQs — Web Development
-═══════════════════════════════════════════════════════════ -->
-<section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+             FAQs — Web Development
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
 
-    <!-- Ambient Background Glow -->
-    <div class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]"></div>
-
-    <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
-
-            <!-- Left Side: Sticky Heading & CTA -->
-            <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
-                <div class="flex items-center gap-3">
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">08</span>
-                    <span class="h-px w-8 bg-white/20"></span>
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-white/50">FAQs</span>
-                </div>
-
-                <h2 class="mt-6 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-5xl lg:text-6xl" data-split>
-                    Questions before<br />building your website?
-                </h2>
-
-                <p class="mt-6 max-w-md leading-relaxed text-white/50">
-                    Here are common questions businesses ask before starting their web development project with Scalixo Media.
-                </p>
-
-                <a href="/contact" data-magnetic
-                    class="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-[0_10px_30px_-10px_rgba(28,88,227,0.3)]">
-                    Ask Your Question
-                    <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1.5"></i>
-                </a>
+            <!-- Ambient Background Glow -->
+            <div
+                class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]">
             </div>
 
-            <!-- Right Side: Accordions -->
-            <div class="lg:col-span-7">
-                <div class="space-y-3">
+            <div class="relative mx-auto max-w-[1500px]">
+                <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
-                    <!-- Q1 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                What is included in your web development service?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                We provide end-to-end development. This includes UI/UX design, responsive coding, content management system (CMS) setup, basic on-page SEO, contact form integration, and website deployment. We build sites designed to look great and convert visitors into leads.
-                            </p>
+                    <!-- Left Side: Sticky Heading & CTA -->
+                    <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">08</span>
+                            <span class="h-px w-8 bg-white/20"></span>
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-white/50">FAQs</span>
                         </div>
-                    </details>
 
-                    <!-- Q2 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                How much does a new website cost?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Pricing depends on the number of pages, custom features (like e-commerce or booking systems), and whether you need a template or fully custom design. A standard business website costs significantly less than a complex web application. We provide transparent, fixed-price quotes based on your exact requirements.
-                            </p>
+                        <h2 class="mt-6 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-5xl lg:text-6xl"
+                            data-split>
+                            Questions before<br />building your website?
+                        </h2>
+
+                        <p class="mt-6 max-w-md leading-relaxed text-white/50">
+                            Below are answers to the questions businesses most often ask
+                            before starting a web development project with Scalixo Media —
+                            covering what's included, pricing, timelines, mobile-friendliness
+                            and SEO, content editing, and domain and hosting setup. If your
+                            question isn't covered here, contact us and we'll answer it
+                            directly.
+                        </p>
+
+                        <a href="/contact" data-magnetic
+                            class="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-[0_10px_30px_-10px_rgba(28,88,227,0.3)]">
+                            Ask Your Question
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Right Side: Accordions -->
+                    <div class="lg:col-span-7">
+                        <div class="space-y-3">
+
+                            <!-- Q1 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        What is included in your web development service?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        We provide end-to-end development. This includes UI/UX design, responsive
+                                        coding, content management system (CMS) setup, basic on-page SEO, contact
+                                        form integration, and website deployment. We build sites designed to look
+                                        great and convert visitors into leads.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q2 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        How much does a new website cost?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Pricing depends on the number of pages, custom features (like e-commerce or
+                                        booking systems), and whether you need a template or fully custom design. A
+                                        standard business website costs significantly less than a complex web
+                                        application. We provide transparent, fixed-price quotes based on your exact
+                                        requirements.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q3 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        How long does it take to build a website?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        A standard 5-page business website typically takes 3 to 5 weeks from start to
+                                        launch. E-commerce or custom web applications can take 6 to 10 weeks. The
+                                        timeline largely depends on how quickly you provide content, feedback, and
+                                        approvals during the design phase.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q4 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        Will my website be mobile-friendly and SEO-optimized?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Absolutely. Every website we build is fully responsive and tested across
+                                        devices (mobile, tablet, desktop). We also build with
+                                        <a href="https://developers.google.com/search/docs/essentials" target="_blank"
+                                            rel="noopener"
+                                            class="underline underline-offset-2 decoration-white/25 transition-colors hover:text-accent hover:decoration-accent">SEO
+                                            best practices</a> in mind—including clean code structure, fast loading
+                                        speeds, meta tags, and proper heading hierarchies—so you rank higher on Google.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q5 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        Will I be able to update the website myself?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Yes. We build our websites on user-friendly CMS platforms (like WordPress,
+                                        Webflow, or custom dashboards). We provide a training session and video
+                                        walkthrough so you can easily change text, update images, and add blog posts
+                                        without needing to know how to code.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q6 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        Do you handle domain registration and hosting?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Yes, we can manage the entire setup for you. If you already have a domain and
+                                        hosting, we will connect them to your new site. If you are starting from
+                                        scratch, we will help you purchase the domain name, set up secure and fast
+                                        hosting, and configure your business emails.
+                                    </p>
+                                </div>
+                            </details>
+
                         </div>
-                    </details>
-
-                    <!-- Q3 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                How long does it take to build a website?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                A standard 5-page business website typically takes 3 to 5 weeks from start to launch. E-commerce or custom web applications can take 6 to 10 weeks. The timeline largely depends on how quickly you provide content, feedback, and approvals during the design phase.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q4 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                Will my website be mobile-friendly and SEO-optimized?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Absolutely. Every website we build is fully responsive and tested across devices (mobile, tablet, desktop). We also build with SEO best practices in mind—including clean code structure, fast loading speeds, meta tags, and proper heading hierarchies—so you rank higher on Google.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q5 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                Will I be able to update the website myself?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Yes. We build our websites on user-friendly CMS platforms (like WordPress, Webflow, or custom dashboards). We provide a training session and video walkthrough so you can easily change text, update images, and add blog posts without needing to know how to code.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q6 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                Do you handle domain registration and hosting?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Yes, we can manage the entire setup for you. If you already have a domain and hosting, we will connect them to your new site. If you are starting from scratch, we will help you purchase the domain name, set up secure and fast hosting, and configure your business emails.
-                            </p>
-                        </div>
-                    </details>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- ═══════════════════════════════════════════════════════════
              FINAL CTA
@@ -1359,6 +1592,13 @@
                 <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
                     Let's build<br />something that<br />actually converts<span class="text-accent">.</span>
                 </h2>
+
+                <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    Tell us about your project and we'll come back with a clear scope,
+                    timeline, and fixed-price quote — usually within 48 hours. No
+                    obligation, no sales pressure, just a direct conversation about what
+                    your website needs to achieve.
+                </p>
 
                 <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
                     data-reveal>
