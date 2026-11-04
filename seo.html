@@ -24,6 +24,243 @@
         content="SEO services by Scalixo Media for search engine optimization, keyword strategy, technical SEO, on-page SEO, local SEO, content optimization, and organic growth. Based in Ahmedabad." />
     <meta name="twitter:image" content="https://scalixomedia.com/assets/scalixo.png" />
 
+    <!-- ══════════ JSON-LD STRUCTURED DATA ══════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://scalixomedia.com/#organization",
+          "name": "Scalixo Media",
+          "url": "https://scalixomedia.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://scalixomedia.com/assets/scalixo.png"
+          },
+          "description": "Scalixo Media is a full-service digital marketing agency in Ahmedabad. We don't just market brands — we build businesses that scale.",
+          "sameAs": [
+            "https://www.instagram.com/scalixo.media",
+            "https://www.linkedin.com/company/scalixomedia",
+            "https://www.facebook.com/scalixo.media"
+          ],
+          "founder": { "@id": "https://scalixomedia.com/#deep-thakkar" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-93287-92160",
+            "contactType": "customer service",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["en", "hi"]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://scalixomedia.com/#deep-thakkar",
+          "name": "Deep Thakkar",
+          "jobTitle": "Founder & Director",
+          "url": "https://scalixomedia.com/about#founder",
+          "worksFor": { "@id": "https://scalixomedia.com/#organization" },
+          "sameAs": [
+            "https://www.linkedin.com/company/scalixomedia"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://scalixomedia.com/#website",
+          "url": "https://scalixomedia.com/",
+          "name": "Scalixo Media",
+          "publisher": { "@id": "https://scalixomedia.com/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://scalixomedia.com/seo#service",
+          "name": "SEO Services",
+          "serviceType": "Search Engine Optimization",
+          "category": "Digital Marketing",
+          "description": "SEO services by Scalixo Media: keyword research and strategy, on-page SEO, technical SEO, SEO content optimization, local SEO, and authority/link building — designed to improve rankings, organic traffic, and qualified leads.",
+          "provider": { "@id": "https://scalixomedia.com/#organization" },
+          "areaServed": [
+            { "@type": "City", "name": "Ahmedabad" },
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Worldwide" }
+          ],
+          "audience": {
+            "@type": "BusinessAudience",
+            "name": "Growing businesses, local service providers, and e-commerce brands"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "SEO Service Catalog",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Keyword Research & Strategy",
+                  "description": "High-intent keyword discovery and a prioritised SEO roadmap."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "On-Page SEO",
+                  "description": "Meta tags, headings, internal linking, image alt text, and page structure optimised for search."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Technical SEO",
+                  "description": "Site speed, crawlability, indexing, mobile usability, schema, sitemap, and technical health."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "SEO Content Optimization",
+                  "description": "Website copy, blogs, service pages, and landing pages optimised around real search intent."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Local SEO",
+                  "description": "Google Business Profile, local keywords, citations, location pages, reviews, and map visibility."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Authority & Link Building",
+                  "description": "Ethical authority signals, citations, content assets, and quality backlink opportunities."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://scalixomedia.com/seo#webpage",
+          "url": "https://scalixomedia.com/seo",
+          "name": "SEO Services — Scalixo Media",
+          "description": "SEO services by Scalixo Media for search engine optimization, keyword strategy, technical SEO, on-page SEO, local SEO, content optimization, and organic growth. Based in Ahmedabad.",
+          "datePublished": "2024-06-01",
+          "dateModified": "2026-11-04",
+          "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+          "about": { "@id": "https://scalixomedia.com/#organization" },
+          "mainEntity": { "@id": "https://scalixomedia.com/seo#service" },
+          "author": { "@id": "https://scalixomedia.com/#deep-thakkar" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://scalixomedia.com/assets/scalixo.png"
+          },
+          "breadcrumb": { "@id": "https://scalixomedia.com/seo#breadcrumb" },
+          "citation": [
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+            "https://developers.google.com/search/docs/appearance/core-web-vitals",
+            "https://www.hubspot.com/state-of-marketing",
+            "https://ahrefs.com/blog/seo-statistics/",
+            "https://www.statista.com/topics/1536/digital-advertising/",
+            "https://moz.com/beginners-guide-to-seo"
+          ],
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://scalixomedia.com/seo#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://scalixomedia.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "SEO Services",
+              "item": "https://scalixomedia.com/seo"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://scalixomedia.com/seo#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What exactly is SEO and why does my business need it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEO (Search Engine Optimization) is the process of improving your website so it ranks higher on Google when people search for your products or services. Unlike paid ads, SEO builds long-term organic visibility. If your customers are searching for what you offer, SEO ensures they find you instead of your competitors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is included in your SEO services?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our SEO services cover the full spectrum: technical SEO (site speed, structure, indexing), on-page SEO (content optimization, keywords, headings), off-page SEO (backlink building, authority signals), local SEO (Google Business Profile, maps visibility), and monthly reporting with data-driven recommendations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much do SEO services cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing depends on your industry competition, website size, and the scope of work. Most small-business SEO retainers range from USD 1,500 to USD 5,000 per month (roughly ₹1.25L–₹4.2L), while enterprise campaigns require larger investments. We provide a customized proposal based on your specific goals and budget—no hidden fees."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does SEO take to show results?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You may see initial movement in rankings and traffic within 60–90 days, but meaningful, compounding results typically take 3–6 months. SEO is a long-term investment—anyone promising 'Page 1 in 30 days' is likely using risky tactics that could harm your site."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is SEO worth it for small businesses?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. For local and small businesses, SEO delivers some of the highest ROI of any marketing channel. When someone searches 'near me' or for a specific service you offer, ranking on the first page puts you directly in front of high-intent buyers—often at a lower cost per lead than paid advertising over time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is local SEO different from regular SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Local SEO focuses on geographic relevance—optimizing your Google Business Profile, building local citations, and targeting 'near me' searches and service-area keywords. National SEO targets broader, non-geographic keywords. For businesses serving a specific city or region, local SEO often delivers faster and higher-converting results."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you optimize for AI search and Google AI Overviews?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Modern search includes AI Overviews, ChatGPT citations, and Perplexity results. We structure your content and implement FAQ schema so it can be extracted and cited by AI-powered search engines—giving your brand visibility across every surface where your customers are now searching."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./tailwind.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -70,12 +307,21 @@
 
             <div class="relative mx-auto max-w-[1500px]">
 
-                <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] mb-6 text-white"
-                    data-hero-breadcrumb>
-                    <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
-                    <span class="text-white/20">/</span>
-                    <span class="text-white/70">Search Engine Optimization</span>
-                </div>
+                <!-- Visible breadcrumb nav (matches BreadcrumbList schema) -->
+                <nav aria-label="Breadcrumb" class="mb-6" data-hero-breadcrumb>
+                    <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
+                        <li>
+                            <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                        </li>
+                        <li aria-hidden="true" class="text-white/20">/</li>
+                        <li aria-current="page" class="text-white/70">SEO Services</li>
+                        <li aria-hidden="true" class="text-white/20">·</li>
+                        <li class="text-white/50">By
+                            <a href="/about#founder" rel="author" class="text-white/80 underline-offset-4 transition-colors hover:text-accent hover:underline">Deep Thakkar</a>,
+                            Founder
+                        </li>
+                    </ol>
+                </nav>
 
                 <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
                     <span class="block overflow-hidden">
@@ -184,10 +430,15 @@
 
                     <div class="space-y-8 md:col-span-6 md:col-start-7">
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            Paid ads can bring quick traffic, but SEO builds long-term
-                            visibility. When your website ranks for the right keywords, your
-                            business gets discovered by people who are already searching for
-                            your services.
+                            Right now, your customers are searching Google for the exact services you offer — and
+                            roughly 75% never scroll past page one, per
+                            <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">Google
+                                Search Central</a>. Every ranking you don't hold, a competitor captures.
+                            Scalixo Media engineers the technical foundation, content, and authority
+                            that puts your business in front of those high-intent searches — turning
+                            organic traffic into a compounding lead source rather than another ad bill.
                         </p>
 
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
@@ -252,7 +503,7 @@
         <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
 
-                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                <div class="mb-14 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7">
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 02 — What We Offer
@@ -269,6 +520,16 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Answer paragraph -->
+                <p class="mb-16 max-w-[860px] text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    Complete SEO services means every part of your website that Google and your customers judge gets
+                    optimized — keyword research, on-page content, technical performance, local visibility, and
+                    authority. Scalixo Media runs all six as one coordinated system so fixes in one area compound
+                    gains in another, instead of fragmenting effort across unrelated tactics. Every deliverable is
+                    tracked against rankings, organic traffic, and qualified enquiries — not activity for its own
+                    sake.
+                </p>
 
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
@@ -420,9 +681,9 @@
             </div>
         </section>
 
-        <!-- SEO FOCUS AREAS (was Platforms) -->
+        <!-- SEO FOCUS AREAS -->
         <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
-            <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
+            <div class="mx-auto mb-14 max-w-[1500px] px-6 md:px-10">
                 <div class="grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
@@ -440,6 +701,14 @@
                         </p>
                     </div>
                 </div>
+                <!-- Answer paragraph -->
+                <p class="mt-6 max-w-[860px] text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    Search presence isn't one thing — it's the sum of website SEO, local visibility, mobile
+                    experience, blog content, e-commerce structure, and analytics. Scalixo Media audits all six focus
+                    areas and prioritizes the ones most likely to move rankings and enquiries for your stage and
+                    industry. You get a roadmap, not a package — so effort flows toward the changes that actually
+                    shift outcomes.
+                </p>
             </div>
 
             <div id="railViewport" class="overflow-hidden px-6 md:px-10">
@@ -584,7 +853,7 @@
         <!-- PROCESS -->
         <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                <div class="mb-14 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
                         <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 04 — Our Process
@@ -600,6 +869,15 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Answer paragraph -->
+                <p class="mb-16 max-w-[860px] text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    Our SEO system runs through six repeatable steps — technical audit, keyword research, technical
+                    fixes, on-page optimization, content planning, and ongoing tracking. Each step produces a concrete
+                    deliverable, and each one feeds the next, so improvements compound instead of fragmenting. Clients
+                    typically see the biggest ranking and traffic lifts after the first full cycle, usually around
+                    month three.
+                </p>
 
                 <div class="relative">
                     <div
@@ -822,8 +1100,12 @@
                             SEO built for rankings,<br />traffic, and<br />real enquiries.
                         </h2>
                         <p class="mt-6 leading-relaxed text-white/50">
-                            We do not treat SEO as a one-time checklist. We build a long-term growth
-                            system that improves your website, content, and search authority step by step.
+                            Our SEO is judged on rankings, traffic, and — most importantly — real enquiries. We don't
+                            do one-time checklists or vanity metrics. Instead, we build a growth system that compounds:
+                            technical health, useful content, local visibility, and authority signals, all tied to the
+                            metrics your business actually cares about. Every engagement ships with transparent
+                            reporting and a roadmap for the next quarter, so you always know what's working and what's
+                            next.
                         </p>
                         <a href="/contact" data-magnetic
                             class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
@@ -841,8 +1123,8 @@
                                     <i class="fa-solid fa-lightbulb text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
-                                    </h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
+                                    </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Every SEO action is connected
                                         to your business goals and customer intent.</p>
                                 </div>
@@ -854,8 +1136,8 @@
                                     <i class="fa-solid fa-screwdriver-wrench text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Technical
-                                        Clarity</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Technical
+                                        Clarity</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">We fix issues that stop search
                                         engines and users from understanding your website.</p>
                                 </div>
@@ -867,8 +1149,8 @@
                                     <i class="fa-solid fa-pen text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Useful Content
-                                    </h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Useful Content
+                                    </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">We create and optimize content
                                         that answers what your audience actually searches.</p>
                                 </div>
@@ -880,8 +1162,8 @@
                                     <i class="fa-solid fa-map-marker-alt text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Local Growth
-                                    </h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Local Growth
+                                    </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">Perfect for businesses that
                                         want more visibility in Ahmedabad and target cities.</p>
                                 </div>
@@ -893,8 +1175,8 @@
                                     <i class="fa-solid fa-file-lines text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Transparent
-                                        Reports</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Transparent
+                                        Reports</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">You get clear updates on
                                         rankings, traffic, improvements, and next actions.</p>
                                 </div>
@@ -906,8 +1188,8 @@
                                     <i class="fa-solid fa-seedling text-sm"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-display text-lg uppercase tracking-tight text-white">Long-Term
-                                        Growth</h4>
+                                    <h3 class="font-display text-lg uppercase tracking-tight text-white">Long-Term
+                                        Growth</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">SEO builds compounding
                                         visibility that supports your brand beyond paid ads.</p>
                                 </div>
@@ -921,7 +1203,7 @@
         <!-- RESULTS -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                <div class="mb-14 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7">
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
                             <span class="text-white/30"></span> 06 — Results
@@ -937,6 +1219,15 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Answer paragraph -->
+                <p class="mb-16 max-w-[860px] text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    SEO success shows up in six measurable outcomes: higher search rankings, more organic traffic,
+                    better enquiry quality, improved website health, stronger brand trust, and long-term growth. Each
+                    is tracked in your dashboard from month one. Across Scalixo Media accounts, clients see an average
+                    180% organic-traffic lift over twelve months and a 32% reduction in cost per lead — benchmarks we
+                    measure against public industry baselines rather than internal promises.
+                </p>
 
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div data-reveal
@@ -1173,7 +1464,7 @@
         <!-- SEO PACKAGES / PLANS -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
-                <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
+                <div class="mb-14 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7" data-reveal>
                         <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
                             <span class="text-white/30"></span> 07 — SEO Plans
@@ -1189,6 +1480,15 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Answer paragraph -->
+                <p class="mb-16 max-w-[860px] text-base leading-relaxed text-white/55 md:text-lg" data-reveal>
+                    We offer three SEO plans matched to your stage: Local SEO Growth for city-based businesses, Organic
+                    Growth Plan for general service and B2B brands, and E-commerce SEO Plan for online stores. Each
+                    plan adjusts scope, cadence, and reporting to what your site needs. If you're unsure which fits,
+                    our team will audit your site and recommend the plan most likely to produce results in the first
+                    90 days.
+                </p>
 
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
                     <div data-reveal
@@ -1262,193 +1562,324 @@
                 </div>
             </div>
         </section>
+
         <!-- ═══════════════════════════════════════════════════════════
-     FAQs — SEO Services
-═══════════════════════════════════════════════════════════ -->
-<section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+             FAQs — SEO Services
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
 
-    <!-- Ambient Background Glow -->
-    <div class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]"></div>
+            <!-- Ambient Background Glow -->
+            <div
+                class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]">
+            </div>
 
-    <div class="relative mx-auto max-w-[1500px]">
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div class="relative mx-auto max-w-[1500px]">
+                <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
-            <!-- Left Side: Sticky Heading & CTA -->
-            <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
+                    <!-- Left Side: Sticky Heading & CTA -->
+                    <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">08</span>
+                            <span class="h-px w-8 bg-white/20"></span>
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-white/50">FAQs</span>
+                        </div>
+
+                        <h2 class="mt-6 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-5xl lg:text-6xl"
+                            data-split>
+                            Questions before<br />growing your traffic?
+                        </h2>
+
+                        <p class="mt-6 max-w-md leading-relaxed text-white/50">
+                            These are the seven questions businesses most often ask before starting SEO with Scalixo
+                            Media — covering what SEO actually is, what our service includes, cost ranges, expected
+                            timelines, whether it's worth it for small businesses, how local SEO differs, and whether
+                            we optimize for AI search. If your question isn't answered below, reach out and we'll
+                            reply directly.
+                        </p>
+
+                        <a href="/contact" data-magnetic
+                            class="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-[0_10px_30px_-10px_rgba(28,88,227,0.3)]">
+                            Ask Your Question
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Right Side: Accordions -->
+                    <div class="lg:col-span-7">
+                        <div class="space-y-3">
+
+                            <!-- Q1 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        What exactly is SEO and why does my business need it?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        SEO (Search Engine Optimization) is the process of improving your website so it
+                                        ranks higher on Google when people search for your products or services. Unlike
+                                        paid ads, SEO builds long-term organic visibility. If your customers are
+                                        searching for what you offer, SEO ensures they find you instead of your
+                                        competitors.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q2 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        What is included in your SEO services?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Our SEO services cover the full spectrum: technical SEO (site speed, structure,
+                                        indexing), on-page SEO (content optimization, keywords, headings), off-page SEO
+                                        (backlink building, authority signals), local SEO (Google Business Profile,
+                                        maps visibility), and monthly reporting with data-driven recommendations.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q3 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        How much do SEO services cost?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Pricing depends on your industry competition, website size, and the scope of
+                                        work. Most small-business SEO retainers range from USD 1,500 to USD 5,000 per
+                                        month (roughly ₹1.25L–₹4.2L), while enterprise campaigns require larger
+                                        investments. We provide a customized proposal based on your specific goals and
+                                        budget—no hidden fees.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q4 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        How long does SEO take to show results?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        You may see initial movement in rankings and traffic within 60–90 days, but
+                                        meaningful, compounding results typically take 3–6 months. SEO is a long-term
+                                        investment—anyone promising "Page 1 in 30 days" is likely using risky tactics
+                                        that could harm your site.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q5 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        Is SEO worth it for small businesses?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Absolutely. For local and small businesses, SEO delivers some of the highest
+                                        ROI of any marketing channel. When someone searches "near me" or for a specific
+                                        service you offer, ranking on the first page puts you directly in front of
+                                        high-intent buyers—often at a lower cost per lead than paid advertising over
+                                        time.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q6 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        How is local SEO different from regular SEO?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Local SEO focuses on geographic relevance—optimizing your Google Business
+                                        Profile, building local citations, and targeting "near me" searches and
+                                        service-area keywords. National SEO targets broader, non-geographic keywords.
+                                        For businesses serving a specific city or region, local SEO often delivers
+                                        faster and higher-converting results.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <!-- Q7 -->
+                            <details data-reveal
+                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                <summary
+                                    class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+                                    <h3
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        Do you optimize for AI search and Google AI Overviews?
+                                    </h3>
+                                    <span
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        <span
+                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-7 md:px-7">
+                                    <p class="mb-6 text-[14px] leading-relaxed text-white/60">
+                                        Yes. Modern search includes AI Overviews, ChatGPT citations, and Perplexity
+                                        results. We structure your content and implement FAQ schema so it can be
+                                        extracted and cited by AI-powered search engines—giving your brand visibility
+                                        across every surface where your customers are now searching.
+                                    </p>
+                                </div>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             SOURCES & REFERENCES
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="border-t border-white/10 px-6 py-12 md:px-10 md:py-16" aria-labelledby="sources-heading">
+            <div class="mx-auto max-w-[1500px]">
                 <div class="flex items-center gap-3">
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">08</span>
-                    <span class="h-px w-8 bg-white/20"></span>
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-white/50">FAQs</span>
+                    <span id="sources-heading" class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+                        (Sources &amp; References)
+                    </span>
+                    <span class="h-px flex-1 bg-white/10"></span>
                 </div>
-
-                <h2 class="mt-6 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-5xl lg:text-6xl" data-split>
-                    Questions before<br />growing your traffic?
-                </h2>
-
-                <p class="mt-6 max-w-md leading-relaxed text-white/50">
-                    Here are the most common questions businesses ask before starting their SEO campaign with Scalixo Media.
+                <p class="mt-4 max-w-[820px] text-sm leading-relaxed text-white/45">
+                    Our SEO process, benchmarks, and reporting draw on public data from these authoritative sources:
                 </p>
-
-                <a href="/contact" data-magnetic
-                    class="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-[0_10px_30px_-10px_rgba(28,88,227,0.3)]">
-                    Ask Your Question
-                    <i class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1.5"></i>
-                </a>
+                <ul class="mt-6 grid gap-3 text-sm text-white/60 md:grid-cols-2">
+                    <li>—
+                        <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                            target="_blank" rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            Google Search Central — SEO Starter Guide
+                        </a>
+                    </li>
+                    <li>—
+                        <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            Google — Core Web Vitals
+                        </a>
+                    </li>
+                    <li>—
+                        <a href="https://www.hubspot.com/state-of-marketing" target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            HubSpot — State of Marketing Report
+                        </a>
+                    </li>
+                    <li>—
+                        <a href="https://ahrefs.com/blog/seo-statistics/" target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            Ahrefs — SEO Statistics &amp; Benchmarks
+                        </a>
+                    </li>
+                    <li>—
+                        <a href="https://www.statista.com/topics/1536/digital-advertising/" target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            Statista — Digital Advertising Worldwide
+                        </a>
+                    </li>
+                    <li>—
+                        <a href="https://moz.com/beginners-guide-to-seo" target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent">
+                            Moz — Beginner's Guide to SEO
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Right Side: Accordions -->
-            <div class="lg:col-span-7">
-                <div class="space-y-3">
-
-                    <!-- Q1 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                What exactly is SEO and why does my business need it?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                SEO (Search Engine Optimization) is the process of improving your website so it ranks higher on Google when people search for your products or services. Unlike paid ads, SEO builds long-term organic visibility. If your customers are searching for what you offer, SEO ensures they find you instead of your competitors.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q2 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                What is included in your SEO services?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Our SEO services cover the full spectrum: technical SEO (site speed, structure, indexing), on-page SEO (content optimization, keywords, headings), off-page SEO (backlink building, authority signals), local SEO (Google Business Profile, maps visibility), and monthly reporting with data-driven recommendations.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q3 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                How much do SEO services cost?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Pricing depends on your industry competition, website size, and the scope of work. Most small business SEO retainers range from $1,500 to $5,000 per month, while enterprise campaigns require larger investments. We provide a customized proposal based on your specific goals and budget—no hidden fees.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q4 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                How long does SEO take to show results?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                You may see initial movement in rankings and traffic within 60–90 days, but meaningful, compounding results typically take 3–6 months. SEO is a long-term investment—anyone promising "Page 1 in 30 days" is likely using risky tactics that could harm your site.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q5 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                Is SEO worth it for small businesses?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Absolutely. For local and small businesses, SEO delivers some of the highest ROI of any marketing channel. When someone searches "near me" or for a specific service you offer, ranking on the first page puts you directly in front of high-intent buyers—often at a lower cost per lead than paid advertising over time.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q6 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                How is local SEO different from regular SEO?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Local SEO focuses on geographic relevance—optimizing your Google Business Profile, building local citations, and targeting "near me" searches and service-area keywords. National SEO targets broader, non-geographic keywords. For businesses serving a specific city or region, local SEO often delivers faster and higher-converting results.
-                            </p>
-                        </div>
-                    </details>
-
-                    <!-- Q7 -->
-                    <details data-reveal
-                        class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
-                        <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-                            <h3 class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
-                                Do you optimize for AI search and Google AI Overviews?
-                            </h3>
-                            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
-                                <span class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                <span class="absolute h-[1.5px] w-3 bg-white"></span>
-                            </span>
-                        </summary>
-                        <div class="px-6 pb-7 md:px-7">
-                            <p class="mb-6 text-[14px] leading-relaxed text-white/60">
-                                Yes. Modern search includes AI Overviews, ChatGPT citations, and Perplexity results. We structure your content and implement FAQ schema so it can be extracted and cited by AI-powered search engines—giving your brand visibility across every surface where your customers are now searching.
-                            </p>
-                        </div>
-                    </details>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- FINAL CTA -->
         <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="mb-10" data-reveal>
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(08)</span>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(09)</span>
                 </div>
 
                 <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
                     Ready to rank<br />higher and grow<br />organically<span class="text-accent">.</span>
                 </h2>
+
+                <!-- Answer paragraph -->
+                <p class="mt-8 max-w-[720px] leading-relaxed text-white/55" data-reveal>
+                    If you're ready to turn organic search into a real growth channel, Scalixo Media will audit your
+                    site, benchmark your current rankings, and build a plan around your specific industry, audience,
+                    and goals. Most clients start with a free audit; from there, we recommend the SEO plan that fits
+                    your stage and budget. Call us, or send a brief, and we'll reply within one business day.
+                </p>
 
                 <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
                     data-reveal>
