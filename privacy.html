@@ -30,6 +30,163 @@
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- ══════════ JSON-LD STRUCTURED DATA ══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://scalixomedia.com/#organization",
+        "name": "Scalixo Media",
+        "url": "https://scalixomedia.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://scalixomedia.com/assets/scalixo.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/scalixo.media",
+          "https://www.linkedin.com/company/scalixomedia",
+          "https://www.facebook.com/scalixo.media"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9328792160",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["en"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "postalCode": "380052",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://scalixomedia.com/#author",
+        "name": "Scalixo Editorial Team",
+        "url": "https://scalixomedia.com/about",
+        "worksFor": { "@id": "https://scalixomedia.com/#organization" },
+        "sameAs": [
+          "https://www.linkedin.com/company/scalixomedia"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://scalixomedia.com/#website",
+        "url": "https://scalixomedia.com",
+        "name": "Scalixo Media",
+        "publisher": { "@id": "https://scalixomedia.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://scalixomedia.com/privacy#webpage",
+        "url": "https://scalixomedia.com/privacy",
+        "name": "Privacy Policy — Scalixo Media",
+        "description": "Read the Privacy Policy of Scalixo Media and learn how we collect, use, and protect your information.",
+        "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+        "about": { "@id": "https://scalixomedia.com/#organization" },
+        "mainEntity": { "@id": "https://scalixomedia.com/privacy#article" },
+        "breadcrumb": { "@id": "https://scalixomedia.com/privacy#breadcrumb" },
+        "inLanguage": "en",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-01-01"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://scalixomedia.com/privacy#article",
+        "headline": "Privacy Policy — Scalixo Media",
+        "description": "Read the Privacy Policy of Scalixo Media and learn how we collect, use, and protect your information.",
+        "author": { "@id": "https://scalixomedia.com/#author" },
+        "publisher": { "@id": "https://scalixomedia.com/#organization" },
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-01-01",
+        "mainEntityOfPage": { "@id": "https://scalixomedia.com/privacy#webpage" },
+        "image": "https://scalixomedia.com/assets/scalixo.png",
+        "articleSection": "Privacy",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://scalixomedia.com/privacy#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://scalixomedia.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://scalixomedia.com/privacy"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://scalixomedia.com/privacy#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Scalixo Media sell or rent my personal information?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Scalixo Media does not sell, rent, or trade personal information. Data is shared only with service providers necessary to deliver our services, when required by law, or to protect legal rights."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I request access, correction, or deletion of my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contact us at +91 93287 92160 or via the contact page. We acknowledge requests within 7 days and fulfil them within 30 days, subject to legal retention requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What cookies does scalixomedia.com use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We use functional cookies for site operation, analytics cookies (Google Analytics) to understand traffic, and marketing cookies (Meta Pixel, Google Ads) to measure campaigns. You can disable cookies in your browser settings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the data controller for my information?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scalixo Media, 301, 3rd Floor, Harvy Complex, Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052, is the data controller for personal information collected on scalixomedia.com."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does Scalixo Media retain my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We retain personal data only as long as needed to fulfil the purpose it was collected for — typically the duration of a project plus a reasonable period for legal, tax, and operational records."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is scalixomedia.com GDPR and CCPA compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We process personal information in line with GDPR principles for EU/UK visitors and honour CCPA rights for California residents, including the right to know, delete, and opt out."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="font-sans">
@@ -53,13 +210,16 @@
 
       <div class="relative mx-auto max-w-[1500px]">
 
-        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
-          data-reveal>
-        
-          <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
-          <span class="text-white/20">/</span>
-          <span class="text-white/70">Privacy Policy</span>
-        </div>
+        <!-- Semantic breadcrumb (matches BreadcrumbList in JSON-LD) -->
+        <nav aria-label="Breadcrumb" data-reveal>
+          <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]">
+            <li>
+              <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+            </li>
+            <li aria-hidden="true" class="text-white/20">/</li>
+            <li aria-current="page" class="text-white/70">Privacy Policy</li>
+          </ol>
+        </nav>
 
         <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
           Privacy<br />Policy<span class="text-accent">.</span>
@@ -71,6 +231,13 @@
               Your data, handled with intent. Learn how Scalixo Media collects, uses,
               and protects your personal information.
             </p>
+            <div class="mt-6 flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              <span>Written by</span>
+              <a href="https://scalixomedia.com/about"
+                 class="text-white/70 underline-offset-4 transition-colors hover:text-accent hover:underline">
+                Scalixo Editorial Team
+              </a>
+            </div>
           </div>
           <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
             <div>
@@ -83,7 +250,7 @@
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Sections</div>
-              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">10</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">12</div>
             </div>
           </div>
         </div>
@@ -99,7 +266,7 @@
         <aside class="md:col-span-3">
           <div class="md:sticky md:top-28" data-reveal>
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Index)</span>
-            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5">
+            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5" aria-label="On this page">
               <a href="#intro" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · Introduction</a>
               <a href="#collect" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · Information we collect</a>
               <a href="#use" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · How we use information</a>
@@ -110,6 +277,8 @@
               <a href="#rights" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · Your rights</a>
               <a href="#updates" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · Policy updates</a>
               <a href="#contact" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Contact us</a>
+              <a href="#faq" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · Common questions</a>
+              <a href="#references" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · References</a>
             </nav>
 
             <a href="/contact" data-magnetic
@@ -133,7 +302,9 @@
             </p>
             <p class="mt-4 leading-relaxed text-white/45">
               By using our website, you agree to the practices described in this policy.
-              If you do not agree, please discontinue use of the site.
+              If you do not agree, please discontinue use of the site. You can read more
+              about our team on the <a href="/about" class="text-accent underline-offset-4 hover:underline">About page</a>
+              or explore the <a href="/services" class="text-accent underline-offset-4 hover:underline">services we offer</a>.
             </p>
           </div>
 
@@ -144,11 +315,13 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Introduction</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Welcome to Scalixo Media. This Privacy Policy explains how we collect,
-                use, disclose, and safeguard your information when you visit our website
-                or use our digital marketing services. By using our website, you agree
-                to the practices described in this policy.
+              <p class="text-white/70">
+                This Privacy Policy explains how Scalixo Media collects, uses, discloses,
+                and safeguards personal information when you visit scalixomedia.com or
+                use our digital marketing services. It applies to all visitors, prospects,
+                and clients. By using the site, you agree to the practices described. If
+                you disagree, please discontinue use. This policy should be read alongside
+                our Terms of Service.
               </p>
             </div>
           </article>
@@ -159,17 +332,50 @@
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Information We Collect</h2>
             </div>
-            <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                We may collect personal information such as your name, email address,
-                phone number, company name, business details, website URL, and project
-                requirements.
+            <div class="mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
+              <p class="text-white/70">
+                Scalixo Media collects two categories of data: (1) personal information
+                you provide directly — name, email, phone, company name, business details,
+                website URL, and project requirements; and (2) technical information
+                collected automatically — IP address, browser type, device data, operating
+                system, pages visited, session duration, and cookies. We collect only what
+                is needed to respond to inquiries, quote projects, and deliver services.
               </p>
-              <p>
-                We may also collect technical information such as IP address, browser
-                type, device information, operating system, pages visited, session
-                duration, and cookies.
-              </p>
+
+              <!-- Structured table for reliable extraction -->
+              <div class="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+                <table class="w-full text-left text-sm">
+                  <thead>
+                    <tr class="border-b border-white/10 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
+                      <th scope="col" class="px-4 py-3 font-normal md:px-6">Data type</th>
+                      <th scope="col" class="px-4 py-3 font-normal md:px-6">Examples</th>
+                      <th scope="col" class="px-4 py-3 font-normal md:px-6">Why we collect it</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-white/55">
+                    <tr class="border-b border-white/5">
+                      <td class="px-4 py-3 align-top text-white/75 md:px-6">Contact data</td>
+                      <td class="px-4 py-3 align-top md:px-6">Name, email, phone, company</td>
+                      <td class="px-4 py-3 align-top md:px-6">Respond to inquiries, prepare quotes</td>
+                    </tr>
+                    <tr class="border-b border-white/5">
+                      <td class="px-4 py-3 align-top text-white/75 md:px-6">Business data</td>
+                      <td class="px-4 py-3 align-top md:px-6">Website URL, project brief, goals</td>
+                      <td class="px-4 py-3 align-top md:px-6">Scope projects and recommendations</td>
+                    </tr>
+                    <tr class="border-b border-white/5">
+                      <td class="px-4 py-3 align-top text-white/75 md:px-6">Technical data</td>
+                      <td class="px-4 py-3 align-top md:px-6">IP, browser, OS, pages, session</td>
+                      <td class="px-4 py-3 align-top md:px-6">Site security, analytics, performance</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 align-top text-white/75 md:px-6">Cookie data</td>
+                      <td class="px-4 py-3 align-top md:px-6">Preferences, analytics, campaign IDs</td>
+                      <td class="px-4 py-3 align-top md:px-6">Personalisation and ad measurement</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </article>
 
@@ -180,30 +386,40 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How We Use Your Information</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <ul class="space-y-3">
+              <p class="text-white/70">
+                Scalixo Media uses your information for six specific purposes: responding
+                to inquiries and consultation requests; preparing quotations and project
+                recommendations; delivering our <a href="/services" class="text-accent underline-offset-4 hover:underline">digital marketing</a>,
+                branding, <a href="/services/seo" class="text-accent underline-offset-4 hover:underline">SEO</a>, and
+                <a href="/services/web-development" class="text-accent underline-offset-4 hover:underline">web development</a>
+                services; improving site performance and customer experience; analysing
+                traffic and campaign performance; and sending relevant updates when you
+                opt in. We do not use your data for purposes beyond those listed here.
+              </p>
+              <ul class="mt-4 space-y-3">
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To respond to inquiries and consultation requests.</span>
+                  <span>Respond to inquiries and consultation requests.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To provide quotations and project recommendations.</span>
+                  <span>Provide quotations and project recommendations.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To deliver digital marketing, branding, SEO, and web development services.</span>
+                  <span>Deliver digital marketing, branding, SEO, and web development services.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To improve website performance and customer experience.</span>
+                  <span>Improve website performance and customer experience.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To analyze website traffic and campaign performance.</span>
+                  <span>Analyse website traffic and campaign performance.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>To send updates and marketing communication when appropriate.</span>
+                  <span>Send updates and marketing communication when you opt in.</span>
                 </li>
               </ul>
             </div>
@@ -216,10 +432,14 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Cookies</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Our website may use cookies to improve browsing experience, analyze
-                website traffic, remember preferences, and improve performance. You can
-                disable cookies from your browser settings.
+              <p class="text-white/70">
+                Scalixo Media uses cookies and similar tracking technologies to keep the
+                site functioning, remember preferences, measure traffic via
+                <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">Google Analytics</a>,
+                and support marketing campaigns via Meta Pixel and Google Ads. Cookies
+                fall into three categories: functional, analytics, and marketing. You can
+                disable cookies in your browser settings at any time; some site features
+                may not work correctly without them.
               </p>
             </div>
           </article>
@@ -231,11 +451,13 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Information Security</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                We implement appropriate security measures to protect your information
-                against unauthorized access, disclosure, or misuse. However, no online
-                transmission is completely secure, and we cannot guarantee absolute
-                security.
+              <p class="text-white/70">
+                Scalixo Media applies industry-standard safeguards — encrypted transmission
+                (HTTPS), access controls, and secure hosting — to protect your information
+                from unauthorized access, disclosure, or misuse. No method of online
+                transmission is 100% secure, so we cannot guarantee absolute security. We
+                retain data only as long as necessary for the purposes described, and we
+                review our safeguards periodically.
               </p>
             </div>
           </article>
@@ -247,14 +469,16 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Third-Party Services</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                We may use trusted third-party services such as Google Analytics, Meta
-                Pixel, Google Ads, WhatsApp Business, payment gateways, and hosting
-                providers.
-              </p>
-              <p>
-                These third-party services have their own privacy policies and data
-                handling practices.
+              <p class="text-white/70">
+                Scalixo Media works with trusted third-party providers to deliver services.
+                These currently include
+                <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">Google Analytics</a>
+                (traffic measurement),
+                <a href="https://www.facebook.com/privacy/policy" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">Meta Pixel</a>
+                (advertising), Google Ads (campaign tracking), WhatsApp Business (client
+                communication), and payment gateways (billing). Each third party processes
+                data under its own privacy policy. We are not responsible for their
+                independent practices.
               </p>
             </div>
           </article>
@@ -266,10 +490,13 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Sharing Information</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                We do not sell, rent, or trade your personal information. Information
-                may only be shared when required by law, required to provide our
-                services, or necessary to protect our legal rights.
+              <p class="text-white/70">
+                Scalixo Media does not sell, rent, or trade your personal information. We
+                share data only when: (1) required by law or legal process; (2) necessary
+                to deliver a service you requested; or (3) needed to protect our legal
+                rights or prevent fraud. Every third-party processor we engage is bound
+                by confidentiality obligations and is permitted to use your data only for
+                the purpose we specify.
               </p>
             </div>
           </article>
@@ -281,11 +508,35 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Your Rights</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                You may request to access, update, delete, or restrict the use of your
-                personal information. You may also request to stop receiving marketing
-                emails by contacting us.
+              <p class="text-white/70">
+                You have the right to access, correct, delete, or restrict the use of your
+                personal information. You may also opt out of marketing emails at any time.
+                To exercise any of these rights, <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact us</a>
+                or call +91 93287 92160; we respond within 30 days. Depending on your
+                location, you may have additional rights under
+                <a href="https://gdpr-info.eu/" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">GDPR</a>
+                (EU/UK) or
+                <a href="https://oag.ca.gov/privacy/ccpa" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">CCPA</a>
+                (California).
               </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="text-white/75">Access</strong> — request a copy of the personal data we hold about you.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="text-white/75">Correction</strong> — ask us to fix inaccurate or incomplete data.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="text-white/75">Deletion</strong> — request erasure where retention is no longer required.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span><strong class="text-white/75">Opt-out</strong> — unsubscribe from marketing at any time.</span>
+                </li>
+              </ul>
             </div>
           </article>
 
@@ -296,9 +547,12 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Policy Updates</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                We may update this Privacy Policy periodically. Changes become effective
-                immediately after being published on this page.
+              <p class="text-white/70">
+                We may update this Privacy Policy to reflect changes in our practices or
+                legal requirements. When we do, we will update the "Last updated" date at
+                the top of this page. Material changes will be announced on this page. We
+                encourage you to review this policy periodically — the current version
+                always supersedes prior versions.
               </p>
             </div>
           </article>
@@ -310,9 +564,11 @@
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Contact Us</h2>
             </div>
             <div class="mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Questions, concerns or requests regarding your privacy? Reach out and
-                we'll get back to you.
+              <p class="text-white/70">
+                Questions, concerns, or requests regarding your privacy? Reach out and
+                we'll get back to you. Scalixo Media, 301, 3rd Floor, Harvy Complex,
+                Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052, is the data controller for
+                personal information collected on scalixomedia.com.
               </p>
 
               <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8">
@@ -347,6 +603,126 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </article>
+
+          <!-- 11 · Common Questions (matches FAQPage JSON-LD) -->
+          <article id="faq" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">11</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Common Questions</h2>
+            </div>
+            <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p class="text-white/70">
+                These are the questions our clients and site visitors ask most often about
+                privacy. Each answer is short and self-contained so you can act on it
+                immediately; full detail is in the sections above.
+              </p>
+
+              <dl class="mt-6 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.02]">
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">Does Scalixo Media sell or rent my personal information?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    No. Scalixo Media does not sell, rent, or trade personal information.
+                    Data is shared only with service providers necessary to deliver our
+                    services, when required by law, or to protect legal rights.
+                  </dd>
+                </div>
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">How do I request access, correction, or deletion of my data?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    Contact us at +91 93287 92160 or via the
+                    <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact page</a>.
+                    We acknowledge requests within 7 days and fulfil them within 30 days,
+                    subject to legal retention requirements.
+                  </dd>
+                </div>
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">What cookies does scalixomedia.com use?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    We use functional cookies for site operation, analytics cookies
+                    (Google Analytics) to understand traffic, and marketing cookies (Meta
+                    Pixel, Google Ads) to measure campaigns. You can disable cookies in
+                    your browser settings.
+                  </dd>
+                </div>
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">Who is the data controller for my information?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    Scalixo Media, 301, 3rd Floor, Harvy Complex, Gurukul Rd, Memnagar,
+                    Ahmedabad, Gujarat 380052, is the data controller for personal
+                    information collected on scalixomedia.com.
+                  </dd>
+                </div>
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">How long does Scalixo Media retain my data?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    We retain personal data only as long as needed to fulfil the purpose
+                    it was collected for — typically the duration of a project plus a
+                    reasonable period for legal, tax, and operational records.
+                  </dd>
+                </div>
+                <div class="p-5 md:p-6">
+                  <dt class="text-sm font-semibold text-white/85 md:text-base">Is scalixomedia.com GDPR and CCPA compliant?</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-white/55">
+                    We process personal information in line with GDPR principles for
+                    EU/UK visitors and honour CCPA rights for California residents,
+                    including the right to know, delete, and opt out.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 12 · References -->
+          <article id="references" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
+            <div class="flex items-baseline gap-4">
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">12</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">References</h2>
+            </div>
+            <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p class="text-white/70">
+                The claims in this policy are grounded in the following authoritative
+                sources. Where we reference legal frameworks or third-party processors,
+                the links below point to their official documentation.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>
+                    <a href="https://gdpr-info.eu/" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">GDPR — General Data Protection Regulation (EU/UK)</a>
+                    — the legal basis for our EU/UK data handling.
+                  </span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>
+                    <a href="https://oag.ca.gov/privacy/ccpa" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">CCPA — California Consumer Privacy Act</a>
+                    — the framework for California residents' rights.
+                  </span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>
+                    <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">Google Privacy Policy</a>
+                    — covering Google Analytics and Google Ads.
+                  </span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>
+                    <a href="https://www.facebook.com/privacy/policy" rel="noopener nofollow" target="_blank" class="text-accent underline-offset-4 hover:underline">Meta Privacy Policy</a>
+                    — covering Meta Pixel and Meta advertising.
+                  </span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>
+                    <a href="https://schema.org/" rel="noopener" target="_blank" class="text-accent underline-offset-4 hover:underline">Schema.org</a>
+                    — the structured-data vocabulary used on this page.
+                  </span>
+                </li>
+              </ul>
             </div>
           </article>
 

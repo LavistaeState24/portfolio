@@ -30,6 +30,154 @@
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- ══════════ JSON-LD STRUCTURED DATA ══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://scalixomedia.com/#organization",
+        "name": "Scalixo Media",
+        "url": "https://scalixomedia.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://scalixomedia.com/assets/scalixo.png"
+        },
+        "description": "Scalixo Media is a digital marketing and creative agency based in Ahmedabad, India, offering social media marketing, performance marketing, lead generation, SEO, website development, branding, and influencer marketing.",
+        "telephone": "+91-93287-92160",
+        "email": "hello@scalixomedia.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "postalCode": "380052",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/scalixo.media",
+          "https://www.linkedin.com/company/scalixomedia",
+          "https://www.facebook.com/scalixo.media"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://scalixomedia.com/#website",
+        "url": "https://scalixomedia.com/",
+        "name": "Scalixo Media",
+        "description": "Digital marketing and creative agency based in Ahmedabad, India.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://scalixomedia.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://scalixomedia.com/terms#webpage",
+        "url": "https://scalixomedia.com/terms",
+        "name": "Terms & Conditions — Scalixo Media",
+        "description": "Read the Terms and Conditions governing the use of Scalixo Media's website and digital marketing services.",
+        "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+        "about": { "@id": "https://scalixomedia.com/#organization" },
+        "mainEntity": { "@id": "https://scalixomedia.com/terms#article" },
+        "inLanguage": "en",
+        "breadcrumb": { "@id": "https://scalixomedia.com/terms#breadcrumb" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://scalixomedia.com/assets/scalixo.png"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://scalixomedia.com/terms#article",
+        "headline": "Terms & Conditions — Scalixo Media",
+        "description": "The Terms and Conditions governing use of the Scalixo Media website and digital marketing services.",
+        "articleSection": "Legal",
+        "inLanguage": "en",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-01-01",
+        "author": { "@id": "https://scalixomedia.com/#legal-author" },
+        "publisher": { "@id": "https://scalixomedia.com/#organization" },
+        "mainEntityOfPage": { "@id": "https://scalixomedia.com/terms#webpage" },
+        "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+        "about": { "@id": "https://scalixomedia.com/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://scalixomedia.com/terms#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://scalixomedia.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms & Conditions",
+            "item": "https://scalixomedia.com/terms"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://scalixomedia.com/#legal-author",
+        "name": "Scalixo Media Legal",
+        "jobTitle": "Legal Counsel",
+        "url": "https://scalixomedia.com/contact",
+        "worksFor": { "@id": "https://scalixomedia.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://scalixomedia.com/terms#faq",
+        "isPartOf": { "@id": "https://scalixomedia.com/terms#webpage" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does Scalixo Media provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scalixo Media provides digital marketing and creative services including social media marketing, performance marketing, lead generation, SEO, website development, branding, and influencer marketing. Specific scope, deliverables, timelines, and fees for any engagement are defined in a separate proposal or written agreement shared before work begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do payments and billing work at Scalixo Media?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unless agreed otherwise in writing, a non-refundable advance is required before work begins, invoices are due within the period stated on the invoice, and third-party platform costs such as ad spend, subscriptions, domain, and hosting are billed separately. Late payments may result in paused work, suspended account access, or late fees where permitted by law."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Scalixo Media guarantee marketing results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Digital marketing results depend on many factors outside our control, including market conditions, platform algorithms, competition, pricing, and the quality of your product or service. While we apply industry best practices, Scalixo Media does not guarantee specific rankings, traffic volumes, leads, conversions, revenue, or returns on ad spend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the work delivered by Scalixo Media?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upon full payment of the agreed fees, ownership of final approved deliverables created specifically for you transfers to you, unless stated otherwise in the agreement. Scalixo Media retains ownership of concepts, drafts, working files, internal frameworks, tools, and methodologies, and may use completed work in our portfolio unless you request otherwise in writing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact Scalixo Media about these Terms?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact Scalixo Media by phone at +91 93287 92160, by visiting our office at 301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052, or through our contact page at scalixomedia.com/contact. For questions specifically about these Terms, call or write and we will route you to the right person."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="font-sans">
@@ -53,17 +201,31 @@
 
       <div class="relative mx-auto max-w-[1500px]">
 
-        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]"
-          data-reveal>
-          
-          <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
-          <span class="text-white/20">/</span>
-          <span class="text-white/70">Terms &amp; Conditions</span>
-        </div>
+        <!-- ══════════ VISIBLE BREADCRUMB NAV ══════════ -->
+        <nav aria-label="Breadcrumb" data-reveal>
+          <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]">
+            <li>
+              <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+            </li>
+            <li aria-hidden="true" class="text-white/20">/</li>
+            <li>
+              <span class="text-white/70" aria-current="page">Terms &amp; Conditions</span>
+            </li>
+          </ol>
+        </nav>
 
         <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
           Terms &amp;<br />Conditions<span class="text-accent">.</span>
         </h1>
+
+        <!-- ══════════ VISIBLE BYLINE ══════════ -->
+        <p class="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-white/45" data-reveal>
+          By <a href="/contact" class="text-white/75 transition-colors hover:text-accent">Scalixo Media Legal</a>
+          <span class="mx-2 text-white/20">·</span>
+          <span>Published <time datetime="2026-01-01">Jan 2026</time></span>
+          <span class="mx-2 text-white/20">·</span>
+          <span>Reviewed <time datetime="2026-01-01">Jan 2026</time></span>
+        </p>
 
         <div class="mt-10 grid gap-8 md:grid-cols-12 md:gap-10" data-reveal>
           <div class="md:col-span-5">
@@ -98,19 +260,19 @@
         <aside class="md:col-span-3">
           <div class="md:sticky md:top-28" data-reveal>
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Index)</span>
-            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5">
-              <a href="#acceptance" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · Acceptance of terms</a>
-              <a href="#services" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · Services</a>
-              <a href="#client" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · Client responsibilities</a>
-              <a href="#payment" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · Payments &amp; billing</a>
-              <a href="#ip" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Intellectual property</a>
-              <a href="#confidentiality" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06 · Confidentiality</a>
-              <a href="#warranties" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07 · No guarantees</a>
-              <a href="#liability" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · Limitation of liability</a>
-              <a href="#termination" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · Termination</a>
-              <a href="#law" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Governing law</a>
-              <a href="#changes" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · Changes to terms</a>
-              <a href="#contact" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · Contact us</a>
+            <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5" aria-label="On this page">
+              <a href="#acceptance" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · Do you accept these terms?</a>
+              <a href="#services" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · What services do we provide?</a>
+              <a href="#client" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · What are your client responsibilities?</a>
+              <a href="#payment" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · How do payments &amp; billing work?</a>
+              <a href="#ip" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Who owns the intellectual property?</a>
+              <a href="#confidentiality" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06 · How is confidential information protected?</a>
+              <a href="#warranties" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07 · Do we guarantee results?</a>
+              <a href="#liability" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · What are the limits of our liability?</a>
+              <a href="#termination" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · How can an engagement be terminated?</a>
+              <a href="#law" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Which laws govern these terms?</a>
+              <a href="#changes" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · How are changes handled?</a>
+              <a href="#contact" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · How can you contact us?</a>
             </nav>
 
             <a href="/contact" data-magnetic
@@ -135,7 +297,8 @@
             <p class="mt-4 leading-relaxed text-white/45">
               By accessing this website or hiring Scalixo Media, you agree to be bound by
               these Terms. If you do not agree with any part of them, please do not use
-              the site or our services.
+              the site or our services. You can review how we handle personal data in our
+              <a href="/privacy" class="text-accent underline-offset-4 hover:underline">Privacy Policy</a>.
             </p>
           </div>
 
@@ -143,18 +306,22 @@
           <article id="acceptance" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Acceptance of Terms</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Do You Accept These Terms?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                By using this website, submitting an enquiry form, or entering into a
+              <p class="text-white/70">
+                Yes — by using this website, submitting an enquiry form, or entering into a
                 service agreement with Scalixo Media, you confirm that you have read,
-                understood, and accepted these Terms.
+                understood, and accepted these Terms. If you are accepting on behalf of a
+                company or other legal entity, you confirm you have the authority to bind
+                that entity to these Terms. If you do not agree with any part of them,
+                please do not use the site or our services.
               </p>
               <p>
-                If you are entering into these Terms on behalf of a company or other
-                legal entity, you represent that you have the authority to bind that
-                entity to these Terms.
+                For how we handle personal information collected through the site, see our
+                <a href="/privacy" class="text-accent underline-offset-4 hover:underline">Privacy Policy</a>,
+                and for any clarification before signing a service agreement, reach out via our
+                <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact page</a>.
               </p>
             </div>
           </article>
@@ -163,19 +330,23 @@
           <article id="services" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Services</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Services Does Scalixo Media Provide?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Scalixo Media provides digital marketing and creative services,
-                including but not limited to social media marketing, performance
-                marketing, lead generation, SEO, website development, branding, and
-                influencer marketing.
+              <p class="text-white/70">
+                Scalixo Media provides digital marketing and creative services — including
+                social media marketing, performance marketing, lead generation, SEO,
+                website development, branding, and influencer marketing. The specific scope,
+                deliverables, timelines, and fees for any engagement are defined in a
+                separate proposal, quotation, or written agreement shared with you before
+                work begins. Each engagement is scoped individually based on your goals,
+                market, and budget, so no two engagements deliver identical outputs.
               </p>
               <p>
-                The specific scope, deliverables, timelines, and fees for any engagement
-                are defined in a separate proposal, quotation, or written agreement
-                shared with you before work begins.
+                A full breakdown of what we do is available on our
+                <a href="/services" class="text-accent underline-offset-4 hover:underline">Services page</a>.
+                To scope a specific engagement, talk to us through the
+                <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact page</a>.
               </p>
             </div>
           </article>
@@ -184,9 +355,17 @@
           <article id="client" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Client Responsibilities</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are Your Responsibilities as a Client?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
+              <p class="text-white/70">
+                As a client, you are responsible for providing accurate, complete, and
+                timely information, brand assets, and access required to deliver the
+                services. You must respond to review and approval requests within agreed
+                timeframes, ensure you have the legal right to use any content, images,
+                trademarks, or data you provide, and comply with all applicable laws and
+                platform policies relevant to your business.
+              </p>
               <ul class="space-y-3">
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
@@ -202,7 +381,9 @@
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Comply with all applicable laws, platform policies, and advertising regulations relevant to your business.</span>
+                  <span>Comply with advertising regulations — including the
+                    <a href="https://www.ascionline.in/" rel="noopener" class="text-accent underline-offset-4 hover:underline">ASCI Code</a>
+                    in India — and with platform policies relevant to your business.</span>
                 </li>
               </ul>
             </div>
@@ -212,13 +393,17 @@
           <article id="payment" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Payments &amp; Billing</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Do Payments and Billing Work?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Fees, invoicing schedules, and payment terms are outlined in the
-                proposal or agreement shared with you. Unless agreed otherwise in
-                writing:
+              <p class="text-white/70">
+                Fees, invoicing schedules, and payment terms are outlined in the proposal or
+                agreement shared with you. Unless agreed otherwise in writing: a
+                non-refundable advance is required before work begins, invoices are due
+                within the period stated on the invoice, and third-party platform costs (ad
+                spend, subscriptions, domain, hosting) are billed separately. Late payments
+                may result in paused work, suspended account access, or late fees where
+                permitted by law.
               </p>
               <ul class="space-y-3">
                 <li class="flex gap-3">
@@ -245,23 +430,22 @@
           <article id="ip" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">05</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Intellectual Property</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Who Owns the Intellectual Property?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
+              <p class="text-white/70">
                 Upon full payment of the agreed fees, ownership of final approved
-                deliverables created specifically for you transfers to you, unless
-                stated otherwise in the agreement.
+                deliverables created specifically for you transfers to you, unless stated
+                otherwise in the agreement. Scalixo Media retains ownership of all
+                concepts, drafts, working files, internal frameworks, tools, and
+                methodologies used to create the deliverables. We may also use completed
+                work in our portfolio and marketing materials unless you request otherwise
+                in writing.
               </p>
               <p>
-                Scalixo Media retains ownership of all concepts, drafts, working files,
-                internal frameworks, tools, and methodologies used to create the
-                deliverables. We may also use completed work in our portfolio and
-                marketing materials unless you request otherwise in writing.
-              </p>
-              <p>
-                Third-party assets (fonts, stock footage, licensed software) remain
-                subject to their respective licenses.
+                Third-party assets (fonts, stock footage, licensed software) remain subject
+                to their respective licenses. See recent work in our
+                <a href="/work" class="text-accent underline-offset-4 hover:underline">portfolio</a>.
               </p>
             </div>
           </article>
@@ -270,17 +454,16 @@
           <article id="confidentiality" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">06</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Confidentiality</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Is Confidential Information Protected?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Both parties agree to keep confidential any non-public business,
-                technical, or financial information shared during the engagement. This
-                obligation survives termination of the agreement.
-              </p>
-              <p>
-                Confidential information does not include information that is publicly
-                available, independently developed, or required to be disclosed by law.
+              <p class="text-white/70">
+                Both parties agree to keep confidential any non-public business, technical,
+                or financial information shared during the engagement. This obligation
+                survives termination of the agreement. Confidential information does not
+                include information that is publicly available, independently developed, or
+                required to be disclosed by law — for example, under India's
+                <a href="https://www.meity.gov.in/data-protection-framework" rel="noopener" class="text-accent underline-offset-4 hover:underline">Digital Personal Data Protection Act, 2023</a>.
               </p>
             </div>
           </article>
@@ -289,18 +472,23 @@
           <article id="warranties" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">07</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">No Guarantees</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Does Scalixo Media Guarantee Results?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Digital marketing results depend on many factors outside our control,
-                including market conditions, platform algorithms, competition, pricing,
-                and the quality of your product or service.
+              <p class="text-white/70">
+                No. Digital marketing results depend on many factors outside our control,
+                including market conditions, platform algorithms, competition, pricing, and
+                the quality of your product or service. While we apply industry best
+                practices, Scalixo Media does not guarantee specific rankings, traffic
+                volumes, leads, conversions, revenue, or returns on ad spend. Any
+                projections shared are estimates, not promises.
               </p>
               <p>
-                While we apply industry best practices, Scalixo Media does not guarantee
-                specific rankings, traffic volumes, leads, conversions, revenue, or
-                returns on ad spend.
+                Our work is shaped by the advertising policies of the platforms we operate
+                on — such as
+                <a href="https://support.google.com/adspolicy/answer/6008942" rel="noopener" class="text-accent underline-offset-4 hover:underline">Google Ads policies</a>
+                and
+                <a href="https://transparency.fb.com/policies/ad-standards/" rel="noopener" class="text-accent underline-offset-4 hover:underline">Meta advertising standards</a>.
               </p>
             </div>
           </article>
@@ -309,19 +497,16 @@
           <article id="liability" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">08</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Limitation of Liability</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are the Limits of Our Liability?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                To the maximum extent permitted by law, Scalixo Media shall not be
-                liable for any indirect, incidental, consequential, special, or punitive
-                damages, including lost profits, lost revenue, or lost data, arising
-                out of or related to the services.
-              </p>
-              <p>
-                Our total liability for any claim shall not exceed the total fees paid
-                by you to Scalixo Media for the specific engagement giving rise to the
-                claim.
+              <p class="text-white/70">
+                To the maximum extent permitted by law, Scalixo Media shall not be liable
+                for any indirect, incidental, consequential, special, or punitive damages,
+                including lost profits, lost revenue, or lost data, arising out of or
+                related to the services. Our total liability for any claim shall not exceed
+                the total fees paid by you to Scalixo Media for the specific engagement
+                giving rise to the claim.
               </p>
             </div>
           </article>
@@ -330,14 +515,15 @@
           <article id="termination" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">09</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Termination</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can an Engagement Be Terminated?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Either party may terminate an engagement with written notice as
-                specified in the relevant agreement. Upon termination, you remain
-                responsible for payment of all fees for work completed up to the
-                termination date and any non-cancellable third-party costs incurred.
+              <p class="text-white/70">
+                Either party may terminate an engagement with written notice as specified
+                in the relevant agreement. Upon termination, you remain responsible for
+                payment of all fees for work completed up to the termination date and any
+                non-cancellable third-party costs incurred. We will hand over any completed
+                work and account access in accordance with the terms of your engagement.
               </p>
             </div>
           </article>
@@ -346,14 +532,17 @@
           <article id="law" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">10</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Governing Law</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Which Laws Govern These Terms?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                These Terms are governed by and construed in accordance with the laws
-                of India. Any disputes arising from these Terms or the services shall
-                be subject to the exclusive jurisdiction of the courts located in
-                Ahmedabad, Gujarat.
+              <p class="text-white/70">
+                These Terms are governed by and construed in accordance with the laws of
+                India. Any disputes arising from these Terms or the services shall be
+                subject to the exclusive jurisdiction of the courts located in Ahmedabad,
+                Gujarat. Nothing in these Terms limits any statutory rights you may have
+                under the
+                <a href="https://legislative.gov.in/sites/default/files/A1872-09.pdf" rel="noopener" class="text-accent underline-offset-4 hover:underline">Indian Contract Act, 1872</a>
+                or other applicable Indian law.
               </p>
             </div>
           </article>
@@ -362,14 +551,16 @@
           <article id="changes" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">11</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Changes to Terms</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Are Changes to These Terms Handled?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
-              <p>
+              <p class="text-white/70">
                 We may update these Terms from time to time. Changes become effective
-                immediately after being published on this page. Continued use of our
-                website or services after changes are posted constitutes acceptance of
-                the updated Terms.
+                immediately after being published on this page, and we will update the
+                "Last updated" date at the top of this page. Continued use of our website or
+                services after changes are posted constitutes acceptance of the updated
+                Terms. If a change materially affects an active engagement, we will notify
+                you in writing.
               </p>
             </div>
           </article>
@@ -378,11 +569,17 @@
           <article id="contact" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">12</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Contact Us</h2>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can You Contact Scalixo Media?</h2>
             </div>
             <div class="mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
-              <p>
-                Questions about these Terms? Reach out and we'll get back to you.
+              <p class="text-white/70">
+                You can contact Scalixo Media by phone at +91 93287 92160, by visiting our
+                office at 301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd,
+                Memnagar, Ahmedabad, Gujarat 380052, or through our
+                <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact page</a>.
+                For questions specifically about these Terms, call or write and we will
+                route you to the right person. More about the team is available on our
+                <a href="/about" class="text-accent underline-offset-4 hover:underline">About page</a>.
               </p>
 
               <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8">
@@ -419,6 +616,102 @@
               </div>
             </div>
           </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ VISIBLE FAQ (mirrors FAQPage schema) ══════════ -->
+    <section id="faq" class="border-t border-white/10 px-6 pb-24 md:px-10 md:pb-32">
+      <div class="mx-auto grid max-w-[1500px] gap-12 md:grid-cols-12 md:gap-16">
+
+        <aside class="md:col-span-3">
+          <div class="md:sticky md:top-28" data-reveal>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(FAQ)</span>
+            <h2 class="mt-4 font-display text-3xl uppercase leading-[0.95] md:text-5xl">Common<br />Questions</h2>
+          </div>
+        </aside>
+
+        <div class="md:col-span-9 md:col-start-4">
+
+          <details class="group border-t border-white/10 py-6 md:py-8" data-reveal open>
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-4">
+              <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
+                What services does Scalixo Media provide?
+              </h3>
+              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-relaxed text-white/55">
+              Scalixo Media provides digital marketing and creative services including social media marketing,
+              performance marketing, lead generation, SEO, website development, branding, and influencer marketing.
+              Specific scope, deliverables, timelines, and fees for any engagement are defined in a separate proposal
+              or written agreement shared before work begins. See the
+              <a href="/services" class="text-accent underline-offset-4 hover:underline">Services page</a> for current offerings.
+            </p>
+          </details>
+
+          <details class="group border-t border-white/10 py-6 md:py-8" data-reveal>
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-4">
+              <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
+                How do payments and billing work at Scalixo Media?
+              </h3>
+              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-relaxed text-white/55">
+              Unless agreed otherwise in writing, a non-refundable advance is required before work begins, invoices
+              are due within the period stated on the invoice, and third-party platform costs such as ad spend,
+              subscriptions, domain, and hosting are billed separately. Late payments may result in paused work,
+              suspended account access, or late fees where permitted by law.
+            </p>
+          </details>
+
+          <details class="group border-t border-white/10 py-6 md:py-8" data-reveal>
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-4">
+              <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
+                Does Scalixo Media guarantee marketing results?
+              </h3>
+              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-relaxed text-white/55">
+              No. Digital marketing results depend on many factors outside our control, including market conditions,
+              platform algorithms, competition, pricing, and the quality of your product or service. While we apply
+              industry best practices, Scalixo Media does not guarantee specific rankings, traffic volumes, leads,
+              conversions, revenue, or returns on ad spend.
+            </p>
+          </details>
+
+          <details class="group border-t border-white/10 py-6 md:py-8" data-reveal>
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-4">
+              <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
+                Who owns the work delivered by Scalixo Media?
+              </h3>
+              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-relaxed text-white/55">
+              Upon full payment of the agreed fees, ownership of final approved deliverables created specifically for
+              you transfers to you, unless stated otherwise in the agreement. Scalixo Media retains ownership of
+              concepts, drafts, working files, internal frameworks, tools, and methodologies, and may use completed
+              work in our portfolio unless you request otherwise in writing. Recent work can be seen in our
+              <a href="/work" class="text-accent underline-offset-4 hover:underline">portfolio</a>.
+            </p>
+          </details>
+
+          <details class="group border-t border-b border-white/10 py-6 md:py-8" data-reveal>
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-4">
+              <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
+                How can I contact Scalixo Media about these Terms?
+              </h3>
+              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-relaxed text-white/55">
+              You can contact Scalixo Media by phone at
+              <a href="tel:+919328792160" class="text-accent underline-offset-4 hover:underline">+91 93287 92160</a>,
+              by visiting our office at 301, 3rd Floor, Harvy Complex, Subhash Chowk, Gurukul Rd, Memnagar, Ahmedabad,
+              Gujarat 380052, or through our
+              <a href="/contact" class="text-accent underline-offset-4 hover:underline">contact page</a>.
+              For questions specifically about these Terms, call or write and we will route you to the right person.
+            </p>
+          </details>
 
         </div>
       </div>
