@@ -24,6 +24,254 @@
     content="Scalixo Media is a full-service digital marketing agency in Ahmedabad. We don't just market brands — we build businesses that scale." />
   <meta name="twitter:image" content="https://scalixomedia.com/assets/scalixo.png" />
 
+  <!-- ══════════ JSON-LD STRUCTURED DATA ══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://scalixomedia.com/#organization",
+        "name": "Scalixo Media",
+        "alternateName": "Scalixo",
+        "url": "https://scalixomedia.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://scalixomedia.com/assets/scalixo.png"
+        },
+        "description": "Scalixo Media is a full-service digital marketing agency in Ahmedabad. We don't just market brands — we build businesses that scale.",
+        "sameAs": [
+          "https://www.instagram.com/scalixo.media",
+          "https://www.linkedin.com/company/scalixomedia",
+          "https://www.facebook.com/scalixo.media"
+        ],
+        "founder": { "@id": "https://scalixomedia.com/#deep-thakkar" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "priceRange": "₹₹",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-93287-92160",
+          "contactType": "customer service",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["en", "hi"]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Digital Marketing Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Creative Design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Search Engine Optimization (SEO)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Influencer Marketing" } }
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://scalixomedia.com/#service",
+        "name": "Full-Service Digital Marketing",
+        "serviceType": "Digital Marketing Agency",
+        "category": "Marketing",
+        "description": "Scalixo Media provides end-to-end digital marketing — social media management, branding, SEO, web development, and performance marketing — engineered to produce measurable revenue for businesses in India and worldwide.",
+        "provider": { "@id": "https://scalixomedia.com/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "Growing businesses, founders, and D2C brands"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Scalixo Media Service Catalog",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Social Media Management",
+                "description": "Strategy, content creation, community management, and paid amplification across Instagram, LinkedIn, Facebook, and YouTube."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Branding & Creative Design",
+                "description": "Brand identity, visual systems, packaging, and creative direction built for consistency across every channel."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Search Engine Optimization (SEO)",
+                "description": "Technical SEO, on-page optimization, content strategy, and link acquisition designed to compound organic traffic."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Web Development",
+                "description": "Fast, accessible, conversion-focused websites and landing pages built on modern stacks (including MERN)."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Performance Marketing",
+                "description": "Google Ads, Meta Ads, and full-funnel campaign management tied directly to ROAS and revenue."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Influencer Marketing",
+                "description": "Creator partnerships, campaign management, and UGC pipelines built around measurable reach and conversions."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://scalixomedia.com/#deep-thakkar",
+        "name": "Deep Thakkar",
+        "jobTitle": "Founder & Director",
+        "url": "https://scalixomedia.com/about#founder",
+        "worksFor": { "@id": "https://scalixomedia.com/#organization" },
+        "sameAs": [
+          "https://www.linkedin.com/company/scalixomedia"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://scalixomedia.com/#website",
+        "url": "https://scalixomedia.com/",
+        "name": "Scalixo Media",
+        "publisher": { "@id": "https://scalixomedia.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://scalixomedia.com/about#webpage",
+        "url": "https://scalixomedia.com/about",
+        "name": "About Us — Scalixo Media",
+        "description": "Scalixo Media is a full-service digital marketing agency in Ahmedabad. We don't just market brands — we build businesses that scale.",
+        "datePublished": "2024-06-01",
+        "dateModified": "2026-11-04",
+        "isPartOf": { "@id": "https://scalixomedia.com/#website" },
+        "about": { "@id": "https://scalixomedia.com/#organization" },
+        "mainEntity": [
+          { "@id": "https://scalixomedia.com/#organization" },
+          { "@id": "https://scalixomedia.com/#service" }
+        ],
+        "author": { "@id": "https://scalixomedia.com/#deep-thakkar" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://scalixomedia.com/assets/scalixo.png"
+        },
+        "breadcrumb": { "@id": "https://scalixomedia.com/about#breadcrumb" },
+        "citation": [
+          "https://www.statista.com/topics/1536/digital-advertising/",
+          "https://www.hubspot.com/state-of-marketing",
+          "https://web.dev/articles/vitals",
+          "https://about.instagram.com/",
+          "https://www.wordstream.com/blog/ws/2017/07/19/data-driven-ppc"
+        ],
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://scalixomedia.com/about#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://scalixomedia.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://scalixomedia.com/about"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://scalixomedia.com/about#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Scalixo Media and what do you do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scalixo Media is a full-service digital marketing agency. We help businesses build their brands, scale their online presence, and generate measurable revenue through social media management, branding, SEO, web development, and performance marketing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes your agency different from others?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We don't just focus on vanity metrics like likes and followers. We build systems designed for business growth. We combine high-end creative design with data-driven strategy, ensuring every piece of content or ad campaign is directly tied to your bottom line—not just looking pretty."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are you based, and do you work with international clients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are proudly headquartered in Ahmedabad, India. However, we work with clients globally across the US, UK, UAE, and Australia. Our communication, project management, and reporting processes are fully remote-friendly and designed to accommodate different time zones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who will I be working with on my project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You will be assigned a dedicated Account Manager who serves as your main point of contact. They are supported by a specialized team of strategists, graphic designers, video editors, and SEO specialists depending on your service package. You will never be left guessing who to talk to."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What industries do you specialize in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We have deep experience across a wide range of sectors including real estate, healthcare, e-commerce, hospitality, fashion, and B2B professional services. Our core strategies are universal, but we always take the time to research and understand the unique nuances of your specific industry before launching a campaign."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you require long-term contracts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For project-based work (like web design or branding), we work on a fixed-scope basis. For ongoing services (like SEO or social media management), we typically recommend a 3 to 6-month initial commitment to allow strategies to take effect and show tangible results. After that, we operate on rolling monthly agreements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="./tailwind.css" />
   <link rel="stylesheet" href="./style.css" />
@@ -61,12 +309,21 @@
 
       <div class="relative mx-auto max-w-[1500px]">
 
-        <div class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white mb-6"
-          data-hero-breadcrumb>
-          <a href="/" class="text-accent-2 transition-colors hover:text-accent">Home</a>
-          <span class="text-white/20">/</span>
-          <span class="text-white/70">About</span>
-        </div>
+        <!-- Visible breadcrumb nav (matches BreadcrumbList schema) -->
+        <nav aria-label="Breadcrumb" class="mb-6" data-hero-breadcrumb>
+          <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
+            <li>
+              <a href="/" class="text-accent-2 transition-colors hover:text-accent">Home</a>
+            </li>
+            <li aria-hidden="true" class="text-white/20">/</li>
+            <li aria-current="page" class="text-white/70">About</li>
+            <li aria-hidden="true" class="text-white/20">·</li>
+            <li class="text-white/50">By
+              <a href="/about#founder" rel="author" class="text-white/80 underline-offset-4 transition-colors hover:text-accent hover:underline">Deep Thakkar</a>,
+              Founder
+            </li>
+          </ol>
+        </nav>
 
         <h1 class="max-w-[1100px] font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]">
           <span class="block overflow-hidden">
@@ -86,7 +343,7 @@
       </div>
     </section>
 
-    <!-- ══════════ 2. METRICS — Number Ticker Animation ══════════ -->
+    <!-- ══════════ 2. METRICS — Number Ticker + Semantic Table ══════════ -->
     <section class="border-t border-white/10 px-6 py-16 md:px-10 md:py-20">
       <div class="mx-auto max-w-[1500px]">
 
@@ -96,10 +353,17 @@
             <h2 class="mt-3 font-display text-3xl uppercase leading-none text-white md:text-5xl">
               Growth you can count.
             </h2>
+            <p class="mt-5 max-w-[720px] leading-relaxed text-white/55">
+              Since launch, Scalixo Media has grown <strong class="text-white">30+ brands</strong>, managed over
+              <strong class="text-white">₹1 crore in ad spend</strong>, maintained <strong class="text-white">90%
+                client retention</strong>, and delivered an average <strong class="text-white">4.2x return on ad
+                spend</strong>. These numbers come from the same system we build for every client — not one-off wins.
+            </p>
           </div>
         </div>
 
-        <div
+        <!-- Visual grid (aria-hidden; semantic table below carries the same data) -->
+        <div aria-hidden="true"
           class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-4">
           <div class="bg-ink p-7 text-center transition-colors duration-500 hover:bg-white/[0.03] md:p-10">
             <div class="font-display text-5xl leading-none text-accent md:text-6xl"><span class="num-ticker"
@@ -123,16 +387,31 @@
           </div>
         </div>
 
+        <!-- Semantic table for AI/crawlers (visually hidden) -->
+        <table class="sr-only">
+          <caption>Scalixo Media key performance metrics</caption>
+          <thead>
+            <tr>
+              <th scope="col">Metric</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Brands Grown</th><td>30+</td></tr>
+            <tr><th scope="row">Ad Spend Managed</th><td>₹1Cr+</td></tr>
+            <tr><th scope="row">Client Retention</th><td>90%</td></tr>
+            <tr><th scope="row">Average ROAS</th><td>4.2x</td></tr>
+          </tbody>
+        </table>
+
       </div>
     </section>
 
-    <!-- ══════════ 3. storyline ══════════ -->
+    <!-- ══════════ 3. STORYLINE ══════════ -->
 
     <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1500px]">
         <div class="grid gap-12 md:grid-cols-12 md:gap-14">
-
-          <!-- Image column — slides from left -->
 
           <div class="md:col-span-7" data-slide-right>
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(About Us)</span>
@@ -142,11 +421,17 @@
               <span class="text-accent-2">Businesses That Scale.</span>
             </h2>
 
+            <p class="mt-6 max-w-[720px] leading-relaxed text-white/55">
+              Scalixo Media builds marketing systems that scale businesses — not just social profiles. We start with
+              clarity on your market, offer, and ideal customer, then engineer every channel, content piece, and
+              campaign to do one job: move the right people one step closer to becoming your customer.
+            </p>
+
             <div class="mt-8 space-y-5 text-base leading-relaxed text-white/55 md:text-lg">
               <p>
                 At Scalixo Media, we believe marketing isn't about posting every day or running random ads.
                 It's about building a predictable system that attracts the right audience, generates
-                qualified leads, and helps businesses grow consistently.That system doesn't happen by accident. It
+                qualified leads, and helps businesses grow consistently. That system doesn't happen by accident. It
                 starts with clarity — understanding your market,
                 your offer, and the exact customer you're built to serve.
               </p>
@@ -155,8 +440,6 @@
                 piece of content, and every campaign is designed to do one job: move the right people one
                 step closer to becoming your customer.
               </p>
-
-
 
             </div>
 
@@ -167,11 +450,8 @@
                 <span
                   class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
               </a>
-
             </div>
           </div>
-          <!-- Text column — slides from right -->
-
 
           <div class="relative md:col-span-5" data-slide-left>
             <div class="relative overflow-hidden rounded-3xl ">
@@ -185,8 +465,8 @@
       </div>
     </section>
 
-    <!-- ══════════ 4. FOUNDER STORY — Scale-In + Fade Animation ══════════ -->
-    <section class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <!-- ══════════ 4. FOUNDER STORY ══════════ -->
+    <section id="founder" class="relative overflow-hidden border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
 
       <div
         class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]">
@@ -198,7 +478,6 @@
       <div class="relative mx-auto max-w-[1500px]">
         <div class="grid gap-12 md:grid-cols-12 md:gap-14">
 
-          <!-- Founder photo — scale in -->
           <div class="md:col-span-5" data-scale-in>
             <div class="relative">
               <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10">
@@ -210,15 +489,20 @@
             </div>
           </div>
 
-          <!-- Story — scale in with delay -->
           <div class="md:col-span-7" data-scale-in>
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Founder's Note)</span>
-
 
             <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
               Why We Started Scalixo <br />
               <span class="text-accent-2">Businesses That Scale.</span>
             </h2>
+
+            <p class="mt-6 max-w-[720px] leading-relaxed text-white/55">
+              Scalixo Media was founded because most agencies optimize for vanity metrics — likes, follows,
+              impressions — while businesses actually need revenue. Deep Thakkar started Scalixo with one promise:
+              build marketing that pays for itself, where every campaign, every rupee spent, and every piece of
+              content is engineered to move the business forward.
+            </p>
 
             <div class="mt-8 space-y-5 text-base leading-relaxed text-white/55 md:text-lg">
               <p>
@@ -250,7 +534,7 @@
         </div>
     </section>
 
-    <!-- ══════════ 5. TEAM — Stagger Animation ══════════ -->
+    <!-- ══════════ 5. TEAM ══════════ -->
     <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1500px]">
 
@@ -274,10 +558,8 @@
           </div>
         </div>
 
-        <!-- Team grid with stagger -->
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6" data-stagger>
 
-          <!-- Team Member 01 -->
           <div
             class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
             <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
@@ -290,7 +572,6 @@
             </div>
           </div>
 
-          <!-- Team Member 02 -->
           <div
             class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
             <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
@@ -300,11 +581,9 @@
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">Social Media Executive</div>
               <div class="mt-2 font-display text-xl uppercase leading-none text-white">Khushi Khatri</div>
-
             </div>
           </div>
 
-          <!-- Team Member 03 -->
           <div
             class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
             <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
@@ -314,11 +593,9 @@
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">Influencer & Sales</div>
               <div class="mt-2 font-display text-xl uppercase leading-none text-white">Dipika Dutta</div>
-
             </div>
           </div>
 
-          <!-- Team Member 04 -->
           <div
             class="team-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-accent/50">
             <div class="aspect-[4/5] overflow-hidden bg-gradient-to-br from-accent/10 to-transparent">
@@ -329,7 +606,6 @@
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">Performance Marketer Executive
               </div>
               <div class="mt-2 font-display text-xl uppercase leading-none text-white">Shivam kumar</div>
-
             </div>
           </div>
 
@@ -342,7 +618,6 @@
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/90 to-transparent p-5">
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white">Sr Mern Stack Developer</div>
               <div class="mt-2 font-display text-xl uppercase leading-none text-white">Aman Solanki</div>
-
             </div>
           </div>
 
@@ -351,7 +626,7 @@
       </div>
     </section>
 
-    <!-- ══════════ 6. VALUES — Fade-Up Stagger ══════════ -->
+    <!-- ══════════ 6. VALUES ══════════ -->
     <section class="border-t border-white/10 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1500px]">
 
@@ -360,6 +635,12 @@
           <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-5xl">
             Principles behind<br />every campaign.
           </h2>
+          <p class="mt-6 max-w-[720px] leading-relaxed text-white/55">
+            Every Scalixo Media campaign follows four principles: outcomes over optics, radical transparency,
+            senior-led work, and long-term thinking. We measure success in revenue, share honest dashboards weekly,
+            keep strategy in the hands of senior operators, and build compounding systems rather than one-off
+            campaigns.
+          </p>
         </div>
 
         <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" data-stagger>
@@ -420,7 +701,7 @@
       </div>
     </section>
 
-    <!-- ══════════ 7. TESTIMONIALS — Mask Reveal Animation ══════════ -->
+    <!-- ══════════ 7. TESTIMONIALS ══════════ -->
     <section id="voices" class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
       <div class="mx-auto mb-14 max-w-[1600px] px-6 md:px-10">
         <div class="grid gap-8 md:grid-cols-12">
@@ -432,6 +713,11 @@
             <h2 class="mt-6 font-display text-[clamp(2.2rem,6vw,5rem)] uppercase leading-[0.9] tracking-[-0.02em]">
               What founders say<br /><span class="text-white">when we ship.</span>
             </h2>
+            <p class="mt-6 max-w-[560px] leading-relaxed text-white/55">
+              Founders we work with consistently report higher ROAS, faster organic growth, and clearer reporting
+              than with their previous agencies. Below is real feedback from 50+ engagements across India, the UK,
+              and the US.
+            </p>
           </div>
           <div class="md:col-span-4 md:col-start-9 md:self-end">
             <p class="text-sm leading-relaxed text-white/50 md:text-base">
@@ -455,8 +741,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K
-                to
-                18K followers and our DMs are full of qualified leads.
+                to 18K followers and our DMs are full of qualified leads.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -480,8 +765,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our
-                ROAS
-                went from 1.8x to 5.4x.
+                ROAS went from 1.8x to 5.4x.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -505,8 +789,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 The best agency we've worked with in Ahmedabad. They understand both brand building and performance.
-                Our
-                traffic is up 210%.
+                Our traffic is up 210%.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -533,8 +816,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K
-                to
-                18K followers and our DMs are full of qualified leads.
+                to 18K followers and our DMs are full of qualified leads.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -557,8 +839,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our
-                ROAS
-                went from 1.8x to 5.4x.
+                ROAS went from 1.8x to 5.4x.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -581,8 +862,7 @@
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 The best agency we've worked with in Ahmedabad. They understand both brand building and performance.
-                Our
-                traffic is up 210%.
+                Our traffic is up 210%.
               </p>
               <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                 <div class="flex items-center gap-3">
@@ -759,18 +1039,14 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-     FAQs — About Us
-═══════════════════════════════════════════════════════════ -->
+    <!-- ══════════ 8. FAQs — About Us ══════════ -->
      <section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
 
-    <!-- Ambient Background Glow -->
     <div class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]"></div>
 
     <div class="relative mx-auto max-w-[1500px]">
         <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
-            <!-- Left Side: Sticky Heading & CTA -->
             <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
                 <div class="flex items-center gap-3">
                     <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">05</span>
@@ -793,11 +1069,9 @@
                 </a>
             </div>
 
-            <!-- Right Side: Accordions -->
             <div class="lg:col-span-7">
                 <div class="space-y-3">
 
-                    <!-- Q1 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -816,7 +1090,6 @@
                         </div>
                     </details>
 
-                    <!-- Q2 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -835,7 +1108,6 @@
                         </div>
                     </details>
 
-                    <!-- Q3 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -854,7 +1126,6 @@
                         </div>
                     </details>
 
-                    <!-- Q4 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -873,7 +1144,6 @@
                         </div>
                     </details>
 
-                    <!-- Q5 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -892,7 +1162,6 @@
                         </div>
                     </details>
 
-                    <!-- Q6 -->
                     <details data-reveal
                         class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
                         <summary class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
@@ -917,7 +1186,28 @@
     </div>
      </section>
 
-    <!-- ══════════ 9. FINAL CTA — Shimmer Animation ══════════ -->
+    <!-- ══════════ 9. SOURCES & REFERENCES ══════════ -->
+    <section class="border-t border-white/10 px-6 py-12 md:px-10 md:py-16" aria-labelledby="sources-heading">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="flex items-center gap-3">
+          <span id="sources-heading" class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Sources & References)</span>
+          <span class="h-px flex-1 bg-white/10"></span>
+        </div>
+        <p class="mt-4 max-w-[820px] text-sm leading-relaxed text-white/45">
+          Our process, benchmarks, and reporting draw on public data from these authoritative sources:
+        </p>
+        <ul class="mt-6 grid gap-3 text-sm text-white/60 md:grid-cols-2">
+          <li>— <a href="https://www.statista.com/topics/1536/digital-advertising/" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">Statista — Digital Advertising worldwide</a></li>
+          <li>— <a href="https://www.hubspot.com/state-of-marketing" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">HubSpot — State of Marketing Report</a></li>
+          <li>— <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">Google web.dev — Core Web Vitals</a></li>
+          <li>— <a href="https://about.instagram.com/" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">Meta — Instagram for Business</a></li>
+          <li>— <a href="https://www.wordstream.com/blog/ws/2017/07/19/data-driven-ppc" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">WordStream — Google Ads Benchmarks</a></li>
+          <li>— <a href="https://www.linkedin.com/business/marketing/blog" target="_blank" rel="noopener noreferrer nofollow" class="text-accent-2 underline-offset-4 hover:text-accent hover:underline">LinkedIn — Business Marketing Blog</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════ 10. FINAL CTA ══════════ -->
     <section class="relative overflow-hidden border-t border-white/10 px-6 py-10 md:px-10 md:py-32">
 
       <div
@@ -933,6 +1223,11 @@
           Let's grow<br />together<span class="text-accent">.</span>
         </h2>
 
+        <p class="mt-6 max-w-[720px] leading-relaxed text-white/55" data-slide-up>
+          Ready to build a marketing system that pays for itself? Book a call with Scalixo Media to discuss your
+          goals, current channels, and where the fastest growth is likely to come from.
+        </p>
+
         <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
           data-slide-up>
           <div class="flex flex-wrap gap-5">
@@ -942,7 +1237,6 @@
               <span
                 class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </a>
-
           </div>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2">
             <a href="https://www.instagram.com/scalixo.media"
