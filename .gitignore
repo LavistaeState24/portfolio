@@ -1,3 +1,5 @@
 node_modules/
 assets/*.mp4
 assets/*.mov
+claude/
+serena/
