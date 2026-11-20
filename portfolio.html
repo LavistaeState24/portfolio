@@ -478,9 +478,9 @@
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">04 pieces</span>
           </div>
 
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-4 md:gap-6">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-4 md:gap-4">
             <!-- Reel 1 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
+            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px] lg:max-w-none mb-10">
               <div
                 class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
                 <div
@@ -521,7 +521,7 @@
             </div>
 
             <!-- Reel 2 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
+            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px] lg:max-w-none mb-10">
               <div
                 class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
                 <div
@@ -562,7 +562,7 @@
             </div>
 
             <!-- Reel 3 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
+            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px] lg:max-w-none mb-10">
               <div
                 class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
                 <div
@@ -603,7 +603,7 @@
             </div>
 
             <!-- Reel 4 -->
-            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px]">
+            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px] lg:max-w-none mb-10">
               <div
                 class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
                 <div
@@ -616,6 +616,48 @@
                 <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
                   <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm">Krupa
                     Nails</p>
+                </div>
+                <button
+                  class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
+                  <span
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm md:h-14 md:w-14">
+                    <svg class="ml-1 h-5 w-5 text-white md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </button>
+                <button
+                  class="mute-btn absolute bottom-14 right-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-sm transition-transform hover:scale-110 md:h-9 md:w-9">
+                  <svg class="mute-icon h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                  </svg>
+                </button>
+                <div class="absolute bottom-5 left-4 right-4 z-30 h-1 overflow-hidden rounded-full bg-white/25">
+                  <div class="progress-bar h-full w-0 rounded-full bg-white"></div>
+                </div>
+                <span
+                  class="absolute left-2.5 top-7 z-20 rounded-full bg-black/55 px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest text-white backdrop-blur-sm md:left-3 md:top-8 md:text-[9px]">▶
+                  Reel · 0:18</span>
+              </div>
+            </div>
+
+            <!-- Reel 5 -->
+            <div class="reel-card group relative mx-auto w-full max-w-[240px] md:max-w-[280px] lg:max-w-none mb-10">
+              <div
+                class="relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border-[6px] border-neutral-800 bg-black shadow-2xl md:rounded-[40px] md:border-[8px]">
+                <div
+                  class="absolute left-1/2 top-0 z-20 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-neutral-800 md:h-5 md:w-24">
+                </div>
+                <video class="reel-video h-full w-full object-cover" loop muted playsinline preload="metadata">
+                  <source
+                    src="https://dfduzpsnzruzsdjipgww.supabase.co/storage/v1/object/public/client-content/cl_1787553675109/Sclupt%20and%20Soar_V05.mp4"
+                    type="video/mp4">
+                </video>
+                <div class="pointer-events-none absolute bottom-16 left-3 right-3 z-10">
+                  <p class="font-sans text-xs font-semibold leading-tight text-white drop-shadow-lg md:text-sm ">
+                    Sclupt and Soar</p>
                 </div>
                 <button
                   class="play-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/15 transition-opacity duration-300">
