@@ -182,13 +182,13 @@
 
 <body class="font-sans">
 
-   <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
+  <div class="progress-bar fixed top-0 left-0 z-[60] h-[2px] w-full bg-accent"></div>
 
-    <!-- Cursor -->
-    <div class="cursor-ring"></div>
-    <div class="cursor-dot"></div>
+  <!-- Cursor -->
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
 
-    <header id="siteHeader"></header>
+  <header id="siteHeader"></header>
 
   <main>
 
@@ -205,22 +205,22 @@
         <nav aria-label="Breadcrumb" data-reveal>
           <ol class="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em]">
             <li>
-              <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+              <a href="/" class="text-white/40 transition-colors hover:text-accent-2">Home</a>
             </li>
             <li aria-hidden="true" class="text-white/20">/</li>
             <li>
-              <span class="text-white/70" aria-current="page">Terms &amp; Conditions</span>
+              <span class="text-accent-2" aria-current="page">Terms &amp; Conditions</span>
             </li>
           </ol>
         </nav>
 
         <h1 class="mt-8 font-display text-[clamp(2.6rem,9vw,7.5rem)] uppercase leading-[0.92]" data-reveal>
-          Terms &amp;<br />Conditions<span class="text-accent">.</span>
+          Terms &amp;<br />Conditions<span class="text-accent-2">.</span>
         </h1>
 
         <!-- ══════════ VISIBLE BYLINE ══════════ -->
         <p class="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-white/45" data-reveal>
-          By <a href="/contact" class="text-white/75 transition-colors hover:text-accent">Scalixo Media Legal</a>
+          By <a href="/contact" class="text-white/75 transition-colors hover:text-accent-2">Scalixo Media Legal</a>
           <span class="mx-2 text-white/20">·</span>
           <span>Published <time datetime="2026-01-01">Jan 2026</time></span>
           <span class="mx-2 text-white/20">·</span>
@@ -236,11 +236,13 @@
           <div class="flex flex-wrap gap-10 md:col-span-6 md:col-start-7">
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Last updated</div>
-              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">July 4, 2026</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-accent-2 md:text-3xl">July 4, 2026
+              </div>
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Applies to</div>
-              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">scalixomedia.com</div>
+              <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">scalixomedia.com
+              </div>
             </div>
             <div>
               <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Sections</div>
@@ -259,24 +261,48 @@
         <!-- ── Sticky TOC ── -->
         <aside class="md:col-span-3">
           <div class="md:sticky md:top-28" data-reveal>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(Index)</span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">(Index)</span>
             <nav class="mt-6 flex flex-col gap-3 border-l border-white/10 pl-5" aria-label="On this page">
-              <a href="#acceptance" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">01 · Do you accept these terms?</a>
-              <a href="#services" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">02 · What services do we provide?</a>
-              <a href="#client" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">03 · What are your client responsibilities?</a>
-              <a href="#payment" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">04 · How do payments &amp; billing work?</a>
-              <a href="#ip" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">05 · Who owns the intellectual property?</a>
-              <a href="#confidentiality" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">06 · How is confidential information protected?</a>
-              <a href="#warranties" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">07 · Do we guarantee results?</a>
-              <a href="#liability" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">08 · What are the limits of our liability?</a>
-              <a href="#termination" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">09 · How can an engagement be terminated?</a>
-              <a href="#law" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">10 · Which laws govern these terms?</a>
-              <a href="#changes" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">11 · How are changes handled?</a>
-              <a href="#contact" class="toc-link font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent">12 · How can you contact us?</a>
+              <a href="#acceptance"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">01
+                · Do you accept these terms?</a>
+              <a href="#services"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">02
+                · What services do we provide?</a>
+              <a href="#client"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">03
+                · What are your client responsibilities?</a>
+              <a href="#payment"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">04
+                · How do payments &amp; billing work?</a>
+              <a href="#ip"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">05
+                · Who owns the intellectual property?</a>
+              <a href="#confidentiality"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">06
+                · How is confidential information protected?</a>
+              <a href="#warranties"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">07
+                · Do we guarantee results?</a>
+              <a href="#liability"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">08
+                · What are the limits of our liability?</a>
+              <a href="#termination"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">09
+                · How can an engagement be terminated?</a>
+              <a href="#law"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">10
+                · Which laws govern these terms?</a>
+              <a href="#changes"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">11
+                · How are changes handled?</a>
+              <a href="#contact"
+                class="toc-link font-mono text-[11px] uppercase ] text-white/45 transition-colors hover:text-accent-2">12
+                · How can you contact us?</a>
             </nav>
 
             <a href="/contact" data-magnetic
-              class="cta-btn group mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+              class="cta-btn group mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 font-mono text-[10px] uppercase ] text-white">
               <span class="relative z-10 transition-colors duration-500">Ask a question</span>
               <span class="relative z-10 transition-transform duration-500 group-hover:translate-x-0.5">→</span>
             </a>
@@ -288,7 +314,7 @@
 
           <!-- Intro card -->
           <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-10" data-reveal>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Overview</span>
+            <span class="font-mono text-[10px] uppercase  text-accent-2">Overview</span>
             <p class="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
               These Terms and Conditions ("Terms") govern your access to and use of the
               Scalixo Media website and services. Please read them carefully before
@@ -305,7 +331,7 @@
           <!-- 01 · Acceptance -->
           <article id="acceptance" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">01</span>
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Do You Accept These Terms?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -329,8 +355,9 @@
           <!-- 02 · Services -->
           <article id="services" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Services Does Scalixo Media Provide?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">02</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Services Does Scalixo Media
+                Provide?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -354,8 +381,9 @@
           <!-- 03 · Client Responsibilities -->
           <article id="client" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are Your Responsibilities as a Client?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">03</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are Your Responsibilities as a
+                Client?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -369,7 +397,8 @@
               <ul class="space-y-3">
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Provide accurate, complete, and timely information, brand assets, and access required to deliver the services.</span>
+                  <span>Provide accurate, complete, and timely information, brand assets, and access required to deliver
+                    the services.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
@@ -377,12 +406,14 @@
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Ensure you have the legal right to use any content, images, trademarks, or data you provide to us.</span>
+                  <span>Ensure you have the legal right to use any content, images, trademarks, or data you provide to
+                    us.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                   <span>Comply with advertising regulations — including the
-                    <a href="https://www.ascionline.in/" rel="noopener" class="text-accent underline-offset-4 hover:underline">ASCI Code</a>
+                    <a href="https://www.ascionline.in/" rel="noopener"
+                      class="text-accent underline-offset-4 hover:underline">ASCI Code</a>
                     in India — and with platform policies relevant to your business.</span>
                 </li>
               </ul>
@@ -392,8 +423,9 @@
           <!-- 04 · Payments -->
           <article id="payment" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Do Payments and Billing Work?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">04</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Do Payments and Billing Work?
+              </h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -416,11 +448,13 @@
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Third-party platform costs (ad spend, subscriptions, domain, hosting) are billed separately and paid directly or reimbursed by the client.</span>
+                  <span>Third-party platform costs (ad spend, subscriptions, domain, hosting) are billed separately and
+                    paid directly or reimbursed by the client.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-                  <span>Late payments may result in paused work, suspended account access, or late fees where permitted by law.</span>
+                  <span>Late payments may result in paused work, suspended account access, or late fees where permitted
+                    by law.</span>
                 </li>
               </ul>
             </div>
@@ -429,8 +463,9 @@
           <!-- 05 · Intellectual Property -->
           <article id="ip" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">05</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Who Owns the Intellectual Property?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">05</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Who Owns the Intellectual Property?
+              </h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -453,8 +488,9 @@
           <!-- 06 · Confidentiality -->
           <article id="confidentiality" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">06</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Is Confidential Information Protected?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">06</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Is Confidential Information
+                Protected?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -463,7 +499,8 @@
                 survives termination of the agreement. Confidential information does not
                 include information that is publicly available, independently developed, or
                 required to be disclosed by law — for example, under India's
-                <a href="https://www.meity.gov.in/data-protection-framework" rel="noopener" class="text-accent underline-offset-4 hover:underline">Digital Personal Data Protection Act, 2023</a>.
+                <a href="https://www.meity.gov.in/data-protection-framework" rel="noopener"
+                  class="text-accent underline-offset-4 hover:underline">Digital Personal Data Protection Act, 2023</a>.
               </p>
             </div>
           </article>
@@ -471,8 +508,9 @@
           <!-- 07 · No Guarantees -->
           <article id="warranties" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">07</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Does Scalixo Media Guarantee Results?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">07</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Does Scalixo Media Guarantee Results?
+              </h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -486,9 +524,11 @@
               <p>
                 Our work is shaped by the advertising policies of the platforms we operate
                 on — such as
-                <a href="https://support.google.com/adspolicy/answer/6008942" rel="noopener" class="text-accent underline-offset-4 hover:underline">Google Ads policies</a>
+                <a href="https://support.google.com/adspolicy/answer/6008942" rel="noopener"
+                  class="text-accent underline-offset-4 hover:underline">Google Ads policies</a>
                 and
-                <a href="https://transparency.fb.com/policies/ad-standards/" rel="noopener" class="text-accent underline-offset-4 hover:underline">Meta advertising standards</a>.
+                <a href="https://transparency.fb.com/policies/ad-standards/" rel="noopener"
+                  class="text-accent underline-offset-4 hover:underline">Meta advertising standards</a>.
               </p>
             </div>
           </article>
@@ -496,8 +536,9 @@
           <!-- 08 · Limitation of Liability -->
           <article id="liability" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">08</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are the Limits of Our Liability?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">08</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">What Are the Limits of Our Liability?
+              </h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -514,8 +555,9 @@
           <!-- 09 · Termination -->
           <article id="termination" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">09</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can an Engagement Be Terminated?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">09</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can an Engagement Be Terminated?
+              </h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -531,7 +573,7 @@
           <!-- 10 · Governing Law -->
           <article id="law" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">10</span>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">10</span>
               <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">Which Laws Govern These Terms?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
@@ -541,7 +583,8 @@
                 subject to the exclusive jurisdiction of the courts located in Ahmedabad,
                 Gujarat. Nothing in these Terms limits any statutory rights you may have
                 under the
-                <a href="https://legislative.gov.in/sites/default/files/A1872-09.pdf" rel="noopener" class="text-accent underline-offset-4 hover:underline">Indian Contract Act, 1872</a>
+                <a href="https://legislative.gov.in/sites/default/files/A1872-09.pdf" rel="noopener"
+                  class="text-accent underline-offset-4 hover:underline">Indian Contract Act, 1872</a>
                 or other applicable Indian law.
               </p>
             </div>
@@ -550,8 +593,9 @@
           <!-- 11 · Changes -->
           <article id="changes" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">11</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Are Changes to These Terms Handled?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">11</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Are Changes to These Terms
+                Handled?</h2>
             </div>
             <div class="mt-6 space-y-4 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -568,8 +612,9 @@
           <!-- 12 · Contact Us -->
           <article id="contact" class="scroll-mt-32 border-t border-white/10 py-10 md:py-14" data-reveal>
             <div class="flex items-baseline gap-4">
-              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">12</span>
-              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can You Contact Scalixo Media?</h2>
+              <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">12</span>
+              <h2 class="font-display text-2xl uppercase leading-none md:text-4xl">How Can You Contact Scalixo Media?
+              </h2>
             </div>
             <div class="mt-6 space-y-6 leading-relaxed text-white/55 md:pl-12">
               <p class="text-white/70">
@@ -595,7 +640,7 @@
                   <div>
                     <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Phone</div>
                     <a href="tel:+919328792160"
-                      class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent md:text-2xl">
+                      class="mt-2 block font-display text-xl uppercase leading-none text-white transition-colors hover:text-accent-2 md:text-2xl">
                       +91 93287 92160
                     </a>
                   </div>
@@ -605,12 +650,14 @@
                   <a href="tel:+919328792160" data-magnetic
                     class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
                     Call us
-                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    <span
+                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                   </a>
                   <a href="/contact" data-magnetic
                     class="group inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white md:text-xs">
                     Start a project
-                    <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    <span
+                      class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                   </a>
                 </div>
               </div>
@@ -627,7 +674,7 @@
 
         <aside class="md:col-span-3">
           <div class="md:sticky md:top-28" data-reveal>
-            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(FAQ)</span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">(FAQ)</span>
             <h2 class="mt-4 font-display text-3xl uppercase leading-[0.95] md:text-5xl">Common<br />Questions</h2>
           </div>
         </aside>
@@ -639,14 +686,16 @@
               <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
                 What services does Scalixo Media provide?
               </h3>
-              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+              <span
+                class="text-2xl leading-none text-accent-2 transition-transform duration-300 group-open:rotate-45">+</span>
             </summary>
             <p class="mt-4 leading-relaxed text-white/55">
               Scalixo Media provides digital marketing and creative services including social media marketing,
               performance marketing, lead generation, SEO, website development, branding, and influencer marketing.
               Specific scope, deliverables, timelines, and fees for any engagement are defined in a separate proposal
               or written agreement shared before work begins. See the
-              <a href="/services" class="text-accent underline-offset-4 hover:underline">Services page</a> for current offerings.
+              <a href="/services" class="text-accent underline-offset-4 hover:underline">Services page</a> for current
+              offerings.
             </p>
           </details>
 
@@ -655,7 +704,8 @@
               <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
                 How do payments and billing work at Scalixo Media?
               </h3>
-              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+              <span
+                class="text-2xl leading-none text-accent-2 transition-transform duration-300 group-open:rotate-45">+</span>
             </summary>
             <p class="mt-4 leading-relaxed text-white/55">
               Unless agreed otherwise in writing, a non-refundable advance is required before work begins, invoices
@@ -670,7 +720,8 @@
               <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
                 Does Scalixo Media guarantee marketing results?
               </h3>
-              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+              <span
+                class="text-2xl leading-none text-accent-2 transition-transform duration-300 group-open:rotate-45">+</span>
             </summary>
             <p class="mt-4 leading-relaxed text-white/55">
               No. Digital marketing results depend on many factors outside our control, including market conditions,
@@ -685,7 +736,8 @@
               <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
                 Who owns the work delivered by Scalixo Media?
               </h3>
-              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+              <span
+                class="text-2xl leading-none text-accent-2 transition-transform duration-300 group-open:rotate-45">+</span>
             </summary>
             <p class="mt-4 leading-relaxed text-white/55">
               Upon full payment of the agreed fees, ownership of final approved deliverables created specifically for
@@ -701,7 +753,8 @@
               <h3 class="font-display text-xl uppercase leading-tight md:text-2xl">
                 How can I contact Scalixo Media about these Terms?
               </h3>
-              <span class="text-2xl leading-none text-accent transition-transform duration-300 group-open:rotate-45">+</span>
+              <span
+                class="text-2xl leading-none text-accent-2 transition-transform duration-300 group-open:rotate-45">+</span>
             </summary>
             <p class="mt-4 leading-relaxed text-white/55">
               You can contact Scalixo Media by phone at
@@ -721,26 +774,27 @@
     <section id="contact-cta" class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
       <div class="mx-auto max-w-[1500px]">
         <div class="mb-10" data-reveal>
-          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">(03)</span>
+          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">(03)</span>
         </div>
 
         <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-reveal>
-          Need More<br />Information<span class="text-accent">?</span>
+          Need More<br />Information<span class="text-accent-2">?</span>
         </h2>
 
         <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
           data-reveal>
           <a href="tel:+919328792160" data-magnetic
-            class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+            class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-500 hover:border-accent-2 hover:bg-accent-2 hover:text-ink">
             +91 93287 92160
-            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            <span
+              class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
           </a>
           <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
             <a href="https://www.instagram.com/scalixo.media?igsh=emkxZ3Q3bGlvaXhr"
-              class="transition-colors hover:text-accent">Instagram</a>
+              class="transition-colors hover:text-accent-2">Instagram</a>
             <a href="https://www.linkedin.com/company/scalixomedia/posts/"
-              class="transition-colors hover:text-accent">LinkedIn</a>
-            <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent">Facebook</a>
+              class="transition-colors hover:text-accent-2">LinkedIn</a>
+            <a href="https://www.facebook.com/scalixo.media" class="transition-colors hover:text-accent-2">Facebook</a>
           </div>
         </div>
       </div>
@@ -748,9 +802,11 @@
 
   </main>
 
+
   <!-- ══════════ FOOTER ══════════ -->
   <footer class="border-t border-white/10 px-6 py-8 md:px-10">
-    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
+    <div
+      class="mx-auto flex max-w-[1500px] flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/35 md:flex-row md:items-center md:justify-between">
       <span>© <span id="year">2025</span> Scalixo Media — All rights reserved</span>
       <span class="flex items-center gap-2">
         <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>

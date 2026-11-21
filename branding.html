@@ -241,14 +241,16 @@
                 bg-[size:72px_72px]
                 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
 
+            <!-- Blue ambient (brand framing) -->
             <div data-parallax="0.15"
                 class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]">
             </div>
+            <!-- Lime micro-glow (signal spark) -->
             <div data-parallax="-0.1"
-                class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]">
+                class="pointer-events-none absolute -left-60 top-1/2 h-[520px] w-[520px] rounded-full bg-accent-2/[0.04] blur-[140px]">
             </div>
             <div data-parallax="0.08"
-                class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/5 blur-[120px]">
+                class="pointer-events-none absolute right-1/3 bottom-0 h-[380px] w-[380px] rounded-full bg-accent/[0.08] blur-[120px]">
             </div>
 
             <div class="relative mx-auto max-w-[1500px]">
@@ -257,7 +259,7 @@
                 <nav aria-label="Breadcrumb" data-hero-breadcrumb class="mb-6">
                     <ol class="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
                         <li>
-                            <a href="index" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                            <a href="index" class="text-white/40 transition-colors hover:text-accent-2">Home</a>
                         </li>
                         <li aria-hidden="true" class="text-white/20">/</li>
                         <li aria-current="page" class="text-white/70">Branding &amp; Identity Design</li>
@@ -272,7 +274,7 @@
                         <span class="hero-line block" data-hero-line>recognize, trust,</span>
                     </span>
                     <span class="block overflow-hidden">
-                        <span class="hero-line block text-accent" data-hero-line>remember.</span>
+                        <span class="hero-line block text-accent-2" data-hero-line>remember.</span>
                     </span>
                 </h1>
 
@@ -287,26 +289,19 @@
                             media.
                         </p>
 
-                        <!-- Visible byline (matches the Person node in JSON-LD) -->
-                        <!-- <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
-                            <span>By <a href="/about" class="text-white/70 transition-colors hover:text-accent">Scalixo Media Studio</a></span>
-                            <span class="text-white/20">·</span>
-                            <span>Reviewed by the Scalixo Brand Team</span>
-                            <span class="text-white/20">·</span>
-                            <span>Updated <time datetime="2025-01-15">Jan 2025</time></span>
-                        </div> -->
-
                         <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <!-- Primary lime CTA (matches Contact submit button) -->
                             <a href="#services" data-magnetic
-                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent-2 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink transition-all duration-500 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_20px_50px_-15px_rgba(212,255,36,0.5)]">
                                 <span
-                                    class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                    class="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-700 group-hover:translate-x-0"></span>
                                 <span class="relative">Explore Identity Work</span>
                                 <i
                                     class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
                             </a>
+                            <!-- Secondary CTA — lime outline (matches Contact "Ask Your Question") -->
                             <a href="/contact" data-magnetic
-                                class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
+                                class="group inline-flex items-center gap-3 rounded-full border border-accent-2/40 bg-accent-2/[0.04] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2 transition-all duration-500 hover:border-accent-2 hover:bg-accent-2 hover:text-ink">
                                 <i class="fa-solid fa-comments text-xs"></i>
                                 Start Your Brand
                             </a>
@@ -335,38 +330,38 @@
         </section>
 
         <!-- MARQUEE — Branding terms -->
-        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
+        <section class="relative overflow-hidden border-y border-accent/20 bg-accent/[0.015] py-7 md:py-9">
             <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
                 <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
                     <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Brand
                         Strategy</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Logo
                         Design</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Visual
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent-2 md:text-5xl">Visual
                         Identity</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
                     <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Brand
                         Messaging</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
                     <span
                         class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Guidelines</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
                     <span
-                        class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Collaterals</span>
-                    <i class="fa-solid fa-circle text-[6px] text-accent"></i>
+                        class="font-display text-3xl uppercase tracking-tight text-accent-2 md:text-5xl">Collaterals</span>
+                    <i class="fa-solid fa-circle text-[6px] text-accent-2"></i>
                 </div>
             </div>
         </section>
 
         <!-- WHY IT MATTERS — Branding definition -->
-        <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+        <section class="relative border-b border-accent/20 px-6 py-20 md:px-10 md:py-28">
             <div class="mx-auto max-w-[1500px]">
                 <div class="grid gap-10 md:grid-cols-12 md:gap-14">
                     <div class="md:col-span-5">
                         <div class="sticky top-32">
-                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2" data-reveal>
                                 <span class="text-white/30"></span> 01 — Why It Matters
                             </span>
                             <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -384,7 +379,7 @@
                     <div class="space-y-8 md:col-span-6 md:col-start-7">
                         <!-- ANSWER BLOCK: 60 words -->
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
-                            <a href="https://www.ama.org/resources/Pages/Dictionary.aspx?dLetter=B" target="_blank" rel="noopener noreferrer" class="underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent">Branding</a>
+                            <a href="https://www.ama.org/resources/Pages/Dictionary.aspx?dLetter=B" target="_blank" rel="noopener noreferrer" class="text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent-2">Branding</a>
                             is the strategy and visual system that shapes how customers
                             perceive your business — combining positioning, messaging, identity,
                             and consistency across every touchpoint. A strong brand creates trust
@@ -402,24 +397,24 @@
 
                         <!-- Three pillars: Clarity, Trust, Recall -->
                         <div class="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-3" data-reveal>
-                            <div class="pl-4">
-                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">01
+                            <div class="pl-4 border-l border-accent/30">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-accent-2">01
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Clarity
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60">Clarity
                                 </div>
                                 <p class="mt-2 text-sm text-white/45">Clear positioning and messaging.</p>
                             </div>
-                            <div class="pl-4">
-                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">02
+                            <div class="pl-4 border-l border-accent/30">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-accent-2">02
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Trust
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60">Trust
                                 </div>
                                 <p class="mt-2 text-sm text-white/45">Professional visuals that build credibility.</p>
                             </div>
-                            <div class="pl-4">
-                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-white">03
+                            <div class="pl-4 border-l border-accent/30">
+                                <div class="font-display text-3xl uppercase leading-none tracking-tight text-accent-2">03
                                 </div>
-                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">Recall
+                                <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60">Recall
                                 </div>
                                 <p class="mt-2 text-sm text-white/45">A memorable identity customers recognize.</p>
                             </div>
@@ -430,12 +425,12 @@
         </section>
 
         <!-- SERVICES — Complete Branding & Identity Solutions -->
-        <section id="services" class="scroll-mt-24 border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+        <section id="services" class="scroll-mt-24 border-t border-accent/20 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
 
                 <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7">
-                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2" data-reveal>
                             <span class="text-white/30"></span> 02 — What We Create
                         </div>
                         <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -461,13 +456,13 @@
 
                     <!-- Brand Strategy -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-bullseye"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
@@ -480,7 +475,7 @@
                                 and more confident.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>strategy.ts</span>
                             </div>
                         </div>
@@ -488,13 +483,13 @@
 
                     <!-- Logo Design -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-pen-nib"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Logo
@@ -507,7 +502,7 @@
                                 recognizable at any size.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>logo.ts</span>
                             </div>
                         </div>
@@ -515,13 +510,13 @@
 
                     <!-- Visual Identity -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-palette"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Visual
@@ -534,7 +529,7 @@
                                 so every asset your team creates looks unmistakably yours.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>visual-identity.ts</span>
                             </div>
                         </div>
@@ -542,13 +537,13 @@
 
                     <!-- Brand Messaging -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-comments"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
@@ -561,7 +556,7 @@
                                 instantly understand what you offer and why it matters.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>messaging.ts</span>
                             </div>
                         </div>
@@ -569,13 +564,13 @@
 
                     <!-- Brand Guidelines -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-layer-group"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Brand
@@ -588,7 +583,7 @@
                                 no matter who on your team is creating the asset.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>guidelines.ts</span>
                             </div>
                         </div>
@@ -596,13 +591,13 @@
 
                     <!-- Marketing Collaterals -->
                     <article data-reveal data-glow
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:bg-white/[0.04]">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:bg-accent/[0.04] hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
                             class="pointer-events-none absolute -inset-px rounded-2xl bg-[radial-gradient(circle_at_var(--x,50%)_var(--y,50%),rgba(28,88,227,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div
-                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">
                                 <i class="fa-solid fa-photo-video"></i>
                             </div>
                             <h3 class="font-display text-2xl uppercase leading-none tracking-tight text-white">Marketing
@@ -615,7 +610,7 @@
                                 from your brand system and ready to use from day one.
                             </p>
                             <div
-                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white">
+                                class="mt-8 flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
                                 <span>collaterals.ts</span>
                             </div>
                         </div>
@@ -626,11 +621,11 @@
         </section>
 
         <!-- INDUSTRIES — Who We Brand For -->
-        <section id="platforms" class="relative overflow-hidden border-t border-white/10 py-24 md:py-32">
+        <section id="platforms" class="relative overflow-hidden border-t border-accent/20 py-24 md:py-32">
             <div class="mx-auto mb-16 max-w-[1500px] px-6 md:px-10">
                 <div class="grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
-                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2" data-reveal>
                             <span class="text-white/30"></span> 03 — Who We Brand For
                         </div>
                         <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -655,14 +650,14 @@
                 <div id="railTrack" class="flex gap-6 will-change-transform">
 
                     <div data-glow
-                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:border-accent-2/60 md:w-[360px]">
                         <div
                             class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
-                                <i class="fa-solid fa-building text-4xl text-accent"></i>
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">01</span>
+                                <i class="fa-solid fa-building text-4xl text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">01</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Real
                                 Estate</h3>
@@ -674,22 +669,22 @@
                                 choosing you over the competition.
                             </p>
                             <div
-                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
-                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
                                 <span>property</span>
                             </div>
                         </div>
                     </div>
 
                     <div data-glow
-                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:border-accent-2/60 md:w-[360px]">
                         <div
                             class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
-                                <i class="fa-solid fa-spa text-4xl text-accent"></i>
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">02</span>
+                                <i class="fa-solid fa-spa text-4xl text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">02</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Salons
                             </h3>
@@ -701,22 +696,22 @@
                                 experience a premium brand at every touchpoint.
                             </p>
                             <div
-                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
-                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
                                 <span>wellness</span>
                             </div>
                         </div>
                     </div>
 
                     <div data-glow
-                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:border-accent-2/60 md:w-[360px]">
                         <div
                             class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
-                                <i class="fa-solid fa-utensils text-4xl text-accent"></i>
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">03</span>
+                                <i class="fa-solid fa-utensils text-4xl text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">03</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">
                                 Restaurants</h3>
@@ -728,22 +723,22 @@
                                 brand system.
                             </p>
                             <div
-                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
-                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
                                 <span>hospitality</span>
                             </div>
                         </div>
                     </div>
 
                     <div data-glow
-                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:border-accent/40 md:w-[360px]">
+                        class="group relative w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:border-accent-2/60 md:w-[360px]">
                         <div
                             class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
                             <div class="mb-8 flex items-center justify-between">
-                                <i class="fa-solid fa-graduation-cap text-4xl text-accent"></i>
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/25">04</span>
+                                <i class="fa-solid fa-graduation-cap text-4xl text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">04</span>
                             </div>
                             <h3 class="font-display text-3xl uppercase leading-none tracking-tight text-white">Education
                             </h3>
@@ -755,8 +750,8 @@
                                 instantly trust your institute.
                             </p>
                             <div
-                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
-                                <i class="fa-solid fa-bullseye text-[10px] text-accent"></i>
+                                class="mt-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-accent-2">
+                                <i class="fa-solid fa-bullseye text-[10px] text-accent transition-colors duration-500 group-hover:text-accent-2"></i>
                                 <span>education</span>
                             </div>
                         </div>
@@ -767,11 +762,11 @@
         </section>
 
         <!-- PROCESS — From Business Idea To Memorable Brand Identity -->
-        <section id="process" class="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+        <section id="process" class="relative border-t border-accent/20 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-6">
-                        <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent" data-reveal>
+                        <div class="font-mono text-[11px] mb-10 uppercase tracking-[0.3em] text-accent-2" data-reveal>
                             <span class="text-white/30"></span> 04 — Our Branding Process
                         </div>
                         <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -794,10 +789,10 @@
 
                 <div class="relative">
                     <div
-                        class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-white/10 md:block">
+                        class="pointer-events-none absolute left-[11px] top-4 bottom-4 hidden w-px bg-accent/20 md:block">
                     </div>
                     <div id="processLine"
-                        class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent md:block"
+                        class="pointer-events-none absolute left-[11px] top-4 hidden w-px bg-accent-2 md:block"
                         style="height: 0;"></div>
 
                     <div id="processList" class="space-y-6 md:space-y-8">
@@ -806,13 +801,13 @@
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div
-                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-accent/40 bg-ink transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2">
                                     <span
-                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                        class="h-1.5 w-1.5 rounded-full bg-accent transition-colors duration-500 group-hover:bg-ink"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">Step
                                     01</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
@@ -828,9 +823,9 @@
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Research</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Research</span>
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audit</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Audit</span>
                                 </div>
                             </div>
                         </div>
@@ -839,13 +834,13 @@
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div
-                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-accent/40 bg-ink transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2">
                                     <span
-                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                        class="h-1.5 w-1.5 rounded-full bg-accent transition-colors duration-500 group-hover:bg-ink"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">Step
                                     02</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
@@ -861,9 +856,9 @@
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Strategy</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Strategy</span>
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Messaging</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Messaging</span>
                                 </div>
                             </div>
                         </div>
@@ -872,13 +867,13 @@
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div
-                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-accent/40 bg-ink transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2">
                                     <span
-                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                        class="h-1.5 w-1.5 rounded-full bg-accent transition-colors duration-500 group-hover:bg-ink"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">Step
                                     03</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
@@ -894,9 +889,9 @@
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Logo</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Logo</span>
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Visuals</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Visuals</span>
                                 </div>
                             </div>
                         </div>
@@ -905,13 +900,13 @@
                         <div class="process-step group relative grid gap-4 md:grid-cols-12 md:gap-8">
                             <div class="md:col-span-1">
                                 <div
-                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-ink transition-all duration-500 group-hover:border-accent group-hover:bg-accent">
+                                    class="flex h-6 w-6 items-center justify-center rounded-full border border-accent/40 bg-ink transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2">
                                     <span
-                                        class="h-1.5 w-1.5 rounded-full bg-white/40 transition-colors duration-500 group-hover:bg-white"></span>
+                                        class="h-1.5 w-1.5 rounded-full bg-accent transition-colors duration-500 group-hover:bg-ink"></span>
                                 </div>
                             </div>
                             <div class="md:col-span-4">
-                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">Step
+                                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">Step
                                     04</span>
                                 <h3
                                     class="mt-3 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
@@ -927,9 +922,9 @@
                                 </p>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Delivery</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Delivery</span>
                                     <span
-                                        class="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Guidelines</span>
+                                        class="rounded-full border border-accent/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Guidelines</span>
                                 </div>
                             </div>
                         </div>
@@ -940,11 +935,11 @@
         </section>
 
         <!-- WHY CHOOSE — Branding-focused reasons -->
-        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+        <section class="border-t border-accent/20 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="grid gap-16 md:grid-cols-12 md:gap-16">
                     <div class="md:col-span-5" data-reveal>
-                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2">
                             <span class="text-white/30"></span> 05 — Why Scalixo
                         </div>
                         <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -961,8 +956,9 @@
                             use, and includes launch-ready templates, collaterals, and source
                             files for day one.
                         </p>
+                        <!-- Primary lime CTA (matches Contact submit button) -->
                         <a href="/contact" data-magnetic
-                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                            class="group mt-9 inline-flex items-center gap-3 rounded-full bg-accent-2 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink transition-all duration-500 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_20px_50px_-15px_rgba(212,255,36,0.5)]">
                             Start Your Brand
                             <i
                                 class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1"></i>
@@ -973,11 +969,10 @@
                         <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2">
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-bullseye text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 to avoid skipped heading level -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Strategy First
                                     </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -991,11 +986,10 @@
 
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-palette text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Consistent
                                         Visuals</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -1009,11 +1003,10 @@
 
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-comments text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Clear Messaging
                                     </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -1028,11 +1021,10 @@
 
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-layer-group text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Practical
                                         Guidelines</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -1047,11 +1039,10 @@
 
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-photo-video text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Launch-Ready
                                         Assets</h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -1066,11 +1057,10 @@
 
                             <div data-reveal class="flex items-start gap-4">
                                 <span
-                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/15 text-accent transition-colors duration-500 hover:border-accent-2 hover:text-accent-2">
                                     <i class="fa-solid fa-headset text-sm"></i>
                                 </span>
                                 <div>
-                                    <!-- FIXED: h4 → h3 -->
                                     <h3 class="font-display text-lg uppercase tracking-tight text-white">Direct Access
                                     </h3>
                                     <p class="mt-2 text-sm leading-relaxed text-white/45">
@@ -1089,11 +1079,11 @@
         </section>
 
         <!-- RESULTS — Branding outcomes -->
-        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+        <section class="border-t border-accent/20 px-6 py-24 md:px-10 md:py-32">
             <div class="mx-auto max-w-[1500px]">
                 <div class="mb-20 grid gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-7">
-                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent" data-reveal>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2" data-reveal>
                             <span class="text-white/30"></span> 06 — Results
                         </div>
                         <h2 class="mt-5 font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
@@ -1117,12 +1107,12 @@
 
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Instant Trust</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1135,12 +1125,12 @@
                     </div>
 
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Stronger Recall</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1153,12 +1143,12 @@
                     </div>
 
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Clear Positioning</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1171,12 +1161,12 @@
                     </div>
 
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Premium Perception</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1190,12 +1180,12 @@
                     </div>
 
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">Team
                                 Alignment</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1208,12 +1198,12 @@
                     </div>
 
                     <div data-reveal
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40">
+                        class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
                         <div
-                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
+                            class="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/15 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100">
                         </div>
                         <div class="relative">
-                            <span class="block h-px w-10 bg-accent transition-all duration-500 group-hover:w-20"></span>
+                            <span class="block h-px w-10 bg-accent-2 transition-all duration-500 group-hover:w-20"></span>
                             <h3 class="mt-6 font-display text-2xl uppercase leading-none tracking-tight text-white">
                                 Scale Ready</h3>
                             <p class="mt-4 text-sm leading-relaxed text-white/45">
@@ -1228,14 +1218,15 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-     FAQs — Branding & Identity
-═══════════════════════════════════════════════════════════ -->
-        <section class="relative overflow-hidden border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
+        <!-- FAQs — Branding & Identity -->
+        <section class="relative overflow-hidden border-t border-accent/20 px-6 py-24 md:px-10 md:py-32">
 
             <!-- Ambient Background Glow -->
             <div
-                class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]">
+                class="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]">
+            </div>
+            <div
+                class="pointer-events-none absolute bottom-10 right-10 h-[250px] w-[250px] rounded-full bg-accent-2/[0.04] blur-[100px]">
             </div>
 
             <div class="relative mx-auto max-w-[1500px]">
@@ -1244,8 +1235,8 @@
                     <!-- Left Side: Sticky Heading & CTA -->
                     <div class="lg:sticky lg:top-32 lg:col-span-5 lg:self-start" data-reveal>
                         <div class="flex items-center gap-3">
-                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">07</span>
-                            <span class="h-px w-8 bg-white/20"></span>
+                            <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2">07</span>
+                            <span class="h-px w-8 bg-accent"></span>
                             <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-white/50">FAQs</span>
                         </div>
 
@@ -1263,8 +1254,9 @@
                             us directly and we'll respond within one business day.
                         </p>
 
+                        <!-- Lime outline CTA (matches Contact "Ask Your Question") -->
                         <a href="/contact" data-magnetic
-                            class="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-[0_10px_30px_-10px_rgba(28,88,227,0.3)]">
+                            class="group mt-10 inline-flex items-center gap-3 rounded-full border border-accent-2/40 bg-accent-2/[0.04] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2 hover:bg-accent-2 hover:text-ink hover:shadow-[0_10px_30px_-10px_rgba(212,255,36,0.4)]">
                             Ask Your Question
                             <i
                                 class="fa-solid fa-arrow-right text-xs transition-transform duration-500 group-hover:translate-x-1.5"></i>
@@ -1277,18 +1269,18 @@
 
                             <!-- Q1 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         What is included in branding and identity design?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1306,18 +1298,18 @@
 
                             <!-- Q2 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         Do you only design logos?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1334,18 +1326,18 @@
 
                             <!-- Q3 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         How long does a branding project take?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1362,18 +1354,18 @@
 
                             <!-- Q4 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         How much does branding cost?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1390,18 +1382,18 @@
 
                             <!-- Q5 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         Can you rebrand my existing business?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1419,18 +1411,18 @@
 
                             <!-- Q6 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         Will I receive editable files?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1446,18 +1438,18 @@
 
                             <!-- Q7 -->
                             <details data-reveal
-                                class="group rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] open:border-accent/40 open:bg-accent/[0.03] open:shadow-[0_10px_40px_-15px_rgba(28,88,227,0.2)]">
+                                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:border-accent/40 hover:bg-accent/[0.03] open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)]">
                                 <summary
                                     class="flex cursor-pointer list-none items-center justify-between p-6 md:p-7 [&::-webkit-details-marker]:hidden">
                                     <h3
-                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent md:text-xl">
+                                        class="pr-6 font-display text-lg uppercase tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-xl">
                                         How many revisions are included?
                                     </h3>
                                     <span
-                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-accent/50 group-hover:bg-accent/20 group-open:rotate-180 group-open:border-accent group-open:bg-accent group-open:text-white">
+                                        class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-500 group-hover:border-accent-2/50 group-hover:bg-accent-2/20 group-hover:text-accent-2 group-open:rotate-180 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                                         <span
-                                            class="absolute h-3 w-[1.5px] bg-white transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
-                                        <span class="absolute h-[1.5px] w-3 bg-white"></span>
+                                            class="absolute h-3 w-[1.5px] bg-current transition-all duration-300 group-open:h-0 group-open:opacity-0"></span>
+                                        <span class="absolute h-[1.5px] w-3 bg-current"></span>
                                     </span>
                                 </summary>
                                 <div class="px-6 pb-7 md:px-7">
@@ -1478,20 +1470,30 @@
         </section>
 
         <!-- FINAL CTA — Ready To Build A Brand People Remember? -->
-        <section class="border-t border-white/10 px-6 py-24 md:px-10 md:py-32">
-            <div class="mx-auto max-w-[1500px]">
+        <section class="relative border-t border-accent/20 px-6 py-24 md:px-10 md:py-32 overflow-hidden">
+
+            <!-- Dual glow: blue + lime converge -->
+            <div
+                class="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[150px]">
+            </div>
+            <div
+                class="pointer-events-none absolute right-0 bottom-0 h-[300px] w-[300px] rounded-full bg-accent-2/[0.05] blur-[120px]">
+            </div>
+
+            <div class="relative mx-auto max-w-[1500px]">
                 <div class="mb-10" data-reveal>
-                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">(08)</span>
+                    <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-accent-2">(08)</span>
                 </div>
 
                 <h2 class="font-display text-[clamp(2.8rem,11vw,10rem)] uppercase leading-[1.05]" data-split>
-                    Ready to build a<br />brand people<br />remember<span class="text-accent">.</span>
+                    Ready to build a<br />brand people<br />remember<span class="text-accent-2">.</span>
                 </h2>
 
                 <div class="mt-12 flex flex-col items-start gap-10 md:mt-16 md:flex-row md:items-center md:justify-between"
                     data-reveal>
+                    <!-- Primary lime CTA (matches Contact final CTA) -->
                     <a href="tel:+919328792160" data-magnetic
-                        class="group inline-flex items-center gap-4 rounded-full border border-white/15 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:border-accent hover:bg-accent hover:text-white">
+                        class="group inline-flex items-center gap-4 rounded-full bg-accent-2 px-8 py-5 font-mono text-xs uppercase tracking-[0.2em] text-ink transition-all duration-500 hover:bg-white hover:shadow-[0_15px_50px_-15px_rgba(212,255,36,0.6)]">
                         +91 93287 92160
                         <span
                             class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
@@ -1499,11 +1501,11 @@
 
                     <div class="flex gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
                         <a href="https://www.instagram.com/scalixo.media" target="_blank" rel="noopener noreferrer"
-                            class="transition-colors hover:text-accent">Instagram</a>
+                            class="transition-colors hover:text-accent-2">Instagram</a>
                         <a href="https://www.linkedin.com/company/scalixomedia/posts/" target="_blank"
-                            rel="noopener noreferrer" class="transition-colors hover:text-accent">LinkedIn</a>
+                            rel="noopener noreferrer" class="transition-colors hover:text-accent-2">LinkedIn</a>
                         <a href="https://www.facebook.com/scalixo.media" target="_blank" rel="noopener noreferrer"
-                            class="transition-colors hover:text-accent">Facebook</a>
+                            class="transition-colors hover:text-accent-2">Facebook</a>
                     </div>
                 </div>
             </div>
