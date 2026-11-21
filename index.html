@@ -200,15 +200,14 @@
         </div>
         <div class="absolute -top-[30rem] right-[-10rem] h-[60rem] w-[60rem] rounded-full bg-accent/20 blur-[180px]">
         </div>
-        <div class="absolute -left-72 top-[45%] h-[36rem] w-[36rem] rounded-full bg-accent-2/10 blur-[150px]"></div>
+        <div class="absolute -left-72 top-[45%] h-[36rem] w-[36rem] rounded-full bg-accent-2/[0.06] blur-[150px]"></div>
         <div
           class="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(ellipse_at_60%_30%,#000_0%,transparent_70%)]">
         </div>
         <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-ink"></div>
       </div>
 
-      <div
-        class="relative grid max-w-auto flex-1 items-center gap-10 px-6 pb-16 md:px-10 lg:grid-cols-12 lg:gap-10">
+      <div class="relative grid max-w-auto flex-1 items-center gap-10 px-6 pb-16 md:px-10 lg:grid-cols-12 lg:gap-10">
 
         <!-- ── left: copy ── -->
         <div class="lg:col-span-7">
@@ -217,17 +216,17 @@
           <nav aria-label="Breadcrumb"
             class="mt-14 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
             <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <li><a href="#home" class="text-white/60 transition-colors hover:text-white">Home</a></li>
+              <li><a href="#home" class="text-white/60 transition-colors hover:text-accent-2">Home</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
-              <li><a href="#services" class="text-white/60 transition-colors hover:text-white">Services</a></li>
+              <li><a href="#services" class="text-white/60 transition-colors hover:text-accent-2">Services</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
-              <li><a href="#work" class="text-white/60 transition-colors hover:text-white">Work</a></li>
+              <li><a href="#work" class="text-white/60 transition-colors hover:text-accent-2">Work</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
-              <li><a href="#process" class="text-white/60 transition-colors hover:text-white">Process</a></li>
+              <li><a href="#process" class="text-white/60 transition-colors hover:text-accent-2">Process</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
-              <li><a href="#voices" class="text-white/60 transition-colors hover:text-white">Client Voices</a></li>
+              <li><a href="#voices" class="text-white/60 transition-colors hover:text-accent-2">Client Voices</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
-              <li><a href="#about" class="text-white/60 transition-colors hover:text-white">About</a></li>
+              <li><a href="#about" class="text-white/60 transition-colors hover:text-accent-2">About</a></li>
               <li aria-hidden="true" class="text-white/20">/</li>
               <li aria-current="page" class="text-accent-2">FAQ</li>
             </ol>
@@ -244,11 +243,11 @@
 
             <!-- Author -->
             <div class="flex items-center gap-2.5">
-           
+
               <span class="font-mono">
                 <span class="text-white/35">By</span>
                 <a href="/about"
-                  class="ml-1 text-white/80 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/60">
+                  class="ml-1 text-white/80 underline decoration-white/20 underline-offset-4 transition-colors hover:text-accent-2 hover:decoration-accent-2">
                   Scalixo Media Editorial Team
                 </a>
               </span>
@@ -276,28 +275,30 @@
           </p>
 
           <div class="hero-rise mt-8 flex flex-wrap items-center gap-3" style="animation-delay:.42s">
+            <!-- Primary lime CTA — matches Contact submit button -->
             <a href="/contact"
-              class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_18px_50px_-15px_rgba(28,88,227,0.8)] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_-15px_rgba(28,88,227,0.95)]">
+              class="group inline-flex items-center gap-3 rounded-full bg-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink shadow-[0_18px_50px_-15px_rgba(212,255,36,0.5)] transition-all duration-500 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_24px_60px_-15px_rgba(212,255,36,0.7)]">
               Book Free Strategy Call
               <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
+            <!-- Secondary lime outline — matches Contact FAQ CTA -->
             <a href="#work"
-              class="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/75 backdrop-blur transition-all duration-500 hover:border-accent-2/60 hover:text-white">
+              class="group inline-flex items-center gap-3 rounded-full border border-accent-2/40 bg-accent-2/[0.04] px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2 backdrop-blur transition-all duration-500 hover:border-accent-2 hover:bg-accent-2 hover:text-ink">
               See Our Work <span
                 class="transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
             </a>
           </div>
 
-          <div class="hero-rise mt-10 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-white/10 pt-8"
+          <div class="hero-rise mt-10 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-accent/20 pt-8"
             style="animation-delay:.55s">
             <div class="flex items-center gap-4">
               <div class="flex -space-x-2.5">
                 <span
-                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-gradient-to-br from-accent to-accent-2 font-mono text-[10px]">RE</span>
+                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-accent-2 font-mono text-[10px] text-ink">RE</span>
                 <span
-                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-gradient-to-br from-indigo-500 to-sky-400 font-mono text-[10px]">D2C</span>
+                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-accent font-mono text-[10px] text-white">D2C</span>
                 <span
-                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-gradient-to-br from-violet-500 to-accent font-mono text-[10px]">B2B</span>
+                  class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-accent/60 font-mono text-[10px] text-white">B2B</span>
                 <span
                   class="grid h-9 w-9 place-items-center rounded-full border-2 border-ink bg-white/10 font-mono text-[10px] text-white/80 backdrop-blur">+</span>
               </div>
@@ -306,7 +307,7 @@
                 <div class="text-xs text-white/45">Real estate, retail & services</div>
               </div>
             </div>
-            <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+            <div class="hidden h-10 w-px bg-accent/30 sm:block"></div>
             <div class="leading-tight">
               <div class="font-display text-3xl tracking-wide text-white">₹1Cr<span class="text-accent-2">+</span>
               </div>
@@ -321,21 +322,21 @@
           <div aria-hidden="true" class="absolute inset-8 -z-10 rounded-[2rem] bg-accent/30 blur-[80px]"></div>
 
           <div
-            class="relative rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] backdrop-blur-xl md:p-7">
+            class="relative rounded-[1.75rem] border border-accent/30 bg-accent/[0.03] p-6 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] backdrop-blur-xl md:p-7">
             <div class="flex items-center justify-between">
               <div>
                 <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">Campaign · Last 30 days
                 </div>
                 <div class="mt-2 flex items-baseline gap-3">
                   <span class="font-display text-5xl tracking-wide">1,284</span>
-                  <span class="rounded-full bg-emerald-400/10 px-2 py-0.5 font-mono text-[11px] text-emerald-300">▲
+                  <span class="rounded-full bg-accent-2/10 px-2 py-0.5 font-mono text-[11px] text-accent-2">▲
                     38%</span>
                 </div>
                 <div class="text-sm text-white/45">Qualified leads</div>
               </div>
               <div
-                class="flex gap-1 rounded-full border border-white/10 bg-ink/60 p-1 font-mono text-[10px] uppercase tracking-wider">
-                <span class="rounded-full bg-white/10 px-2.5 py-1 text-white">30D</span>
+                class="flex gap-1 rounded-full border border-accent/30 bg-ink/60 p-1 font-mono text-[10px] uppercase tracking-wider">
+                <span class="rounded-full bg-accent-2/20 px-2.5 py-1 text-accent-2">30D</span>
                 <span class="px-2.5 py-1 text-white/40">90D</span>
               </div>
             </div>
@@ -344,12 +345,12 @@
               aria-label="Leads trending upward">
               <defs>
                 <linearGradient id="heroArea" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#4B7BFF" stop-opacity=".45" />
-                  <stop offset="100%" stop-color="#4B7BFF" stop-opacity="0" />
+                  <stop offset="0%" stop-color="#d4ff24" stop-opacity=".35" />
+                  <stop offset="100%" stop-color="#d4ff24" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient id="heroLine" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#1C58E3" />
-                  <stop offset="100%" stop-color="#8AA9FF" />
+                  <stop offset="0%" stop-color="#1558c9" />
+                  <stop offset="100%" stop-color="#d4ff24" />
                 </linearGradient>
               </defs>
               <g stroke="rgba(255,255,255,0.06)">
@@ -363,26 +364,26 @@
               <path
                 d="M0 118 C 30 112, 45 104, 70 106 S 115 90, 140 84 S 185 88, 205 66 S 255 52, 275 34 S 305 20, 320 14"
                 fill="none" stroke="url(#heroLine)" stroke-width="2.5" stroke-linecap="round" class="hero-draw" />
-              <circle cx="320" cy="14" r="4" fill="#fff" />
-              <circle cx="320" cy="14" r="9" fill="#4B7BFF" opacity=".3" />
+              <circle cx="320" cy="14" r="4" fill="#d4ff24" />
+              <circle cx="320" cy="14" r="9" fill="#d4ff24" opacity=".3" />
             </svg>
 
             <div class="mt-6 grid grid-cols-3 gap-3">
-              <div class="rounded-2xl border border-white/[0.07] bg-ink/50 p-3">
+              <div class="rounded-2xl border border-accent/20 bg-ink/50 p-3">
                 <div class="font-mono text-[9.5px] uppercase tracking-[0.18em] text-white/40">Meta</div>
                 <div class="mt-1 text-lg font-semibold">62%</div>
                 <div class="mt-2 h-1 rounded-full bg-white/10">
                   <div class="h-1 w-[62%] rounded-full bg-accent-2"></div>
                 </div>
               </div>
-              <div class="rounded-2xl border border-white/[0.07] bg-ink/50 p-3">
+              <div class="rounded-2xl border border-accent/20 bg-ink/50 p-3">
                 <div class="font-mono text-[9.5px] uppercase tracking-[0.18em] text-white/40">Google</div>
                 <div class="mt-1 text-lg font-semibold">24%</div>
                 <div class="mt-2 h-1 rounded-full bg-white/10">
                   <div class="h-1 w-[24%] rounded-full bg-accent"></div>
                 </div>
               </div>
-              <div class="rounded-2xl border border-white/[0.07] bg-ink/50 p-3">
+              <div class="rounded-2xl border border-accent/20 bg-ink/50 p-3">
                 <div class="font-mono text-[9.5px] uppercase tracking-[0.18em] text-white/40">Organic</div>
                 <div class="mt-1 text-lg font-semibold">14%</div>
                 <div class="mt-2 h-1 rounded-full bg-white/10">
@@ -401,7 +402,7 @@
     <section class="relative overflow-hidden md:py-10">
       <div class="mx-auto mb-8 max-w-[1600px] px-6 md:px-10">
         <div class="flex items-center gap-3 font-mono text-[15px] uppercase tracking-[0.3em] text-white/40">
-          <span class="text-xs bg-white/40"></span>
+          <span class="h-px w-8 bg-accent"></span>
           Trusted by 30+ brands across India
         </div>
       </div>
@@ -411,23 +412,23 @@
         <div class="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
           <div class="flex shrink-0 items-center gap-12 pr-12 md:gap-20 md:pr-20">
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Creata</span>
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Creata</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Mint
               Salon</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Grace
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Grace
               Coffee Cafe</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Pintoo</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Customized
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Customized
               Polycast</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Casa
               Atelier Luxe</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Amber
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Amber
               by Heer</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Nature
@@ -435,19 +436,19 @@
           </div>
           <div class="flex shrink-0 items-center gap-12 pr-12 md:gap-20 md:pr-20" aria-hidden="true">
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Desi
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Desi
               Rituals</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Lavsita
               Marketing</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Pintoo</span>
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Pintoo</span>
             <span
               class="font-serif text-2xl text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Lavista</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">Polycast</span>
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">Polycast</span>
             <span
-              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-white md:text-4xl">chanakya</span>
+              class="font-serif text-2xl tracking-tight text-white/30 transition-colors duration-500 hover:text-accent-2 md:text-4xl">chanakya</span>
           </div>
         </div>
       </div>
@@ -457,7 +458,7 @@
     <!-- ══════════════════════════════════════════════
          01 · SERVICES
     ══════════════════════════════════════════════ -->
-    <section id="services" class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
+    <section id="services" class="relative overflow-hidden border-b border-accent/20 py-20 md:py-28">
       <div class="mx-auto max-w-[1600px] px-6 md:px-10">
         <div class="mb-10 grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7">
@@ -477,10 +478,10 @@
               service is delivered by a specialist team and measured against business outcomes — qualified leads,
               conversion rate, and return on ad spend — not vanity metrics. We build strategy grounded in
               <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener"
-                class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Google
+                class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Google
                 Search Central guidelines</a> and
               <a href="https://transparency.meta.com/policies/ad-standards/" target="_blank" rel="noopener"
-                class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Meta
+                class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Meta
                 advertising standards</a>, so campaigns stay compliant and durable.
             </p>
           </div>
@@ -491,9 +492,9 @@
         <div id="svcTrack" role="list" class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -508,26 +509,26 @@
                   Complete social media management with content calendars, creative production, community management,
                   and platform-native growth for Instagram, LinkedIn, and YouTube. Follows
                   <a href="https://business.instagram.com/" target="_blank" rel="noopener"
-                    class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Instagram
+                    class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Instagram
                     for Business</a> best practices.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-display text-4xl leading-none text-accent-2 md:text-5xl">3.5x</div>
                   <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">Follower Growth
                   </div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -542,25 +543,25 @@
                   Data-driven Meta and Google Ads campaigns built for ROAS with funnel strategy, creative testing,
                   audience targeting, and continuous optimization. Campaigns follow
                   <a href="https://ads.google.com/home/" target="_blank" rel="noopener"
-                    class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Google
+                    class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Google
                     Ads</a> performance standards.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-display text-4xl leading-none text-accent-2 md:text-5xl">4.8x</div>
                   <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">Average ROAS</div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -576,22 +577,22 @@
                   organic traffic and long-term authority.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-display text-4xl leading-none text-accent-2 md:text-5xl">80%</div>
                   <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">Organic Traffic
                   </div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -606,26 +607,26 @@
                   High-converting landing pages, business sites, and e-commerce stores engineered for speed, SEO,
                   and conversion. Targets are anchored to
                   <a href="https://web.dev/vitals/" target="_blank" rel="noopener"
-                    class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Google
+                    class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Google
                     Core Web Vitals</a> thresholds.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-display text-4xl leading-none text-accent-2 md:text-5xl">90<span
                       class="text-xl">/100</span></div>
                   <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">PageSpeed</div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -641,21 +642,21 @@
                   across every touchpoint.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-display text-4xl leading-none text-accent-2 md:text-5xl">20+</div>
                   <div class="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">Brands Shaped</div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
 
           <article role="listitem"
-            class="service-card group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-ink-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50">
+            class="service-card group relative h-full overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)]">
             <div
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/15 to-transparent transition-all duration-700 group-hover:h-full">
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-accent/20 to-transparent transition-all duration-700 group-hover:h-full">
             </div>
             <div class="relative flex h-full flex-col p-8 md:p-10">
               <div class="flex items-start justify-between">
@@ -671,18 +672,18 @@
                   drive real conversions.
                 </p>
               </div>
-              <div class="mt-10 flex items-end justify-between border-t border-white/10 pt-6">
+              <div class="mt-10 flex items-end justify-between border-t border-accent/20 pt-6">
                 <div>
                   <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-white/40">Creator Network</div>
                   <div class="mt-3 flex justify-start">
                     <a href="/contact"
-                      class="group flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors hover:text-white">
+                      class="group flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/60 transition-colors hover:text-accent-2">
                       Contact Us
                     </a>
                   </div>
                 </div>
                 <a href="/contact"
-                  class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-white">→</a>
+                  class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-white transition-all duration-500 group-hover:border-accent-2 group-hover:bg-accent-2 group-hover:text-ink">→</a>
               </div>
             </div>
           </article>
@@ -694,12 +695,12 @@
     <!-- ══════════════════════════════════════════════
          02 · WORK
     ══════════════════════════════════════════════ -->
-    <section id="work" class="relative overflow-hidden border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section id="work" class="relative overflow-hidden border-b border-accent/20 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1500px]">
         <div class="mb-14 grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7" data-reveal>
-            <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-              <span class="h-px w-8 bg-accent"></span>
+            <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
+              <span class="h-px w-8 bg-accent-2"></span>
               02 / Selected Work
             </div>
             <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] text-white md:text-6xl">
@@ -711,7 +712,7 @@
               We build fast, accessible, conversion-optimized websites and digital products for real clients
               across real estate, CRM, SaaS, and agency verticals. Every project is measured on
               <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener"
-                class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Google
+                class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Google
                 PageSpeed Insights</a> scores, SEO fundamentals, mobile responsiveness, and conversion paths — and
               tracked after launch. Recent work includes a full CRM platform, two real estate marketing sites, and
               a property management SaaS, all shipped live and linked below.
@@ -722,16 +723,16 @@
         <div role="list" class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
 
           <a role="listitem" href="https://cpplcrm.com/" target="_blank" rel="noopener noreferrer" data-reveal
-            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:shadow-[0_20px_50px_-20px_rgba(21,88,201,0.5)]">
             <div class="relative aspect-[4/3] w-full overflow-hidden">
               <img src="./assets/w1.png" alt="Polycast CRM" loading="lazy" decoding="async"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span
-                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">&nearr;</span>
+                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-accent-2/40 bg-black/40 text-accent-2 backdrop-blur-md transition-all duration-300 group-hover:bg-accent-2 group-hover:text-ink">&nearr;</span>
               <div class="absolute inset-x-6 bottom-6">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">01 / CRM Platform</div>
+                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">01 / CRM Platform</div>
                 <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                   Polycast CRM</h3>
               </div>
@@ -740,16 +741,16 @@
 
           <a role="listitem" href="https://www.lavistaestates.com/" target="_blank" rel="noopener noreferrer"
             data-reveal
-            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:shadow-[0_20px_50px_-20px_rgba(21,88,201,0.5)]">
             <div class="relative aspect-[4/3] w-full overflow-hidden">
               <img src="./assets/w2.png" alt="Lavista E State" loading="lazy" decoding="async"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span
-                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">&nearr;</span>
+                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-accent-2/40 bg-black/40 text-accent-2 backdrop-blur-md transition-all duration-300 group-hover:bg-accent-2 group-hover:text-ink">&nearr;</span>
               <div class="absolute inset-x-6 bottom-6">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">02 / Real Estate</div>
+                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">02 / Real Estate</div>
                 <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                   Lavista</h3>
               </div>
@@ -758,16 +759,16 @@
 
           <a role="listitem" href="https://www.lavistamarketingagency.com/" target="_blank" rel="noopener noreferrer"
             data-reveal
-            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:shadow-[0_20px_50px_-20px_rgba(21,88,201,0.5)]">
             <div class="relative aspect-[4/3] w-full overflow-hidden">
               <img src="./assets/w3.png" alt="Lavista Marketing" loading="lazy" decoding="async"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span
-                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">&nearr;</span>
+                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-accent-2/40 bg-black/40 text-accent-2 backdrop-blur-md transition-all duration-300 group-hover:bg-accent-2 group-hover:text-ink">&nearr;</span>
               <div class="absolute inset-x-6 bottom-6">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">03 / Agency</div>
+                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">03 / Agency</div>
                 <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">
                   Lavista Marketing</h3>
               </div>
@@ -776,16 +777,16 @@
 
           <a role="listitem" href="https://property-management-app-seven.vercel.app/" target="_blank"
             rel="noopener noreferrer" data-reveal
-            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0f0f0f] transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_20px_50px_-20px_rgba(28,88,227,0.4)]">
+            class="group relative flex flex-col overflow-hidden rounded-[20px] border border-accent/20 bg-[#0a0d14] transition-all duration-500 hover:-translate-y-2 hover:border-accent-2/60 hover:shadow-[0_20px_50px_-20px_rgba(21,88,201,0.5)]">
             <div class="relative aspect-[4/3] w-full overflow-hidden">
               <img src="./assets/w4.png" alt="Real Estate CRM" loading="lazy" decoding="async"
                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               <span
                 class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span
-                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-white group-hover:text-black">&nearr;</span>
+                class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-accent-2/40 bg-black/40 text-accent-2 backdrop-blur-md transition-all duration-300 group-hover:bg-accent-2 group-hover:text-ink">&nearr;</span>
               <div class="absolute inset-x-6 bottom-6">
-                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">04 / Property SaaS</div>
+                <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">04 / Property SaaS</div>
                 <h3 class="mt-2 font-display text-2xl uppercase leading-none tracking-tight text-white md:text-3xl">Real
                   Estate CRM</h3>
               </div>
@@ -799,7 +800,7 @@
     <!-- ══════════════════════════════════════════════
          03 · STATS BAND
     ══════════════════════════════════════════════ -->
-    <section class="relative overflow-hidden border-y border-white/10 py-10 md:py-14">
+    <section class="relative overflow-hidden border-y border-accent/20 py-10 md:py-14">
       <div class="mb-6 mx-auto max-w-[1600px] px-6 md:px-10">
         <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">
           <span class="h-px w-8 bg-accent-2"></span>
@@ -822,54 +823,54 @@
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">100%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Follower<br />Growth</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-white md:text-6xl">4.4x</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">ROAS<br />Lift</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">+210%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Organic<br />Traffic</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-white md:text-6xl">32%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">CPL<br />Reduction</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">18K</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Followers<br />in 4mo</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
           </div>
           <div class="flex shrink-0 items-center gap-12 pr-12 md:gap-20 md:pr-20" aria-hidden="true">
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">+800%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Follower<br />Growth</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-white md:text-6xl">5.4x</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">ROAS<br />Lift</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">+210%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Organic<br />Traffic</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-white md:text-6xl">32%</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">CPL<br />Reduction</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
             <div role="listitem" class="flex items-center gap-4">
               <span class="font-display text-4xl uppercase leading-none text-accent-2 md:text-6xl">18K</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Followers<br />in 4mo</span>
             </div>
-            <span class="h-8 w-px bg-white/10"></span>
+            <span class="h-8 w-px bg-accent/30"></span>
           </div>
         </div>
       </div>
@@ -878,7 +879,7 @@
     <!-- ══════════════════════════════════════════════
          04 · PROCESS
     ══════════════════════════════════════════════ -->
-    <section id="process" class="relative overflow-hidden border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section id="process" class="relative overflow-hidden border-b border-accent/20 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1600px]">
         <div class="mb-14 grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7">
@@ -897,7 +898,7 @@
               a custom roadmap with clear KPIs, channel mix, and budget allocation. Execution runs on a daily
               optimization cycle tracked in
               <a href="https://analytics.google.com/" target="_blank" rel="noopener"
-                class="text-white/80 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">Google
+                class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">Google
                 Analytics</a> and native platform dashboards, and every result feeds back into strategy — so growth
               compounds month over month.
             </p>
@@ -910,7 +911,7 @@
         <div role="list" class="group relative mx-auto h-[440px] w-full max-w-2xl md:h-[400px]">
 
           <article role="listitem"
-            class="absolute inset-0 z-10 translate-x-10 -translate-y-10 scale-90 rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-40 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:-rotate-[8deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            class="absolute inset-0 z-10 translate-x-10 -translate-y-10 scale-90 rounded-3xl border border-accent/20 bg-[#0a0d14] p-8 opacity-40 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:-rotate-[8deg] md:group-hover:scale-100 md:group-hover:opacity-100">
             <div class="flex items-start justify-between">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">04</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">scale.ts</span>
@@ -921,13 +922,13 @@
               off month after month.
             </p>
             <div
-              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              class="mt-8 flex items-center gap-3 border-t border-accent/20 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
               <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Compounding growth
             </div>
           </article>
 
           <article role="listitem"
-            class="absolute inset-0 z-20 translate-x-6 -translate-y-6 scale-95 rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-60 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:-rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            class="absolute inset-0 z-20 translate-x-6 -translate-y-6 scale-95 rounded-3xl border border-accent/20 bg-[#0a0d14] p-8 opacity-60 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:-translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:-rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
             <div class="flex items-start justify-between">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">03</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">execute.ts</span>
@@ -938,13 +939,13 @@
               channel.
             </p>
             <div
-              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              class="mt-8 flex items-center gap-3 border-t border-accent/20 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
               <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Daily optimization
             </div>
           </article>
 
           <article role="listitem"
-            class="absolute inset-0 z-30 translate-x-3 -translate-y-3 scale-[0.98] rounded-3xl border border-white/10 bg-ink-3 p-8 opacity-80 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
+            class="absolute inset-0 z-30 translate-x-3 -translate-y-3 scale-[0.98] rounded-3xl border border-accent/20 bg-[#0a0d14] p-8 opacity-80 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[100px] md:group-hover:translate-y-0 md:group-hover:rotate-[4deg] md:group-hover:scale-100 md:group-hover:opacity-100">
             <div class="flex items-start justify-between">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">02</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">strategy.ts</span>
@@ -955,13 +956,13 @@
               agrees on.
             </p>
             <div
-              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              class="mt-8 flex items-center gap-3 border-t border-accent/20 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
               <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Roadmap + KPIs
             </div>
           </article>
 
           <article role="listitem"
-            class="absolute inset-0 z-40 rounded-3xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-8 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:rotate-[8deg]">
+            class="absolute inset-0 z-40 rounded-3xl border border-accent/30 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-8 transition-all duration-700 ease-out hover:z-50 hover:ring-2 hover:ring-accent-2/60 md:p-10 md:group-hover:translate-x-[200px] md:group-hover:translate-y-0 md:group-hover:rotate-[8deg]">
             <div class="flex items-start justify-between">
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-2">01</span>
               <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">discover.ts</span>
@@ -972,7 +973,7 @@
               a single rupee.
             </p>
             <div
-              class="mt-8 flex items-center gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
+              class="mt-8 flex items-center gap-3 border-t border-accent/20 pt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
               <span class="h-1.5 w-1.5 rounded-full bg-accent-2"></span>Full audit first
             </div>
           </article>
@@ -981,7 +982,7 @@
 
         <div
           class="mx-auto mt-12 flex max-w-2xl items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">
-          <div class="h-px flex-1 bg-white/10">
+          <div class="h-px flex-1 bg-accent/20">
             <div class="h-full w-1/4 bg-accent-2 transition-all duration-700 group-hover:w-full"></div>
           </div>
           <span>01 — 04</span>
@@ -992,7 +993,7 @@
     <!-- ══════════════════════════════════════════════
          05 · TESTIMONIALS
     ══════════════════════════════════════════════ -->
-    <section id="voices" class="relative overflow-hidden border-b border-white/10 py-20 md:py-28">
+    <section id="voices" class="relative overflow-hidden border-b border-accent/20 py-20 md:py-28">
       <div class="mx-auto mb-14 max-w-[1600px] px-6 md:px-10">
         <div class="grid gap-8 md:grid-cols-12">
           <div class="md:col-span-7">
@@ -1021,19 +1022,19 @@
         <div role="list" class="flex w-max animate-marquee items-stretch group-hover:[animation-play-state:paused]">
           <div class="flex shrink-0 items-stretch gap-5 pr-5">
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K
                 to 18K followers and our DMs are full of qualified leads.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     RK</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Rahul K.</div>
@@ -1045,19 +1046,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our
                 ROAS went from 1.8x to 5.4x.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     PM</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Priya M.</div>
@@ -1069,19 +1070,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 The best agency we've worked with in Ahmedabad. They understand both brand building and performance.
                 Our traffic is up 210%.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     AS</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Amit S.</div>
@@ -1096,19 +1097,19 @@
 
           <div class="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden="true">
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">01</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Scalixo completely transformed our social media presence. Within 4 months, our Instagram grew from 2K
                 to 18K followers and our DMs are full of qualified leads.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     RK</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Rahul K.</div>
@@ -1120,19 +1121,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">02</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 We were spending on ads without a clear strategy. Scalixo rebuilt our funnel and within 6 weeks our
                 ROAS went from 1.8x to 5.4x.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     PM</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Priya M.</div>
@@ -1144,19 +1145,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">03</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 The best agency we've worked with in Ahmedabad. They understand both brand building and performance.
                 Our traffic is up 210%.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     AS</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Amit S.</div>
@@ -1176,19 +1177,19 @@
         <div role="list" class="flex w-max animate-marquee-rev items-stretch group-hover:[animation-play-state:paused]">
           <div class="flex shrink-0 items-stretch gap-5 pr-5">
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Their content team just gets our brand voice. We stopped explaining and started scaling — posting is
                 finally off my plate.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     NZ</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Nidhi Z.</div>
@@ -1200,19 +1201,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Reporting is honest and clear. No vanity metrics — just leads, CAC and revenue. That alone made them
                 worth it.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     KV</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Karan V.</div>
@@ -1224,19 +1225,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 transition-colors duration-500 hover:border-accent/50 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 transition-colors duration-500 hover:border-accent-2/50 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">06</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 New website went live in 3 weeks and PageSpeed jumped from 42 to 94. Organic enquiries doubled in the
                 first month.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     SD</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Sneha D.</div>
@@ -1250,19 +1251,19 @@
 
           <div class="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden="true">
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">04</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Their content team just gets our brand voice. We stopped explaining and started scaling — posting is
                 finally off my plate.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     NZ</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Nidhi Z.</div>
@@ -1274,19 +1275,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">05</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 Reporting is honest and clear. No vanity metrics — just leads, CAC and revenue. That alone made them
                 worth it.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     KV</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Karan V.</div>
@@ -1298,19 +1299,19 @@
             </article>
 
             <article role="listitem"
-              class="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-3 to-ink-2 p-6 md:w-[380px] md:p-7">
+              class="w-[320px] shrink-0 rounded-2xl border border-accent/20 bg-gradient-to-br from-[#060a13] to-[#0a0d14] p-6 md:w-[380px] md:p-7">
               <div class="flex items-baseline justify-between">
-                <div class="font-display text-4xl leading-none text-accent-2/30">"</div>
+                <div class="font-display text-4xl leading-none text-accent-2">"</div>
                 <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">06</span>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                 New website went live in 3 weeks and PageSpeed jumped from 42 to 94. Organic enquiries doubled in the
                 first month.
               </p>
-              <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+              <div class="mt-6 flex items-center justify-between border-t border-accent/20 pt-5">
                 <div class="flex items-center gap-3">
                   <div
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-xs text-accent-2">
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/50 bg-accent/15 font-display text-xs text-accent-2">
                     SD</div>
                   <div>
                     <div class="font-display text-sm uppercase text-white">Sneha D.</div>
@@ -1350,10 +1351,9 @@
 
         <div role="list" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 md:gap-4">
           <div role="listitem"
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)] md:p-9">
             <div class="flex items-start justify-between">
-              <div
-                class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
+              <div class="font-display text-5xl leading-none text-accent-2 md:text-6xl">
                 01</div>
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Team</span>
             </div>
@@ -1365,10 +1365,9 @@
           </div>
 
           <div role="listitem"
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)] md:p-9">
             <div class="flex items-start justify-between">
-              <div
-                class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
+              <div class="font-display text-5xl leading-none text-accent-2 md:text-6xl">
                 02</div>
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Focus</span>
             </div>
@@ -1380,10 +1379,9 @@
           </div>
 
           <div role="listitem"
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)] md:p-9">
             <div class="flex items-start justify-between">
-              <div
-                class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
+              <div class="font-display text-5xl leading-none text-accent-2 md:text-6xl">
                 03</div>
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Advisory</span>
             </div>
@@ -1395,10 +1393,9 @@
           </div>
 
           <div role="listitem"
-            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9">
+            class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-2/60 hover:shadow-[0_20px_45px_-20px_rgba(21,88,201,0.5)] md:p-9">
             <div class="flex items-start justify-between">
-              <div
-                class="font-display text-5xl leading-none text-accent/25 transition-colors duration-500 group-hover:text-accent/60 md:text-6xl">
+              <div class="font-display text-5xl leading-none text-accent-2 md:text-6xl">
                 04</div>
               <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">Process</span>
             </div>
@@ -1415,7 +1412,7 @@
     <!-- ══════════════════════════════════════════════
          07 · ABOUT
     ══════════════════════════════════════════════ -->
-    <section id="about" class="relative overflow-hidden border-y border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section id="about" class="relative overflow-hidden border-y border-accent/20 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1600px]">
         <div class="grid gap-10 md:grid-cols-12 md:gap-14">
           <div class="md:col-span-6">
@@ -1435,7 +1432,7 @@
               led by a senior strategist, not handed off to junior managers.
             </p>
             <a href="/about"
-              class="mt-8 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-white/70 transition-colors hover:text-accent-2">
+              class="mt-8 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-accent transition-colors hover:text-accent-2">
               Read our full story <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -1445,7 +1442,7 @@
 
               <!-- 01 -->
               <div role="listitem"
-                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2 p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_22px_45px_-22px_rgba(28,88,227,0.55)]">
+                class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_22px_45px_-22px_rgba(21,88,201,0.5)]">
                 <!-- top accent line — reveals left → right on hover -->
                 <span aria-hidden="true"
                   class="pointer-events-none absolute inset-x-6 top-0 h-[2px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-accent to-accent-2 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
@@ -1461,7 +1458,7 @@
 
               <!-- 02 -->
               <div role="listitem"
-                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2 p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_22px_45px_-22px_rgba(28,88,227,0.55)]">
+                class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_22px_45px_-22px_rgba(21,88,201,0.5)]">
                 <span aria-hidden="true"
                   class="pointer-events-none absolute inset-x-6 top-0 h-[2px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-accent to-accent-2 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
 
@@ -1476,7 +1473,7 @@
 
               <!-- 03 -->
               <div role="listitem"
-                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2 p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_22px_45px_-22px_rgba(28,88,227,0.55)]">
+                class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_22px_45px_-22px_rgba(21,88,201,0.5)]">
                 <span aria-hidden="true"
                   class="pointer-events-none absolute inset-x-6 top-0 h-[2px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-accent to-accent-2 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
 
@@ -1491,7 +1488,7 @@
 
               <!-- 04 -->
               <div role="listitem"
-                class="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2 p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_22px_45px_-22px_rgba(28,88,227,0.55)]">
+                class="group relative overflow-hidden rounded-2xl border border-accent/20 bg-accent/[0.02] p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-accent-2/60 hover:shadow-[0_22px_45px_-22px_rgba(21,88,201,0.5)]">
                 <span aria-hidden="true"
                   class="pointer-events-none absolute inset-x-6 top-0 h-[2px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-accent to-accent-2 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
 
@@ -1509,14 +1506,10 @@
         </div>
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════════════
-         08 · FAQ
-    ══════════════════════════════════════════════ -->
     <!-- ══════════════════════════════════════════════
      08 · FAQ — split layout (sticky left / numbered accordions right)
 ══════════════════════════════════════════════ -->
-    <section id="faq" class="relative overflow-hidden border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
+    <section id="faq" class="relative overflow-hidden border-b border-accent/20 px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1600px]">
 
         <!-- section label -->
@@ -1538,56 +1531,17 @@
               Quick answers to the questions we hear most from founders evaluating an agency. If you don't see yours
               here,
               <a href="/contact"
-                class="text-white/85 underline decoration-white/20 underline-offset-2 hover:text-accent-2 hover:decoration-accent">book
+                class="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-2 hover:decoration-accent-2">book
                 a free strategy call</a> — we'll answer it directly.
             </p>
 
+            <!-- Primary lime CTA -->
             <a href="/contact"
-              class="group mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white shadow-[0_18px_50px_-15px_rgba(28,88,227,0.8)] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_-15px_rgba(28,88,227,0.95)]">
+              class="group mt-8 inline-flex items-center gap-3 rounded-full bg-accent-2 px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink shadow-[0_18px_50px_-15px_rgba(212,255,36,0.5)] transition-all duration-500 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_24px_60px_-15px_rgba(212,255,36,0.7)]">
               Book Free Strategy Call
               <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
 
-            <!-- quick facts table -->
-            <!-- <div class="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60">
-              <table class="w-full text-left text-sm">
-                <caption class="sr-only">Scalixo Media — quick facts</caption>
-                <thead class="bg-white/[0.02]">
-                  <tr class="border-b border-white/10">
-                    <th scope="col" class="px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
-                      Fact</th>
-                    <th scope="col" class="px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
-                      Detail</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-white/5 text-white/70">
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">Location</th>
-                    <td class="px-5 py-3">Ahmedabad, Gujarat, India</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">Clients</th>
-                    <td class="px-5 py-3">30+ brands across India</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">Ad spend managed</th>
-                    <td class="px-5 py-3">₹1 Cr+</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">Avg. client ROAS</th>
-                    <td class="px-5 py-3">4.8x</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">PageSpeed scores</th>
-                    <td class="px-5 py-3">90+/100</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="px-5 py-3 text-left font-normal text-white/50">Services</th>
-                    <td class="px-5 py-3">Social, performance, SEO, web, brand, influencer</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div> -->
           </div>
 
           <!-- ───────────── RIGHT: numbered accordion cards ───────────── -->
@@ -1596,18 +1550,18 @@
 
               <!-- 01 -->
               <details role="listitem"
-                class="group rounded-2xl border border-white/10 bg-ink-2/60 transition-all duration-300 open:border-accent/50 open:bg-ink-2 hover:border-white/20">
+                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-300 open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)] hover:border-accent/40 hover:bg-accent/[0.03]">
                 <summary class="flex cursor-pointer items-start gap-5 p-6 md:p-7">
                   <span
                     class="mt-1 font-mono text-[11px] uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-open:text-accent-2 md:text-xs">
                     01
                   </span>
                   <span
-                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white md:text-lg">
+                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-lg">
                     What services does Scalixo Media offer?
                   </span>
                   <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 group-open:rotate-45 group-open:border-accent group-open:bg-accent group-open:text-white">
+                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-open:rotate-45 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                     <i class="fi fi-rr-plus text-[12px] leading-none"></i>
                   </span>
                 </summary>
@@ -1623,18 +1577,18 @@
 
               <!-- 02 -->
               <details role="listitem"
-                class="group rounded-2xl border border-white/10 bg-ink-2/60 transition-all duration-300 open:border-accent/50 open:bg-ink-2 hover:border-white/20">
+                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-300 open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)] hover:border-accent/40 hover:bg-accent/[0.03]">
                 <summary class="flex cursor-pointer items-start gap-5 p-6 md:p-7">
                   <span
                     class="mt-1 font-mono text-[11px] uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-open:text-accent-2 md:text-xs">
                     02
                   </span>
                   <span
-                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white md:text-lg">
+                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-lg">
                     How quickly can we expect results from social media marketing?
                   </span>
                   <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 group-open:rotate-45 group-open:border-accent group-open:bg-accent group-open:text-white">
+                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-open:rotate-45 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                     <i class="fi fi-rr-plus text-[12px] leading-none"></i>
                   </span>
                 </summary>
@@ -1650,18 +1604,18 @@
 
               <!-- 03 -->
               <details role="listitem"
-                class="group rounded-2xl border border-white/10 bg-ink-2/60 transition-all duration-300 open:border-accent/50 open:bg-ink-2 hover:border-white/20">
+                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-300 open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)] hover:border-accent/40 hover:bg-accent/[0.03]">
                 <summary class="flex cursor-pointer items-start gap-5 p-6 md:p-7">
                   <span
                     class="mt-1 font-mono text-[11px] uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-open:text-accent-2 md:text-xs">
                     03
                   </span>
                   <span
-                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white md:text-lg">
+                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-lg">
                     What industries does Scalixo Media work with?
                   </span>
                   <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 group-open:rotate-45 group-open:border-accent group-open:bg-accent group-open:text-white">
+                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-open:rotate-45 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                     <i class="fi fi-rr-plus text-[12px] leading-none"></i>
                   </span>
                 </summary>
@@ -1676,18 +1630,18 @@
 
               <!-- 04 -->
               <details role="listitem"
-                class="group rounded-2xl border border-white/10 bg-ink-2/60 transition-all duration-300 open:border-accent/50 open:bg-ink-2 hover:border-white/20">
+                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-300 open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)] hover:border-accent/40 hover:bg-accent/[0.03]">
                 <summary class="flex cursor-pointer items-start gap-5 p-6 md:p-7">
                   <span
                     class="mt-1 font-mono text-[11px] uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-open:text-accent-2 md:text-xs">
                     04
                   </span>
                   <span
-                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white md:text-lg">
+                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-lg">
                     Where is Scalixo Media located?
                   </span>
                   <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 group-open:rotate-45 group-open:border-accent group-open:bg-accent group-open:text-white">
+                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-open:rotate-45 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                     <i class="fi fi-rr-plus text-[12px] leading-none"></i>
                   </span>
                 </summary>
@@ -1702,18 +1656,18 @@
 
               <!-- 05 -->
               <details role="listitem"
-                class="group rounded-2xl border border-white/10 bg-ink-2/60 transition-all duration-300 open:border-accent/50 open:bg-ink-2 hover:border-white/20">
+                class="group rounded-2xl border border-accent/20 bg-[#0a0d14] transition-all duration-300 open:border-accent-2/50 open:bg-accent-2/[0.03] open:shadow-[0_10px_40px_-15px_rgba(212,255,36,0.2)] hover:border-accent/40 hover:bg-accent/[0.03]">
                 <summary class="flex cursor-pointer items-start gap-5 p-6 md:p-7">
                   <span
                     class="mt-1 font-mono text-[11px] uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-open:text-accent-2 md:text-xs">
                     05
                   </span>
                   <span
-                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white md:text-lg">
+                    class="flex-1 font-display text-base uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent-2 md:text-lg">
                     How does Scalixo Media price its marketing services?
                   </span>
                   <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 group-open:rotate-45 group-open:border-accent group-open:bg-accent group-open:text-white">
+                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-open:rotate-45 group-open:border-accent-2 group-open:bg-accent-2 group-open:text-ink">
                     <i class="fi fi-rr-plus text-[12px] leading-none"></i>
                   </span>
                 </summary>
@@ -1739,9 +1693,11 @@
     <section class="relative overflow-hidden px-6 py-20 md:px-10 md:py-28">
       <div class="mx-auto max-w-[1200px]">
         <div
-          class="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/20 via-ink-2 to-ink-2 px-6 py-14 text-center md:px-16 md:py-20">
+          class="relative overflow-hidden rounded-3xl border border-accent-2/30 bg-gradient-to-br from-accent/15 via-[#0a0d14] to-[#0a0d14] px-6 py-14 text-center md:px-16 md:py-20">
           <div aria-hidden="true"
             class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/40 blur-[100px]"></div>
+          <div aria-hidden="true"
+            class="absolute -bottom-20 right-10 h-64 w-64 rounded-full bg-accent-2/[0.06] blur-[100px]"></div>
           <div aria-hidden="true"
             class="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,#000,transparent_70%)]">
           </div>
@@ -1760,13 +1716,15 @@
               you exactly where the biggest growth opportunities are, even if you don't hire us.
             </p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+              <!-- Primary lime CTA -->
               <a href="/contact"
-                class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white shadow-[0_18px_50px_-15px_rgba(28,88,227,0.8)] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_-15px_rgba(28,88,227,0.95)]">
+                class="group inline-flex items-center gap-3 rounded-full bg-accent-2 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink shadow-[0_18px_50px_-15px_rgba(212,255,36,0.5)] transition-all duration-500 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_24px_60px_-15px_rgba(212,255,36,0.7)]">
                 Book Free Strategy Call
                 <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
               </a>
+              <!-- Secondary lime outline -->
               <a href="#work"
-                class="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.02] px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/75 backdrop-blur transition-all duration-500 hover:border-accent-2/60 hover:text-white">
+                class="group inline-flex items-center gap-3 rounded-full border border-accent-2/40 bg-accent-2/[0.04] px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-2 backdrop-blur transition-all duration-500 hover:border-accent-2 hover:bg-accent-2 hover:text-ink">
                 See Our Work <span
                   class="transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
               </a>

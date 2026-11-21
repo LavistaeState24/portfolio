@@ -226,10 +226,11 @@
         <!-- HERO — Influencer Marketing -->
         <section class="relative overflow-hidden px-6 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
             <div class="pointer-events-none absolute inset-0 opacity-[0.35]
-                bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
-                bg-[size:72px_72px]
-                [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
+        bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
+        bg-[size:72px_72px]
+        [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_70%)]"></div>
 
+            <!-- Ambient Blue Glows (55% structural surface) -->
             <div data-parallax="0.15"
                 class="pointer-events-none absolute -right-40 -top-24 h-[620px] w-[620px] rounded-full bg-accent/20 blur-[160px]">
             </div>
@@ -244,11 +245,13 @@
 
                 <!-- VISIBLE BREADCRUMB TRAIL (semantic nav/ol/li) -->
                 <nav aria-label="Breadcrumb" data-hero-breadcrumb class="mb-6">
-                    <ol class="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
+                    <ol
+                        class="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white">
                         <li>
-                            <a href="/" class="text-white/40 transition-colors hover:text-accent">Home</a>
+                            <!-- Brand blue at rest, signal lime on hover -->
+                            <a href="/" class="text-accent transition-colors hover:text-accent-2">Home</a>
                         </li>
-                        <li aria-hidden="true" class="text-white/20">/</li>
+                        <li aria-hidden="true" class="text-accent/40">/</li>
                         <li aria-current="page" class="text-white/70">Influencer Marketing</li>
                     </ol>
                 </nav>
@@ -261,40 +264,35 @@
                         <span class="hero-line block" data-hero-line>that build trust</span>
                     </span>
                     <span class="block overflow-hidden">
-                        <span class="hero-line block text-accent" data-hero-line>and drive action.</span>
+                        <!-- Payoff line in Lime -->
+                        <span class="hero-line block text-accent-2" data-hero-line>and drive action.</span>
                     </span>
                 </h1>
 
                 <div class="mt-10 grid gap-10 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-5" data-hero-sub>
-                        <p class="text-lg leading-relaxed text-white/55 md:text-xl">
+                        <p class="text-lg leading-relaxed text-white/75 md:text-xl">
                             Scalixo Media is an influencer marketing agency that plans and manages creator campaigns
                             to build brand awareness, earn audience trust, increase engagement, and generate qualified
                             enquiries. We connect businesses with relevant creators, define the campaign message, manage
                             delivery, and review performance against the agreed goal.
                         </p>
 
-                        <!-- Visible byline (matches the Person node in JSON-LD) -->
-                        <!-- <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">
-                            <span>By <a href="/about" class="text-white/70 transition-colors hover:text-accent">Scalixo Media Studio</a></span>
-                            <span class="text-white/20">·</span>
-                            <span>Reviewed by the Scalixo Influencer Team</span>
-                            <span class="text-white/20">·</span>
-                            <span>Updated <time datetime="2026-11-03">Nov 2026</time></span>
-                        </div> -->
-
                         <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <!-- Primary CTA: Solid Lime (bg-accent-2 text-ink) -->
                             <a href="#services" data-magnetic
-                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(28,88,227,0.7)]">
+                                class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent-2 px-8 py-4 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-ink transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-15px_rgba(204,255,0,0.45)]">
                                 <span
-                                    class="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+                                    class="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-700 group-hover:translate-x-0"></span>
                                 <span class="relative">Explore Services</span>
                                 <i
                                     class="fa-solid fa-arrow-down relative text-xs transition-transform duration-500 group-hover:translate-y-1"></i>
                             </a>
+
+                            <!-- Secondary CTA: Blue structural border + Lime hover ring -->
                             <a href="/contact" data-magnetic
-                                class="group inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent hover:bg-accent/10">
-                                <i class="fa-solid fa-comments text-xs"></i>
+                                class="group inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/[0.02] px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-all duration-500 hover:border-accent-2/60 hover:bg-accent/10">
+                                <i class="fa-solid fa-comments text-xs text-accent-2"></i>
                                 Plan Campaign
                             </a>
                         </div>
@@ -302,17 +300,18 @@
 
                     <div class="flex flex-wrap items-end gap-10 md:col-span-6 md:col-start-7" data-hero-sub>
                         <div>
-                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Focus</div>
-                            <div class="mt-2 font-display text-2xl uppercase leading-none text-accent md:text-3xl">
+                            <!-- Eyebrow standardized to text-accent-2 -->
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">Focus</div>
+                            <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">
                                 Creator Trust</div>
                         </div>
                         <div>
-                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Services</div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">Services</div>
                             <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">
                                 Research · Campaign · Coordination</div>
                         </div>
                         <div>
-                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/40">Based in</div>
+                            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-2">Based in</div>
                             <div class="mt-2 font-display text-2xl uppercase leading-none text-white md:text-3xl">
                                 Ahmedabad</div>
                         </div>
@@ -321,31 +320,32 @@
             </div>
         </section>
 
-        <!-- MARQUEE — Influencer terms -->
-        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.015] py-7 md:py-9">
+        <!-- MARQUEE — Influencer terms (Blue divider border-accent/20 + cool blue-tinted surface) -->
+        <section class="relative overflow-hidden border-y border-accent/20 bg-accent/[0.02] py-7 md:py-9">
             <div id="marqueeTrack" class="flex w-max whitespace-nowrap will-change-transform">
                 <div class="flex items-center gap-12 px-6 md:gap-16 md:px-8">
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Influencer
+                    <span class="font-display text-3xl uppercase tracking-tight text-white md:text-5xl">Influencer
                         Research</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Campaign
+                    <span class="font-display text-3xl uppercase tracking-tight text-white md:text-5xl">Campaign
                         Strategy</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Creator
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent-2 md:text-5xl">Creator
                         Coordination</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Reels
+                    <span class="font-display text-3xl uppercase tracking-tight text-white md:text-5xl">Reels
                         Campaigns</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-white/90 md:text-5xl">Product
+                    <span class="font-display text-3xl uppercase tracking-tight text-white md:text-5xl">Product
                         Promotions</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
-                    <span class="font-display text-3xl uppercase tracking-tight text-accent md:text-5xl">Performance
+                    <span class="font-display text-3xl uppercase tracking-tight text-accent-2 md:text-5xl">Performance
                         Review</span>
                     <i class="fa-solid fa-circle text-[6px] text-accent"></i>
                 </div>
             </div>
         </section>
+
 
         <!-- WHY IT MATTERS — People Trust People -->
         <section class="relative border-b border-white/10 px-6 py-20 md:px-10 md:py-28">
@@ -372,8 +372,13 @@
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
                             Influencer marketing helps a brand reach a relevant audience through creator-led content,
                             rather than relying only on brand-produced advertising. The approach works best when the
-                            creator, message, audience, and campaign objective fit together. Paid relationships and other
-                            material connections should be disclosed clearly; see the <a href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 hover:text-white">FTC Endorsements, Influencers, and Reviews guidance</a>.
+                            creator, message, audience, and campaign objective fit together. Paid relationships and
+                            other
+                            material connections should be disclosed clearly; see the <a
+                                href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-accent underline underline-offset-4 hover:text-white">FTC Endorsements,
+                                Influencers, and Reviews guidance</a>.
                         </p>
 
                         <p class="text-lg leading-relaxed text-white/55 md:text-xl" data-reveal>
@@ -435,10 +440,14 @@
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
                             Our influencer marketing service covers the full campaign lifecycle: creator research and
                             shortlisting, strategy, briefing, coordination, content approvals, publishing, measurement,
-                            and reporting. This gives your team one structured workflow from the initial business goal to
+                            and reporting. This gives your team one structured workflow from the initial business goal
+                            to
                             the final performance review. Campaigns are also planned with platform and advertising
                             requirements in mind, including clear disclosure of paid or otherwise material creator
-                            relationships. Read the <a href="https://www.ftc.gov/node/60343" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 hover:text-white">FTC disclosure guidance</a> for details.
+                            relationships. Read the <a href="https://www.ftc.gov/node/60343" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-accent underline underline-offset-4 hover:text-white">FTC disclosure
+                                guidance</a> for details.
                         </p>
                     </div>
                 </div>
@@ -610,7 +619,8 @@
                         <p class="text-base leading-relaxed text-white/50">
                             Creator categories help us match a campaign with the audience, geography, content style, and
                             reach required by the business goal. We can evaluate micro creators for focused communities,
-                            macro creators for broad awareness, and local or specialist creators for relevance and trust.
+                            macro creators for broad awareness, and local or specialist creators for relevance and
+                            trust.
                         </p>
                     </div>
                 </div>
@@ -776,9 +786,12 @@
                     </div>
                     <div class="md:col-span-6 md:col-start-7 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            Our influencer campaign process has six practical stages: define the business goal, find suitable
-                            creators, prepare the brief, coordinate production, publish the content, and review performance.
-                            The sequence keeps responsibilities, approvals, timelines, and success measures clear for both
+                            Our influencer campaign process has six practical stages: define the business goal, find
+                            suitable
+                            creators, prepare the brief, coordinate production, publish the content, and review
+                            performance.
+                            The sequence keeps responsibilities, approvals, timelines, and success measures clear for
+                            both
                             the brand and the creator.
                         </p>
                     </div>
@@ -991,8 +1004,10 @@
                             Strategy, not random<br />collaborations.
                         </h2>
                         <p class="mt-6 leading-relaxed text-white/50">
-                            Scalixo Media uses a strategy-led influencer marketing process instead of selecting creators by
-                            follower count alone. We match creator fit, audience relevance, campaign messaging, deliverables,
+                            Scalixo Media uses a strategy-led influencer marketing process instead of selecting creators
+                            by
+                            follower count alone. We match creator fit, audience relevance, campaign messaging,
+                            deliverables,
                             approvals, and reporting to the business outcome you want, such as awareness, enquiries,
                             footfall, or product discovery.
                         </p>
@@ -1110,10 +1125,16 @@
                     </div>
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
-                            Influencer campaign success should be measured against the objective agreed before publishing,
+                            Influencer campaign success should be measured against the objective agreed before
+                            publishing,
                             not assumed from reach alone. Depending on the brief, useful indicators can include relevant
-                            reach, engagement, profile visits, messages, website visits, bookings, or reusable content. For
-                            Meta partnership ads, advertisers can also review ad performance in Ads Manager; see <a href="https://www.facebook.com/business/help/342728904797642" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 hover:text-white">Meta's partnership ads guidance</a>.
+                            reach, engagement, profile visits, messages, website visits, bookings, or reusable content.
+                            For
+                            Meta partnership ads, advertisers can also review ad performance in Ads Manager; see <a
+                                href="https://www.facebook.com/business/help/342728904797642" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-accent underline underline-offset-4 hover:text-white">Meta's partnership ads
+                                guidance</a>.
                         </p>
                     </div>
                 </div>
@@ -1222,8 +1243,10 @@
                     <div class="md:col-span-4 md:col-start-9 md:self-end" data-reveal>
                         <p class="text-sm leading-relaxed text-white/50 md:text-base">
                             Influencer campaigns can be planned around a specific business use case, including local
-                            visibility, a product launch, or short-form video collaboration. We shape the creator shortlist,
-                            content brief, call to action, publishing plan, and measurement approach around the campaign's
+                            visibility, a product launch, or short-form video collaboration. We shape the creator
+                            shortlist,
+                            content brief, call to action, publishing plan, and measurement approach around the
+                            campaign's
                             goal and target audience.
                         </p>
                     </div>
@@ -1324,9 +1347,15 @@
                         </h2>
 
                         <p class="mt-6 max-w-md leading-relaxed text-white/50">
-                            These FAQs answer the practical questions businesses ask before starting an influencer marketing
-                            campaign with Scalixo Media, including creator selection, local campaigns, coordination, content
-                            reuse, and disclosure. For the latest advertising guidance, review the <a href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 hover:text-white">FTC influencer and endorsement guidance</a>.
+                            These FAQs answer the practical questions businesses ask before starting an influencer
+                            marketing
+                            campaign with Scalixo Media, including creator selection, local campaigns, coordination,
+                            content
+                            reuse, and disclosure. For the latest advertising guidance, review the <a
+                                href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-accent underline underline-offset-4 hover:text-white">FTC influencer and
+                                endorsement guidance</a>.
                         </p>
 
                         <a href="/contact" data-magnetic
@@ -1486,7 +1515,8 @@
                     <p class="mt-8 max-w-2xl text-lg leading-relaxed text-white/55 md:text-xl">
                         Scalixo Media can help you plan and manage a creator campaign around a clear business goal,
                         from local awareness and product launches to short-form video, qualified enquiries, and reusable
-                        social content. Contact the team to discuss your audience, budget, timeline, and campaign objective.
+                        social content. Contact the team to discuss your audience, budget, timeline, and campaign
+                        objective.
                     </p>
                 </div>
 
