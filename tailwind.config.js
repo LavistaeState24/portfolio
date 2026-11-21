@@ -10,11 +10,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: '#08090B',
-        'ink-2': '#0E1014',
-        'ink-3': '#15181E',
-        accent: '#1C58E3',
-        'accent-2': '#4B7BFF',
+        ink: '#030407',
+        'ink-2': '#030408',
+        'ink-3': '#030409',
+        'accent': '#1C58E3',
+        'accent-2': '#d4ff24',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
