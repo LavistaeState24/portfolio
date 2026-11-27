@@ -6,6 +6,8 @@
     { "source": "/blog/", "destination": "/blog.html" },
     { "source": "/branding", "destination": "/branding.html" },
     { "source": "/branding/", "destination": "/branding.html" },
+    { "source": "/careers", "destination": "/careers.html" },
+    { "source": "/careers/", "destination": "/careers.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/contact/", "destination": "/contact.html" },
     { "source": "/Faq", "destination": "/Faq.html" },
